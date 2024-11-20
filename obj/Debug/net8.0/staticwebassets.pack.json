@@ -1,0 +1,429 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\feedback.bundle.scp.css",
+      "PackagePath": "staticwebassets\\feedback.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\css\\form.css",
+      "PackagePath": "staticwebassets\\css\\form.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\fonts\\PingAR_LT_Bold.otf",
+      "PackagePath": "staticwebassets\\fonts\\PingAR_LT_Bold.otf"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\fonts\\PingAR_LT_Light.otf",
+      "PackagePath": "staticwebassets\\fonts\\PingAR_LT_Light.otf"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\fonts\\PingAR_LT_Medium.otf",
+      "PackagePath": "staticwebassets\\fonts\\PingAR_LT_Medium.otf"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\fonts\\PingAR_LT_Regular.otf",
+      "PackagePath": "staticwebassets\\fonts\\PingAR_LT_Regular.otf"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\1.jpg",
+      "PackagePath": "staticwebassets\\public\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\1.svg",
+      "PackagePath": "staticwebassets\\public\\1.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\81.jpg",
+      "PackagePath": "staticwebassets\\public\\81.jpg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\82.gif",
+      "PackagePath": "staticwebassets\\public\\82.gif"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\Yanbu1.jpg",
+      "PackagePath": "staticwebassets\\public\\Yanbu1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\Yanbu1.png",
+      "PackagePath": "staticwebassets\\public\\Yanbu1.png"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\bin.svg",
+      "PackagePath": "staticwebassets\\public\\bin.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\bird.jpg",
+      "PackagePath": "staticwebassets\\public\\bird.jpg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\bird.png",
+      "PackagePath": "staticwebassets\\public\\bird.png"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\celebrate.svg",
+      "PackagePath": "staticwebassets\\public\\celebrate.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\draw.svg",
+      "PackagePath": "staticwebassets\\public\\draw.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\energy.svg",
+      "PackagePath": "staticwebassets\\public\\energy.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\factory-breakdown-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\public\\factory-breakdown-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\factory.svg",
+      "PackagePath": "staticwebassets\\public\\factory.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\inbox.svg",
+      "PackagePath": "staticwebassets\\public\\inbox.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\int-logo.png",
+      "PackagePath": "staticwebassets\\public\\int-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\lang.svg",
+      "PackagePath": "staticwebassets\\public\\lang.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\leaf.svg",
+      "PackagePath": "staticwebassets\\public\\leaf.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\left-arrow.svg",
+      "PackagePath": "staticwebassets\\public\\left-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\mining.svg",
+      "PackagePath": "staticwebassets\\public\\mining.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\navbar_logo.png",
+      "PackagePath": "staticwebassets\\public\\navbar_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\navbar_logo.svg",
+      "PackagePath": "staticwebassets\\public\\navbar_logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\other.svg",
+      "PackagePath": "staticwebassets\\public\\other.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\people-nearby-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\public\\people-nearby-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\pharma.svg",
+      "PackagePath": "staticwebassets\\public\\pharma.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\plant.svg",
+      "PackagePath": "staticwebassets\\public\\plant.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\reward.svg",
+      "PackagePath": "staticwebassets\\public\\reward.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\term1.svg",
+      "PackagePath": "staticwebassets\\public\\term1.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\term2.svg",
+      "PackagePath": "staticwebassets\\public\\term2.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\term3.svg",
+      "PackagePath": "staticwebassets\\public\\term3.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\term4.svg",
+      "PackagePath": "staticwebassets\\public\\term4.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\term5.svg",
+      "PackagePath": "staticwebassets\\public\\term5.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\term6.svg",
+      "PackagePath": "staticwebassets\\public\\term6.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\waste.svg",
+      "PackagePath": "staticwebassets\\public\\waste.svg"
+    },
+    {
+      "Id": "C:\\Users\\E N T R O P Y\\Desktop\\feedback\\feedback\\wwwroot\\public\\water.svg",
+      "PackagePath": "staticwebassets\\public\\water.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.feedback.props",
+      "PackagePath": "build\\feedback.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.feedback.props",
+      "PackagePath": "buildMultiTargeting\\feedback.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.feedback.props",
+      "PackagePath": "buildTransitive\\feedback.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.feedback.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

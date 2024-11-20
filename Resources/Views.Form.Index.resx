@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="slogen" xml:space="preserve">
+        <value> صنـاعـــــــة وحيـــــــاة</value>
+    </data>
+    <data name="formTitle" xml:space="preserve">
+        <value>قياس الوعي البيئي في مدينة ينبع الصناعية</value>
+    </data>
+    <data name="formSubSextion1" xml:space="preserve">
+        <value>معلومات شخصية</value>
+    </data>
+    <data name="labelName1" xml:space="preserve">
+        <value>الفئة العمرية</value>
+    </data>
+    <data name="AgeGroupLabel1" xml:space="preserve">
+        <value>أقل من 25</value>
+    </data>
+    <data name="AgeGroupLabel2" xml:space="preserve">
+        <value>من 26 الى 35</value>
+    </data>
+    <data name="AgeGroupLabel3" xml:space="preserve">
+        <value>من 36 الى 46</value>
+    </data>
+    <data name="AgeGroupLabel4" xml:space="preserve">
+        <value>أعلى من 45</value>
+    </data>
+    <data name="labelName2" xml:space="preserve">
+        <value>اﻟﺟﻧس</value>
+    </data>
+    <data name="Sex1" xml:space="preserve">
+        <value>ذكر</value>
+    </data>
+    <data name="Sex2" xml:space="preserve">
+        <value>انثى</value>
+    </data>
+    <data name="labelName3" xml:space="preserve">
+        <value>المؤهل الدراسي</value>
+    </data>
+    <data name="eduLabel1" xml:space="preserve">
+        <value>ابتدائي</value>
+    </data>
+    <data name="eduLabel2" xml:space="preserve">
+        <value>متوسط</value>
+    </data>
+    <data name="eduLabel3" xml:space="preserve">
+        <value>ثانوي</value>
+    </data>
+    <data name="eduLabel4" xml:space="preserve">
+        <value>بكالوريوس</value>
+    </data>
+    <data name="eduLabel5" xml:space="preserve">
+        <value>تعليم عالي</value>
+    </data>
+    <data name="formSubSection2" xml:space="preserve">
+        <value>الوعي البيئي والاتجاهات</value>
+    </data>
+    <data name="labelName4" xml:space="preserve">
+        <value>أنا‏ أهتم بمصدر المعلومة البيئية
+</value>
+    </data>
+    <data name="vote1" xml:space="preserve">
+        <value>موافق بشدة</value>
+    </data>
+    <data name="vote3" xml:space="preserve">
+        <value>غير متأكد</value>
+    </data>
+    <data name="vote2" xml:space="preserve">
+        <value>موافق</value>
+    </data>
+    <data name="vote4" xml:space="preserve">
+        <value>غير موافق</value>
+    </data>
+    <data name="vote5" xml:space="preserve">
+        <value>غير موافق بشدة</value>
+    </data>
+    <data name="labelName5" xml:space="preserve">
+        <value>اهتمام المجتمع بالقضايا البيئية يساعد في زيادة الوعي البيئي</value>
+    </data>
+    <data name="labelName6" xml:space="preserve">
+        <value>لا أتردد في الإبلاغ عن أي سلوك ضار بالبيئة إلى الجهات المختصة</value>
+    </data>
+    <data name="labelName7" xml:space="preserve">
+        <value>لا أتردد في المشاركة في أي برنامج بيئي في مدينة ينبع الصناعية.</value>
+    </data>
+    <data name="labelName8" xml:space="preserve">
+        <value>تهمني القضايا البيئية التي يتم طرحها من خلال وسائل الإعلام المختلفة</value>
+    </data>
+    <data name="labelName9" xml:space="preserve">
+        <value>البرامج التعليمية في المدارس تتميز بنطاق واسع لزيادة المعرفة البيئية لدى الطلبة</value>
+    </data>
+    <data name="labelName10" xml:space="preserve">
+        <value>الحفاظ على البيئة مسؤولية الجميع</value>
+    </data>
+    <data name="labelName11" xml:space="preserve">
+        <value>سلوك الفرد تجاه البيئة يحدد مستوى الوعي البيئي</value>
+    </data>
+    <data name="labelName12" xml:space="preserve">
+        <value>الأنشطة البيئية من القطاع الخاص في ينبع الصناعية محدودة</value>
+    </data>
+    <data name="labelName13" xml:space="preserve">
+        <value>ﻣروﻧﺔ اﻛﺛر اﻟﺑﯾﺋﻲ اﻟﻌﻣل ﯾﺟﻌل ﺑﯾﺋﯾﺔ ﺟﻣﻌﯾﺔ واﻧﺷﺎء اﺳﺗﺣداث</value>
+    </data>
+    <data name="labelName14" xml:space="preserve">
+        <value>ملاحظات‏ ومقترحات ترغبون في ذكرها للمساهمة في زيادة اهتمام المجتمع في المحافظة على البيئة والمشاركة في الانشطة المصاحبة لها بمدينة ينبع الصناعية؟</value>
+    </data>
+    <data name="formSubSection3" xml:space="preserve">
+        <value>الاقتراحات والآراء حول المشاركة البيئية</value>
+    </data>
+    <data name="submit" xml:space="preserve">
+        <value>إرسال</value>
+    </data>
+</root>

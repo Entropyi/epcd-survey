@@ -1,0 +1,71 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.EntityFrameworkCore
+@inject IViewLocalizer Localizer
+@model Request
+
+@{
+    ViewData["Title"] = "Form";
+}
+
+<div class="header-container">
+
+    <div class="header__head form-header-padding">
+
+        <div class="header_top-elements-container">
+
+            <div class=header__slogan-container>
+                <p class="slogan-text">
+                    @Localizer["slogen"]
+                </p>
+            </div>
+
+            <a asp-controller="Home" asp-action="Index">
+                <div class=header__logos-container>
+                    <img src="/public/navbar_logo.png" alt="rc logo" width="154.3" height="45">
+                </div>
+            </a>
+
+            <form asp-controller="Culture" asp-action="ToggleCulture" asp-route-returnUrl="@Context.Request.Path" method="post"
+                  class="header__lang-switch-container">
+                <button type="submit" class="header__lang-switch-container">
+                    @if (Thread.CurrentThread.CurrentCulture.Name == "ar")
+                    {
+                        <p class="lang-switch-text">EN</p>
+                    }
+                    else
+                    {
+                        <div class="lang-switch-text">
+                            ع
+                        </div>
+                    }
+                    <div class="lang-switch-icon">
+                        <img src="/public/lang.svg" alt="lang icon" width="18.3" height="18">
+                    </div>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="form-root-container">
+    <div class="form-container">
+
+        <div class="form__super-title-container">
+            <h1 class="form__super-title-text">@Localizer["formTitle"]</h1>
+        </div>
+        <div class="form__section-container">
+            <div class="form__sextion-title-container-home" style="display: flex;">
+                <a class="homecard" asp-action="Index" asp-controller="Form">
+                    <h3 style="flex: 1" class="form__section-title-text"> @Localizer["formSubSection1"]</h3>
+                    <img src="public/people-nearby-svgrepo-com.svg" alt="">
+                </a>      
+                
+                <div class="homecard">
+                    <h3 style="flex: 1"  class="form__section-title-text"> @Localizer["formSubSection2"]</h3>
+                    <img src="public/factory-breakdown-svgrepo-com.svg">
+                </div>
+            </div>
+          </div>  
+    </div>
+</div>
