@@ -49,487 +49,488 @@
 
 
 <div class="form-root-container">
-    <form method="post" asp-action="Index" class="form-container">
-        <div asp-validation-summary="ModelOnly"></div>
+<form method="post" asp-action="Index" class="form-container">
+<div asp-validation-summary="ModelOnly"></div>
 
-        <div class="form__super-title-container">
-            <h1 class="form__super-title-text">@Localizer["formTitle"]</h1>
-        </div>
-        <div class="form__section-container">
-            <div class="form__sextion-title-container">
-                <h3 class="form__section-title-text"> @Localizer["formSubSextion1"]</h3>
-            </div>
+<div class="form__super-title-container">
+    <h1 class="form__super-title-text">@Localizer["formTitle"]</h1>
+</div>
+<div class="form__section-container">
+    <div class="form__sextion-title-container">
+        <h3 class="form__section-title-text"> @Localizer["formSubSextion1"]</h3>
+    </div>
 
-            <div class="form__inputs-container">
-                <div class="form__input-container">
-                    <label class="form__label-text">@Localizer["labelName1"]</label>
-                    <div class="AgeGroupLabel">
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
-                        </div>
-                        
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
-                        </div>
-                       
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
-                        </div>
-                       
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
-                        </div>
-                    </div>
-                    <span asp-validation-for="FullNameInArabic" class="text-danger"></span>
+    <div class="form__inputs-container">
+        <div class="form__input-container">
+            <label class="form__label-text">@Localizer["labelName1"]</label>
+            <div class="AgeGroupLabel">
+                <div>
+                    <input class="test" name="AgeGrop" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
                 </div>
 
-                <div class="form__input-container">
-                    <label class="form__label-text">@Localizer["labelName2"]</label>
-                    <div class="AgeGroupLabel">
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["Sex1"]</label>
-                        </div>
-
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["Sex2"]</label>
-                        </div>
-                    </div>
-
-                    <span asp-validation-for="FullNameInEnglish" class="text-danger"></span>
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
                 </div>
 
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
+                </div>
 
-                <div class="form__input-container">
-                    <label class="form__label-text">@Localizer["labelName3"]</label>
-                    <div class="AgeGroupLabel">
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel1"]</label>
-                        </div>
-
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel2"]</label>
-                        </div>
-
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel3"]</label>
-                        </div>
-
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel4"]</label>
-                        </div> 
-                        
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel5"]</label>
-                        </div>
-                    </div>
-                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
                 </div>
             </div>
+            <span asp-validation-for="FullNameInArabic" class="text-danger"></span>
         </div>
 
-        <div class="form__section-container">
-            <div class="form__sextion-title-container">
-                <h3 class="form__section-title-text">@Localizer["formSubSection2"]</h3>
+        <div class="form__input-container">
+            <label class="form__label-text">@Localizer["labelName2"]</label>
+            <div class="AgeGroupLabel">
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["Sex1"]</label>
+                </div>
+
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["Sex2"]</label>
+                </div>
             </div>
 
-            <div class="form__inputs-container">
-                
-                <div class="form__input-container">
-                    <label class="form__label-text">@Localizer["labelName4"]</label>
-                    <div class="AgeGroupLabel">
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                        </div>
-
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                        </div>
-
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                        </div>
-
-                        <div>
-                            <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                        </div>
-                    </div>
-                    <span asp-validation-for="IdeaName" class="text-danger"></span>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName4"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                    <span asp-validation-for="TeamName" class="text-danger"></span>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName4"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                    <span asp-validation-for="IdeaDescription" class="text-danger"></span>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName4"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName5"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName6"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName7"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName8"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName9"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName10"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName11"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName12"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="form__input-container">
-                    <div class="form__input-container">
-                        <label class="form__label-text">@Localizer["labelName13"]</label>
-                        <div class="AgeGroupLabel">
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
-                            </div>
-
-                            <div>
-                                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
-                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
-                            </div>
-                        </div>
-                        <span asp-validation-for="IdeaName" class="text-danger"></span>
-                    </div>
-                </div>
-                
-                
-            </div>
+            <span asp-validation-for="FullNameInEnglish" class="text-danger"></span>
         </div>
 
-        <div class="form__section-container">
-            
-            <div class="form__sextion-title-container">
-                <h3 class="form__section-title-text">@Localizer["formSubSection3"]</h3>
+
+        <div class="form__input-container">
+            <label class="form__label-text">@Localizer["labelName3"]</label>
+            <div class="AgeGroupLabel">
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel1"]</label>
+                </div>
+
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel2"]</label>
+                </div>
+
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel3"]</label>
+                </div>
+
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel4"]</label>
+                </div>
+
+                <div>
+                    <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                    <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel5"]</label>
+                </div>
+            </div>
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="form__section-container">
+<div class="form__sextion-title-container">
+    <h3 class="form__section-title-text">@Localizer["formSubSection2"]</h3>
+</div>
+
+<div class="form__inputs-container">
+
+<div class="form__input-container">
+    <label class="form__label-text">@Localizer["labelName4"]</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="AgeGroup" id="AgeGroup" type="radio" value="@Localizer["AgeGroup"]">
+            <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="AgeGroup" id="AgeGroup" type="radio" value="@Localizer["AgeGroup"]">
+            <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="AgeGroup" id="AgeGroup" type="radio" value="@Localizer["AgeGroup"]">
+            <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="AgeGroup" id="AgeGroup" type="radio" value="@Localizer["AgeGroup"]">
+            <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="IdeaName" class="text-danger"></span>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName4"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <label class="form__label-text">@Localizer["labelName14"]</label>
-                <textarea asp-for="IdeaDescription" class="form__input"></textarea>       
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+    <span asp-validation-for="TeamName" class="text-danger"></span>
+</div>
 
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName4"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
 
-        <div class="form__submit-container">
-            <input class="form__submit" type="submit" name="" id="" value="@Localizer["submit"]">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
         </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+    <span asp-validation-for="IdeaDescription" class="text-danger"></span>
+</div>
 
-    </form>
-    
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName4"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName5"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName6"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName7"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName8"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName9"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName10"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName11"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName12"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form__input-container">
+    <div class="form__input-container">
+        <label class="form__label-text">@Localizer["labelName13"]</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="checkbox1" type="radio" value="@Localizer["AgeGroup"]">
+                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="IdeaName" class="text-danger"></span>
+    </div>
+</div>
+
+
+</div>
+</div>
+
+<div class="form__section-container">
+
+    <div class="form__sextion-title-container">
+        <h3 class="form__section-title-text">@Localizer["formSubSection3"]</h3>
+    </div>
+
+    <div>
+        <label class="form__label-text">@Localizer["labelName14"]</label>
+        <textarea asp-for="IdeaDescription" class="form__input"></textarea>
+    </div>
+</div>
+
+
+<div class="form__submit-container">
+    <input class="form__submit" type="submit" name="" id="" value="@Localizer["submit"]">
+</div>
+
+</form>
+
 </div>
