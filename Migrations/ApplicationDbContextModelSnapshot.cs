@@ -224,7 +224,109 @@ namespace feedback.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("feedback.Models.Request", b =>
+            modelBuilder.Entity("feedback.Models.Form", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreationDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Question1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Question1EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions10")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions10EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions11")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions11EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions12")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions12EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions13")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions13EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions2EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions3EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions4EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions5")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions5EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions6")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions6EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions7")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions7EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions8")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions8EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions9")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Questions9EN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Form");
+                });
+
+            modelBuilder.Entity("feedback.Models.FormEntry", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -232,59 +334,71 @@ namespace feedback.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateOnly?>("DateOfBirth")
-                        .IsRequired()
-                        .HasColumnType("date");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("FullNameInArabic")
-                        .IsRequired()
-                        .HasMaxLength(29)
-                        .HasColumnType("nvarchar(29)");
-
-                    b.Property<string>("FullNameInEnglish")
-                        .IsRequired()
-                        .HasMaxLength(29)
-                        .HasColumnType("nvarchar(29)");
-
-                    b.Property<string>("Ge")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IdeaDescription")
+                    b.Property<string>("AgeGroup")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IdeaName")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
-
-                    b.Property<string>("Nationality")
+                    b.Property<string>("CreationDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("Education")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TeamName")
+                    b.Property<int>("Locale")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OpenQuestion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale1")
                         .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale10")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale3")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale4")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale5")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale6")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale7")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale8")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Scale9")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sex")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.ToTable("Requests");
+                    b.ToTable("FormEntry");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

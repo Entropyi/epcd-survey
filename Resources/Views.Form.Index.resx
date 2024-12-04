@@ -127,4 +127,7 @@
     <data name="submit" xml:space="preserve">
         <value>إرسال</value>
     </data>
+    <data name="required" xml:space="preserve">
+        <value>test</value>
+    </data>
 </root>

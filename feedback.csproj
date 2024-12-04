@@ -26,13 +26,21 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Views.Form.Index.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.Shared.Header.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.Home.Index.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.Shared.Header.en.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.Home.Index.en.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
       <EmbeddedResource Update="Resources\Views.Home.Index.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Views.Home.Index.Designer.cs</LastGenOutput>
       </EmbeddedResource>
-      <EmbeddedResource Update="Resources\Views.Home.Index.en.resx">
+      <EmbeddedResource Update="Resources\Views.Form.Success.resx">
         <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>Views.Home.Index.en.Designer.cs</LastGenOutput>
+        <LastGenOutput>Views.Form.Success.resx.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
@@ -42,15 +50,25 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>Views.Form.Index.resx</DependentUpon>
       </Compile>
+      <Compile Update="Resources\Views.Shared.Header.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.Shared.Header.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views.Shared.Header.en.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.Shared.Header.en.resx</DependentUpon>
+      </Compile>
       <Compile Update="Resources\Views.Home.Index.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Views.Home.Index.resx</DependentUpon>
       </Compile>
-      <Compile Update="Resources\Views.Home.Index.en.Designer.cs">
+      <Compile Update="Resources\Views.Form.Success.Designer.cs">
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
-        <DependentUpon>Views.Home.Index.en.resx</DependentUpon>
+        <DependentUpon>Views.Form.Success.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

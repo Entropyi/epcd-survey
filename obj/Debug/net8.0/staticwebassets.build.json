@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dD8m3hqgXcqx/FGBkdQS3gZyGvpuKDdRi3wNzBAaQbI=",
+  "Hash": "/jsXBcNrfosMETzidjERu0XcN1oC0C/cA77XhatwemA=",
   "Source": "feedback",
   "BasePath": "_content/feedback",
   "Mode": "Default",
@@ -2922,6 +2922,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\public\\reward.svg"
+    },
+    {
+      "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\success.svg",
+      "SourceId": "feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\",
+      "BasePath": "_content/feedback",
+      "RelativePath": "public/success.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\public\\success.svg"
     },
     {
       "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term1.svg",

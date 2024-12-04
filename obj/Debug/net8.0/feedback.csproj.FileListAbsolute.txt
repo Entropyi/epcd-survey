@@ -525,9 +525,7 @@ C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\runtimes\win\lib\net6.
 C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.csproj.AssemblyReference.cache
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.Index.resources
-C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Home.Index.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.Index.en.resources
-C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Home.Index.en.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.csproj.GenerateResource.cache
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.AssemblyInfoInputs.cache
@@ -556,3 +554,11 @@ C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\refint\feedback.dll
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.pdb
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.genruntimeconfig.cache
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\ref\feedback.dll
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Models.FormEntry.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Models.FormEntry.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Shared.Header.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Shared.Header.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Home.Index.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Home.Index.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.Success.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.Success.en.resources

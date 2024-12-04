@@ -10,6 +10,7 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
-    public DbSet<Request> Requests { get; set; }
+    public DbSet<Form> Form { get; set; }
+    public DbSet<FormEntry> FormEntry { get; set; }
 
 }

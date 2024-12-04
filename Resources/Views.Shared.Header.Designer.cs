@@ -21,14 +21,14 @@ namespace feedback.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Views_Home_Index_en {
+    internal class Views_Shared_Header {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Views_Home_Index_en() {
+        internal Views_Shared_Header() {
         }
         
         /// <summary>
@@ -38,7 +38,7 @@ namespace feedback.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("feedback.Resources.Views.Home.Index.en", typeof(Views_Home_Index_en).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("feedback.Resources.Views.Shared.Header", typeof(Views_Shared_Header).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -60,7 +60,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Community .
+        ///   Looks up a localized string similar to المجتمع.
         /// </summary>
         internal static string formSubSection1 {
             get {
@@ -69,7 +69,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Industries.
+        ///   Looks up a localized string similar to الصناعات.
         /// </summary>
         internal static string formSubSection2 {
             get {
@@ -78,7 +78,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose the target sector.
+        ///   Looks up a localized string similar to اختر نوع القطاع المستهدف.
         /// </summary>
         internal static string formTitle {
             get {
@@ -87,7 +87,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  industry and Life.
+        ///   Looks up a localized string similar to  صنـاعـــــــة وحيـــــــاة.
         /// </summary>
         internal static string slogen {
             get {

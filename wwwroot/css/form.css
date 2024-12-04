@@ -83,14 +83,14 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    resize: none; 
+    resize: none;
 }
 
 .form__input:focus {
     border-color: var(--secondary-1);
     border-width: 0.2em;
     transition: ease-in 0.8s;
-     
+
 }
 
 .homecard{
@@ -139,7 +139,41 @@
 }
 
 .test{
-    background-color: red;    
+    background-color: red;
+}
+
+
+.pass_form-root-container{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.pass-container{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 10em;
+    border-radius: 0.4em;
+    background: rgba(173,235,179,0.3);
+}
+.pass_svg{
+    width: 170px;
+}
+
+.pass-title{
+    font-family: Font-Bold;
+    font-size: 1.5em;
+    color: var(--th-Primary);
+}
+
+.pass-text{
+    font-family: Font-Light;
+    color: var(--th-Primary-3);
 }
 
 @media (max-width: 1218px) {
@@ -161,5 +195,11 @@
         display: grid;
         gap: 1em;
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 547px) {
+    .pass-container{
+        padding: 5em 4em;
     }
 }

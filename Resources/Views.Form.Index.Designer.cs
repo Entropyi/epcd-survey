@@ -304,6 +304,15 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to test.
+        /// </summary>
+        internal static string required {
+            get {
+                return ResourceManager.GetString("required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ذكر.
         /// </summary>
         internal static string Sex1 {

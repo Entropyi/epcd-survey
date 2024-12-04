@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Required" xml:space="preserve">
+        <value>This field is required</value>
+    </data>
+    <data name="InvalidEmail" xml:space="preserve">
+        <value>The email address is invalid</value>
+    </data>
+    <data name="InvalidPhoneNumber" xml:space="preserve">
+        <value>The phone number is invalid</value>
+    </data>
+    <data name="InvalidPhoneNumberLengthMax" xml:space="preserve">
+        <value>The phone number must be 10 numbers</value>
+    </data>
+    <data name="InvalidTeamName" xml:space="preserve">
+        <value>The team name length is less than 5 characters</value>
+    </data>
+    <data name="InvalidPhoneNumberLengthMin" xml:space="preserve">
+        <value>The team name length is more than 25 characters</value>
+    </data>
+    <data name="InvalidIdeaNameLengthMin" xml:space="preserve">
+        <value>The idea name length is less than 5 characters</value>
+    </data>
+    <data name="InvalidIdeaDescriptionLenghtMin" xml:space="preserve">
+        <value>The idea description length is less than 5 characters</value>
+    </data>
+    <data name="InvalidIdeaNameLengthMax" xml:space="preserve">
+        <value>The idea name length is more than 15 characters</value>
+    </data>
+    <data name="InvalidNameLengthMin" xml:space="preserve">
+        <value>The name length is less than 10 characters</value>
+    </data>
+    <data name="InvalidNameLengthMax" xml:space="preserve">
+        <value>The name length is more than 29 characters</value>
+    </data>
+</root>

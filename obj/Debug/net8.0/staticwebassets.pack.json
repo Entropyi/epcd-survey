@@ -377,6 +377,10 @@
       "PackagePath": "staticwebassets\\public\\reward.svg"
     },
     {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\success.svg",
+      "PackagePath": "staticwebassets\\public\\success.svg"
+    },
+    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term1.svg",
       "PackagePath": "staticwebassets\\public\\term1.svg"
     },

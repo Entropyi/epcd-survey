@@ -85,14 +85,5 @@ namespace feedback.Resources {
                 return ResourceManager.GetString("formTitle", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to  صنـاعـــــــة وحيـــــــاة.
-        /// </summary>
-        internal static string slogen {
-            get {
-                return ResourceManager.GetString("slogen", resourceCulture);
-            }
-        }
     }
 }

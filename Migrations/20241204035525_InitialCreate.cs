@@ -51,26 +51,50 @@ namespace feedback.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Requests",
+                name: "Form",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FullNameInArabic = table.Column<string>(type: "nvarchar(29)", maxLength: 29, nullable: false),
-                    FullNameInEnglish = table.Column<string>(type: "nvarchar(29)", maxLength: 29, nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Nationality = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateOfBirth = table.Column<DateOnly>(type: "date", nullable: false),
-                    IdeaName = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
-                    IdeaDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TeamName = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Ge = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Category = table.Column<int>(type: "int", nullable: false),
+                    Question1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions3 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions4 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions5 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions6 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions7 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions8 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions9 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions10 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions11 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions12 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions13 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions14 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions15 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions16 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Question1EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions2EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions3EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions4EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions5EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions6EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions7EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions8EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions9EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions10EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions11EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions12EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions13EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions14EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions15EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Questions16EN = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreationDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Requests", x => x.Id);
+                    table.PrimaryKey("PK_Form", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -179,6 +203,44 @@ namespace feedback.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "FormEntry",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FormId = table.Column<int>(type: "int", nullable: false),
+                    AgeGroup = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Education = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Sex = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale2 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale3 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale4 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale5 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale6 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale7 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale8 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale9 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale10 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale11 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale12 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Scale13 = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OpenQuestion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Locale = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreationDate = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_FormEntry", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_FormEntry_Form_FormId",
+                        column: x => x.FormId,
+                        principalTable: "Form",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -219,10 +281,9 @@ namespace feedback.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Requests_Email",
-                table: "Requests",
-                column: "Email",
-                unique: true);
+                name: "IX_FormEntry_FormId",
+                table: "FormEntry",
+                column: "FormId");
         }
 
         /// <inheritdoc />
@@ -244,13 +305,16 @@ namespace feedback.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Requests");
+                name: "FormEntry");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Form");
         }
     }
 }
