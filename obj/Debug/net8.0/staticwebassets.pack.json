@@ -269,54 +269,6 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\1.jpg",
-      "PackagePath": "staticwebassets\\public\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\1.svg",
-      "PackagePath": "staticwebassets\\public\\1.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\81.jpg",
-      "PackagePath": "staticwebassets\\public\\81.jpg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\82.gif",
-      "PackagePath": "staticwebassets\\public\\82.gif"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\Yanbu1.jpg",
-      "PackagePath": "staticwebassets\\public\\Yanbu1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\Yanbu1.png",
-      "PackagePath": "staticwebassets\\public\\Yanbu1.png"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\bin.svg",
-      "PackagePath": "staticwebassets\\public\\bin.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\bird.jpg",
-      "PackagePath": "staticwebassets\\public\\bird.jpg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\bird.png",
-      "PackagePath": "staticwebassets\\public\\bird.png"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\celebrate.svg",
-      "PackagePath": "staticwebassets\\public\\celebrate.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\draw.svg",
-      "PackagePath": "staticwebassets\\public\\draw.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\energy.svg",
-      "PackagePath": "staticwebassets\\public\\energy.svg"
-    },
-    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\factory-breakdown-svgrepo-com.svg",
       "PackagePath": "staticwebassets\\public\\factory-breakdown-svgrepo-com.svg"
     },
@@ -325,28 +277,12 @@
       "PackagePath": "staticwebassets\\public\\factory.svg"
     },
     {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\inbox.svg",
-      "PackagePath": "staticwebassets\\public\\inbox.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\int-logo.png",
-      "PackagePath": "staticwebassets\\public\\int-logo.png"
-    },
-    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\lang.svg",
       "PackagePath": "staticwebassets\\public\\lang.svg"
     },
     {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\leaf.svg",
-      "PackagePath": "staticwebassets\\public\\leaf.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\left-arrow.svg",
-      "PackagePath": "staticwebassets\\public\\left-arrow.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\mining.svg",
-      "PackagePath": "staticwebassets\\public\\mining.svg"
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\link-broken-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\public\\link-broken-svgrepo-com.svg"
     },
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\navbar_logo.png",
@@ -357,60 +293,12 @@
       "PackagePath": "staticwebassets\\public\\navbar_logo.svg"
     },
     {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\other.svg",
-      "PackagePath": "staticwebassets\\public\\other.svg"
-    },
-    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\people-nearby-svgrepo-com.svg",
       "PackagePath": "staticwebassets\\public\\people-nearby-svgrepo-com.svg"
     },
     {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\pharma.svg",
-      "PackagePath": "staticwebassets\\public\\pharma.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\plant.svg",
-      "PackagePath": "staticwebassets\\public\\plant.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\reward.svg",
-      "PackagePath": "staticwebassets\\public\\reward.svg"
-    },
-    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\success.svg",
       "PackagePath": "staticwebassets\\public\\success.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term1.svg",
-      "PackagePath": "staticwebassets\\public\\term1.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term2.svg",
-      "PackagePath": "staticwebassets\\public\\term2.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term3.svg",
-      "PackagePath": "staticwebassets\\public\\term3.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term4.svg",
-      "PackagePath": "staticwebassets\\public\\term4.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term5.svg",
-      "PackagePath": "staticwebassets\\public\\term5.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\term6.svg",
-      "PackagePath": "staticwebassets\\public\\term6.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\waste.svg",
-      "PackagePath": "staticwebassets\\public\\waste.svg"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\water.svg",
-      "PackagePath": "staticwebassets\\public\\water.svg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.feedback.props",

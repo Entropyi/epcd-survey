@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "Form";
+}
+
+@await Html.PartialAsync("Header")
+
+<div class="notfound-super-container">
+    <div class="notfound-sub-container">
+        <div class="notfound-card-container">
+            <img class="notfound_svg" src="../public/link-broken-svgrepo-com.svg" alt="broken Link">
+            <h3 class="pass-title">@Localizer["Text"]</h3>
+            <p class="pass-text">@Localizer["Title"]</p>
+        </div>
+    </div>
+</div>

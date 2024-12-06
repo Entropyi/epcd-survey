@@ -14,6 +14,7 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.11"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11"/>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
     </ItemGroup>
 
     <ItemGroup>
@@ -42,6 +43,10 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Views.Form.Success.resx.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.NotFound.Index.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.NotFound.Index.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -69,6 +74,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Views.Form.Success.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views.NotFound.Index.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.NotFound.Index.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

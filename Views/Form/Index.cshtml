@@ -4,49 +4,11 @@
 @model FormEntry
 
 @{
-    ViewData["Title"] = "Form";
+    ViewData["Title"] = ViewData["Category"];
 }
 
-<div class="header-container">
-
-    <div class="header__head form-header-padding">
-
-        <div class="header_top-elements-container">
-
-            <div class=header__slogan-container>
-                <p class="slogan-text">
-                    @Localizer["slogen"]
-                </p>
-            </div>
-
-            <a asp-controller="Home" asp-action="Index">
-                <div class=header__logos-container>
-                    <img src="/public/navbar_logo.png" alt="rc logo" width="154.3" height="45">
-                </div>
-            </a>
-
-            <form asp-controller="Culture" asp-action="ToggleCulture" asp-route-returnUrl="@Context.Request.Path" method="post"
-                  class="header__lang-switch-container">
-                <button type="submit" class="header__lang-switch-container">
-                    @if (Thread.CurrentThread.CurrentCulture.Name == "ar")
-                    {
-                        <p class="lang-switch-text">EN</p>
-                    }
-                    else
-                    {
-                        <div class="lang-switch-text">
-                            ع
-                        </div>
-                    }
-                    <div class="lang-switch-icon">
-                        <img src="/public/lang.svg" alt="lang icon" width="18.3" height="18">
-                    </div>
-                </button>
-            </form>
-        </div>
-    </div>
-</div>
-
+<h1>Cara is @ViewData["Category"]</h1>
+@await Html.PartialAsync("Header")
 
 <div class="form-root-container">
 <form method="post" asp-action="Index" class="form-container">

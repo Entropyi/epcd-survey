@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text.Encodings.Web;
 using feedback.Data;
 using Microsoft.AspNetCore.Mvc;
 using feedback.Models;
@@ -8,19 +9,34 @@ namespace feedback.Controllers;
 public class FormController : Controller
 {
     private readonly ApplicationDbContext _context;
-
-    
     private readonly ILogger<FormController> _logger;
 
     public FormController(ILogger<FormController> logger, ApplicationDbContext context)
     {
         _logger = logger;
         _context = context ?? throw new ArgumentNullException(nameof(context));
-
     }
 
-    public IActionResult Index(int id, int category)
+
+    public IActionResult Index(string Category)
     {
+        string category = HtmlEncoder.Default.Encode(Category);
+
+        List<string> Categories = new();
+        Categories.Add("Community");
+        Categories.Add("Industry");
+
+
+        int valid = Categories.IndexOf(category);
+
+        if (valid == -1)
+        {
+            return RedirectToAction("Index", "NotFound");
+            
+        }
+        
+        
+        ViewData["Category"] = category;
         return View();
     }
 
@@ -34,7 +50,6 @@ public class FormController : Controller
     {
         if (ModelState.IsValid)
         {
-            
             _context.Add(entry);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Success));
@@ -48,6 +63,11 @@ public class FormController : Controller
         return View();
     }
     
+    public IActionResult Home()
+    {
+        return View();
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

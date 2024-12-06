@@ -176,6 +176,34 @@
     color: var(--th-Primary-3);
 }
 
+.notfound-super-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.notfound-sub-container{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.notfound_svg{
+    width: 10em;
+}
+
+.notfound-card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 5em 0;
+    border-radius: 0.5em;
+    background-color: rgba(5,41,118,0.1);
+}
+
 @media (max-width: 1218px) {
 
     .form-root-container {
