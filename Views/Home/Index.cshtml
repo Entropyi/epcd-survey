@@ -16,7 +16,8 @@
         </div>
         <div class="form__section-container">
             <div class="form__sextion-title-container-home" style="display: flex;">
-                <a class="homecard" asp-action="Index" asp-controller="Form" asp-route-Category="Community">
+                <a class="homecard" asp-action="Index" asp-controller="Form" asp-route-Category="Community" asp-route-FormID="@ViewData["From"]">
+                    
                     <h3 style="flex: 1" class="form__section-title-text"> @Localizer["formSubSection1"]</h3>
                     <img src="public/people-nearby-svgrepo-com.svg" alt="">
                 </a>      

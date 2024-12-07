@@ -3,6 +3,7 @@ using System.Text.Encodings.Web;
 using feedback.Data;
 using Microsoft.AspNetCore.Mvc;
 using feedback.Models;
+using feedback.Shared;
 
 namespace feedback.Controllers;
 
@@ -18,32 +19,25 @@ public class FormController : Controller
     }
 
 
-    public IActionResult Index(string Category)
+    public async Task<IActionResult> Index(string Category, int FormID)
     {
         string category = HtmlEncoder.Default.Encode(Category);
 
         List<string> Categories = new();
         Categories.Add("Community");
         Categories.Add("Industry");
-
-
-        int valid = Categories.IndexOf(category);
-
-        if (valid == -1)
-        {
-            return RedirectToAction("Index", "NotFound");
-            
-        }
-        
         
         ViewData["Category"] = category;
+        
+        ViewBag.Form = await _context.Form.FindAsync(FormID);
+        
         return View();
     }
 
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Index(
+    public async Task<IActionResult> FormProcessing(
         [Bind(
             "Id,AgeGroup,Education,Sex,Scale1,Scale2,Scale3,Scale4,Scale5,Scale6,Scale7,Scale8,Scale9,Scale10,Scale11,Scale12,Scale13,OpenQuestion")]
         FormEntry entry)

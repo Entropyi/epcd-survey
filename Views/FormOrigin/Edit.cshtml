@@ -1,0 +1,171 @@
+@model feedback.Models.Form
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question1" class="control-label"></label>
+                <input asp-for="Question1" class="form-control" />
+                <span asp-validation-for="Question1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions2" class="control-label"></label>
+                <input asp-for="Questions2" class="form-control" />
+                <span asp-validation-for="Questions2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions3" class="control-label"></label>
+                <input asp-for="Questions3" class="form-control" />
+                <span asp-validation-for="Questions3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions4" class="control-label"></label>
+                <input asp-for="Questions4" class="form-control" />
+                <span asp-validation-for="Questions4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions5" class="control-label"></label>
+                <input asp-for="Questions5" class="form-control" />
+                <span asp-validation-for="Questions5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions6" class="control-label"></label>
+                <input asp-for="Questions6" class="form-control" />
+                <span asp-validation-for="Questions6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions7" class="control-label"></label>
+                <input asp-for="Questions7" class="form-control" />
+                <span asp-validation-for="Questions7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions8" class="control-label"></label>
+                <input asp-for="Questions8" class="form-control" />
+                <span asp-validation-for="Questions8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions9" class="control-label"></label>
+                <input asp-for="Questions9" class="form-control" />
+                <span asp-validation-for="Questions9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions10" class="control-label"></label>
+                <input asp-for="Questions10" class="form-control" />
+                <span asp-validation-for="Questions10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions11" class="control-label"></label>
+                <input asp-for="Questions11" class="form-control" />
+                <span asp-validation-for="Questions11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions12" class="control-label"></label>
+                <input asp-for="Questions12" class="form-control" />
+                <span asp-validation-for="Questions12" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions13" class="control-label"></label>
+                <input asp-for="Questions13" class="form-control" />
+                <span asp-validation-for="Questions13" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question1EN" class="control-label"></label>
+                <input asp-for="Question1EN" class="form-control" />
+                <span asp-validation-for="Question1EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions2EN" class="control-label"></label>
+                <input asp-for="Questions2EN" class="form-control" />
+                <span asp-validation-for="Questions2EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions3EN" class="control-label"></label>
+                <input asp-for="Questions3EN" class="form-control" />
+                <span asp-validation-for="Questions3EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions4EN" class="control-label"></label>
+                <input asp-for="Questions4EN" class="form-control" />
+                <span asp-validation-for="Questions4EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions5EN" class="control-label"></label>
+                <input asp-for="Questions5EN" class="form-control" />
+                <span asp-validation-for="Questions5EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions6EN" class="control-label"></label>
+                <input asp-for="Questions6EN" class="form-control" />
+                <span asp-validation-for="Questions6EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions7EN" class="control-label"></label>
+                <input asp-for="Questions7EN" class="form-control" />
+                <span asp-validation-for="Questions7EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions8EN" class="control-label"></label>
+                <input asp-for="Questions8EN" class="form-control" />
+                <span asp-validation-for="Questions8EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions9EN" class="control-label"></label>
+                <input asp-for="Questions9EN" class="form-control" />
+                <span asp-validation-for="Questions9EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions10EN" class="control-label"></label>
+                <input asp-for="Questions10EN" class="form-control" />
+                <span asp-validation-for="Questions10EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions11EN" class="control-label"></label>
+                <input asp-for="Questions11EN" class="form-control" />
+                <span asp-validation-for="Questions11EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions12EN" class="control-label"></label>
+                <input asp-for="Questions12EN" class="form-control" />
+                <span asp-validation-for="Questions12EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Questions13EN" class="control-label"></label>
+                <input asp-for="Questions13EN" class="form-control" />
+                <span asp-validation-for="Questions13EN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreationDate" class="control-label"></label>
+                <input asp-for="CreationDate" class="form-control" />
+                <span asp-validation-for="CreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -18,8 +18,7 @@
                     <img src="/public/navbar_logo.png" alt="rc logo" width="154.3" height="45">
                 </div>
             </a>
-
-            <form asp-controller="Culture" asp-action="ToggleCulture" asp-route-returnUrl="@Context.Request.Path" method="post"
+            <form asp-controller="Culture" asp-action="ToggleCulture" asp-route-returnUrl="@Context.Request.Path@Context.Request.QueryString" method="post"
                   class="header__lang-switch-container">
                 <button type="submit" class="header__lang-switch-container">
                     @if (Thread.CurrentThread.CurrentCulture.Name == "ar")
