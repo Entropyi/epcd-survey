@@ -30,24 +30,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormOrigin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybU9yaWdpblxDcmVhdGUuY3NodG1s
+[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormCreator/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybUNyZWF0b3JcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormOrigin/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybU9yaWdpblxEZWxldGUuY3NodG1s
+[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormCreator/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybUNyZWF0b3JcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormOrigin/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybU9yaWdpblxEZXRhaWxzLmNzaHRtbA==
+[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormCreator/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybUNyZWF0b3JcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormOrigin/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybU9yaWdpblxFZGl0LmNzaHRtbA==
+[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormCreator/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybUNyZWF0b3JcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormOrigin/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybU9yaWdpblxJbmRleC5jc2h0bWw=
+[C:/Users/je-ha/RiderProjects/epcd-survey/Views/FormCreator/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybUNyZWF0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/je-ha/RiderProjects/epcd-survey/Views/Form/Index.cshtml]

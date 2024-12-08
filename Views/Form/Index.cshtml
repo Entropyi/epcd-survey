@@ -5,7 +5,14 @@
 
 @{
     ViewData["Title"] = ViewData["Category"];
+
+    var FormTitle = ViewBag.Form.Question1;
+    @if (Thread.CurrentThread.CurrentCulture.Name == "en")
+    {
+        FormTitle = ViewBag.Form.Question1EN;
+    }
 }
+
 
 
 @await Html.PartialAsync("Header")
@@ -408,7 +415,7 @@
     <input class="form__submit" type="submit" name="" id="" value="@Localizer["submit"]">
 </div>
 
-    <input type="hidden" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Locale">
+    <input type="hidden" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
     <input type="hidden" value="@DateTime.Now.ToString("MM/dd/yyyy-hh:mm:ss");" asp-for="CreationDate">
 </form>
 

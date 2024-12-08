@@ -682,3 +682,5 @@ C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\runtimes\win\lib\net7.
 C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.NotFound.Index.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.NotFound.Index.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Index.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Index.en.resources

@@ -5,7 +5,7 @@
 namespace feedback.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCre : Migration
+    public partial class InitialCrea : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

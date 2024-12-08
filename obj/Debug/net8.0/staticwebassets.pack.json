@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\feedback.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\area.css",
+      "PackagePath": "staticwebassets\\css\\area.css"
+    },
+    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\form.css",
       "PackagePath": "staticwebassets\\css\\form.css"
     },

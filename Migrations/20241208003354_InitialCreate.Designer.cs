@@ -12,8 +12,8 @@ using feedback.Data;
 namespace feedback.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241204050129_InitialCreat")]
-    partial class InitialCreat
+    [Migration("20241208003354_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -238,107 +238,150 @@ namespace feedback.Migrations
                     b.Property<int>("Category")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreationDate")
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FromSectionOneLabelAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FromSectionOneLabelEn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FromSectionThreeLabelAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FromSectionThreeLabelEn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FromSectionTwoLabelAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FromSectionTwoLabelEn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FromTitleAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FromTitleEn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OpenQuestionAr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OpenQuestionEn")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Question1")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Question1EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions10")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions10EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions11")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions11EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions12")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions12EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions13")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions13EN")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Questions14")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Questions14EN")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Questions15")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Questions15EN")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Questions16")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Questions16EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions2")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions2EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions3")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions3EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions4")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions4EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions5")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions5EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions6")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions6EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions7")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions7EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions8")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions8EN")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions9")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Questions9EN")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -355,81 +398,75 @@ namespace feedback.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AgeGroup")
+                    b.Property<int?>("AgeGroup")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("CreationDate")
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Education")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Education")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("FormId")
+                        .HasColumnType("int");
 
-                    b.Property<int>("Locale")
+                    b.Property<int>("Language")
                         .HasColumnType("int");
 
                     b.Property<string>("OpenQuestion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Scale1")
+                    b.Property<int?>("Scale1")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale10")
+                    b.Property<int?>("Scale10")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale11")
+                    b.Property<int?>("Scale2")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale12")
+                    b.Property<int?>("Scale3")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale13")
+                    b.Property<int?>("Scale4")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale2")
+                    b.Property<int?>("Scale5")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale3")
+                    b.Property<int?>("Scale6")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale4")
+                    b.Property<int?>("Scale7")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale5")
+                    b.Property<int?>("Scale8")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale6")
+                    b.Property<int?>("Scale9")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("Scale7")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Scale8")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Scale9")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sex")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Sex")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FormId");
 
                     b.ToTable("FormEntry");
                 });
@@ -483,6 +520,22 @@ namespace feedback.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("feedback.Models.FormEntry", b =>
+                {
+                    b.HasOne("feedback.Models.Form", "Form")
+                        .WithMany("FormEntrys")
+                        .HasForeignKey("FormId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Form");
+                });
+
+            modelBuilder.Entity("feedback.Models.Form", b =>
+                {
+                    b.Navigation("FormEntrys");
                 });
 #pragma warning restore 612, 618
         }

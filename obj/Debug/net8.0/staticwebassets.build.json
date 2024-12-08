@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fgbU5VDBK+q+x6lMXWD+uBbmjJMxgyEsWxDlMafeNkM=",
+  "Hash": "CekQYLDo8HZQvNpmb5imxxvCO+nedsAzBrvKsuOOKhs=",
   "Source": "feedback",
   "BasePath": "_content/feedback",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\feedback.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\area.css",
+      "SourceId": "feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\",
+      "BasePath": "_content/feedback",
+      "RelativePath": "css/area.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\area.css"
     },
     {
       "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\form.css",
