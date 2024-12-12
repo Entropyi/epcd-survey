@@ -1,4 +1,5 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using Azure.Core
+@using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.EntityFrameworkCore
 @inject IViewLocalizer Localizer
 @model FormEntry
@@ -6,50 +7,110 @@
 @{
     ViewData["Title"] = ViewData["Category"];
 
-    var FormTitle = ViewBag.Form.Question1;
-    @if (Thread.CurrentThread.CurrentCulture.Name == "en")
+    var formTitle = ViewBag.Form.FormTitleAr;
+    var formSection1 = ViewBag.Form.FormSectionOneLabelAr;
+    var formSection2 = ViewBag.Form.FormSectionTwoLabelAr;
+    var formSection3 = ViewBag.Form.FormSectionThreeLabelAr;
+
+    var question1 = ViewBag.Form.Question1;
+    var question2 = ViewBag.Form.Question2;
+    var question3 = ViewBag.Form.Question3;
+    var question4 = ViewBag.Form.Question4;
+    var question5 = ViewBag.Form.Question5;
+    var question6 = ViewBag.Form.Question6;
+    var question7 = ViewBag.Form.Question7;
+    var question8 = ViewBag.Form.Question8;
+    var question9 = ViewBag.Form.Question9;
+    var question10 = ViewBag.Form.Question10;
+    var question11 = ViewBag.Form.Question11;
+    var question12 = ViewBag.Form.Question12;
+    var question13 = ViewBag.Form.Question13;
+    var question14 = ViewBag.Form.OpenQuestionAr;
+
+
+    if (Thread.CurrentThread.CurrentCulture.Name != "ar")
     {
-        FormTitle = ViewBag.Form.Question1EN;
+         formTitle = ViewBag.Form.FormTitleEn;
+         formSection1 = ViewBag.Form.FormSectionOneLabelEn;
+         formSection2 = ViewBag.Form.FormSectionTwoLabelEn;
+         formSection3 = ViewBag.Form.FormSectionThreeLabelEn;
+
+         question1 = ViewBag.Form.Question1EN;
+         question2 = ViewBag.Form.Question2EN;
+         question3 = ViewBag.Form.Question3EN;
+         question4 = ViewBag.Form.Question4EN;
+         question5 = ViewBag.Form.Question5EN;
+         question6 = ViewBag.Form.Question6EN;
+         question7 = ViewBag.Form.Question7EN;
+         question8 = ViewBag.Form.Question8EN;
+         question9 = ViewBag.Form.Question9EN;
+         question10 = ViewBag.Form.Question10EN;
+         question11 = ViewBag.Form.Question11EN;
+         question12 = ViewBag.Form.Question12EN;
+         question13 = ViewBag.Form.Question13EN;
+         question14 = ViewBag.Form.OpenQuestionEn;
     }
+    else
+    {
+         formTitle = ViewBag.Form.FormTitleAr;
+         formSection1 = ViewBag.Form.FormSectionOneLabelAr;
+         formSection2 = ViewBag.Form.FormSectionTwoLabelAr;
+         formSection3 = ViewBag.Form.FormSectionThreeLabelAr;
+
+         question1 = ViewBag.Form.Question1;
+         question2 = ViewBag.Form.Question2;
+         question3 = ViewBag.Form.Question3;
+         question4 = ViewBag.Form.Question4;
+         question5 = ViewBag.Form.Question5;
+         question6 = ViewBag.Form.Question6;
+         question7 = ViewBag.Form.Question7;
+         question8 = ViewBag.Form.Question8;
+         question9 = ViewBag.Form.Question9;
+         question10 = ViewBag.Form.Question10;
+         question11 = ViewBag.Form.Question11;
+         question12 = ViewBag.Form.Question12;
+         question13 = ViewBag.Form.Question13;
+         question14 = ViewBag.Form.OpenQuestionAr;
+    }
+    
+    
 }
-
-
 
 @await Html.PartialAsync("Header")
 
 <div class="form-root-container">
-<form method="post" asp-action="FormProcessing" class="form-container">
+<form method="post" asp-action="Index" class="form-container">
 <div asp-validation-summary="ModelOnly"></div>
 
 <div class="form__super-title-container">
-    <h1 class="form__super-title-text">@Localizer["formTitle"]</h1>
+    <h1 class="form__super-title-text">@formTitle</h1>
 </div>
 <div class="form__section-container">
     <div class="form__sextion-title-container">
-        <h3 class="form__section-title-text"> @Localizer["formSubSextion1"]</h3>
+        <h3 class="form__section-title-text"> @formSection1</h3>
     </div>
 
     <div class="form__inputs-container">
         <div class="form__input-container">
-            <label class="form__label-text">@Localizer["labelName1"]</label>
+            <label class="form__label-text">@question1</label>
             <div class="AgeGroupLabel">
                 <div>
-                    <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel1"]" required="required">
+                    <input class="test" name="AgeGroup" type="radio" value="1" required="required">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel2"]">
+                    <input class="test" name="AgeGroup" type="radio" value="2">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel3"]">
+                    <input class="test" name="AgeGroup" type="radio" value="3">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel4"]">
+                    <input class="test" name="AgeGroup" type="radio" value="4">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
                 </div>
             </div>
@@ -58,15 +119,15 @@
         </div>
 
         <div class="form__input-container">
-            <label class="form__label-text">@Localizer["labelName2"]</label>
+            <label class="form__label-text">@question2</label>
             <div class="AgeGroupLabel">
                 <div>
-                    <input class="test" name="Sex" type="radio" value="@Localizer["Sex1"]"  required="required">
+                    <input class="test" name="Sex" type="radio" value="Male"  required="required">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["Sex1"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="Sex" type="radio" value="@Localizer["Sex2"]">
+                    <input class="test" name="Sex" type="radio" value="Female">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["Sex2"]</label>
                 </div>
             </div>
@@ -76,30 +137,30 @@
 
 
         <div class="form__input-container">
-            <label class="form__label-text">@Localizer["labelName3"]</label>
+            <label class="form__label-text">@question3</label>
             <div class="AgeGroupLabel">
                 <div>
-                    <input class="test" name="Education" type="radio" value="@Localizer["eduLabel1"]"  required="required">
+                    <input class="test" name="Education" type="radio" value="1"  required="required">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel1"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="Education" type="radio" value="@Localizer["eduLabel2"]">
+                    <input class="test" name="Education" type="radio" value="2">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel2"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="Education" type="radio" value="@Localizer["eduLabel3"]">
+                    <input class="test" name="Education" type="radio" value="3">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel3"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="Education" type="radio" value="@Localizer["eduLabel4"]">
+                    <input class="test" name="Education" type="radio" value="4">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel4"]</label>
                 </div>
 
                 <div>
-                    <input class="test" name="Education" type="radio" value="@Localizer["eduLabel5"]">
+                    <input class="test" name="Education" type="radio" value="5">
                     <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel5"]</label>
                 </div>
             </div>
@@ -111,31 +172,31 @@
 
 <div class="form__section-container">
 <div class="form__sextion-title-container">
-    <h3 class="form__section-title-text">@Localizer["formSubSection2"]</h3>
+    <h3 class="form__section-title-text">@formSection2</h3>
 </div>
 
 <div class="form__inputs-container">
 
 <div class="form__input-container">
-    <label class="form__label-text">@Localizer["labelName4"]</label>
+    <label class="form__label-text">@question4</label>
     <div class="AgeGroupLabel">
         <div>
-            <input class="test" name="Scale1" type="radio" value="@Localizer["vote1"]"  required="required">
+            <input class="test" name="Scale1" type="radio" value="1"  required="required">
             <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
         </div>
 
         <div>
-            <input class="test" name="Scale1" type="radio" value="@Localizer["vote2"]">
+            <input class="test" name="Scale1" type="radio" value="2">
             <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
         </div>
 
         <div>
-            <input class="test" name="Scale1" type="radio" value="@Localizer["vote3"]">
+            <input class="test" name="Scale1" type="radio" value="3">
             <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
         </div>
 
         <div>
-            <input class="test" name="Scale1" type="radio" value="@Localizer["vote4"]">
+            <input class="test" name="Scale1" type="radio"  value="4">
             <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
         </div>
     </div>
@@ -144,25 +205,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName5"]</label>
+        <label class="form__label-text">@question5</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale2" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale2" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale2" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale2" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale2" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale2" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale2" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale2" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -172,25 +233,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName6"]</label>
+        <label class="form__label-text">@question6</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale3" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale3" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale3" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale3" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale3" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale3" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale3" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale3" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -200,25 +261,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName7"]</label>
+        <label class="form__label-text">@question7</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale4" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale4" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale4" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale4" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale4" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale4" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale4" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale4" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -228,25 +289,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName8"]</label>
+        <label class="form__label-text">@question8</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale5" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale5" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale5" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale5" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale5" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale5" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale5" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale5" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -256,25 +317,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName9"]</label>
+        <label class="form__label-text">@question9</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale6" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale6" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale6" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale6" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale6" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale6" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale6" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale6" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -284,25 +345,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName10"]</label>
+        <label class="form__label-text">@question10</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale7" type="radio" value="@Localizer["vote1"]" required="required">
+                <input class="test" name="Scale7" type="radio" value="1" required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale7" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale7" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale7" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale7" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale7" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale7" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -312,25 +373,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName11"]</label>
+        <label class="form__label-text">@question11</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale8" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale8" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale8" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale8" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale8" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale8" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale8" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale8" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -340,25 +401,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName12"]</label>
+        <label class="form__label-text">@question12</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale9" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale9" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale9" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale9" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale9" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale9" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale9" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale9" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -368,25 +429,25 @@
 
 <div class="form__input-container">
     <div class="form__input-container">
-        <label class="form__label-text">@Localizer["labelName13"]</label>
+        <label class="form__label-text">question13</label>
         <div class="AgeGroupLabel">
             <div>
-                <input class="test" name="Scale10" type="radio" value="@Localizer["vote1"]"  required="required">
+                <input class="test" name="Scale10" type="radio" value="1"  required="required">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale10" type="radio" value="@Localizer["vote2"]">
+                <input class="test" name="Scale10" type="radio" value="2">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale10" type="radio" value="@Localizer["vote3"]">
+                <input class="test" name="Scale10" type="radio" value="3">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
             </div>
 
             <div>
-                <input class="test" name="Scale10" type="radio" value="@Localizer["vote4"]">
+                <input class="test" name="Scale10" type="radio" value="4">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
             </div>
         </div>
@@ -399,11 +460,11 @@
 <div class="form__section-container">
 
     <div class="form__sextion-title-container">
-        <h3 class="form__section-title-text">@Localizer["formSubSection3"]</h3>
+        <h3 class="form__section-title-text">@formSection3</h3>
     </div>
 
     <div>
-        <label class="form__label-text">@Localizer["labelName14"]</label>
+        <label class="form__label-text">@question14</label>
         <textarea asp-for="OpenQuestion" class="form__input"></textarea>
     </div>
     <span asp-validation-for="OpenQuestion" class="text-danger"></span>
@@ -415,8 +476,11 @@
     <input class="form__submit" type="submit" name="" id="" value="@Localizer["submit"]">
 </div>
 
-    <input type="hidden" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
-    <input type="hidden" value="@DateTime.Now.ToString("MM/dd/yyyy-hh:mm:ss");" asp-for="CreationDate">
+<input type="hidden" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
+<input type="hidden" asp-for="CreationDate" value="@DateTime.Now">
+<input type="hidden" asp-for="Category" value="@ViewData["Category"]">
+<input type="hidden" asp-for="FormId" value="@ViewBag.Form.id">
+<input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
 </form>
 
 </div>

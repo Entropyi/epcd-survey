@@ -22,7 +22,9 @@ namespace feedback.Controllers
         // GET: FormCreator
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Form.ToListAsync());
+            return View(await _context.Form
+                .Include(f => f.FormEntries)
+                .ToListAsync());
         }
 
         // GET: FormCreator/Details/5
@@ -34,7 +36,9 @@ namespace feedback.Controllers
             }
 
             var form = await _context.Form
+                .Include(f => f.FormEntries) // Ensure FormEntries is loaded
                 .FirstOrDefaultAsync(m => m.id == id);
+
             if (form == null)
             {
                 return NotFound();
@@ -54,7 +58,7 @@ namespace feedback.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,Category,FromTitleAr,FromTitleEn,FromSectionOneLabelAr,FromSectionOneLabelEn,FromSectionTwoLabelAr,FromSectionTwoLabelEn,FromSectionThreeLabelAr,FromSectionThreeLabelEn,Question1,Questions2,Questions3,Questions4,Questions5,Questions6,Questions7,Questions8,Questions9,Questions10,Questions11,Questions12,Questions13,Question1EN,Questions2EN,Questions3EN,Questions4EN,Questions5EN,Questions6EN,Questions7EN,Questions8EN,Questions9EN,Questions10EN,Questions11EN,Questions12EN,Questions13EN,OpenQuestionAr,OpenQuestionEn,CreationDate")] Form form)
+        public async Task<IActionResult> Create([Bind("id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,OpenQuestionAr,OpenQuestionEn,CreationDate")] Form form)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +90,7 @@ namespace feedback.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,Category,FromTitleAr,FromTitleEn,FromSectionOneLabelAr,FromSectionOneLabelEn,FromSectionTwoLabelAr,FromSectionTwoLabelEn,FromSectionThreeLabelAr,FromSectionThreeLabelEn,Question1,Questions2,Questions3,Questions4,Questions5,Questions6,Questions7,Questions8,Questions9,Questions10,Questions11,Questions12,Questions13,Question1EN,Questions2EN,Questions3EN,Questions4EN,Questions5EN,Questions6EN,Questions7EN,Questions8EN,Questions9EN,Questions10EN,Questions11EN,Questions12EN,Questions13EN,OpenQuestionAr,OpenQuestionEn,CreationDate")] Form form)
+        public async Task<IActionResult> Edit(int id, [Bind("id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,Question14,Question14En,OpenQuestionAr,OpenQuestionEn,CreationDate")] Form form)
         {
             if (id != form.id)
             {

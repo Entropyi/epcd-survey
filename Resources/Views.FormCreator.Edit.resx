@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="FromTitle" xml:space="preserve">
+        <value>عنوان الإستبيان</value>
+    </data>
+    <data name="LanguageAr" xml:space="preserve">
+        <value>النص باللغة العربية</value>
+    </data>
+    <data name="LanguageEn" xml:space="preserve">
+        <value>النص باللغة الإنجليزية</value>
+    </data>
+    <data name="SectionOneTitle" xml:space="preserve">
+        <value>عنوان القسم الأول</value>
+    </data>
+    <data name="SectionTwoTitle" xml:space="preserve">
+        <value>عنوان القسم الثاني</value>
+    </data>
+    <data name="SectionThreeTitle" xml:space="preserve">
+        <value>عنوان القسم الثالث</value>
+    </data>
+    <data name="Question1" xml:space="preserve">
+        <value>السؤال الأول</value>
+    </data>
+    <data name="Question2" xml:space="preserve">
+        <value>السؤال الثاني</value>
+    </data>
+    <data name="Question3" xml:space="preserve">
+        <value>السؤال الثالث</value>
+    </data>
+    <data name="Question4" xml:space="preserve">
+        <value>السؤال الرابع</value>
+    </data>
+    <data name="Question5" xml:space="preserve">
+        <value>السؤال الخامس</value>
+    </data>
+    <data name="Question6" xml:space="preserve">
+        <value>السؤال السادس</value>
+    </data>
+    <data name="Question7" xml:space="preserve">
+        <value>السؤال السابع</value>
+    </data>
+    <data name="Question8" xml:space="preserve">
+        <value>السؤال الثامن</value>
+    </data>
+    <data name="Question9" xml:space="preserve">
+        <value>السؤال التاسع</value>
+    </data>
+    <data name="Question10" xml:space="preserve">
+        <value>السؤال العاشر</value>
+    </data>
+    <data name="Question11" xml:space="preserve">
+        <value>السؤال الحادي عشر</value>
+    </data>
+    <data name="Question12" xml:space="preserve">
+        <value>السؤال الثاني عشر</value>
+    </data>
+    <data name="Question13" xml:space="preserve">
+        <value>السؤال الثالث عشر</value>
+    </data>
+    <data name="Question14" xml:space="preserve">
+        <value>السؤال الرابع عشر</value>
+    </data>
+    <data name="Question15" xml:space="preserve">
+        <value>السؤال الخامس عشر</value>
+    </data>
+    <data name="vote1" xml:space="preserve">
+        <value>موافق بشدة
+</value>
+    </data>
+    <data name="vote2" xml:space="preserve">
+        <value>موافق</value>
+    </data>
+    <data name="vote3" xml:space="preserve">
+        <value>غير متأكد
+</value>
+    </data>
+    <data name="vote4" xml:space="preserve">
+        <value>غير موافق
+</value>
+    </data>
+    <data name="Sex1" xml:space="preserve">
+        <value>ذكر</value>
+    </data>
+    <data name="Sex2" xml:space="preserve">
+        <value>انثى</value>
+    </data>
+    <data name="AgeGroupLabel1" xml:space="preserve">
+        <value>أقل من 25</value>
+    </data>
+    <data name="AgeGroupLabel2" xml:space="preserve">
+        <value>من 26 الى 35
+</value>
+    </data>
+    <data name="AgeGroupLabel3" xml:space="preserve">
+        <value>من 36 الى 46
+</value>
+    </data>
+    <data name="AgeGroupLabel4" xml:space="preserve">
+        <value>أعلى من 45
+</value>
+    </data>
+    <data name="eduLabel1" xml:space="preserve">
+        <value>ابتدائي</value>
+    </data>
+    <data name="eduLabel2" xml:space="preserve">
+        <value>متوسط</value>
+    </data>
+    <data name="eduLabel3" xml:space="preserve">
+        <value>ثانوي</value>
+    </data>
+    <data name="eduLabel4" xml:space="preserve">
+        <value>بكالوريوس</value>
+    </data>
+    <data name="eduLabel5" xml:space="preserve">
+        <value>تعليم عالي</value>
+    </data>
+    <data name="vote5" xml:space="preserve">
+        <value>غير موافق بشدة
+</value>
+    </data>
+    <data name="Return" xml:space="preserve">
+        <value>رجوع</value>
+    </data>
+    <data name="Submit" xml:space="preserve">
+        <value>تعديل</value>
+    </data>
+</root>

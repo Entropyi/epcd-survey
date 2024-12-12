@@ -1,216 +1,769 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model feedback.Models.Form
-
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Edit";
+ViewData["Title"] = "asdasdda";
 }
 
-<h1>Edit</h1>
+@await Html.PartialAsync("Header")
 
-<h4>Form</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="id" />
-            <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <input asp-for="Category" class="form-control" />
-                <span asp-validation-for="Category" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromTitleAr" class="control-label"></label>
-                <input asp-for="FromTitleAr" class="form-control" />
-                <span asp-validation-for="FromTitleAr" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromTitleEn" class="control-label"></label>
-                <input asp-for="FromTitleEn" class="form-control" />
-                <span asp-validation-for="FromTitleEn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromSectionOneLabelAr" class="control-label"></label>
-                <input asp-for="FromSectionOneLabelAr" class="form-control" />
-                <span asp-validation-for="FromSectionOneLabelAr" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromSectionOneLabelEn" class="control-label"></label>
-                <input asp-for="FromSectionOneLabelEn" class="form-control" />
-                <span asp-validation-for="FromSectionOneLabelEn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromSectionTwoLabelAr" class="control-label"></label>
-                <input asp-for="FromSectionTwoLabelAr" class="form-control" />
-                <span asp-validation-for="FromSectionTwoLabelAr" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromSectionTwoLabelEn" class="control-label"></label>
-                <input asp-for="FromSectionTwoLabelEn" class="form-control" />
-                <span asp-validation-for="FromSectionTwoLabelEn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromSectionThreeLabelAr" class="control-label"></label>
-                <input asp-for="FromSectionThreeLabelAr" class="form-control" />
-                <span asp-validation-for="FromSectionThreeLabelAr" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FromSectionThreeLabelEn" class="control-label"></label>
-                <input asp-for="FromSectionThreeLabelEn" class="form-control" />
-                <span asp-validation-for="FromSectionThreeLabelEn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Question1" class="control-label"></label>
-                <input asp-for="Question1" class="form-control" />
-                <span asp-validation-for="Question1" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions2" class="control-label"></label>
-                <input asp-for="Questions2" class="form-control" />
-                <span asp-validation-for="Questions2" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions3" class="control-label"></label>
-                <input asp-for="Questions3" class="form-control" />
-                <span asp-validation-for="Questions3" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions4" class="control-label"></label>
-                <input asp-for="Questions4" class="form-control" />
-                <span asp-validation-for="Questions4" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions5" class="control-label"></label>
-                <input asp-for="Questions5" class="form-control" />
-                <span asp-validation-for="Questions5" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions6" class="control-label"></label>
-                <input asp-for="Questions6" class="form-control" />
-                <span asp-validation-for="Questions6" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions7" class="control-label"></label>
-                <input asp-for="Questions7" class="form-control" />
-                <span asp-validation-for="Questions7" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions8" class="control-label"></label>
-                <input asp-for="Questions8" class="form-control" />
-                <span asp-validation-for="Questions8" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions9" class="control-label"></label>
-                <input asp-for="Questions9" class="form-control" />
-                <span asp-validation-for="Questions9" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions10" class="control-label"></label>
-                <input asp-for="Questions10" class="form-control" />
-                <span asp-validation-for="Questions10" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions11" class="control-label"></label>
-                <input asp-for="Questions11" class="form-control" />
-                <span asp-validation-for="Questions11" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions12" class="control-label"></label>
-                <input asp-for="Questions12" class="form-control" />
-                <span asp-validation-for="Questions12" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions13" class="control-label"></label>
-                <input asp-for="Questions13" class="form-control" />
-                <span asp-validation-for="Questions13" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Question1EN" class="control-label"></label>
-                <input asp-for="Question1EN" class="form-control" />
-                <span asp-validation-for="Question1EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions2EN" class="control-label"></label>
-                <input asp-for="Questions2EN" class="form-control" />
-                <span asp-validation-for="Questions2EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions3EN" class="control-label"></label>
-                <input asp-for="Questions3EN" class="form-control" />
-                <span asp-validation-for="Questions3EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions4EN" class="control-label"></label>
-                <input asp-for="Questions4EN" class="form-control" />
-                <span asp-validation-for="Questions4EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions5EN" class="control-label"></label>
-                <input asp-for="Questions5EN" class="form-control" />
-                <span asp-validation-for="Questions5EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions6EN" class="control-label"></label>
-                <input asp-for="Questions6EN" class="form-control" />
-                <span asp-validation-for="Questions6EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions7EN" class="control-label"></label>
-                <input asp-for="Questions7EN" class="form-control" />
-                <span asp-validation-for="Questions7EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions8EN" class="control-label"></label>
-                <input asp-for="Questions8EN" class="form-control" />
-                <span asp-validation-for="Questions8EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions9EN" class="control-label"></label>
-                <input asp-for="Questions9EN" class="form-control" />
-                <span asp-validation-for="Questions9EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions10EN" class="control-label"></label>
-                <input asp-for="Questions10EN" class="form-control" />
-                <span asp-validation-for="Questions10EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions11EN" class="control-label"></label>
-                <input asp-for="Questions11EN" class="form-control" />
-                <span asp-validation-for="Questions11EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions12EN" class="control-label"></label>
-                <input asp-for="Questions12EN" class="form-control" />
-                <span asp-validation-for="Questions12EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Questions13EN" class="control-label"></label>
-                <input asp-for="Questions13EN" class="form-control" />
-                <span asp-validation-for="Questions13EN" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="OpenQuestionAr" class="control-label"></label>
-                <input asp-for="OpenQuestionAr" class="form-control" />
-                <span asp-validation-for="OpenQuestionAr" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="OpenQuestionEn" class="control-label"></label>
-                <input asp-for="OpenQuestionEn" class="form-control" />
-                <span asp-validation-for="OpenQuestionEn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreationDate" class="control-label"></label>
-                <input asp-for="CreationDate" class="form-control" />
-                <span asp-validation-for="CreationDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+<div class="return-super-container">
+    <form asp-action="Index" class="return-container">
+        <a class="return-text" asp-action="Index">@Localizer["Return"]</a>
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<div class="form-root-container">
+    <form method="Post" asp-action="Edit" class="form-container">
+        <div asp-validation-summary="ModelOnly"></div>
 
+        <div class="form__super-title-container">
+            <h1 class="form__super-title-text" id="formTitle">@Localizer["FromTitle"]</h1>
+
+
+            <div class="form__create-container">
+
+                <div class="form__create-input-container">
+                    <div class="form__input_inner-container">
+                        <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                        <input asp-for="FormTitleAr" class="form__create-input" id="titleAr" type="text">
+                        <span asp-validation-for="FormTitleAr" class="text-danger"></span>
+                    </div>
+
+                    <div class="form__input_inner-container">
+                        <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                        <input asp-for="FormTitleEn" class="form__create-input" type="text">
+                        <span asp-validation-for="FormTitleEn" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="form__section-container">
+            <div class="form__sextion-title-container">
+                <h3 class="form__section-title-text"> @Localizer["SectionOneTitle"]</h3>
+                <div class="form__create-container">
+
+                    <div class="form__create-input-container">
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                            <input asp-for="FormSectionOneLabelAr" class="form__create-input" type="text">
+                            <span asp-validation-for="FormSectionOneLabelAr" class="text-danger"></span>
+                        </div>
+
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                            <input asp-for="FormSectionOneLabelEn" class="form__create-input" type="text">
+                            <span asp-validation-for="FormSectionOneLabelEn" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form__inputs-container">
+                <div class="form__input-container">
+                    <label class="form__label-text">@Localizer["Question1"]</label>
+                    <div class="form__create-container">
+
+                        <div class="form__create-input-container">
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                <input asp-for="Question1" class="form__create-input" type="text">
+                                <span asp-validation-for="Question1" class="text-danger"></span>
+                            </div>
+
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                <input asp-for="Question1EN" class="form__create-input" type="text">
+                                <span asp-validation-for="Question1EN" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="AgeGroupLabel">
+                        <div>
+                            <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel1"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel2"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel3"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="AgeGroup" type="radio" value="@Localizer["AgeGroupLabel4"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <label class="form__label-text">@Localizer["Question2"]</label>
+                    <div class="form__create-container">
+
+                        <div class="form__create-input-container">
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                <input asp-for="Question2" class="form__create-input" type="text">
+                                <span asp-validation-for="Question2" class="text-danger"></span>
+                            </div>
+
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                <input asp-for="Question2EN" class="form__create-input" type="text">
+                                <span asp-validation-for="Question2EN" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="AgeGroupLabel">
+
+                        <div>
+                            <input class="test" name="Sex" type="radio" value="@Localizer["Sex1"]"/>
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["Sex1"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Sex" type="radio" value="@Localizer["Sex2"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["Sex2"]</label>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="form__input-container">
+                    <label class="form__label-text">@Localizer["Question3"]</label>
+                    <div class="form__create-container">
+
+                        <div class="form__create-input-container">
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                <input asp-for="Question3" class="form__create-input" type="text">
+                                <span asp-validation-for="Question3" class="text-danger"></span>
+                            </div>
+
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                <input asp-for="Question3EN" class="form__create-input" type="text">
+                                <span asp-validation-for="Question3EN" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="AgeGroupLabel">
+                        <div>
+                            <input class="test" name="Education" type="radio" value="@Localizer["eduLabel1"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel1"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Education" type="radio" value="@Localizer["eduLabel2"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel2"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Education" type="radio" value="@Localizer["eduLabel3"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel3"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Education" type="radio" value="@Localizer["eduLabel4"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel4"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Education" type="radio" value="@Localizer["eduLabel5"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["eduLabel5"]</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form__section-container">
+            <div class="form__sextion-title-container">
+                <h3 class="form__section-title-text">@Localizer["SectionTwoTitle"]</h3>
+                <div class="form__create-container">
+
+                    <div class="form__create-input-container">
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                            <input asp-for="FormSectionTwoLabelAr" class="form__create-input" type="text">
+                            <span asp-validation-for="FormSectionTwoLabelAr" class="text-danger"></span>
+                        </div>
+
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                            <input asp-for="FormSectionTwoLabelEn" class="form__create-input" type="text">
+                            <span asp-validation-for="FormSectionTwoLabelEn" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form__inputs-container">
+
+                <div class="form__input-container">
+                    <label class="form__label-text">@Localizer["Question4"]</label>
+                    <div class="form__create-container">
+
+                        <div class="form__create-input-container">
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                <input asp-for="Question4" class="form__create-input" type="text">
+                                <span asp-validation-for="Question4" class="text-danger"></span>
+                            </div>
+
+                            <div class="form__input_inner-container">
+                                <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                <input asp-for="Question4EN" class="form__create-input" type="text">
+                                <span asp-validation-for="Question4EN" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="AgeGroupLabel">
+                        <div>
+                            <input class="test" name="Scale1" type="radio" value="@Localizer["vote1"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Scale1" type="radio" value="@Localizer["vote2"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Scale1" type="radio" value="@Localizer["vote3"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Scale1" type="radio" value="@Localizer["vote4"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                        </div>
+
+                        <div>
+                            <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                            <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question5"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question5" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question5" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question5EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question5EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale2" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale2" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale2" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale2" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question6"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question6" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question6" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question6EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question6EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question7"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question7" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question7" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question7EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question7EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale4" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale4" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale4" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale4" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question8"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question8" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question8" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question8EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question8EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale5" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale5" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale5" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale5" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question9"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question9" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question9" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question9EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question9EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale6" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale6" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale6" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale6" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question10"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question10" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question10" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question10EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question10EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale7" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale7" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale7" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale7" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question11"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question11" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question11" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question11EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question11EN" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale8" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale8" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale8" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale8" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question12"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question12" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question12" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question12EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question12EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale9" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale9" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale9" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale9" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__input-container">
+                    <div class="form__input-container">
+                        <label class="form__label-text">@Localizer["Question13"]</label>
+                        <div class="form__create-container">
+
+                            <div class="form__create-input-container">
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                                    <input asp-for="Question13" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question13" class="text-danger"></span>
+                                </div>
+
+                                <div class="form__input_inner-container">
+                                    <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                                    <input asp-for="Question13EN" class="form__create-input" type="text">
+                                    <span asp-validation-for="Question13EN" class="text-danger"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="AgeGroupLabel">
+                            <div>
+                                <input class="test" name="Scale10" type="radio" value="@Localizer["vote1"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale10" type="radio" value="@Localizer["vote2"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale10" type="radio" value="@Localizer["vote3"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale10" type="radio" value="@Localizer["vote4"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+                            </div>
+
+                            <div>
+                                <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
+                                <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__section-container">
+
+            <div class="form__sextion-title-container">
+                <h3 class="form__section-title-text">@Localizer["SectionThreeTitle"]</h3>
+                <div class="form__create-container">
+
+                    <div class="form__create-input-container">
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                            <input asp-for="FormSectionThreeLabelAr" class="form__create-input" type="text">
+                            <span asp-validation-for="FormSectionThreeLabelAr" class="text-danger"></span>
+                        </div>
+
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                            <input asp-for="FormSectionThreeLabelEn" class="form__create-input" type="text">
+                            <span asp-validation-for="FormSectionThreeLabelEn" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <input hidden="hidden" asp-for="CreationDate" value="@DateTime.Now" type="text"/>
+
+            <div>
+                <label class="form__label-text">@Localizer["Question14"]</label>
+                <div class="form__create-container">
+
+                    <div class="form__create-input-container">
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageAr"]</label>
+                            <textarea asp-for="OpenQuestionAr" class="form__input"></textarea>
+                            <span asp-validation-for="OpenQuestionAr" class="text-danger"></span>
+                        </div>
+
+                        <div class="form__input_inner-container">
+                            <label class="form__label-text">@Localizer["LanguageEn"]</label>
+                            <textarea  asp-for="OpenQuestionEn" class="form__input"></textarea>
+                            <span asp-validation-for="OpenQuestionEn" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form__submit-container">
+            <input class="form__submit" type="submit" value="@Localizer["Submit"]">
+        </div>
+
+    </form>
+
+</div>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace feedback.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,7 +56,6 @@ namespace feedback.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Category = table.Column<int>(type: "int", nullable: false),
                     FromTitleAr = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FromTitleEn = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FromSectionOneLabelAr = table.Column<string>(type: "nvarchar(max)", nullable: false),

@@ -26,7 +26,7 @@
     color: var(--th-Primary);
 }
 
-.forms-super-container{
+.forms-super-container {
     width: 90%;
     margin: 4em auto;
     display: flex;
@@ -37,7 +37,7 @@
     color: var(--th-Primary);
 }
 
-.forms-container{
+.forms-container {
     display: flex;
     flex-direction: column;
     padding: 1em 3em;
@@ -48,20 +48,20 @@
     background-color: rgba(5, 41, 118, 0.25);
 }
 
-.form-title-container{
+.form-title-container {
 }
 
-.from-title-card-text{
+.from-title-card-text {
     font-size: 1.5em;
     font-family: "Font-Bold";
 }
 
-.responses-text{
+.responses-text {
     font-size: 2em;
     font-family: "Font-Medium";
 }
 
-.form-date-text{
+.form-date-text {
     font-family: "Font-Light";
 }
 
@@ -71,13 +71,68 @@
     font-family: "Font-Light";
 }
 
-.form-action-delete-text:hover{
+.form-action-delete-text:hover {
     color: red;
     cursor: pointer;
 }
 
 .form-action-view-text:hover,
-.form-action-edit-text:hover{
+.form-action-edit-text:hover {
     color: green;
     cursor: pointer;
+}
+
+.form__create-container {
+    gap: 1em 5em;
+}
+
+.form__create-input-container {
+    
+}
+
+.form__create-input {
+    border: 1px solid var(--th-Primary);
+    overflow: auto;
+    outline: none;
+    width: 95%;
+    height: 2.5em;
+    border-width: 0.2em;
+    border-radius: 0.3em;
+    border-color: var(--th-Primary-6);
+    color: var(--th-Primary);
+    font-family: "Font-Light";
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+
+.form__create-input:focus {
+    border-color: var(--secondary-1);
+    border-width: 0.2em;
+    transition: ease-in 0.1s;
+
+}
+
+.return-container{
+    background-color: var(--secondary-4);
+    display: flex;
+    width: fit-content;
+    padding: 1em 3em;
+    border-radius: 0.3em;
+    border: 0.2em solid transparent;
+}
+
+.return-container:hover{
+    border: 0.2em var(--blue) solid;
+}
+
+.return-text{
+    font-family: Font-Bold;
+    color: var(--th-Primary);
+}
+
+.return-super-container {
+    width: 85%;
+    margin: 1em auto;
 }

@@ -31,15 +31,16 @@ public class FormController : Controller
         
         ViewBag.Form = await _context.Form.FindAsync(FormID);
         
+        
         return View();
     }
 
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> FormProcessing(
+    public async Task<IActionResult> Index(
         [Bind(
-            "Id,AgeGroup,Education,Sex,Scale1,Scale2,Scale3,Scale4,Scale5,Scale6,Scale7,Scale8,Scale9,Scale10,Scale11,Scale12,Scale13,OpenQuestion")]
+            "Id,FormId,AgeGroup,Education,Sex,Scale1,Scale2,Scale3,Scale4,Scale5,Scale6,Scale7,Scale8,Scale9,Scale10,OpenQuestion,Language,Category,CreationDate")]
         FormEntry entry)
     {
         if (ModelState.IsValid)

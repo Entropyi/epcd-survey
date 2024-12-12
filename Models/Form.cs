@@ -5,74 +5,66 @@ namespace feedback.Models;
 public class Form
 {
     public int id { get; set; }
+    
+    
+    [Required] public string? FormTitleAr { get; set; }
+    [Required] public string? FormTitleEn { get; set; }
 
-    public enum FormCategory
-    {
-        Community,
-        industry,
-    }
+    [Required] public string? FormSectionOneLabelAr { get; set; }
+    [Required] public string? FormSectionOneLabelEn { get; set; }
+    [Required] public string? FormSectionTwoLabelAr { get; set; }
+    [Required] public string? FormSectionTwoLabelEn { get; set; }
+    [Required] public string? FormSectionThreeLabelAr { get; set; }
+    [Required] public string? FormSectionThreeLabelEn { get; set; }
 
-    [Required(ErrorMessage = "Required")] public FormCategory? Category { get; set; }
+    [Required] public string? Question1 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? FromTitleAr { get; set; }
-    [Required(ErrorMessage = "Required")] public string? FromTitleEn { get; set; }
+    [Required] public string? Question2 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? FromSectionOneLabelAr { get; set; }
-    [Required(ErrorMessage = "Required")] public string? FromSectionOneLabelEn { get; set; }
-    [Required(ErrorMessage = "Required")] public string? FromSectionTwoLabelAr { get; set; }
-    [Required(ErrorMessage = "Required")] public string? FromSectionTwoLabelEn { get; set; }
-    [Required(ErrorMessage = "Required")] public string? FromSectionThreeLabelAr { get; set; }
-    [Required(ErrorMessage = "Required")] public string? FromSectionThreeLabelEn { get; set; }
+    [Required] public string? Question3 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Question1 { get; set; }
+    [Required] public string? Question4 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Questions2 { get; set; }
+    [Required] public string? Question5 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Questions3 { get; set; }
+    [Required] public string? Question6 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Questions4 { get; set; }
+    [Required] public string? Question7 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Questions5 { get; set; }
+    [Required] public string? Question8 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Questions6 { get; set; }
+    [Required] public string? Question9 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Questions7 { get; set; }
-
-    [Required(ErrorMessage = "Required")] public string? Questions8 { get; set; }
-
-    [Required(ErrorMessage = "Required")] public string? Questions9 { get; set; }
-
-    [Required(ErrorMessage = "Required")] public string? Questions10 { get; set; }
+    [Required] public string? Question10 { get; set; }
 
 
-    [Required(ErrorMessage = "Required")] public string? Questions11 { get; set; }
+    [Required] public string? Question11 { get; set; }
 
 
-    [Required(ErrorMessage = "Required")] public string? Questions12 { get; set; }
+    [Required] public string? Question12 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public string? Questions13 { get; set; }
-
-
-    [Required(ErrorMessage = "Required")] public string? Question1EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions2EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions3EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions4EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions5EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions6EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions7EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions8EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions9EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions10EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions11EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions12EN { get; set; }
-    [Required(ErrorMessage = "Required")] public string? Questions13EN { get; set; }
+    [Required] public string? Question13 { get; set; }
 
 
-    [Required(ErrorMessage = "Required")] public string? OpenQuestionAr { get; set; }
-    [Required(ErrorMessage = "Required")] public string? OpenQuestionEn { get; set; }
+    [Required] public string? Question1EN { get; set; }
+    [Required] public string? Question2EN { get; set; }
+    [Required] public string? Question3EN { get; set; }
+    [Required] public string? Question4EN { get; set; }
+    [Required] public string? Question5EN { get; set; }
+    [Required] public string? Question6EN { get; set; }
+    [Required] public string? Question7EN { get; set; }
+    [Required] public string? Question8EN { get; set; }
+    [Required] public string? Question9EN { get; set; }
+    [Required] public string? Question10EN { get; set; }
+    [Required] public string? Question11EN { get; set; }
+    [Required] public string? Question12EN { get; set; }
+    [Required] public string? Question13EN { get; set; }
+    
+    [Required] public string? OpenQuestionAr { get; set; }
+    [Required] public string? OpenQuestionEn { get; set; }
 
 
     public ICollection<FormEntry> FormEntries { get; set; } = new List<FormEntry>();
 
-    [Required(ErrorMessage = "Required")] public DateTime CreationDate { get; init; } = DateTime.Now;
+    [Required] public DateTime? CreationDate { get; init; } = DateTime.Now;
 }

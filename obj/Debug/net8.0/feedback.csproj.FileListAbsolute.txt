@@ -684,3 +684,13 @@ C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Vie
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.NotFound.Index.en.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Index.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Index.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Create.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Create.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Models.Form.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Delete.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Edit.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Models.Form.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Edit.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Delete.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Details.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.FormCreator.Details.en.resources

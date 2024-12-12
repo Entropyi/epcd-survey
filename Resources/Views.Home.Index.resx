@@ -27,4 +27,7 @@
     <data name="formTitle" xml:space="preserve">
         <value>اختر نوع القطاع المستهدف</value>
     </data>
+    <data name="Return" xml:space="preserve">
+        <value>تحكم</value>
+    </data>
 </root>

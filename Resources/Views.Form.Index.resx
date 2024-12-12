@@ -73,8 +73,7 @@
         <value>الوعي البيئي والاتجاهات</value>
     </data>
     <data name="labelName4" xml:space="preserve">
-        <value>أنا‏ أهتم بمصدر المعلومة البيئية
-</value>
+        <value>اﻟﺑﯾﺋﻲ اﻟوﻋﻲ رﻓﻊ ﻓﻲ اﻟﻣﺷﺎرﻛﺔ اﻟﺧﺎص اﻟﻘطﺎع ﻋﻠﻰ</value>
     </data>
     <data name="vote1" xml:space="preserve">
         <value>موافق بشدة</value>
@@ -126,8 +125,5 @@
     </data>
     <data name="submit" xml:space="preserve">
         <value>إرسال</value>
-    </data>
-    <data name="required" xml:space="preserve">
-        <value>test</value>
     </data>
 </root>

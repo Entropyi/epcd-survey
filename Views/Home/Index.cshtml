@@ -6,10 +6,19 @@
     ViewData["Title"] = "Form";
 }
 
+
+
 @await Html.PartialAsync("Header")
 
 <div class="form-root-container">
     <div class="form-container">
+
+        <div style="margin-bottom: 3em" class="return-super-container">
+            <form asp-controller="FormCreator" asp-action="Index" class="return-container">
+                <a asp-controller="FormCreator" asp-action="Index" class="return-text">@Localizer["Return"]</a>
+            </form>
+        </div>
+     
 
         <div class="form__super-title-container">
             <h1 class="form__super-title-text">@Localizer["formTitle"]</h1>
@@ -17,17 +26,18 @@
         <div class="form__section-container">
             <div class="form__sextion-title-container-home" style="display: flex;">
                 <a class="homecard" asp-action="Index" asp-controller="Form" asp-route-Category="Community" asp-route-FormID="@ViewData["From"]">
-                    
+
                     <h3 style="flex: 1" class="form__section-title-text"> @Localizer["formSubSection1"]</h3>
                     <img src="public/people-nearby-svgrepo-com.svg" alt="">
-                </a>      
-                
-                <div class="homecard">
-                    <h3 style="flex: 1"  class="form__section-title-text"> @Localizer["formSubSection2"]</h3>
+                </a>
+
+                <a class="homecard" asp-action="Index" asp-controller="Form" asp-route-Category="Community" asp-route-FormID="@ViewData["From"]">
+                    <h3 style="flex: 1" class="form__section-title-text"> @Localizer["formSubSection2"]</h3>
                     <img src="public/factory-breakdown-svgrepo-com.svg">
-                </div>
+                </a>
             </div>
-        </div>  
+        </div>
+     
     </div>
 </div>
 

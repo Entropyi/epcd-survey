@@ -85,5 +85,14 @@ namespace feedback.Resources {
                 return ResourceManager.GetString("formTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تحكم.
+        /// </summary>
+        internal static string Return {
+            get {
+                return ResourceManager.GetString("Return", resourceCulture);
+            }
+        }
     }
 }

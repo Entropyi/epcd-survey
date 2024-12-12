@@ -14,15 +14,18 @@
 .form__super-title-container {
     font-family: Font-Bold;
     color: var(--th-Primary);
-    font-size: 1.8em;
     margin-bottom: 1em;
 }
 
 .form__section-container {
-    background: #ffff;
+    background: #ffff;;
     border-radius: 0.2em;
     padding: 3em;
     margin-bottom: 3em;
+}
+
+.form__super-title-text{
+    font-size: 1.8em;
 }
 
 .form__sextion-title-container {
@@ -30,8 +33,11 @@
     gap: 0.8em;
     font-family: Font-Medium;
     color: var(--th-Primary);
-    font-size: 1.5em;
     margin-bottom: 1em;
+}
+
+.form__section-title-text{
+    font-size: 1.5em;
 }
 
 .form__sextion-title-container-home {
@@ -84,6 +90,8 @@
     -moz-box-shadow: none;
     box-shadow: none;
     resize: none;
+    border-width: 0.2em;
+
 }
 
 .form__input:focus {

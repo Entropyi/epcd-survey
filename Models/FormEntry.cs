@@ -8,7 +8,7 @@ public class FormEntry
 
 
     public int FormId { get; init; }
-    public Form Form { get; init; }
+    public Form? Form { get; init; }
 
 
     [Required(ErrorMessage = "Required")] public int? AgeGroup { get; init; }
@@ -53,7 +53,7 @@ public class FormEntry
         ar
     }
 
-    [Required(ErrorMessage = "Required")] public Languages Language { get; init; }
+ public Languages? Language { get; init; }
 
     public enum Categories
     {
@@ -61,7 +61,7 @@ public class FormEntry
         Indestry
     }
 
-    [Required(ErrorMessage = "Required")] public Categories Category { get; init; }
+public Categories? Category { get; init; }
 
-    [Required(ErrorMessage = "Required")] public DateTime CreationDate { get; init; } = DateTime.Now;
+public DateTime? CreationDate { get; init; } = DateTime.Now;
 }

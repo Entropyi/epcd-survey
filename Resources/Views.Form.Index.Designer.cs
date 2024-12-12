@@ -249,8 +249,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to أنا‏ أهتم بمصدر المعلومة البيئية
-        ///.
+        ///   Looks up a localized string similar to اﻟﺑﯾﺋﻲ اﻟوﻋﻲ رﻓﻊ ﻓﻲ اﻟﻣﺷﺎرﻛﺔ اﻟﺧﺎص اﻟﻘطﺎع ﻋﻠﻰ.
         /// </summary>
         internal static string labelName4 {
             get {
@@ -300,15 +299,6 @@ namespace feedback.Resources {
         internal static string labelName9 {
             get {
                 return ResourceManager.GetString("labelName9", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to test.
-        /// </summary>
-        internal static string required {
-            get {
-                return ResourceManager.GetString("required", resourceCulture);
             }
         }
         

@@ -119,7 +119,4 @@
     <data name="submit" xml:space="preserve">
         <value>Send</value>
     </data>
-    <data name="required" xml:space="preserve">
-        <value>test</value>
-    </data>
 </root>

@@ -25,6 +25,11 @@
       <_ContentIncludedByDefault Remove="Views\FormOrigin\Details.cshtml" />
       <_ContentIncludedByDefault Remove="Views\FormOrigin\Edit.cshtml" />
       <_ContentIncludedByDefault Remove="Views\FormOrigin\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FormCreator\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FormCreator\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FormCreator\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FormCreator\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\FormCreator\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -55,6 +60,26 @@
       <EmbeddedResource Update="Resources\Views.FormCreator.Index.resx">
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Views.FormCreator.Index.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.FormCreator.Create.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.FormCreator.Create.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Models.Form.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Models.Form.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.FormCreator.Edit.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.FormCreator.Create.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.FormCreator.Delete.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.FormCreator.Create.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.FormCreator.Details.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.FormCreator.Details.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
 
@@ -93,6 +118,31 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Views.FormCreator.Index.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views.FormCreator.Create.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.FormCreator.Create.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Models.Form.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Models.Form.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views.FormCreator.Edit.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.FormCreator.Edit.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views.FormCreator.Delete.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.FormCreator.Delete.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views.FormCreator.Details.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.FormCreator.Details.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

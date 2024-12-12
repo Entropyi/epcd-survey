@@ -20,4 +20,7 @@
     <data name="formTitle" xml:space="preserve">
         <value>Choose the target sector</value>
     </data>
+    <data name="Return" xml:space="preserve">
+        <value>Controls</value>
+    </data>
 </root>
