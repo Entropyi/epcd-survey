@@ -4,6 +4,7 @@ using feedback.Data;
 using Microsoft.AspNetCore.Mvc;
 using feedback.Models;
 using feedback.Shared;
+using Microsoft.EntityFrameworkCore;
 
 namespace feedback.Controllers;
 
@@ -29,9 +30,7 @@ public class FormController : Controller
         
         ViewData["Category"] = category;
         
-        ViewBag.Form = await _context.Form.FindAsync(FormID);
-        
-        
+      
         return View();
     }
 

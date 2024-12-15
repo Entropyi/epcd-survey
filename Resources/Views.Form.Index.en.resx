@@ -44,9 +44,6 @@
     <data name="Sex2" xml:space="preserve">
         <value>Female</value>
     </data>
-    <data name="labelName3" xml:space="preserve">
-        <value>Educational Qualifications</value>
-    </data>
     <data name="eduLabel5" xml:space="preserve">
         <value>Higher Education</value>
     </data>
@@ -66,7 +63,7 @@
         <value>Environmental Awareness and Attitudes</value>
     </data>
     <data name="labelName4" xml:space="preserve">
-        <value>I care about the source of environmental information</value>
+        <value>The private sector should participate in raising environmental awareness</value>
     </data>
     <data name="vote5" xml:space="preserve">
         <value>Strongly disagree</value>
@@ -118,5 +115,8 @@
     </data>
     <data name="submit" xml:space="preserve">
         <value>Send</value>
+    </data>
+    <data name="labelName3" xml:space="preserve">
+        <value>Educational Qualification</value>
     </data>
 </root>

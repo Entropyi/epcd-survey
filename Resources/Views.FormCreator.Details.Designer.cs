@@ -60,11 +60,241 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to السؤال الأول.
+        ///   Looks up a localized string similar to أقل من 25.
         /// </summary>
-        internal static string QuestionOne {
+        internal static string answerAge1 {
             get {
-                return ResourceManager.GetString("QuestionOne", resourceCulture);
+                return ResourceManager.GetString("answerAge1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to من 26 الى 35.
+        /// </summary>
+        internal static string answerAge2 {
+            get {
+                return ResourceManager.GetString("answerAge2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to من 36 الى 46.
+        /// </summary>
+        internal static string answerAge3 {
+            get {
+                return ResourceManager.GetString("answerAge3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to أعلى من 45.
+        /// </summary>
+        internal static string answerAge4 {
+            get {
+                return ResourceManager.GetString("answerAge4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to موافق بشدة.
+        /// </summary>
+        internal static string answerScale1 {
+            get {
+                return ResourceManager.GetString("answerScale1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to موافق.
+        /// </summary>
+        internal static string answerScale2 {
+            get {
+                return ResourceManager.GetString("answerScale2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to غير متأكد.
+        /// </summary>
+        internal static string answerScale3 {
+            get {
+                return ResourceManager.GetString("answerScale3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to غير موافق
+        ///.
+        /// </summary>
+        internal static string answerScale4 {
+            get {
+                return ResourceManager.GetString("answerScale4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to غير موافق بشدة
+        ///.
+        /// </summary>
+        internal static string answerScale5 {
+            get {
+                return ResourceManager.GetString("answerScale5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ابتدائي
+        ///.
+        /// </summary>
+        internal static string asnwerEdu1 {
+            get {
+                return ResourceManager.GetString("asnwerEdu1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to متوسط.
+        /// </summary>
+        internal static string asnwerEdu2 {
+            get {
+                return ResourceManager.GetString("asnwerEdu2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ثانوي.
+        /// </summary>
+        internal static string asnwerEdu3 {
+            get {
+                return ResourceManager.GetString("asnwerEdu3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to بكالوريوس.
+        /// </summary>
+        internal static string asnwerEdu4 {
+            get {
+                return ResourceManager.GetString("asnwerEdu4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تعليم عالي
+        ///.
+        /// </summary>
+        internal static string asnwerEdu5 {
+            get {
+                return ResourceManager.GetString("asnwerEdu5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ذكر.
+        /// </summary>
+        internal static string asnwerSex1 {
+            get {
+                return ResourceManager.GetString("asnwerSex1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to انثى.
+        /// </summary>
+        internal static string asnwerSex2 {
+            get {
+                return ResourceManager.GetString("asnwerSex2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الجنس.
+        /// </summary>
+        internal static string labelName2 {
+            get {
+                return ResourceManager.GetString("labelName2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المؤهل الدراسي.
+        /// </summary>
+        internal static string labelName3 {
+            get {
+                return ResourceManager.GetString("labelName3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to على القطاع الخاص المشاركة في رفع الوعي البيئي.
+        /// </summary>
+        internal static string labelName4 {
+            get {
+                return ResourceManager.GetString("labelName4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to اهتمام المجتمع بالقضايا البيئية يساعد في زيادة الوعي البيئي.
+        /// </summary>
+        internal static string labelName5 {
+            get {
+                return ResourceManager.GetString("labelName5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to لا أتردد في الإبلاغ عن أي سلوك ضار بالبيئة إلى الجهات المختصة.
+        /// </summary>
+        internal static string labelName6 {
+            get {
+                return ResourceManager.GetString("labelName6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to لا أتردد في المشاركة في أي برنامج بيئي في مدينة ينبع الصناعية.
+        /// </summary>
+        internal static string labelName7 {
+            get {
+                return ResourceManager.GetString("labelName7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تهمني القضايا البيئية التي يتم طرحها من خلال وسائل الإعلام المختلفة.
+        /// </summary>
+        internal static string labelName8 {
+            get {
+                return ResourceManager.GetString("labelName8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to البرامج التعليمية في المدارس تتميز بنطاق واسع لزيادة المعرفة البيئية لدى الطلبة
+        ///.
+        /// </summary>
+        internal static string labelName9 {
+            get {
+                return ResourceManager.GetString("labelName9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الأول :.
+        /// </summary>
+        internal static string one {
+            get {
+                return ResourceManager.GetString("one", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to رجوع.
+        /// </summary>
+        internal static string Return {
+            get {
+                return ResourceManager.GetString("Return", resourceCulture);
             }
         }
     }

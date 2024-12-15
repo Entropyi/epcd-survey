@@ -231,7 +231,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to اﻟﺟﻧس.
+        ///   Looks up a localized string similar to الجنس.
         /// </summary>
         internal static string labelName2 {
             get {
@@ -249,7 +249,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to اﻟﺑﯾﺋﻲ اﻟوﻋﻲ رﻓﻊ ﻓﻲ اﻟﻣﺷﺎرﻛﺔ اﻟﺧﺎص اﻟﻘطﺎع ﻋﻠﻰ.
+        ///   Looks up a localized string similar to على القطاع الخاص المشاركة في رفع الوعي البيئي.
         /// </summary>
         internal static string labelName4 {
             get {

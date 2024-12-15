@@ -43,7 +43,7 @@
         <value>أعلى من 45</value>
     </data>
     <data name="labelName2" xml:space="preserve">
-        <value>اﻟﺟﻧس</value>
+        <value>الجنس</value>
     </data>
     <data name="Sex1" xml:space="preserve">
         <value>ذكر</value>
@@ -73,7 +73,7 @@
         <value>الوعي البيئي والاتجاهات</value>
     </data>
     <data name="labelName4" xml:space="preserve">
-        <value>اﻟﺑﯾﺋﻲ اﻟوﻋﻲ رﻓﻊ ﻓﻲ اﻟﻣﺷﺎرﻛﺔ اﻟﺧﺎص اﻟﻘطﺎع ﻋﻠﻰ</value>
+        <value>على القطاع الخاص المشاركة في رفع الوعي البيئي</value>
     </data>
     <data name="vote1" xml:space="preserve">
         <value>موافق بشدة</value>
