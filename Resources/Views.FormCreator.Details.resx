@@ -53,12 +53,10 @@
         <value>غير متأكد</value>
     </data>
     <data name="answerScale4" xml:space="preserve">
-        <value>غير موافق
-</value>
+        <value>غير موافق</value>
     </data>
     <data name="answerScale5" xml:space="preserve">
-        <value>غير موافق بشدة
-</value>
+        <value>غير موافق بشدة</value>
     </data>
     <data name="asnwerSex1" xml:space="preserve">
         <value>ذكر</value>
@@ -67,8 +65,7 @@
         <value>انثى</value>
     </data>
     <data name="asnwerEdu1" xml:space="preserve">
-        <value>ابتدائي
-</value>
+        <value>ابتدائي</value>
     </data>
     <data name="asnwerEdu2" xml:space="preserve">
         <value>متوسط</value>
@@ -80,8 +77,7 @@
         <value>بكالوريوس</value>
     </data>
     <data name="asnwerEdu5" xml:space="preserve">
-        <value>تعليم عالي
-</value>
+        <value>تعليم عالي</value>
     </data>
     <data name="answerAge1" xml:space="preserve">
         <value>أقل من 25</value>

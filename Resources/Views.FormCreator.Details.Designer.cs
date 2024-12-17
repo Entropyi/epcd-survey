@@ -123,8 +123,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to غير موافق
-        ///.
+        ///   Looks up a localized string similar to غير موافق.
         /// </summary>
         internal static string answerScale4 {
             get {
@@ -133,8 +132,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to غير موافق بشدة
-        ///.
+        ///   Looks up a localized string similar to غير موافق بشدة.
         /// </summary>
         internal static string answerScale5 {
             get {
@@ -143,8 +141,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ابتدائي
-        ///.
+        ///   Looks up a localized string similar to ابتدائي.
         /// </summary>
         internal static string asnwerEdu1 {
             get {
@@ -180,8 +177,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to تعليم عالي
-        ///.
+        ///   Looks up a localized string similar to تعليم عالي.
         /// </summary>
         internal static string asnwerEdu5 {
             get {

@@ -41,8 +41,60 @@
       "PackagePath": "staticwebassets\\fonts\\PingAR_LT_Regular.otf"
     },
     {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\chartjs-plugin-datalabels\\LICENSE.md",
+      "PackagePath": "staticwebassets\\js\\chartjs-plugin-datalabels\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\chartjs-plugin-datalabels\\README.md",
+      "PackagePath": "staticwebassets\\js\\chartjs-plugin-datalabels\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.esm.js",
+      "PackagePath": "staticwebassets\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.js",
+      "PackagePath": "staticwebassets\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.min.js",
+      "PackagePath": "staticwebassets\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.min.js"
+    },
+    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\README.md",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\dist\\color.cjs",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\dist\\color.cjs"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\dist\\color.d.ts",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\dist\\color.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\dist\\color.esm.js",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\dist\\color.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\dist\\color.min.js",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\dist\\color.min.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\dist\\color.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\dist\\color.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\package.json",
+      "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\package.json"
     },
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -223,6 +275,462 @@
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\README.md",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\auto\\auto.cjs",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\auto\\auto.cjs"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\auto\\auto.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\auto\\auto.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\auto\\auto.js",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\auto\\auto.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\auto\\package.json",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\auto\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chart.cjs",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chart.cjs"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chart.cjs.map",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chart.cjs.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chart.js",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chart.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chart.js.map",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chart.js.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chart.umd.js",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chart.umd.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chart.umd.js.map",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chart.umd.js.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chunks\\helpers.segment.cjs",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chunks\\helpers.segment.cjs"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chunks\\helpers.segment.cjs.map",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chunks\\helpers.segment.cjs.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chunks\\helpers.segment.js",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chunks\\helpers.segment.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\chunks\\helpers.segment.js.map",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\chunks\\helpers.segment.js.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.bar.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.bar.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.bubble.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.bubble.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.doughnut.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.doughnut.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.line.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.line.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.pie.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.pie.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.polarArea.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.polarArea.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.radar.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.radar.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\controller.scatter.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\controller.scatter.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\controllers\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\controllers\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.adapters.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.adapters.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.animation.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.animation.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.animations.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.animations.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.animations.defaults.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.animations.defaults.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.animator.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.animator.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.config.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.config.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.controller.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.controller.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.datasetController.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.datasetController.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.defaults.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.defaults.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.element.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.element.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.interaction.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.interaction.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.layouts.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.layouts.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.layouts.defaults.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.layouts.defaults.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.plugins.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.plugins.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.registry.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.registry.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.scale.autoskip.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.scale.autoskip.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.scale.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.scale.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.scale.defaults.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.scale.defaults.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.ticks.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.ticks.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\core.typedRegistry.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\core.typedRegistry.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\core\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\core\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\elements\\element.arc.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\elements\\element.arc.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\elements\\element.bar.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\elements\\element.bar.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\elements\\element.line.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\elements\\element.line.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\elements\\element.point.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\elements\\element.point.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\elements\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\elements\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers.cjs",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers.cjs"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers.cjs.map",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers.cjs.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers.js",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers.js.map",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers.js.map"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.canvas.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.canvas.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.collection.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.collection.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.color.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.color.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.config.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.config.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.config.types.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.config.types.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.core.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.core.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.curve.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.curve.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.dom.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.dom.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.easing.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.easing.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.extras.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.extras.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.interpolation.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.interpolation.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.intl.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.intl.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.math.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.math.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.options.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.options.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.rtl.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.rtl.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\helpers.segment.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\helpers.segment.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\helpers\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\helpers\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\index.umd.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\index.umd.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\platform\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\platform\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\platform\\platform.base.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\platform\\platform.base.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\platform\\platform.basic.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\platform\\platform.basic.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\platform\\platform.dom.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\platform\\platform.dom.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.colors.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.colors.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.decimation.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.decimation.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.drawing.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.drawing.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.helper.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.helper.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.options.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.options.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.segment.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.segment.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.target.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.target.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.target.stack.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\filler.target.stack.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.filler\\simpleArc.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.filler\\simpleArc.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.legend.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.legend.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.subtitle.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.subtitle.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.title.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.title.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\plugins\\plugin.tooltip.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\plugins\\plugin.tooltip.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\scale.category.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\scale.category.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\scale.linear.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\scale.linear.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\scale.linearbase.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\scale.linearbase.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\scale.logarithmic.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\scale.logarithmic.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\scale.radialLinear.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\scale.radialLinear.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\scale.time.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\scale.time.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\scales\\scale.timeseries.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\scales\\scale.timeseries.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types\\animation.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types\\animation.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types\\basic.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types\\basic.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types\\color.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types\\color.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types\\geometric.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types\\geometric.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types\\layout.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types\\layout.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\dist\\types\\utils.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\dist\\types\\utils.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\helpers\\helpers.cjs",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\helpers\\helpers.cjs"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\helpers\\helpers.d.ts",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\helpers\\helpers.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\helpers\\helpers.js",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\helpers\\helpers.js"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\helpers\\package.json",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\helpers\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\chart.js\\package.json",
+      "PackagePath": "staticwebassets\\lib\\chart.js\\package.json"
     },
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

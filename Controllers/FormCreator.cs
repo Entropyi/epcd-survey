@@ -12,6 +12,12 @@ namespace feedback.Controllers
 {
     public class FormCreator : Controller
     {
+        public enum Sexes
+        {
+            Male,
+            Female
+        };
+
         private readonly ApplicationDbContext _context;
 
         public FormCreator(ApplicationDbContext context)
@@ -41,82 +47,196 @@ namespace feedback.Controllers
 
             var formEntry = _context.FormEntry.Where(fe => fe.FormId == id).ToList();
 
-            ViewBag.test = formEntry;
+
+            int AgeCount1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 1)
+                .ToList().Count;
+
+            int AgeCount2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 2)
+                .ToList().Count;
+
+            int AgeCount3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 3)
+                .ToList().Count;
+
+            int AgeCount4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 4)
+                .ToList().Count;
+
+            int eduCount1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Education == 1)
+                .ToList().Count;
+
+            int eduCount2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Education == 2)
+                .ToList().Count;
+
+            int eduCount3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Education == 3)
+                .ToList().Count;
+
+            int eduCount4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Education == 4)
+                .ToList().Count;
+
+            int sexesCount1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
+                .ToList().Count;
+
+            int sexesCount2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
+                .ToList().Count;
 
 
-            int Scale1Count1 = 0;
-            int Scale1Count2 = 0;
-            int Scale1Count3 = 0;
-            int Scale1Count4 = 0;
-            int Scale1Count5 = 0;
+            int Scale1Count1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale1 == 1)
+                .ToList().Count;
+
+            int Scale1Count2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale1 == 2)
+                .ToList().Count;
+
+            int Scale1Count3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale1 == 3)
+                .ToList().Count;
+
+            int Scale1Count4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale1 == 4)
+                .ToList().Count;
+
+            int Scale1Count5 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale1 == 5)
+                .ToList().Count;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+            int Scale2Count1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale2 == 1)
+                .ToList().Count;
+
+            int Scale2Count2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale2 == 2)
+                .ToList().Count;
+
+            int Scale2Count3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale2 == 3)
+                .ToList().Count;
+
+            int Scale2Count4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale2 == 4)
+                .ToList().Count;
+
+            int Scale2Count5 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale2 == 5)
+                .ToList().Count;
             
-            int AgeCount1 = 0;
-            int AgeCount2 = 0;
-            int AgeCount3 = 0;
-            int AgeCount4 = 0;
-
             
+            int Scale3Count1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale3 == 1)
+                .ToList().Count;
 
-            foreach (var entry in formEntry)
-            {
-                if (entry.Scale2 == 1)
-                {
-                    Scale1Count1 += 1;
-                }
+            int Scale3Count2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale3 == 2)
+                .ToList().Count;
 
-                if (entry.Scale2 == 2)
-                {
-                    Scale1Count2 += 1;
-                }
+            int Scale3Count3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale3 == 3)
+                .ToList().Count;
 
-                if (entry.Scale2 == 3)
-                {
-                    Scale1Count3 += 1;
-                }
+            int Scale3Count4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale3 == 4)
+                .ToList().Count;
 
-                if (entry.Scale2 == 4)
-                {
-                    Scale1Count4 += 1;
-                }
+            int Scale3Count5 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale3 == 5)
+                .ToList().Count;    
+            
+            int Scale4Count1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale4 == 1)
+                .ToList().Count;
 
-                if (entry.Scale2 == 5)
-                {
-                    Scale1Count4 += 1;
-                }     
-                
-                if (entry.AgeGroup == 1)
-                {
-                    AgeCount1 += 1;
-                }
+            int Scale4Count2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale4 == 2)
+                .ToList().Count;
 
-                if (entry.AgeGroup == 2)
-                {
-                    AgeCount1 += 1;
-                }
+            int Scale4Count3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale4 == 3)
+                .ToList().Count;
 
-                if (entry.AgeGroup == 3)
-                {
-                    AgeCount1 += 1;
-                }
+            int Scale4Count4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale4 == 4)
+                .ToList().Count;
 
-                if (entry.AgeGroup == 4)
-                {
-                    AgeCount1 += 1;
-                }
-                
-            }
+            int Scale4Count5 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Scale4 == 5)
+                .ToList().Count;
+
 
             ViewBag.Scale1Count1 = Scale1Count1;
             ViewBag.Scale1Count2 = Scale1Count2;
             ViewBag.Scale1Count3 = Scale1Count3;
             ViewBag.Scale1Count4 = Scale1Count4;
-            ViewBag.Scale1Count5 = Scale1Count5;   
+            ViewBag.Scale1Count5 = Scale1Count5;
             
+            ViewBag.Scale2Count1 = Scale2Count1;
+            ViewBag.Scale2Count2 = Scale2Count2;
+            ViewBag.Scale2Count3 = Scale2Count3;
+            ViewBag.Scale2Count4 = Scale2Count4;
+            ViewBag.Scale2Count5 = Scale2Count5;    
             
+            ViewBag.Scale3Count1 = Scale3Count1;
+            ViewBag.Scale3Count2 = Scale3Count2;
+            ViewBag.Scale3Count3 = Scale3Count3;
+            ViewBag.Scale3Count4 = Scale3Count4;
+            ViewBag.Scale3Count5 = Scale3Count5; 
+            
+            ViewBag.Scale4Count1 = Scale4Count1;
+            ViewBag.Scale4Count2 = Scale4Count2;
+            ViewBag.Scale4Count3 = Scale4Count3;
+            ViewBag.Scale4Count4 = Scale4Count4;
+            ViewBag.Scale4Count5 = Scale4Count5;
+
+            ViewBag.eduCount1 = eduCount1;
+            ViewBag.eduCount2 = eduCount2;
+            ViewBag.eduCount3 = eduCount3;
+            ViewBag.eduCount4 = eduCount4;
+
             ViewBag.AgeCount1 = AgeCount1;
             ViewBag.AgeCount2 = AgeCount2;
             ViewBag.AgeCount3 = AgeCount3;
             ViewBag.AgeCount4 = AgeCount4;
+
+            ViewBag.Sex1 = sexesCount1;
+            ViewBag.Sex2 = sexesCount2;
 
             ViewBag.PageTitle = form.FormTitleAr;
             ViewBag.Question1 = form.Question1;

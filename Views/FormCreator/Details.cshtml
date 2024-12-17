@@ -9,14 +9,9 @@
 }
 
 
-@Model.FormTitleAr
-@foreach (var entry in (List<FormEntry>)ViewBag.test)
-{
-    <li>Entry ID: @entry.Id, Data: @entry.AgeGroup</li>
-}
-
-
 @await Html.PartialAsync("Header")
+
+
 <div class="return-super-container">
     <form asp-action="Index" class="return-container">
         <a class="return-text" asp-action="Index">@Localizer["Return"]</a>
@@ -24,33 +19,405 @@
 </div>
 
 
-
 <div class="form__super-title-container">
-    <h1 class="form__super-title-text" id="formTitle">
-        @ViewBag.PageTitle
-    </h1>
 
+    <div class="title-super-container">
+        <div class="title-sup-container">
+            <h1 class="form__super-title-text" id="formTitle">
+                @ViewBag.PageTitle
+            </h1>
+        </div>
+    </div>
 
     <div class="form__create-container">
 
-        <div class="form__create-input-container">
-            <div class="form__input_inner-container">
-                <label class="form__label-text">@Localizer["one"]</label>
-                <label class="form__label-text">@ViewBag.Question1</label>
+        <div class="chart-super-container">
+            <div class="chart-sub-container">
+                <div class="chart-question-container">
+                    <label class="form__label-text">@Localizer["one"]</label>
+                    <label class="form__label-text">@ViewBag.Question1</label>
+                </div>
+
+                <canvas id="Question1" width="400" height="200"></canvas>
             </div>
-            
-            <canvas id="QuestionOne" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <div class="form__create-container">
+
+        <div class="chart-super-container">
+            <div class="chart-sub-container">
+                <div class="chart-question-container">
+                    <label class="form__label-text">@Localizer["one"]</label>
+                    <label class="form__label-text">@ViewBag.Question2</label>
+                </div>
+
+                <canvas id="Question2" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__create-container">
+
+        <div class="chart-super-container">
+            <div class="chart-sub-container">
+                <div class="chart-question-container">
+                    <label class="form__label-text">@Localizer["one"]</label>
+                    <label class="form__label-text">@ViewBag.Question3</label>
+                </div>
+
+                <canvas id="Question3" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__create-container">
+
+        <div class="chart-super-container">
+            <div class="chart-sub-container">
+                <div class="chart-question-container">
+                    <label class="form__label-text">@Localizer["one"]</label>
+                    <label class="form__label-text">@ViewBag.Question4</label>
+                </div>
+
+                <canvas id="Question4" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__create-container">
+
+        <div class="chart-super-container">
+            <div class="chart-sub-container">
+                <div class="chart-question-container">
+                    <label class="form__label-text">@Localizer["one"]</label>
+                    <label class="form__label-text">@ViewBag.Question4</label>
+                </div>
+
+                <canvas id="Question5" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__create-container">
+
+        <div class="chart-super-container">
+            <div class="chart-sub-container">
+                <div class="chart-question-container">
+                    <label class="form__label-text">@Localizer["one"]</label>
+                    <label class="form__label-text">@ViewBag.Question5</label>
+                </div>
+
+                <canvas id="Question6" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none">
+        <div class="form__create-container">
+
+            <div class="chart-super-container">
+                <div class="chart-sub-container">
+                    <div class="chart-question-container">
+                        <label class="form__label-text">@Localizer["one"]</label>
+                        <label class="form__label-text">@ViewBag.Question6</label>
+                    </div>
+
+                    <canvas id="Question7" width="400" height="200"></canvas>
+                </div>
+            </div>
         </div>
 
+        <div class="form__create-container">
 
+            <div class="chart-super-container">
+                <div class="chart-sub-container">
+                    <div class="chart-question-container">
+                        <label class="form__label-text">@Localizer["one"]</label>
+                        <label class="form__label-text">@ViewBag.Question7</label>
+                    </div>
+
+                    <canvas id="Question8" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__create-container">
+
+            <div class="chart-super-container">
+                <div class="chart-sub-container">
+                    <div class="chart-question-container">
+                        <label class="form__label-text">@Localizer["one"]</label>
+                        <label class="form__label-text">@ViewBag.Question8</label>
+                    </div>
+
+                    <canvas id="Question9" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__create-container">
+
+            <div class="chart-super-container">
+                <div class="chart-sub-container">
+                    <div class="chart-question-container">
+                        <label class="form__label-text">@Localizer["one"]</label>
+                        <label class="form__label-text">@ViewBag.Question9</label>
+                    </div>
+
+                    <canvas id="Question10" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__create-container">
+
+            <div class="chart-super-container">
+                <div class="chart-sub-container">
+                    <div class="chart-question-container">
+                        <label class="form__label-text">@Localizer["one"]</label>
+                        <label class="form__label-text">@ViewBag.Question10</label>
+                    </div>
+
+                    <canvas id="Question11" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__create-container">
+
+            <div class="chart-super-container">
+                <div class="chart-sub-container">
+                    <div class="chart-question-container">
+                        <label class="form__label-text">@Localizer["one"]</label>
+                        <label class="form__label-text">@ViewBag.Question11</label>
+                    </div>
+
+                    <canvas id="Question12" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__create-container">
+
+            <div class="chart-super-container">
+                <div class="chart-sub-container">
+                    <div class="chart-question-container">
+                        <label class="form__label-text">@Localizer["one"]</label>
+                        <label class="form__label-text">@ViewBag.Question12</label>
+                    </div>
+
+                    <canvas id="Question13" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+        
     </div>
+
+
+    
 
 </div>
 
 <script>
-    var ctx = document.getElementById('QuestionOne').getContext('2d');
-        
-    var charOne = new Chart(ctx, {
+
+    const Question1 = document.getElementById('Question1').getContext('2d');
+    const Question2 = document.getElementById('Question2').getContext('2d');
+    const Question3 = document.getElementById('Question3').getContext('2d');
+    const Question4 = document.getElementById('Question4').getContext('2d');
+    const Question5 = document.getElementById('Question5').getContext('2d');
+    const Question6 = document.getElementById('Question6').getContext('2d');
+    const Question7 = document.getElementById('Question7').getContext('2d');
+    const Question8 = document.getElementById('Question8').getContext('2d');
+    const Question9 = document.getElementById('Question9').getContext('2d');
+    const Question10 = document.getElementById('Question10').getContext('2d');
+    const Question11 = document.getElementById('Question11').getContext('2d');
+    const Question12 = document.getElementById('Question12').getContext('2d');
+    const Question13 = document.getElementById('Question13').getContext('2d');
+
+    
+    const chart1 = new Chart(Question1, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["answerAge1"]',
+            '@Localizer["answerAge2"]',
+            '@Localizer["answerAge3"]',
+            '@Localizer["answerAge4"]'],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                    @ViewBag.eduCount1,
+                    @ViewBag.eduCount2,
+                    @ViewBag.eduCount3,
+                    @ViewBag.eduCount4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    }); const chart2 = new Chart(Question2, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["asnwerSex1"]',
+            '@Localizer["asnwerSex2"]'
+            ],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.Sex1,
+                @ViewBag.Sex2
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    }); const chart3 = new Chart(Question3, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+                '@Localizer["asnwerEdu1"]',
+                '@Localizer["asnwerEdu2"]',
+                '@Localizer["asnwerEdu3"]',
+                '@Localizer["asnwerEdu4"]',
+                '@Localizer["asnwerEdu5"]'
+               ],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.AgeCount1,
+                @ViewBag.AgeCount2,
+                @ViewBag.AgeCount3, 
+                @ViewBag.AgeCount4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+    
+    const chart4 = new Chart(Question4, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["answerScale1"]',
+            '@Localizer["answerScale2"]',
+            '@Localizer["answerScale3"]',
+            '@Localizer["answerScale4"]',
+            '@Localizer["answerScale5"]',], // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.Scale1Count1,
+                @ViewBag.Scale1Count2,
+                @ViewBag.Scale1Count3, 
+                @ViewBag.Scale1Count4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }],
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const chart5 = new Chart(Question5, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',], // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                    @ViewBag.Scale2Count1,
+                    @ViewBag.Scale2Count2,
+                    @ViewBag.Scale2Count3,
+                    @ViewBag.Scale2Count4
+                ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }],
+        },
+        options: {
+            responsive: true
+        }
+    }); 
+    
+    const chart6 = new Chart(Question6, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',], // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                    @ViewBag.Scale3Count1,
+                    @ViewBag.Scale3Count2,
+                    @ViewBag.Scale3Count3,
+                    @ViewBag.Scale3Count4
+                ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }],
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const chart7 = new Chart(Question7, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',], // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                    @ViewBag.Scale4Count1,
+                    @ViewBag.Scale4Count2,
+                    @ViewBag.Scale4Count3,
+                    @ViewBag.Scale4Count4
+                ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }],
+        },
+        options: {
+            responsive: true
+        }
+    }); 
+    
+    const chart8 = new Chart(Question8, {
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
@@ -74,6 +441,137 @@
         options: {
             responsive: true
         }
+    }); 
+    
+    const chart9 = new Chart(Question9, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["answerAge1"]',
+            '@Localizer["answerAge2"]',
+            '@Localizer["answerAge3"]',
+            '@Localizer["answerAge4"]'],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.AgeCount1,
+                @ViewBag.AgeCount2,
+                @ViewBag.AgeCount3, 
+                @ViewBag.AgeCount4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
     });
+
+    const chart10 = new Chart(Question10, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["answerAge1"]',
+            '@Localizer["answerAge2"]',
+            '@Localizer["answerAge3"]',
+            '@Localizer["answerAge4"]'],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.AgeCount1,
+                @ViewBag.AgeCount2,
+                @ViewBag.AgeCount3, 
+                @ViewBag.AgeCount4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    }); 
+    
+    const chart11 = new Chart(Question11, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["answerAge1"]',
+            '@Localizer["answerAge2"]',
+            '@Localizer["answerAge3"]',
+            '@Localizer["answerAge4"]'],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.AgeCount1,
+                @ViewBag.AgeCount2,
+                @ViewBag.AgeCount3, 
+                @ViewBag.AgeCount4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const chart12 = new Chart(Question12, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["answerAge1"]',
+            '@Localizer["answerAge2"]',
+            '@Localizer["answerAge3"]',
+            '@Localizer["answerAge4"]'],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.AgeCount1,
+                @ViewBag.AgeCount2,
+                @ViewBag.AgeCount3, 
+                @ViewBag.AgeCount4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const chart13 = new Chart(Question13, {
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+            '@Localizer["answerAge1"]',
+            '@Localizer["answerAge2"]',
+            '@Localizer["answerAge3"]',
+            '@Localizer["answerAge4"]'],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question1)',
+                data: [
+                @ViewBag.AgeCount1,
+                @ViewBag.AgeCount2,
+                @ViewBag.AgeCount3, 
+                @ViewBag.AgeCount4
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
 
 </script>

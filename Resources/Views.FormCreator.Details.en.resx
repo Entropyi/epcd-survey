@@ -50,24 +50,16 @@
         <value>Between 36 to 46</value>
     </data>
     <data name="asnwerEdu1" xml:space="preserve">
-        <value>Elementary Education
-</value>
+        <value>Elementary Education</value>
     </data>
     <data name="asnwerEdu3" xml:space="preserve">
-        <value>High School Education
-</value>
+        <value>High School Education</value>
     </data>
     <data name="asnwerEdu2" xml:space="preserve">
-        <value>Secondary Education
-</value>
-    </data>
-    <data name="asnwerEdu4" xml:space="preserve">
-        <value>Bachelor's Degree
-</value>
+        <value>Secondary Education</value>
     </data>
     <data name="asnwerEdu5" xml:space="preserve">
-        <value>Higher Education
-</value>
+        <value>Higher Education</value>
     </data>
     <data name="asnwerSex1" xml:space="preserve">
         <value>Male</value>
@@ -76,27 +68,27 @@
         <value>Female</value>
     </data>
     <data name="answerScale1" xml:space="preserve">
-        <value>Strongly agree
-</value>
+        <value>Strongly agree</value>
     </data>
     <data name="answerScale2" xml:space="preserve">
         <value>Agree</value>
     </data>
     <data name="answerScale3" xml:space="preserve">
-        <value>Not sure
-</value>
+        <value>Not sure</value>
     </data>
     <data name="answerScale4" xml:space="preserve">
         <value>Disagree</value>
     </data>
     <data name="answerScale5" xml:space="preserve">
-        <value>Strongly disagree
-</value>
+        <value>Strongly disagree</value>
     </data>
     <data name="one" xml:space="preserve">
-        <value>Question 1  :</value>
+        <value>Question 1 :</value>
     </data>
     <data name="Return" xml:space="preserve">
         <value>Return</value>
+    </data>
+    <data name="asnwerEdu4" xml:space="preserve">
+        <value>Bachelor Degree</value>
     </data>
 </root>
