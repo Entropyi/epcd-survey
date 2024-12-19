@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\area.css"
     },
     {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\auth.css",
+      "PackagePath": "staticwebassets\\css\\auth.css"
+    },
+    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\form.css",
       "PackagePath": "staticwebassets\\css\\form.css"
     },

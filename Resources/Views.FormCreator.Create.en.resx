@@ -135,4 +135,7 @@
     <data name="Submit" xml:space="preserve">
         <value>Save</value>
     </data>
+    <data name="add" xml:space="preserve">
+        <value>Add a question</value>
+    </data>
 </root>

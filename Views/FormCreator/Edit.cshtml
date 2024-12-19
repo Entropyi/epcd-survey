@@ -4,9 +4,14 @@
 @inject IViewLocalizer Localizer
 @{
 ViewData["Title"] = "asdasdda";
-}
 
+
+
+
+
+}
 @await Html.PartialAsync("Header")
+
 
 <div class="return-super-container">
     <form asp-action="Index" class="return-container">
@@ -564,7 +569,7 @@ ViewData["Title"] = "asdasdda";
                     </div>
                 </div>
 
-                <div class="form__input-container">
+                <div class="form__input-container" style="display: @ViewBag.Question11Display">
                     <div class="form__input-container">
                         <label class="form__label-text">@Localizer["Question11"]</label>
                         <div class="form__create-container">
@@ -612,7 +617,7 @@ ViewData["Title"] = "asdasdda";
                     </div>
                 </div>
 
-                <div class="form__input-container">
+                <div class="form__input-container" style="display: @ViewBag.Question11Display">
                     <div class="form__input-container">
                         <label class="form__label-text">@Localizer["Question12"]</label>
                         <div class="form__create-container">
@@ -661,7 +666,7 @@ ViewData["Title"] = "asdasdda";
                     </div>
                 </div>
 
-                <div class="form__input-container">
+                <div class="form__input-container" style="display: @ViewBag.Question11Display">
                     <div class="form__input-container">
                         <label class="form__label-text">@Localizer["Question13"]</label>
                         <div class="form__create-container">

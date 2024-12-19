@@ -1,12 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace feedback.Models;
 
 public class Form
 {
     public int id { get; set; }
-    
-    
+
+
     [Required] public string? FormTitleAr { get; set; }
     [Required] public string? FormTitleEn { get; set; }
 
@@ -37,13 +38,9 @@ public class Form
 
     [Required] public string? Question10 { get; set; }
 
-
-    [Required] public string? Question11 { get; set; }
-
-
-    [Required] public string? Question12 { get; set; }
-
-    [Required] public string? Question13 { get; set; }
+    public string? Question11 { get; set; }
+    public string? Question12 { get; set; }
+    public string? Question13 { get; set; }
 
 
     [Required] public string? Question1EN { get; set; }
@@ -56,10 +53,11 @@ public class Form
     [Required] public string? Question8EN { get; set; }
     [Required] public string? Question9EN { get; set; }
     [Required] public string? Question10EN { get; set; }
-    [Required] public string? Question11EN { get; set; }
-    [Required] public string? Question12EN { get; set; }
-    [Required] public string? Question13EN { get; set; }
     
+    public string? Question11EN { get; set; }
+    public string? Question12EN { get; set; }
+    public string? Question13EN { get; set; }
+
     [Required] public string? OpenQuestionAr { get; set; }
     [Required] public string? OpenQuestionEn { get; set; }
 
@@ -67,4 +65,6 @@ public class Form
     public ICollection<FormEntry> FormEntries { get; set; } = new List<FormEntry>();
 
     [Required] public DateTime? CreationDate { get; init; } = DateTime.Now;
+    
+    public DateTime? UpdateDate { get; init; } = DateTime.Now;
 }

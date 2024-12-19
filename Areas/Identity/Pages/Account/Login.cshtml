@@ -1,0 +1,68 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+@await Html.PartialAsync("Header")
+
+<form id="account" method="post" class="login-super-container">
+    <div class="login-types-container">
+        <div asp-validation-summary="All" class="text-danger" role="alert"></div>
+        <div class="login-title-container">
+            <h1 class="login-title">تسجيل الدخول</h1>
+        </div>
+        
+        <div class="login-container">
+            <div class="login-items-container">
+                <div class="login-group">
+                    <div class="email-container">
+                        <input asp-for="Input.Email" class="form__input__small" autocomplete="username" aria-required="true" placeholder="name@example.com"/>
+                        <label asp-for="Input.Email" class="login-label">Email</label>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="password-container">
+                        <input asp-for="Input.Password" class="form__input__small" autocomplete="current-password" aria-required="true" placeholder="password"/>
+                        <label asp-for="Input.Password" class="login-label">Password</label>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <img id="img-captcha" src="~/captcha-image"/>
+                <input type="text"
+                       asp-for="Input.CaptchaCode"
+                       class="form-control"
+                       placeholder="Captcha Code"
+                       autocomplete="off"
+                       minlength="4"
+                       maxlength="4" />
+            </div>
+
+                <div>
+                    <button  id="login-submit" type="submit" class="login-submit">Log in</button>
+                </div>
+                <p>
+                    <a class="rest-text" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                </p>
+
+            </div>
+
+            
+        </div>
+
+
+        <div>
+        
+            
+        </div>
+
+
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

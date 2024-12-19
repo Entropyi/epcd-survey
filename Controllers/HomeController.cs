@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Edi.Captcha;
 using feedback.Data;
 using Microsoft.AspNetCore.Mvc;
 using feedback.Models;
@@ -8,7 +9,6 @@ namespace feedback.Controllers;
 public class HomeController : Controller
 {
     private readonly ApplicationDbContext _context;
-
 
     private readonly ILogger<HomeController> _logger;
 

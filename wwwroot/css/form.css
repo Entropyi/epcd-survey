@@ -98,7 +98,6 @@
     border-color: var(--secondary-1);
     border-width: 0.2em;
     transition: ease-in 0.8s;
-
 }
 
 .homecard{
@@ -214,6 +213,30 @@
 
 .required-container{
     display: flex;
+}
+
+.add-super-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-container{
+    background-color: var(--secondary-4);
+    padding: 1em;
+    border-radius: 0.2em;
+    border: 0.2em solid transparent;
+}
+
+.add-container:hover{
+    cursor: pointer;
+    transition: ease-in 0.2s;
+    border: 0.2em solid var(--th-Primary);
+}
+
+.add-text{
+    font-family: Font-Bold;
+    color: var(--th-Primary);
 }
 
 @media (max-width: 1218px) {

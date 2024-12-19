@@ -29,8 +29,9 @@ public class FormController : Controller
         Categories.Add("Industry");
         
         ViewData["Category"] = category;
+
+        ViewBag.Form = await _context.Form.FindAsync(FormID);
         
-      
         return View();
     }
 

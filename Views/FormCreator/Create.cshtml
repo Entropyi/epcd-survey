@@ -618,7 +618,7 @@
     </div>
 </div>
 
-<div class="form__input-container">
+<div class="form__input-container" id="Question11Container">
     <div class="form__input-container">
         <label class="form__label-text">@Localizer["Question11"]</label>
         <div class="form__create-container">
@@ -666,7 +666,7 @@
     </div>
 </div>
 
-<div class="form__input-container">
+<div class="form__input-container" id="Question12Container">
     <div class="form__input-container">
         <label class="form__label-text">@Localizer["Question12"]</label>
         <div class="form__create-container">
@@ -715,7 +715,7 @@
     </div>
 </div>
 
-<div class="form__input-container">
+<div class="form__input-container" id="Question13Container">
     <div class="form__input-container">
         <label class="form__label-text">@Localizer["Question13"]</label>
         <div class="form__create-container">
@@ -761,6 +761,14 @@
                 <input class="test" name="Scale3" type="radio" value="@Localizer["vote5"]">
                 <label class="form__label-text-1" for="checkbox1">@Localizer["vote5"]</label>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="add-super-container" id="addContainer">
+    <div class="add-container" id="addQuestion">
+        <div class="add-text">
+            @Localizer["add"]
         </div>
     </div>
 </div>
@@ -831,5 +839,34 @@
 </div>
 
 </form>
-
 </div>
+
+<script>
+    const question11 = document.getElementById("Question11Container");
+    const question12 = document.getElementById("Question12Container");
+    const question13 = document.getElementById("Question13Container");
+    const addQuestion = document.getElementById("addQuestion");
+    const addContainer = document.getElementById("addContainer");
+    
+    question11.style.display = "none";
+    question12.style.display = "none";
+    question13.style.display = "none";
+    
+    let count = 0;
+    
+    addQuestion.addEventListener("click",()=>{
+       if (count == 0){
+           question11.style.display = "grid";
+           count++;
+
+       } else if (count == 1){
+           question12.style.display = "grid";
+           count++;
+       } else {
+           question13.style.display = "grid";
+           addContainer.style.display = "none";
+       }
+    }
+    )
+    
+</script>

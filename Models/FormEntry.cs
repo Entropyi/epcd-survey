@@ -23,25 +23,25 @@ public class FormEntry
 
     [Required(ErrorMessage = "Required")] public Sexes Sex { get; init; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale1 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale1 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale2 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale2 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale3 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale3 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale4 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale4 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale5 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale5 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale6 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale6 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale7 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale7 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale8 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale8 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale9 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale9 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale10 { get; init; }
+    [Required(ErrorMessage = "Required")] public int? Scale10 { get; set; }
 
 
     public string? OpenQuestion { get; init; } = string.Empty;

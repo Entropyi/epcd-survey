@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using feedback.Data;
 using feedback.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace feedback.Controllers
 {
@@ -24,7 +25,8 @@ namespace feedback.Controllers
         {
             _context = context;
         }
-
+        
+        [Authorize]
         // GET: FormCreator
         public async Task<IActionResult> Index()
         {
@@ -33,6 +35,7 @@ namespace feedback.Controllers
                 .ToListAsync());
         }
 
+        [Authorize]
         // GET: FormCreator/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -282,12 +285,15 @@ namespace feedback.Controllers
             return View(form);
         }
 
+        
+        [Authorize]
         // GET: FormCreator/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        [Authorize]
         // POST: FormCreator/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -298,6 +304,9 @@ namespace feedback.Controllers
                 "id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,OpenQuestionAr,OpenQuestionEn,CreationDate")]
             Form form)
         {
+            
+
+            
             if (ModelState.IsValid)
             {
                 _context.Add(form);
@@ -307,7 +316,19 @@ namespace feedback.Controllers
 
             return View(form);
         }
+        
+        public string NullChecker(string value)
+        {
+            if (value == null)
+            {
+                return "none";
+            }
+            return "not null";
+            
+        }
 
+        
+        [Authorize]
         // GET: FormCreator/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -321,10 +342,16 @@ namespace feedback.Controllers
             {
                 return NotFound();
             }
+            
+            ViewBag.Question11Display = NullChecker(form.Question11);
+            ViewBag.Question12Display = NullChecker(form.Question12);
+            ViewBag.Question13Display = NullChecker(form.Question13);
 
             return View(form);
         }
-
+        
+        
+        [Authorize]
         // POST: FormCreator/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -335,11 +362,13 @@ namespace feedback.Controllers
                 "id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,Question14,Question14En,OpenQuestionAr,OpenQuestionEn,CreationDate")]
             Form form)
         {
+            
             if (id != form.id)
             {
                 return NotFound();
             }
-
+            
+            
             if (ModelState.IsValid)
             {
                 try
@@ -358,13 +387,20 @@ namespace feedback.Controllers
                         throw;
                     }
                 }
+                
+                
+                
+                
 
                 return RedirectToAction(nameof(Index));
             }
 
             return View(form);
         }
-
+        
+        
+        
+        [Authorize]
         // GET: FormCreator/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -379,10 +415,16 @@ namespace feedback.Controllers
             {
                 return NotFound();
             }
+            
+            ViewBag.Question11Display = NullChecker(form.Question11);
+            ViewBag.Question12Display = NullChecker(form.Question12);
+            ViewBag.Question13Display = NullChecker(form.Question13);
 
             return View(form);
         }
 
+        
+        [Authorize]
         // POST: FormCreator/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
