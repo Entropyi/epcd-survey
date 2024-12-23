@@ -8,6 +8,12 @@ namespace feedback.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {
+    private readonly UserManager<IdentityUser> _userManager;
+    private readonly IUserStore<IdentityUser> _userStore;
+    private readonly IUserEmailStore<IdentityUser> _emailStore;
+    private readonly ILogger<ApplicationDbContext> _logger;
+
+    
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {

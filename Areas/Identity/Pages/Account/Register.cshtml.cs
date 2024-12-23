@@ -99,21 +99,18 @@ namespace feedback.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
         }
 
-/*
+
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        private readonly int creationAllowed = -1;
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
-        { 
+        {
 
-            if (creationAllowed != -1)
-            {
-                 returnUrl ??= Url.Content("~/");
+            returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
@@ -154,14 +151,16 @@ namespace feedback.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-            }
+            
            
 
             // If we got this far, something failed, redisplay form
             return Page();
         }
-        
-        */
+
+
+
+        /*
 
         public IActionResult OnGet()
         {
@@ -172,7 +171,7 @@ namespace feedback.Areas.Identity.Pages.Account
         {
             return RedirectToPage("Login");
         }
-        
+*/        
 
         private IdentityUser CreateUser()
         {

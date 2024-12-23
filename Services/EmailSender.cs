@@ -1,42 +1,47 @@
 ﻿using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.Extensions.Options;
 using MimeKit;
 
-public class EmailService
+namespace Localization.Services;
+
+public class EmailSender : IEmailSender
 {
-    private readonly string _smtpServer = "smtp.gmail.com"; // Replace with your SMTP server
-    private readonly int _smtpPort = 587; // Port for TLS
-    private readonly string _senderEmail = "your_email@gmail.com";
-    private readonly string _senderPassword = "your_password"; // Use App Password if using Gmail
+    private readonly AuthMessageSenderOptions _options;
+    private readonly ILogger<EmailSender> _logger;
 
-    public async Task SendEmailAsync(string recipientEmail, string subject, string body)
+    public EmailSender(IOptions<AuthMessageSenderOptions> optionsAccessor, ILogger<EmailSender> logger)
     {
-        var message = new MimeMessage();
-        message.From.Add(new MailboxAddress("Your App Name", _senderEmail));
-        message.To.Add(new MailboxAddress("", recipientEmail));
-        message.Subject = subject;
+        _options = optionsAccessor.Value;
+        _logger = logger;
+    }
 
-        // Add body (plain text or HTML)
-        var bodyBuilder = new BodyBuilder
+    public async Task SendEmailAsync(string email, string subject, string htmlMessage)
+    {
+        var mimeMessage = new MimeMessage();
+        mimeMessage.From.Add(new MailboxAddress("Your App", _options.SmtpUser));
+        mimeMessage.To.Add(MailboxAddress.Parse(email));
+        mimeMessage.Subject = subject;
+
+        mimeMessage.Body = new TextPart("html")
         {
-            TextBody = body // Use HtmlBody for HTML content
+            Text = htmlMessage
         };
-        message.Body = bodyBuilder.ToMessageBody();
 
-        using var client = new SmtpClient();
         try
         {
-            await client.ConnectAsync(_smtpServer, _smtpPort, MailKit.Security.SecureSocketOptions.StartTls);
-            await client.AuthenticateAsync(_senderEmail, _senderPassword);
-            await client.SendAsync(message);
+            using var client = new SmtpClient();
+            await client.ConnectAsync(_options.SmtpServer, _options.SmtpPort, MailKit.Security.SecureSocketOptions.StartTls);
+            await client.AuthenticateAsync(_options.SmtpUser, _options.SmtpPass);
+            await client.SendAsync(mimeMessage);
+            await client.DisconnectAsync(true);
+
+            _logger.LogInformation($"Email to {email} sent successfully.");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error sending email: {ex.Message}");
+            _logger.LogError($"Error sending email to {email}: {ex.Message}");
             throw;
-        }
-        finally
-        {
-            await client.DisconnectAsync(true);
         }
     }
 }
