@@ -12897,19 +12897,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\E N T R O P Y\\.nuget\\packages\\": {}
+    "C:\\Users\\je-ha\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\E N T R O P Y\\Desktop\\epcd-survey\\feedback.csproj",
+      "projectUniqueName": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\feedback.csproj",
       "projectName": "feedback",
-      "projectPath": "C:\\Users\\E N T R O P Y\\Desktop\\epcd-survey\\feedback.csproj",
-      "packagesPath": "C:\\Users\\E N T R O P Y\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\E N T R O P Y\\Desktop\\epcd-survey\\obj\\",
+      "projectPath": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\feedback.csproj",
+      "packagesPath": "C:\\Users\\je-ha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\E N T R O P Y\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\je-ha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13004,7 +13004,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
