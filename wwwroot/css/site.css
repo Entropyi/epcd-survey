@@ -33,6 +33,11 @@ a {
     user-drag: none;
 }
 
+body {
+    background: var(--dark-grey-5);
+}
+
+
 :root {
     --th-Primary: #052976;
     --th-secondary: #8142ff;

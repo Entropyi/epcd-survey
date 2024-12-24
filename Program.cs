@@ -40,14 +40,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 
-builder.Services.Configure<AuthMessageSenderOptions>(options =>
-{
-    options.SmtpServer = Environment.GetEnvironmentVariable("SmtpServer");
-    options.SmtpPort = int.Parse(Environment.GetEnvironmentVariable("SmtpPort") ?? "0");
-    options.SmtpUser = Environment.GetEnvironmentVariable("SmtpUser");
-    options.SmtpPass = Environment.GetEnvironmentVariable("SmtpPass");
-});
-
+builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration.GetSection("AuthMessageSenderOptions"));
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 builder.Services.AddScoped<ValidateCaptcha>();

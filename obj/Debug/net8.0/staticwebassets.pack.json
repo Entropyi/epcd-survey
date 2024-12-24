@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\home.css"
     },
     {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\landing.css",
+      "PackagePath": "staticwebassets\\css\\landing.css"
+    },
+    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -799,6 +803,10 @@
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\link-broken-svgrepo-com.svg",
       "PackagePath": "staticwebassets\\public\\link-broken-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\login.svg",
+      "PackagePath": "staticwebassets\\public\\login.svg"
     },
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\navbar_logo.png",

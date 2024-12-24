@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PM9Mde207WtuAGVflIsH+KRPi8xx2kCCUVhcv4tkkrA=",
+  "Hash": "7ZikCkrI3niYkt7tOuSyKYRemDChxY0W3C424qHkDDU=",
   "Source": "feedback",
   "BasePath": "_content/feedback",
   "Mode": "Default",
@@ -1269,6 +1269,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\home.css"
+    },
+    {
+      "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\landing.css",
+      "SourceId": "feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\",
+      "BasePath": "_content/feedback",
+      "RelativePath": "css/landing.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\landing.css"
     },
     {
       "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\site.css",
@@ -4974,6 +4993,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\public\\link-broken-svgrepo-com.svg"
+    },
+    {
+      "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\login.svg",
+      "SourceId": "feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\",
+      "BasePath": "_content/feedback",
+      "RelativePath": "public/login.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\public\\login.svg"
     },
     {
       "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\public\\navbar_logo.png",

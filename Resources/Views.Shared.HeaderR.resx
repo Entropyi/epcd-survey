@@ -19,15 +19,6 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="slogen" xml:space="preserve">
-        <value>Industry and Life</value>
-    </data>
-    <data name="formTitle" xml:space="preserve">
-        <value>Choose the target sector</value>
-    </data>
-    <data name="formSubSection1" xml:space="preserve">
-        <value>Community </value>
-    </data>
-    <data name="formSubSection2" xml:space="preserve">
-        <value>Industries</value>
+        <value> صنـاعـــــــة وحيـــــــاة</value>
     </data>
 </root>

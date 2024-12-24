@@ -4,6 +4,9 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\je-ha\.nuget\packages\edi.captcha\3.25.0\lib\net8.0\Edi.Captcha.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FArea_002EIdentity_002EPages_002EAccount_002ELogin/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FArea_002EIdentity_002EPages_002EAccount_002ELogin/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002ELogin/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FModels_002EForm/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FModels_002EFormEntry/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FModels_002ERequest/@EntryIndexedValue">False</s:Boolean>
@@ -22,7 +25,8 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EHome_002EIndex/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002ENotFound_002EIndex/@EntryIndexedValue">True</s:Boolean>
 	
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EShared_002EHeader/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EShared_002EHeader/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EShared_002EHeaderR/@EntryIndexedValue">True</s:Boolean>
 	
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

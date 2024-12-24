@@ -323,6 +323,14 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Views.FormCreator.Details.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Views.Shared.HeaderR.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Views.Shared.HeaderR.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Areas.Identity.Pages.Account.Login.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Area.Identity.Pages.Account.Login.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -385,6 +393,16 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Views.FormCreator.Details.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Views.Shared.HeaderR.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Views.Shared.HeaderR.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Areas.Identity.Pages.Account.Login.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Areas.Identity.Pages.Account.Login.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

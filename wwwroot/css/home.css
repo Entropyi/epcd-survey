@@ -21,7 +21,17 @@
     justify-self: end;
     justify-content: center;
     flex: 1;
+}
 
+.lang-super-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1;
+}
+
+.slogan-text:lang(en){
+    text-align: center;
 }
 
 .header__logos-container {
@@ -235,7 +245,7 @@
 
 .goals-title-container {
     display: flex;
-    width: f;
+    width: fit-content;
     justify-content: center;
 }
 
@@ -520,7 +530,7 @@
     height: 0.7em;
     border-radius: 2em;
     position: relative;
-    
+
     z-index: 1;
 }
 
