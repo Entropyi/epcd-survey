@@ -145,4 +145,10 @@
     <data name="add" xml:space="preserve">
         <value>اضف سؤال</value>
     </data>
+    <data name="StartDate" xml:space="preserve">
+        <value>تاريخ البداية</value>
+    </data>
+    <data name="EndDate" xml:space="preserve">
+        <value>تاريخ النهاية</value>
+    </data>
 </root>

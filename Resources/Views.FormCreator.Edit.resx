@@ -133,13 +133,18 @@
         <value>تعليم عالي</value>
     </data>
     <data name="vote5" xml:space="preserve">
-        <value>غير موافق بشدة
-</value>
+        <value>غير موافق بشدة</value>
     </data>
     <data name="Return" xml:space="preserve">
         <value>رجوع</value>
     </data>
     <data name="Submit" xml:space="preserve">
         <value>تعديل</value>
+    </data>
+    <data name="StartDate" xml:space="preserve">
+        <value>تاريخ البداية</value>
+    </data>
+    <data name="EndDate" xml:space="preserve">
+        <value>تاريخ النهاية</value>
     </data>
 </root>

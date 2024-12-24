@@ -10,13 +10,16 @@
 
 <div class="return-super-container">
     <form asp-action="Index" class="return-container">
-        <a class="return-text" asp-action="Index">@Localizer["Return"]</a>
+        <a asp-action="Index" class="return-text">@Localizer["Return"]</a>
     </form>
 </div>
 
+
+
+
 <div class="form-root-container">
 <form method="Post" asp-action="Create" class="form-container">
-<div asp-validation-summary="All"></div>
+<div asp-validation-summary="ModelOnly"></div>
 
 <div class="form__super-title-container">
     <h1 class="form__super-title-text" id="formTitle">@Localizer["FromTitle"]</h1>
@@ -28,19 +31,19 @@
             <div class="form__input_inner-container">
                 <div class="required-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                    <p class="text-danger">*</p>
+                    <p class="error-message">*</p>
                 </div>
                 <input asp-for="FormTitleAr" class="form__create-input" id="titleAr" type="text">
-                <span asp-validation-for="FormTitleAr" class="text-danger"></span>
+                <span asp-validation-for="FormTitleAr" class="error-message"></span>
             </div>
 
             <div class="form__input_inner-container">
                 <div class="required-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                    <p class="text-danger">*</p>
+                    <p class="error-message">*</p>
                 </div>
                 <input asp-for="FormTitleEn" class="form__create-input" type="text">
-                <span asp-validation-for="FormTitleEn" class="text-danger"></span>
+                <span asp-validation-for="FormTitleEn" class="error-message"></span>
             </div>
         </div>
 
@@ -57,19 +60,19 @@
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="FormSectionOneLabelAr" class="form__create-input" type="text">
-                    <span asp-validation-for="FormSectionOneLabelAr" class="text-danger"></span>
+                    <span asp-validation-for="FormSectionOneLabelAr" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="FormSectionOneLabelEn" class="form__create-input" type="text">
-                    <span asp-validation-for="FormSectionOneLabelEn" class="text-danger"></span>
+                    <span asp-validation-for="FormSectionOneLabelEn" class="error-message"></span>
                 </div>
             </div>
 
@@ -85,19 +88,19 @@
                     <div class="form__input_inner-container">
                         <div class="required-container">
                             <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                            <p class="text-danger">*</p>
+                            <p class="error-message">*</p>
                         </div>
                         <input asp-for="Question1" class="form__create-input" type="text">
-                        <span asp-validation-for="Question1" class="text-danger"></span>
+                        <span asp-validation-for="Question1" class="error-message"></span>
                     </div>
 
                     <div class="form__input_inner-container">
                         <div class="required-container">
                             <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                            <p class="text-danger">*</p>
+                            <p class="error-message">*</p>
                         </div>
                         <input asp-for="Question1EN" class="form__create-input" type="text">
-                        <span asp-validation-for="Question1EN" class="text-danger"></span>
+                        <span asp-validation-for="Question1EN" class="error-message"></span>
                     </div>
                 </div>
 
@@ -133,19 +136,19 @@
                     <div class="form__input_inner-container">
                         <div class="required-container">
                             <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                            <p class="text-danger">*</p>
+                            <p class="error-message">*</p>
                         </div>
                         <input asp-for="Question2" class="form__create-input" type="text">
-                        <span asp-validation-for="Question2" class="text-danger"></span>
+                        <span asp-validation-for="Question2" class="error-message"></span>
                     </div>
 
                     <div class="form__input_inner-container">
                         <div class="required-container">
                             <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                            <p class="text-danger">*</p>
+                            <p class="error-message">*</p>
                         </div>
                         <input asp-for="Question2EN" class="form__create-input" type="text">
-                        <span asp-validation-for="Question2EN" class="text-danger"></span>
+                        <span asp-validation-for="Question2EN" class="error-message"></span>
                     </div>
                 </div>
 
@@ -174,19 +177,19 @@
                     <div class="form__input_inner-container">
                         <div class="required-container">
                             <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                            <p class="text-danger">*</p>
+                            <p class="error-message">*</p>
                         </div>
                         <input asp-for="Question3" class="form__create-input" type="text">
-                        <span asp-validation-for="Question3" class="text-danger"></span>
+                        <span asp-validation-for="Question3" class="error-message"></span>
                     </div>
 
                     <div class="form__input_inner-container">
                         <div class="required-container">
                             <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                            <p class="text-danger">*</p>
+                            <p class="error-message">*</p>
                         </div>
                         <input asp-for="Question3EN" class="form__create-input" type="text">
-                        <span asp-validation-for="Question3EN" class="text-danger"></span>
+                        <span asp-validation-for="Question3EN" class="error-message"></span>
                     </div>
                 </div>
 
@@ -232,19 +235,19 @@
             <div class="form__input_inner-container">
                 <div class="required-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                    <p class="text-danger">*</p>
+                    <p class="error-message">*</p>
                 </div>
                 <input asp-for="FormSectionTwoLabelAr" class="form__create-input" type="text">
-                <span asp-validation-for="FormSectionTwoLabelAr" class="text-danger"></span>
+                <span asp-validation-for="FormSectionTwoLabelAr" class="error-message"></span>
             </div>
 
             <div class="form__input_inner-container">
                 <div class="required-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                    <p class="text-danger">*</p>
+                    <p class="error-message">*</p>
                 </div>
                 <input asp-for="FormSectionTwoLabelEn" class="form__create-input" type="text">
-                <span asp-validation-for="FormSectionTwoLabelEn" class="text-danger"></span>
+                <span asp-validation-for="FormSectionTwoLabelEn" class="error-message"></span>
             </div>
         </div>
 
@@ -261,19 +264,19 @@
             <div class="form__input_inner-container">
                 <div class="required-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                    <p class="text-danger">*</p>
+                    <p class="error-message">*</p>
                 </div>
                 <input asp-for="Question4" class="form__create-input" type="text">
-                <span asp-validation-for="Question4" class="text-danger"></span>
+                <span asp-validation-for="Question4" class="error-message"></span>
             </div>
 
             <div class="form__input_inner-container">
                 <div class="required-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                    <p class="text-danger">*</p>
+                    <p class="error-message">*</p>
                 </div>
                 <input asp-for="Question4EN" class="form__create-input" type="text">
-                <span asp-validation-for="Question4EN" class="text-danger"></span>
+                <span asp-validation-for="Question4EN" class="error-message"></span>
             </div>
         </div>
 
@@ -315,19 +318,19 @@
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="Question5" class="form__create-input" type="text">
-                    <span asp-validation-for="Question5" class="text-danger"></span>
+                    <span asp-validation-for="Question5" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="Question5EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question5EN" class="text-danger"></span>
+                    <span asp-validation-for="Question5EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -370,19 +373,19 @@
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="Question6" class="form__create-input" type="text">
-                    <span asp-validation-for="Question6" class="text-danger"></span>
+                    <span asp-validation-for="Question6" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="Question6EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question6EN" class="text-danger"></span>
+                    <span asp-validation-for="Question6EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -430,13 +433,13 @@
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
                     <input asp-for="Question7" class="form__create-input" type="text">
-                    <span asp-validation-for="Question7" class="text-danger"></span>
+                    <span asp-validation-for="Question7" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
                     <input asp-for="Question7EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question7EN" class="text-danger"></span>
+                    <span asp-validation-for="Question7EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -479,13 +482,13 @@
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
                     <input asp-for="Question8" class="form__create-input" type="text">
-                    <span asp-validation-for="Question8" class="text-danger"></span>
+                    <span asp-validation-for="Question8" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
                     <input asp-for="Question8EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question8EN" class="text-danger"></span>
+                    <span asp-validation-for="Question8EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -528,13 +531,13 @@
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
                     <input asp-for="Question9" class="form__create-input" type="text">
-                    <span asp-validation-for="Question9" class="text-danger"></span>
+                    <span asp-validation-for="Question9" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
                     <input asp-for="Question9EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question9EN" class="text-danger"></span>
+                    <span asp-validation-for="Question9EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -578,13 +581,13 @@
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
                     <input asp-for="Question10" class="form__create-input" type="text">
-                    <span asp-validation-for="Question10" class="text-danger"></span>
+                    <span asp-validation-for="Question10" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
                     <input asp-for="Question10EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question10EN" class="text-danger"></span>
+                    <span asp-validation-for="Question10EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -627,13 +630,13 @@
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
                     <input asp-for="Question11" class="form__create-input" type="text">
-                    <span asp-validation-for="Question11" class="text-danger"></span>
+                    <span asp-validation-for="Question11" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
                     <input asp-for="Question11EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question11EN" class="text-danger"></span>
+                    <span asp-validation-for="Question11EN" class="error-message"></span>
                 </div>
             </div>
         </div>
@@ -675,13 +678,13 @@
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
                     <input asp-for="Question12" class="form__create-input" type="text">
-                    <span asp-validation-for="Question12" class="text-danger"></span>
+                    <span asp-validation-for="Question12" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
                     <input asp-for="Question12EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question12EN" class="text-danger"></span>
+                    <span asp-validation-for="Question12EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -724,13 +727,13 @@
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageAr"]</label>
                     <input asp-for="Question13" class="form__create-input" type="text">
-                    <span asp-validation-for="Question13" class="text-danger"></span>
+                    <span asp-validation-for="Question13" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <label class="form__label-text">@Localizer["LanguageEn"]</label>
                     <input asp-for="Question13EN" class="form__create-input" type="text">
-                    <span asp-validation-for="Question13EN" class="text-danger"></span>
+                    <span asp-validation-for="Question13EN" class="error-message"></span>
                 </div>
             </div>
 
@@ -785,19 +788,19 @@
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="FormSectionThreeLabelAr" class="form__create-input" type="text">
-                    <span asp-validation-for="FormSectionThreeLabelAr" class="text-danger"></span>
+                    <span asp-validation-for="FormSectionThreeLabelAr" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <input asp-for="FormSectionThreeLabelEn" class="form__create-input" type="text">
-                    <span asp-validation-for="FormSectionThreeLabelEn" class="text-danger"></span>
+                    <span asp-validation-for="FormSectionThreeLabelEn" class="error-message"></span>
                 </div>
             </div>
 
@@ -814,22 +817,36 @@
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageAr"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <textarea asp-for="OpenQuestionAr" class="form__input"></textarea>
-                    <span asp-validation-for="OpenQuestionAr" class="text-danger"></span>
+                    <span asp-validation-for="OpenQuestionAr" class="error-message"></span>
                 </div>
 
                 <div class="form__input_inner-container">
                     <div class="required-container">
                         <label class="form__label-text">@Localizer["LanguageEn"]</label>
-                        <p class="text-danger">*</p>
+                        <p class="error-message">*</p>
                     </div>
                     <textarea  asp-for="OpenQuestionEn" class="form__input"></textarea>
-                    <span asp-validation-for="OpenQuestionEn" class="text-danger"></span>
+                    <span asp-validation-for="OpenQuestionEn" class="error-message"></span>
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div class="dates-container">
+        <div class="required-container">
+            <label class="form__label-text">@Localizer["StartDate"]</label>
+            <p class="error-message">*</p>
+        </div>
+        <input asp-for="StartDate" class="form__create-input">
+
+        <div class="required-container">
+            <label class="form__label-text">@Localizer["EndDate"]</label>
+            <p class="error-message">*</p>
+        </div>
+        <input asp-for="EndDate" class="form__create-input">
     </div>
 </div>
 

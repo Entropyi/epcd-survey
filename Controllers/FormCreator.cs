@@ -25,7 +25,7 @@ namespace feedback.Controllers
         {
             _context = context;
         }
-        
+
         [Authorize]
         // GET: FormCreator
         public async Task<IActionResult> Index()
@@ -126,7 +126,7 @@ namespace feedback.Controllers
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.Scale1 == 5)
                 .ToList().Count;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+
             int Scale2Count1 = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.Scale2 == 1)
@@ -151,8 +151,8 @@ namespace feedback.Controllers
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.Scale2 == 5)
                 .ToList().Count;
-            
-            
+
+
             int Scale3Count1 = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.Scale3 == 1)
@@ -176,8 +176,8 @@ namespace feedback.Controllers
             int Scale3Count5 = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.Scale3 == 5)
-                .ToList().Count;    
-            
+                .ToList().Count;
+
             int Scale4Count1 = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.Scale4 == 1)
@@ -209,19 +209,19 @@ namespace feedback.Controllers
             ViewBag.Scale1Count3 = Scale1Count3;
             ViewBag.Scale1Count4 = Scale1Count4;
             ViewBag.Scale1Count5 = Scale1Count5;
-            
+
             ViewBag.Scale2Count1 = Scale2Count1;
             ViewBag.Scale2Count2 = Scale2Count2;
             ViewBag.Scale2Count3 = Scale2Count3;
             ViewBag.Scale2Count4 = Scale2Count4;
-            ViewBag.Scale2Count5 = Scale2Count5;    
-            
+            ViewBag.Scale2Count5 = Scale2Count5;
+
             ViewBag.Scale3Count1 = Scale3Count1;
             ViewBag.Scale3Count2 = Scale3Count2;
             ViewBag.Scale3Count3 = Scale3Count3;
             ViewBag.Scale3Count4 = Scale3Count4;
-            ViewBag.Scale3Count5 = Scale3Count5; 
-            
+            ViewBag.Scale3Count5 = Scale3Count5;
+
             ViewBag.Scale4Count1 = Scale4Count1;
             ViewBag.Scale4Count2 = Scale4Count2;
             ViewBag.Scale4Count3 = Scale4Count3;
@@ -285,7 +285,7 @@ namespace feedback.Controllers
             return View(form);
         }
 
-        
+
         [Authorize]
         // GET: FormCreator/Create
         public IActionResult Create()
@@ -301,12 +301,9 @@ namespace feedback.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
             [Bind(
-                "id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,OpenQuestionAr,OpenQuestionEn,CreationDate")]
+                "id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,OpenQuestionAr,OpenQuestionEn,CreationDate,StartDate,EndDate")]
             Form form)
         {
-            
-
-            
             if (ModelState.IsValid)
             {
                 _context.Add(form);
@@ -316,18 +313,18 @@ namespace feedback.Controllers
 
             return View(form);
         }
-        
+
         public string NullChecker(string value)
         {
             if (value == null)
             {
                 return "none";
             }
+
             return "not null";
-            
         }
 
-        
+
         [Authorize]
         // GET: FormCreator/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -342,15 +339,15 @@ namespace feedback.Controllers
             {
                 return NotFound();
             }
-            
+
             ViewBag.Question11Display = NullChecker(form.Question11);
             ViewBag.Question12Display = NullChecker(form.Question12);
             ViewBag.Question13Display = NullChecker(form.Question13);
 
             return View(form);
         }
-        
-        
+
+
         [Authorize]
         // POST: FormCreator/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -359,16 +356,15 @@ namespace feedback.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,
             [Bind(
-                "id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,Question14,Question14En,OpenQuestionAr,OpenQuestionEn,CreationDate")]
+                "id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,Question14,Question14En,OpenQuestionAr,OpenQuestionEn,CreationDate,StartDate,EndDate")]
             Form form)
         {
-            
             if (id != form.id)
             {
                 return NotFound();
             }
-            
-            
+
+
             if (ModelState.IsValid)
             {
                 try
@@ -387,19 +383,15 @@ namespace feedback.Controllers
                         throw;
                     }
                 }
-                
-                
-                
-                
+
 
                 return RedirectToAction(nameof(Index));
             }
 
             return View(form);
         }
-        
-        
-        
+
+
         [Authorize]
         // GET: FormCreator/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -415,7 +407,7 @@ namespace feedback.Controllers
             {
                 return NotFound();
             }
-            
+
             ViewBag.Question11Display = NullChecker(form.Question11);
             ViewBag.Question12Display = NullChecker(form.Question12);
             ViewBag.Question13Display = NullChecker(form.Question13);
@@ -423,7 +415,7 @@ namespace feedback.Controllers
             return View(form);
         }
 
-        
+
         [Authorize]
         // POST: FormCreator/Delete/5
         [HttpPost, ActionName("Delete")]

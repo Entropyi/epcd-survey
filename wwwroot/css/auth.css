@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     width: 40%;
+    background-color: var(--white);
     height: 70%;
     align-items: center;
 }
@@ -31,7 +32,7 @@
 
 .login-container{
     display: flex;
-    background-color: rgba(5,41,118,0.1);
+    background-color: red;
     width: 70%;
     height: 50%;  
     justify-content: center;
@@ -43,10 +44,13 @@
 .login-items-container{
     display: flex;
     flex-direction: column;
+    background-color: red;
+
     gap: 1em;
 }
 .login-group{
     display: flex;
+    
     flex-direction: column;
     gap: 1em;
     font-family: "Font-Regular";
@@ -79,17 +83,36 @@
 
 .login-label{
     font-family: "Font-Regular";
-    color: var(--bs-white);
+    color: var(--th-Primary);
 }
 
 .rest-text {
     font-family: "Font-Light";
-    color: var(--dark-grey-2);
+    color: var(--dark-grey-1);
+}
+
+.rest-text:hover {
+    transition: ease-in 0.2s;
+    color: var(--secondary-6);
 }
 
 .login-submit{
+    background-color: var(--th-Primary);
+    display: flex;
+    width: fit-content;
+    color: white;
+    font-family: "Font-Medium";
+    padding: 1em 3em;
+    border-radius: 0.3em;
+    border: 0.4em solid transparent;
     width: 100%;
-    height: 2em;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.login-submit:hover{
+    border: 0.4em var(--th-secondary) solid;
+
 }
 
 .login__section-container{
@@ -97,13 +120,21 @@
     gap: 1em;
     font-family: Font-Bold;
     color: var(--th-Primary);
-    background: rgba(255,255,255,.07);
+    background: rgba(123, 121, 121, 0.3);
+
     border-radius: 0.5em;
     width: fit-content;
     margin: 0 auto;
     padding: 2em;
 }
 
+.captcha-image{
+    border-radius: 1em;
+}
+
+.test{
+    background: red;
+}
 @media (max-width: 510px) {
     
     .login-sub-container:lang(en){

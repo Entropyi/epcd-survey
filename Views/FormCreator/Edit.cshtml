@@ -762,6 +762,21 @@ ViewData["Title"] = "asdasdda";
                     </div>
                 </div>
             </div>
+
+
+            <div class="dates-container">
+                <div class="required-container">
+                    <label class="form__label-text">@Localizer["StartDate"]</label>
+                    <p class="error-message">*</p>
+                </div>
+                <input asp-for="StartDate" class="form__create-input">
+
+                <div class="required-container">
+                    <label class="form__label-text">@Localizer["EndDate"]</label>
+                    <p class="error-message">*</p>
+                </div>
+                <input asp-for="EndDate" class="form__create-input">
+            </div>
         </div>
 
 

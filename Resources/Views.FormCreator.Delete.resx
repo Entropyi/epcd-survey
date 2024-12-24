@@ -142,4 +142,10 @@
     <data name="Return" xml:space="preserve">
         <value>رجوع</value>
     </data>
+    <data name="StartDate" xml:space="preserve">
+        <value>تاريخ البداية</value>
+    </data>
+    <data name="EndDate" xml:space="preserve">
+        <value>تاريخ النهاية</value>
+    </data>
 </root>

@@ -38,7 +38,7 @@ namespace feedback.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("feedback.Resources.Views.FormCreator.Create", typeof(Views_FormCreator_Create).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("feedback.Resources.Views.FormCreator.Delete", typeof(Views_FormCreator_Delete).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -56,15 +56,6 @@ namespace feedback.Resources {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to اضف سؤال.
-        /// </summary>
-        internal static string add {
-            get {
-                return ResourceManager.GetString("add", resourceCulture);
             }
         }
         
@@ -149,6 +140,15 @@ namespace feedback.Resources {
         internal static string eduLabel5 {
             get {
                 return ResourceManager.GetString("eduLabel5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تاريخ النهاية.
+        /// </summary>
+        internal static string EndDate {
+            get {
+                return ResourceManager.GetString("EndDate", resourceCulture);
             }
         }
         
@@ -369,7 +369,16 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to حفظ.
+        ///   Looks up a localized string similar to تاريخ البداية.
+        /// </summary>
+        internal static string StartDate {
+            get {
+                return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to حذف.
         /// </summary>
         internal static string Submit {
             get {
