@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\form.css"
     },
     {
+      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\formV2.css",
+      "PackagePath": "staticwebassets\\css\\formV2.css"
+    },
+    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\home.css",
       "PackagePath": "staticwebassets\\css\\home.css"
     },

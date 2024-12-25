@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7ZikCkrI3niYkt7tOuSyKYRemDChxY0W3C424qHkDDU=",
+  "Hash": "WGzN1f8V8u8U03Q5IGONoWomSpQnJMo+GVQgOyLPCVo=",
   "Source": "feedback",
   "BasePath": "_content/feedback",
   "Mode": "Default",
@@ -1250,6 +1250,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\form.css"
+    },
+    {
+      "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\formV2.css",
+      "SourceId": "feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\",
+      "BasePath": "_content/feedback",
+      "RelativePath": "css/formV2.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\formV2.css"
     },
     {
       "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\home.css",

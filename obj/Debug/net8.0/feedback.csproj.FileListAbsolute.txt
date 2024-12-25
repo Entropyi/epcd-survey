@@ -1046,3 +1046,11 @@ C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Vie
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Shared.HeaderR.en.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.Login.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.Login.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ForgotPassword.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ForgotPassword.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ResetPasswordConfirmation.en.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ResetPassword.resources
+C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Areas.Identity.Pages.Account.ResetPassword.en.resources

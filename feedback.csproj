@@ -331,6 +331,22 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>Area.Identity.Pages.Account.Login.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Areas.Identity.Pages.Account.ForgotPassword.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Areas.Identity.Pages.Account.ForgotPassword.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Areas.Identity.Pages.Account.ForgotPasswordConfirmation.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Areas.Identity.Pages.Account.ForgotPasswordConfirmation.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Areas.Identity.Pages.Account.ResetPasswordConfirmation.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Areas.Identity.Pages.Account.ResetPasswordConfirmation.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Resources\Areas.Identity.Pages.Account.ResetPassword.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Areas.Identity.Pages.Account.ResetPassword.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -403,6 +419,26 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>Areas.Identity.Pages.Account.Login.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Areas.Identity.Pages.Account.ForgotPassword.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Areas.Identity.Pages.Account.ForgotPassword.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Areas.Identity.Pages.Account.ForgotPasswordConfirmation.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Areas.Identity.Pages.Account.ForgotPasswordConfirmation.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Areas.Identity.Pages.Account.ResetPasswordConfirmation.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Areas.Identity.Pages.Account.ResetPasswordConfirmation.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\Areas.Identity.Pages.Account.ResetPassword.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Areas.Identity.Pages.Account.ResetPassword.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

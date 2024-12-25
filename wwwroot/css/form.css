@@ -154,6 +154,7 @@
 }
 
 .error-message{
+    position: absolute;
     font-family: "Font-Light";
     font-size: 0.9em;
     color: red;

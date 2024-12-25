@@ -4,11 +4,15 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\je-ha\.nuget\packages\edi.captcha\3.25.0\lib\net8.0\Edi.Captcha.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002EForgotPassword/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002EForgotPasswordConfirmation/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002ELogin_002Ecshtml/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002ELogin_002Ecshtml/@EntryIndexRemoved">True</s:Boolean>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002ELogin_002ELoginModel/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002ELogin_002ELoginModel/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002EResetPassword/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002EResetPasswordConfirmation/@EntryIndexedValue">False</s:Boolean>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FArea_002EIdentity_002EPages_002EAccount_002ELogin/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FArea_002EIdentity_002EPages_002EAccount_002ELogin/@EntryIndexRemoved">True</s:Boolean>
