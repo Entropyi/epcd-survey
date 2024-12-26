@@ -31,6 +31,11 @@ public class FormController : Controller
         ViewData["Category"] = category;
 
         ViewBag.Form = await _context.Form.FindAsync(FormID);
+
+        if (ViewBag.Form == null)
+        {
+            return RedirectToAction(nameof(NotAvailable));
+        }
         
         return View();
     }
@@ -57,6 +62,12 @@ public class FormController : Controller
     {
         return View();
     }
+    
+    public IActionResult NotAvailable()
+    {
+        return View();
+    }
+
     
     public IActionResult Home()
     {

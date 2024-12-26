@@ -1,6 +1,7 @@
 ﻿@using Azure.Core
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.EntityFrameworkCore
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @inject IViewLocalizer Localizer
 @model FormEntry
 
@@ -22,15 +23,37 @@
     var question8 = ViewBag.Form.Question8;
     var question9 = ViewBag.Form.Question9;
     var question10 = ViewBag.Form.Question10;
-    var question11 = ViewBag.Form.Question11;
-    var question12 = ViewBag.Form.Question12;
-    var question13 = ViewBag.Form.Question13;
-    var question14 = ViewBag.Form.OpenQuestionAr;
+
+    var question11 = string.Empty;
+    var question12 = string.Empty;
+    var question13 = string.Empty;
+    var question14 = string.Empty;
+
+    if (ViewBag.Form.Question11)
+    {
+        question11 = ViewBag.Form.Question11;
+    }
+
+    if (ViewBag.Form.Question12)
+    {
+        question12 = ViewBag.Form.Question12;
+    }
+
+    if (ViewBag.Form.Question13)
+    {
+        question13 = ViewBag.Form.Question13;
+    }
+
+    if (ViewBag.Form.OpenQuestionAr)
+    {
+        question14 = ViewBag.Form.OpenQuestionAr;
+    }
 
 
     if (Thread.CurrentThread.CurrentCulture.Name != "ar")
     {
         formTitle = ViewBag.Form.FormTitleEn;
+
         formSection1 = ViewBag.Form.FormSectionOneLabelEn;
         formSection2 = ViewBag.Form.FormSectionTwoLabelEn;
         formSection3 = ViewBag.Form.FormSectionThreeLabelEn;
@@ -45,10 +68,27 @@
         question8 = ViewBag.Form.Question8EN;
         question9 = ViewBag.Form.Question9EN;
         question10 = ViewBag.Form.Question10EN;
-        question11 = ViewBag.Form.Question11EN;
-        question12 = ViewBag.Form.Question12EN;
-        question13 = ViewBag.Form.Question13EN;
-        question14 = ViewBag.Form.OpenQuestionEn;
+
+
+        if (ViewBag.Form.Question11)
+        {
+            question11 = ViewBag.Form.Question11EN;
+        }
+
+        if (ViewBag.Form.Question12)
+        {
+            question12 = ViewBag.Form.Question12EN;
+        }
+
+        if (ViewBag.Form.Question13)
+        {
+            question13 = ViewBag.Form.Question13EN;
+        }
+
+        if (ViewBag.Form.OpenQuestionAr)
+        {
+            question14 = ViewBag.Form.OpenQuestionEn;
+        }
     }
     else
     {
@@ -67,10 +107,26 @@
         question8 = ViewBag.Form.Question8;
         question9 = ViewBag.Form.Question9;
         question10 = ViewBag.Form.Question10;
-        question11 = ViewBag.Form.Question11;
-        question12 = ViewBag.Form.Question12;
-        question13 = ViewBag.Form.Question13;
-        question14 = ViewBag.Form.OpenQuestionAr;
+
+        if (ViewBag.Form.Question11)
+        {
+            question11 = ViewBag.Form.Question11;
+        }
+
+        if (ViewBag.Form.Question12)
+        {
+            question12 = ViewBag.Form.Question12;
+        }
+
+        if (ViewBag.Form.Question13)
+        {
+            question13 = ViewBag.Form.Question13;
+        }
+
+        if (ViewBag.Form.OpenQuestionAr)
+        {
+            question14 = ViewBag.Form.OpenQuestionAr;
+        }
     }
 }
 
@@ -78,12 +134,12 @@
     <div class="landing-sub-container" id="landing-background">
         <div class="top-container">
             @await Html.PartialAsync("HeaderR")
-            
+
             <div class="form2-root-container">
 
                 <form method="post" asp-action="Index" class="form2-container">
                     <div asp-validation-summary="ModelOnly"></div>
-                
+
                     <div class="form2__super-title-container">
                         <h1 class="form2__super-title-text">@formTitle</h1>
                     </div>
@@ -121,22 +177,21 @@
                         </div>
                         <div class="form2__submit-container">
                             <input class="form2__submit" type="submit" name="" id="" value="@Localizer["submit"]">
-                        </div>  
-                        
+                        </div>
+
                         <div class="form2_navigations-container">
                             <div class="form2__before-container">
                                 <input class="form2__before" type="button" name="" id="before" value="@Localizer["before"]">
                             </div>
-                            
+
                             <div class="form2__next-container">
                                 <input class="form2__next" type="button" name="" id="next" value="@Localizer["next"]">
                             </div>
                         </div>
-        
+
 
                     </div>
-                    
-                    
+
 
                 </form>
             </div>
@@ -150,7 +205,7 @@
     <input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
 </div>
 
-@Html.Hidden("title",0);
+@Html.Hidden("title", 0);
 <script>
     const next = document.getElementById("next")
     const title = document.getElementById("title")
