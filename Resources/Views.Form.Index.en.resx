@@ -119,4 +119,10 @@
     <data name="labelName3" xml:space="preserve">
         <value>Educational Qualification</value>
     </data>
+    <data name="next" xml:space="preserve">
+        <value>Next</value>
+    </data>
+    <data name="before" xml:space="preserve">
+        <value>Previous</value>
+    </data>
 </root>

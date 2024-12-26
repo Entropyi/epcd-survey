@@ -126,4 +126,10 @@
     <data name="submit" xml:space="preserve">
         <value>إرسال</value>
     </data>
+    <data name="next" xml:space="preserve">
+        <value>التالي</value>
+    </data>
+    <data name="before" xml:space="preserve">
+        <value>السابق</value>
+    </data>
 </root>

@@ -1,0 +1,140 @@
+﻿.form2-root-container{
+    background: var(--dark-grey-5);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form2-container{
+    width: 75%;
+    margin-top: 2em;
+}
+
+.form2__super-title-container {
+    font-family: Font-Bold;
+    color: var(--th-Primary);
+    margin-bottom: 1em;
+}
+
+.form2__super-title-text{
+    font-size: 1.8em;
+    color:var(--th-Primary);
+
+}
+
+.form2__section-title-container {
+    gap: 0.8em;
+    font-family: Font-Medium;
+    color: var(--th-Primary);
+    margin-bottom: 1em;
+}
+
+.form2__section-title-text{
+    font-size: 1.5em;
+}
+
+.form2__input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form2__label-text {
+    font-family: Font-Bold;
+    color: var(--dark-grey-2);
+}
+
+.AgeGroupLabel{
+    margin-top: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form2__label-text-1{
+    font-family: Font-Regular;
+    color: var(--dark-grey-2);
+}
+
+.text-danger {
+    font-family: Font-Light;
+    font-size: 0.9em;
+    color: red;
+}
+
+.form2__submit-container {
+    display: flex;
+    display: none;
+    justify-content: end;
+}
+
+.form2__submit {
+    background-color: var(--th-Primary);
+    font-family: Font-Regular;
+    color: wheat;
+    padding: 1em 3em;
+    border-radius: 0.6em;
+    margin: 1em;
+}
+
+.form2__submit:hover {
+    transition: ease-in 20s;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 92%, rgba(0, 29, 255, 1) 100%);
+}
+
+.form2_navigations-container{
+    display: flex;
+    align-items: center;
+}
+
+.form2__next-container:lang(ar) {
+    display: flex;
+    margin-right: auto;
+}
+
+.form2__next-container:lang(en) {
+    display: flex;
+    margin-left: auto;
+}
+
+.form2__next {
+    background-color: var(--th-Primary);
+    font-family: Font-Regular;
+    color: wheat;
+    padding: 1em 3em;
+    border-radius: 0.6em;
+    margin: 1em;
+}
+
+.form2__next:hover {
+    transition: ease-in 300ms;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 92%, rgba(0, 29, 255, 1) 100%);
+    cursor: pointer;
+
+}
+
+.form2__before-container {
+    display: flex;
+    justify-content: end;
+}
+
+.form2__before {
+    border: none;
+    background-color: var(--secondary-3);
+    font-family: Font-Regular;
+    color: var(--th-Primary);
+    padding: 1em 3em;
+    border-radius: 0.6em;
+    margin: 1em;
+}
+
+.form2__before:hover {
+    color: white;
+    cursor: pointer;
+    transition: ease-in 200ms;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(127, 17, 224, 1) 0%, rgba(160, 113, 255, 1) 92%, rgba(213, 192, 255, 1) 100%);
+}

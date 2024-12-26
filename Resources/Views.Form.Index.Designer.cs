@@ -96,6 +96,15 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to السابق.
+        /// </summary>
+        internal static string before {
+            get {
+                return ResourceManager.GetString("before", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ابتدائي.
         /// </summary>
         internal static string eduLabel1 {
@@ -299,6 +308,15 @@ namespace feedback.Resources {
         internal static string labelName9 {
             get {
                 return ResourceManager.GetString("labelName9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to التالي.
+        /// </summary>
+        internal static string next {
+            get {
+                return ResourceManager.GetString("next", resourceCulture);
             }
         }
         

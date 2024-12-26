@@ -79,48 +79,64 @@
         <div class="top-container">
             @await Html.PartialAsync("HeaderR")
             
-            <div class="form-root-container">
+            <div class="form2-root-container">
 
-                <form method="post" asp-action="Index" class="form-container">
+                <form method="post" asp-action="Index" class="form2-container">
                     <div asp-validation-summary="ModelOnly"></div>
                 
-                    <div class="form__super-title-container">
-                        <h1 class="form__super-title-text">@formTitle</h1>
+                    <div class="form2__super-title-container">
+                        <h1 class="form2__super-title-text">@formTitle</h1>
                     </div>
 
-                    <div class="form__section-container">
-                        <div class="form__sextion-title-container">
-                            <h3 class="form__section-title-text"> @formSection1</h3>
+                    <div class="form2__section-container">
+                        <div class="form2__section-title-container">
+                            <h3 class="form2__section-title-text"> @formSection1</h3>
                         </div>
 
-                        <div class="form__input-container">
-                            <label class="form__label-text">@question1</label>
+                        <div class="form2__input-container">
+                            <label class="form2__label-text">@question1</label>
                             <div class="AgeGroupLabel">
                                 <div>
                                     <input class="test" name="AgeGroup" type="radio" value="1" required="required">
-                                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
+                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
                                 </div>
 
                                 <div>
                                     <input class="test" name="AgeGroup" type="radio" value="2">
-                                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
+                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
                                 </div>
 
                                 <div>
                                     <input class="test" name="AgeGroup" type="radio" value="3">
-                                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
+                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
                                 </div>
 
                                 <div>
                                     <input class="test" name="AgeGroup" type="radio" value="4">
-                                    <label class="form__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
+                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
                                 </div>
                             </div>
                             <span asp-validation-for="AgeGroup" class="text-danger"></span>
 
                         </div>
+                        <div class="form2__submit-container">
+                            <input class="form2__submit" type="submit" name="" id="" value="@Localizer["submit"]">
+                        </div>  
+                        
+                        <div class="form2_navigations-container">
+                            <div class="form2__before-container">
+                                <input class="form2__before" type="button" name="" id="before" value="@Localizer["before"]">
+                            </div>
+                            
+                            <div class="form2__next-container">
+                                <input class="form2__next" type="button" name="" id="next" value="@Localizer["next"]">
+                            </div>
+                        </div>
+        
 
                     </div>
+                    
+                    
 
                 </form>
             </div>
@@ -133,3 +149,14 @@
     <input type="hidden" asp-for="FormId" value="@ViewBag.Form.id">
     <input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
 </div>
+
+@Html.Hidden("title",0);
+<script>
+    const next = document.getElementById("next")
+    const title = document.getElementById("title")
+ 
+    
+    next.addEventListener("click", () =>{
+        console.log(`test value is ${title.innerHTML}`);
+    })
+</script>
