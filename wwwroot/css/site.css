@@ -23,6 +23,7 @@ time, mark, audio, video {
 a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
+
 }
 
 * {
@@ -31,10 +32,14 @@ a {
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
+    
 }
+
+
 
 body {
     background: var(--dark-grey-5);
+    
 }
 
 

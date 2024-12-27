@@ -24,27 +24,27 @@
     var question9 = ViewBag.Form.Question9;
     var question10 = ViewBag.Form.Question10;
 
-    var question11 = string.Empty;
-    var question12 = string.Empty;
-    var question13 = string.Empty;
-    var question14 = string.Empty;
+    string? question11 = null;
+    string? question12 = null;
+    string? question13 = null;
+    string? question14 = null;
 
-    if (ViewBag.Form.Question11)
+    if (ViewBag.Form.Question11 != null)
     {
         question11 = ViewBag.Form.Question11;
     }
 
-    if (ViewBag.Form.Question12)
+    if (ViewBag.Form.Question12 != null)
     {
         question12 = ViewBag.Form.Question12;
     }
 
-    if (ViewBag.Form.Question13)
+    if (ViewBag.Form.Question13 != null)
     {
         question13 = ViewBag.Form.Question13;
     }
 
-    if (ViewBag.Form.OpenQuestionAr)
+    if (ViewBag.Form.OpenQuestionAr != null)
     {
         question14 = ViewBag.Form.OpenQuestionAr;
     }
@@ -70,22 +70,22 @@
         question10 = ViewBag.Form.Question10EN;
 
 
-        if (ViewBag.Form.Question11)
+        if (ViewBag.Form.Question11 != null)
         {
             question11 = ViewBag.Form.Question11EN;
         }
 
-        if (ViewBag.Form.Question12)
+        if (ViewBag.Form.Question12 != null)
         {
             question12 = ViewBag.Form.Question12EN;
         }
 
-        if (ViewBag.Form.Question13)
+        if (ViewBag.Form.Question13 != null)
         {
             question13 = ViewBag.Form.Question13EN;
         }
 
-        if (ViewBag.Form.OpenQuestionAr)
+        if (ViewBag.Form.OpenQuestionAr != null)
         {
             question14 = ViewBag.Form.OpenQuestionEn;
         }
@@ -108,22 +108,22 @@
         question9 = ViewBag.Form.Question9;
         question10 = ViewBag.Form.Question10;
 
-        if (ViewBag.Form.Question11)
+        if (ViewBag.Form.Question11 != null && ViewBag.Form.Question13 != null)
         {
             question11 = ViewBag.Form.Question11;
         }
 
-        if (ViewBag.Form.Question12)
+        if (ViewBag.Form.Question12 != null && ViewBag.Form.Question12 != null)
         {
             question12 = ViewBag.Form.Question12;
         }
 
-        if (ViewBag.Form.Question13)
+        if (ViewBag.Form.Question13 != null && ViewBag.Form.Question13 != null)
         {
             question13 = ViewBag.Form.Question13;
         }
 
-        if (ViewBag.Form.OpenQuestionAr)
+        if (ViewBag.Form.OpenQuestionAr != null && ViewBag.Form.OpenQuestionAr != null)
         {
             question14 = ViewBag.Form.OpenQuestionAr;
         }
@@ -131,87 +131,535 @@
 }
 
 <div class="landing-root-container">
-    <div class="landing-sub-container" id="landing-background">
-        <div class="top-container">
-            @await Html.PartialAsync("HeaderR")
+<div class="landing-sub-container" id="landing-background">
+<div class="top-container">
+@await Html.PartialAsync("HeaderR")
 
-            <div class="form2-root-container">
+<div class="form2-root-container">
 
-                <form method="post" asp-action="Index" class="form2-container">
-                    <div asp-validation-summary="ModelOnly"></div>
+<form method="post" asp-action="Index" class="form2-container">
+<div asp-validation-summary="ModelOnly"></div>
 
-                    <div class="form2__super-title-container">
-                        <h1 class="form2__super-title-text">@formTitle</h1>
-                    </div>
+<div class="form2__super-title-container">
+    <h1 class="form2__super-title-text" id="formTitle">@formTitle</h1>
+</div>
 
-                    <div class="form2__section-container">
-                        <div class="form2__section-title-container">
-                            <h3 class="form2__section-title-text"> @formSection1</h3>
-                        </div>
-
-                        <div class="form2__input-container">
-                            <label class="form2__label-text">@question1</label>
-                            <div class="AgeGroupLabel">
-                                <div>
-                                    <input class="test" name="AgeGroup" type="radio" value="1" required="required">
-                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
-                                </div>
-
-                                <div>
-                                    <input class="test" name="AgeGroup" type="radio" value="2">
-                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
-                                </div>
-
-                                <div>
-                                    <input class="test" name="AgeGroup" type="radio" value="3">
-                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
-                                </div>
-
-                                <div>
-                                    <input class="test" name="AgeGroup" type="radio" value="4">
-                                    <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
-                                </div>
-                            </div>
-                            <span asp-validation-for="AgeGroup" class="text-danger"></span>
-
-                        </div>
-                        <div class="form2__submit-container">
-                            <input class="form2__submit" type="submit" name="" id="" value="@Localizer["submit"]">
-                        </div>
-
-                        <div class="form2_navigations-container">
-                            <div class="form2__before-container">
-                                <input class="form2__before" type="button" name="" id="before" value="@Localizer["before"]">
-                            </div>
-
-                            <div class="form2__next-container">
-                                <input class="form2__next" type="button" name="" id="next" value="@Localizer["next"]">
-                            </div>
-                        </div>
-
-
-                    </div>
-
-
-                </form>
-            </div>
-        </div>
+<div class="form2__section-container">
+    <div class="form2__section-title-container" id="section1Container">
+        <h3 class="form2__section-title-text"> @formSection1</h3>
     </div>
 
-    <input type="hidden" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
-    <input type="hidden" asp-for="CreationDate" value="@DateTime.Now">
-    <input type="hidden" asp-for="Category" value="@ViewData["Category"]">
-    <input type="hidden" asp-for="FormId" value="@ViewBag.Form.id">
-    <input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
+    <div class="form2__input-container" id="Question1">
+        <label class="form2__label-text">@question1</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="AgeGroup" type="radio" value="1" required="required">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="AgeGroup" type="radio" value="2">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="AgeGroup" type="radio" value="3">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="AgeGroup" type="radio" value="4">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["AgeGroupLabel4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="AgeGroup" class="text-danger"></span>
+
+    </div>
+
+    <div class="form2__input-container" id="Question2">
+        <label class="form2__label-text">@question2</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="Sex" type="radio" value="Male" required="required">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["Sex1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Sex" type="radio" value="Female">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["Sex2"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="Sex" class="text-danger"></span>
+
+    </div>
+
+    <div class="form2__input-container" id="Question3">
+        <label class="form2__label-text">@question3</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="Education" type="radio" value="1" required="required">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["eduLabel1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Education" type="radio" value="2">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["eduLabel2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Education" type="radio" value="3">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["eduLabel3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Education" type="radio" value="4">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["eduLabel4"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Education" type="radio" value="5">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["eduLabel5"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="Education" class="text-danger"></span>
+    </div>
+
+
+    <div class="form2__section-title-container" id="section2Container">
+        <h3 class="form2__section-title-text" >@formSection2</h3>
+    </div>
+
+
+    <div class="form2__input-container" id="Question4">
+        <label class="form2__label-text">@question4</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="Scale1" type="radio" value="1" required="required">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Scale1" type="radio" value="2">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Scale1" type="radio" value="3">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Scale1" type="radio" value="4">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="Scale1" class="text-danger"></span>
+    </div>
+
+    <div class="form2__input-container" id="Question5">
+        <label class="form2__label-text">@question5</label>
+        <div class="AgeGroupLabel">
+            <div>
+                <input class="test" name="Scale2" type="radio" value="1" required="required">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Scale2" type="radio" value="2">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Scale2" type="radio" value="3">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+            </div>
+
+            <div>
+                <input class="test" name="Scale2" type="radio" value="4">
+                <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+            </div>
+        </div>
+        <span asp-validation-for="Scale2" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="form2__input-container" id="Question6">
+    <label class="form2__label-text">@question6</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale3" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale3" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale3" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale3" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale3" class="text-danger"></span>
+</div>
+
+<div class="form2__input-container" id="Question7">
+    <label class="form2__label-text">@question7</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale4" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale4" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale4" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale4" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale4" class="text-danger"></span>
+</div>
+
+<div class="form2__input-container" id="Question8">
+    <label class="form2__label-text">@question8</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale5" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale5" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale5" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale5" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale5" class="text-danger"></span>
+</div>
+
+<div class="form2__input-container" id="Question9">
+    <label class="form2__label-text">@question9</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale6" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale6" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale6" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale6" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale6" class="text-danger"></span>
+</div>
+
+<div class="form2__input-container" id="Question10">
+    <label class="form2__label-text">@question10</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale7" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale7" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale7" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale7" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale7" class="text-danger"></span>
+</div>
+
+<div class="form2__input-container" id="Question11">
+    <label class="form2__label-text" id="Question11Title">@question11</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale8" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale8" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale8" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale8" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale8" class="text-danger"></span>
+</div>
+
+<div class="form2__input-container" id="Question12">
+    <label class="form2__label-text" id="Question12Title">@question12</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale9" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale9" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale9" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale9" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale9" class="text-danger"></span>
+</div>
+
+
+<div class="form2__input-container" id="Question13">
+    <label class="form2__label-text" id="Question13Title">question13</label>
+    <div class="AgeGroupLabel">
+        <div>
+            <input class="test" name="Scale10" type="radio" value="1" required="required">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote1"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale10" type="radio" value="2">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote2"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale10" type="radio" value="3">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote3"]</label>
+        </div>
+
+        <div>
+            <input class="test" name="Scale10" type="radio" value="4">
+            <label class="form2__label-text-1" for="checkbox1">@Localizer["vote4"]</label>
+        </div>
+    </div>
+    <span asp-validation-for="Scale10" class="text-danger"></span>
+</div>
+
+<div class="form2__section-title-container" id="section3Container">
+    <h3 class="form2__section-title-text">@formSection3</h3>
+</div>
+
+
+<div class="form2__input-container" id="Question14">
+        <label class="form__label-text">@question14</label>
+        <textarea asp-for="OpenQuestion" class="form__input"></textarea>
+        <span asp-validation-for="OpenQuestion" class="text-danger"></span>
+        
+</div>
+
+
+<div class="form2__submit-container">
+    <input class="form2__submit" type="submit" name="" id="" value="@Localizer["submit"]">
+</div>
+
+<div class="form2_navigations-container">
+    <div class="form2__before-container">
+        <input class="form2__before" type="button" name="" id="before" value="@Localizer["before"]">
+    </div>
+
+    <div class="form2__next-container">
+        <input class="form2__next" type="button" name="" id="next" value="@Localizer["next"]">
+    </div>
+</div>
+
+
+</form>
+</div>
+</div>
+</div>
+
+<input type="hidden" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
+<input type="hidden" asp-for="CreationDate" value="@DateTime.Now">
+<input type="hidden" asp-for="Category" value="@ViewData["Category"]">
+<input type="hidden" asp-for="FormId" value="@ViewBag.Form.id">
+<input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
 </div>
 
 @Html.Hidden("title", 0);
 <script>
-    const next = document.getElementById("next")
-    const title = document.getElementById("title")
- 
+    
+    const next = document.getElementById("next");
+    const back = document.getElementById("before");
+
+    const section1Container = document.getElementById("section1Container");
+    const question1Container = document.getElementById("Question1");    
+    const question2Container = document.getElementById("Question2");
+    const question3Container = document.getElementById("Question3");
+
+    const section2Container = document.getElementById("section2Container");
+    const question4Container = document.getElementById("Question4");
+    const question5Container = document.getElementById("Question5");
+    const question6Container = document.getElementById("Question6");
+    const question7Container = document.getElementById("Question7");
+    const question8Container = document.getElementById("Question8");
+    const question9Container = document.getElementById("Question9");
+    const question10Container = document.getElementById("Question10");
+    const question11Container = document.getElementById("Question11");
+    const question12Container = document.getElementById("Question12");
+    const question13Container = document.getElementById("Question13");
+
+    const section3Container = document.getElementById("section3Container");
+    const question14Container = document.getElementById("Question14");
+    
+    
+    const Question11Title = document.getElementById("Question11Title")
+    const Question12Title = document.getElementById("Question12Title")
+    const Question13Title = document.getElementById("Question13Title")
+
+    let tryIt = Question13Title.innerText.length;
+
+
+    console.log(`inner text = ${tryIt}`)
+
+
+    section1Container.style.display = "flex"
+    question1Container.style.display = "flex"
+    
+    let count = 0;
     
     next.addEventListener("click", () =>{
-        console.log(`test value is ${title.innerHTML}`);
+        if (count != 15){
+
+        changeContainerDisplay(count, "none");
+        count++;
+        changeContainerDisplay(count, "flex");
+
+        console.log(count)
+        }
     })
+    
+    back.addEventListener("click", () =>{
+       if (count != 0){
+            
+           changeContainerDisplay(count, "none");
+           count--;
+           changeContainerDisplay(count, "flex");
+
+           console.log(count)
+       }
+   
+    })
+
+
+
+
+    const changeContainerDisplay = (number, display) => {
+    
+        switch (number){
+            case 1:
+                question1Container.style.display = display;
+            break;
+            case 2:
+                question2Container.style.display = display;
+                break;
+            case 3:
+                question3Container.style.display = display;
+                break;
+            case 4:
+                section1Container.style.display = "none"
+                section2Container.style.display = "block"
+                question4Container.style.display = display;
+                break;
+            case 5:
+                question5Container.style.display = display;
+                break;
+            case 6:
+                question6Container.style.display = display;
+                break;
+            case 7:
+                question7Container.style.display = display;
+                break;
+            case 8:
+                question8Container.style.display = display;
+                break;
+            case 9:
+                question9Container.style.display = display;
+                break;
+            case 10:
+                question10Container.style.display = display;
+                break;
+            case 11:
+                question11Container.style.display = display;
+                break;
+            case 12:
+                question12Container.style.display = display;
+                break;
+             case 13:
+                question13Container.style.display = display;
+                break; 
+                
+             case 14:
+                 section2Container.style.display = "none"
+                 section3Container.style.display = "block"
+                 question14Container.style.display = display;
+                break;
+        
+                
+        }
+    }
+    
+    const checkForNull = (string) => {
+        if (!string || string.length <= 0){
+            return "none";
+        }
+        return "flex";
+    }
+
 </script>

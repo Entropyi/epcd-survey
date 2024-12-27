@@ -25,6 +25,7 @@
 }
 
 .form2__section-title-container {
+    display: none;
     gap: 0.8em;
     font-family: Font-Medium;
     color: var(--th-Primary);
@@ -36,7 +37,7 @@
 }
 
 .form2__input-container {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
