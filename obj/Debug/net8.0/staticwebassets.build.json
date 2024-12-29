@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z9PDGJIY14s3beV9am3IObE/hPANVFKGG1x4LUezA9o=",
+  "Hash": "u2K9LNyMbzFu+AFn6qt2QYotTvUb7jVPrgbkWR1IExo=",
   "Source": "feedback",
   "BasePath": "_content/feedback",
   "Mode": "Default",
@@ -1516,6 +1516,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\chartjs-plugin-datalabels\\README.md"
+    },
+    {
+      "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\form.js",
+      "SourceId": "feedback",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\",
+      "BasePath": "_content/feedback",
+      "RelativePath": "js/form.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\form.js"
     },
     {
       "Identity": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\site.js",

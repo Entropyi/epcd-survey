@@ -30,6 +30,7 @@
     font-family: Font-Medium;
     color: var(--th-Primary);
     margin-bottom: 1em;
+    
 }
 
 .form2__section-title-text{
@@ -138,4 +139,15 @@
     transition: ease-in 200ms;
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(127, 17, 224, 1) 0%, rgba(160, 113, 255, 1) 92%, rgba(213, 192, 255, 1) 100%);
+}
+
+.before-disabled{
+    filter: grayscale(100%);
+    border: none;
+    background-color: var(--secondary-3);
+    font-family: Font-Regular;
+    color: var(--th-Primary);
+    padding: 1em 3em;
+    border-radius: 0.6em;
+    margin: 1em;
 }

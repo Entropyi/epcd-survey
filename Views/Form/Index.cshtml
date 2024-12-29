@@ -226,7 +226,7 @@
 
 
     <div class="form2__section-title-container" id="section2Container">
-        <h3 class="form2__section-title-text" >@formSection2</h3>
+        <h3 class="form2__section-title-text">@formSection2</h3>
     </div>
 
 
@@ -388,7 +388,7 @@
 </div>
 
 <div class="form2__input-container" id="Question10">
-    <label class="form2__label-text">@question10</label>
+    <label class="form2__label-text" id="Question10Title">@question10</label>
     <div class="AgeGroupLabel">
         <div>
             <input class="test" name="Scale7" type="radio" value="1" required="required">
@@ -498,10 +498,10 @@
 
 
 <div class="form2__input-container" id="Question14">
-        <label class="form__label-text">@question14</label>
-        <textarea asp-for="OpenQuestion" class="form__input"></textarea>
-        <span asp-validation-for="OpenQuestion" class="text-danger"></span>
-        
+    <label class="form__label-text">@question14</label>
+    <textarea asp-for="OpenQuestion" class="form__input"></textarea>
+    <span asp-validation-for="OpenQuestion" class="text-danger"></span>
+
 </div>
 
 
@@ -511,11 +511,11 @@
 
 <div class="form2_navigations-container">
     <div class="form2__before-container">
-        <input class="form2__before" type="button" name="" id="before" value="@Localizer["before"]">
+        <input class="before-disabled" type="button" name="" id="before" value="@Localizer["before"]">
     </div>
 
     <div class="form2__next-container">
-        <input class="form2__next" type="button" name="" id="next" value="@Localizer["next"]">
+        <input class="before-disabled" type="button" name="" id="next" value="@Localizer["next"]">
     </div>
 </div>
 
@@ -525,141 +525,13 @@
 </div>
 </div>
 
-<input type="hidden" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
+<input type="hidden" id="locale" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
 <input type="hidden" asp-for="CreationDate" value="@DateTime.Now">
 <input type="hidden" asp-for="Category" value="@ViewData["Category"]">
 <input type="hidden" asp-for="FormId" value="@ViewBag.Form.id">
 <input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
 </div>
 
-@Html.Hidden("title", 0);
-<script>
-    
-    const next = document.getElementById("next");
-    const back = document.getElementById("before");
-
-    const section1Container = document.getElementById("section1Container");
-    const question1Container = document.getElementById("Question1");    
-    const question2Container = document.getElementById("Question2");
-    const question3Container = document.getElementById("Question3");
-
-    const section2Container = document.getElementById("section2Container");
-    const question4Container = document.getElementById("Question4");
-    const question5Container = document.getElementById("Question5");
-    const question6Container = document.getElementById("Question6");
-    const question7Container = document.getElementById("Question7");
-    const question8Container = document.getElementById("Question8");
-    const question9Container = document.getElementById("Question9");
-    const question10Container = document.getElementById("Question10");
-    const question11Container = document.getElementById("Question11");
-    const question12Container = document.getElementById("Question12");
-    const question13Container = document.getElementById("Question13");
-
-    const section3Container = document.getElementById("section3Container");
-    const question14Container = document.getElementById("Question14");
-    
-    
-    const Question11Title = document.getElementById("Question11Title")
-    const Question12Title = document.getElementById("Question12Title")
-    const Question13Title = document.getElementById("Question13Title")
-
-    let tryIt = Question13Title.innerText.length;
-
-
-    console.log(`inner text = ${tryIt}`)
-
-
-    section1Container.style.display = "flex"
-    question1Container.style.display = "flex"
-    
-    let count = 0;
-    
-    next.addEventListener("click", () =>{
-        if (count != 15){
-
-        changeContainerDisplay(count, "none");
-        count++;
-        changeContainerDisplay(count, "flex");
-
-        console.log(count)
-        }
-    })
-    
-    back.addEventListener("click", () =>{
-       if (count != 0){
-            
-           changeContainerDisplay(count, "none");
-           count--;
-           changeContainerDisplay(count, "flex");
-
-           console.log(count)
-       }
-   
-    })
-
-
-
-
-    const changeContainerDisplay = (number, display) => {
-    
-        switch (number){
-            case 1:
-                question1Container.style.display = display;
-            break;
-            case 2:
-                question2Container.style.display = display;
-                break;
-            case 3:
-                question3Container.style.display = display;
-                break;
-            case 4:
-                section1Container.style.display = "none"
-                section2Container.style.display = "block"
-                question4Container.style.display = display;
-                break;
-            case 5:
-                question5Container.style.display = display;
-                break;
-            case 6:
-                question6Container.style.display = display;
-                break;
-            case 7:
-                question7Container.style.display = display;
-                break;
-            case 8:
-                question8Container.style.display = display;
-                break;
-            case 9:
-                question9Container.style.display = display;
-                break;
-            case 10:
-                question10Container.style.display = display;
-                break;
-            case 11:
-                question11Container.style.display = display;
-                break;
-            case 12:
-                question12Container.style.display = display;
-                break;
-             case 13:
-                question13Container.style.display = display;
-                break; 
-                
-             case 14:
-                 section2Container.style.display = "none"
-                 section3Container.style.display = "block"
-                 question14Container.style.display = display;
-                break;
-        
-                
-        }
-    }
-    
-    const checkForNull = (string) => {
-        if (!string || string.length <= 0){
-            return "none";
-        }
-        return "flex";
-    }
-
-</script>
+@section Scripts {
+<script src="~/js/form.js"></script>
+}
