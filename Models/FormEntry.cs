@@ -36,12 +36,10 @@ public class FormEntry
     [Required(ErrorMessage = "Required")] public int? Scale6 { get; set; }
 
     [Required(ErrorMessage = "Required")] public int? Scale7 { get; set; }
-
-    [Required(ErrorMessage = "Required")] public int? Scale8 { get; set; }
-
-    [Required(ErrorMessage = "Required")] public int? Scale9 { get; set; }
-
-    [Required(ErrorMessage = "Required")] public int? Scale10 { get; set; }
+    
+   public int? Scale8 { get; set; }
+   public int? Scale9 { get; set; }
+   public int? Scale10 { get; set; }
 
 
     public string? OpenQuestion { get; init; } = string.Empty;
@@ -54,14 +52,8 @@ public class FormEntry
     }
 
  public Languages? Language { get; init; }
-
-    public enum Categories
-    {
-        Community,
-        Indestry
-    }
-
-public Categories? Category { get; init; }
+ 
+public string? Category { get; init; }
 
 public DateTime? CreationDate { get; init; } = DateTime.Now;
 }

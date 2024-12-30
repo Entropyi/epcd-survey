@@ -27,17 +27,24 @@ public class FormController : Controller
         List<string> Categories = new();
         Categories.Add("Community");
         Categories.Add("Industry");
-        
-        ViewData["Category"] = category;
 
-        ViewBag.Form = await _context.Form.FindAsync(FormID);
-
-        if (ViewBag.Form == null)
+        if (Categories.Contains(category))
         {
-            return RedirectToAction(nameof(NotAvailable));
+            ViewBag.Category =  category;
+
+            ViewBag.Form = await _context.Form.FindAsync(FormID);
+
+            if (ViewBag.Form == null)
+            {
+                return RedirectToAction(nameof(NotAvailable));
+            }
+        
+            return View();
         }
         
-        return View();
+        return RedirectToAction(nameof(NotAvailable));
+        
+    
     }
 
 
@@ -45,9 +52,14 @@ public class FormController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Index(
         [Bind(
-            "Id,FormId,AgeGroup,Education,Sex,Scale1,Scale2,Scale3,Scale4,Scale5,Scale6,Scale7,Scale8,Scale9,Scale10,OpenQuestion,Language,Category,CreationDate")]
+            "Id,FormId,AgeGroup,Education,Sex,Scale1,Scale2,Scale3,Scale4,Scale5,Scale6,Scale7,Scale8,Scale9,Scale10,OpenQuestion,Language,CreationDate,Category")]
         FormEntry entry)
     {
+        if (entry.Category is not ("Community" or "Industry"))
+        {
+            ModelState.AddModelError(string.Empty, "Invalid category");
+        }
+        
         if (ModelState.IsValid)
         {
             _context.Add(entry);
