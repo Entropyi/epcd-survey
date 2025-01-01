@@ -46,6 +46,7 @@
     justify-content: center;
     border-radius: 0.3em;
     background-color: rgba(5, 41, 118, 0.25);
+    margin-bottom: 1em;
 }
 
 .form-title-container {
@@ -155,7 +156,60 @@
     border-radius: 0.4em;
 }
 
+.setDefault-super-Container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.setDefault-sub-Container{
+    position: absolute;
+    display: flex;
+    gap: 0.2em;
+    align-items: center;
+    justify-content: center;
+    top: 0.2em;
+}
+
+.nondefault-container{
+    cursor: pointer;
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 0.6);
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+}
+
+.nondefault-container:hover{
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 0.8);
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+}
+
+.default-container{
+    cursor: pointer;
+    transition: ease-in 100ms;
+    background: rgba(163, 230, 53, 0.6);
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+}
+
+.default-container:hover{
+    transition: ease-in 100ms;
+    background: rgba(252, 165, 165, 1);
+    /*background: rgba(252, 165, 165, 1);*/
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+}
+
+.start-date-super-container{
+    flex: 1;
+}
+
+.end-date-super-container{
+    flex: 1;
+}
 @media (max-width: 1000px) {
     .chart-sub-container {
         width: 80%;

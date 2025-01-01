@@ -6,8 +6,28 @@
 @model IEnumerable<feedback.Models.Form>
 
 @{
-ViewData["Title"] = "Index";
+ViewData["Title"] =  "Index" ;
+
+string defaultClassCommunity = "nondefault-container";
+string defaultClassIndustry = "nondefault-container";
+
+int communityDefault = 0;
+int IndustryDefault = 0;
+
+if (ViewBag.communityDefault != null)
+{
+    communityDefault = ViewBag.communityDefault;
 }
+
+if (ViewBag.IndustryDefault != null)
+{
+    IndustryDefault = ViewBag.IndustryDefault;
+}
+
+}
+
+@communityDefault
+@IndustryDefault
 
 @await Html.PartialAsync("Header")
 
@@ -32,7 +52,28 @@ ViewData["Title"] = "Index";
             title = @Html.DisplayFor(modelItem => item.FormTitleAr);
 
         }
-    <div class="forms-container">
+        
+        if (communityDefault > 0 && item.id == communityDefault)
+        {
+            defaultClassCommunity = "default-container";
+        }
+
+        if (communityDefault > 0 && item.id != communityDefault)
+        {
+            defaultClassCommunity = "nondefault-container";
+        }  
+                    
+        if (IndustryDefault > 0 && item.id == IndustryDefault)
+        {
+            defaultClassIndustry = "default-container";
+        }
+
+        if (IndustryDefault > 0 && item.id != IndustryDefault)
+        {
+            defaultClassIndustry = "nondefault-container";
+        } 
+             
+        <div class="forms-container">
 
         <div class="form-title-container">
             <h3 class="from-title-card-text">
@@ -64,6 +105,26 @@ ViewData["Title"] = "Index";
                class="form-action-delete-text">
                 @Localizer["Delete"]
             </a>
+        </div>
+        
+        <div class="setDefault-super-Container">
+            <div class="setDefault-sub-Container">
+                <form method="post" asp-action="SetDefaultForm">
+                    <input type="submit" class="@defaultClassIndustry"
+                           name="Category" value="Industry"/>
+                    
+                    <input type="hidden" name="FormID" value="@item.id">
+                </form>
+
+                <form method="post" asp-action="SetDefaultForm">
+                    <input type="submit"  class="@defaultClassCommunity"
+                           name="Category" value="Community"/>
+                    
+                    <input type="hidden" name="FormID" value="@item.id">
+
+                </form>
+
+            </div>
         </div>
     </div>
     }

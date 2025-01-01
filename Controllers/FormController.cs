@@ -27,7 +27,7 @@ public class FormController : Controller
         List<string> Categories = new();
         Categories.Add("Community");
         Categories.Add("Industry");
-
+        
         if (Categories.Contains(category))
         {
             ViewBag.Category =  category;
@@ -38,8 +38,23 @@ public class FormController : Controller
             {
                 return RedirectToAction(nameof(NotAvailable));
             }
-        
-            return View();
+            
+            var formEndDate = _context.Form
+                .Where(f => f.id == FormID)
+                .Select(e => e.EndDate)
+                .FirstOrDefault();
+            
+            if (formEndDate.HasValue)
+            {
+                TimeSpan? dateDifference = formEndDate - DateTime.Now ;
+                if (dateDifference > TimeSpan.Zero)
+                {
+                    return View();
+                }
+                return RedirectToAction(nameof(NotAvailable));
+            
+            }
+            return RedirectToAction(nameof(NotAvailable));
         }
         
         return RedirectToAction(nameof(NotAvailable));

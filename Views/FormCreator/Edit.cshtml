@@ -763,19 +763,32 @@ ViewData["Title"] = "asdasdda";
                 </div>
             </div>
 
-
             <div class="dates-container">
-                <div class="required-container">
-                    <label class="form__label-text">@Localizer["StartDate"]</label>
-                    <p class="error-message">*</p>
-                </div>
-                <input asp-for="StartDate" class="form__create-input">
+                <div class="start-date-super-container">
+                    <div class="required-container">
+                        <label class="form__label-text">@Localizer["StartDate"]</label>
+                        <p class="error-message">*</p>
+                    </div>
+                    <input asp-for="StartDate" class="form__create-input"
+                           min="@DateTime.Now.AddMonths(-1).ToString("yyyy-MM-ddTHH:mm")"
+                           max="@DateTime.Now.AddYears(5).ToString("yyyy-MM-ddTHH:mm")">
 
-                <div class="required-container">
-                    <label class="form__label-text">@Localizer["EndDate"]</label>
-                    <p class="error-message">*</p>
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
                 </div>
-                <input asp-for="EndDate" class="form__create-input">
+       
+                    <div class="end-date-super-container">
+                        <div class="required-container">
+                            <label class="form__label-text">@Localizer["EndDate"]</label>
+                            <p class="error-message">*</p>
+                        </div>
+
+                        <input asp-for="EndDate" class="form__create-input"
+                               min="@DateTime.Now.AddMonths(-1).ToString("yyyy-MM-ddTHH:mm")"
+                               max="@DateTime.Now.AddYears(5).AddHours(1).ToString("yyyy-MM-ddTHH:mm")">
+
+                        <span asp-validation-for="EndDate" class="text-danger"></span>
+
+                    </div>
             </div>
         </div>
 

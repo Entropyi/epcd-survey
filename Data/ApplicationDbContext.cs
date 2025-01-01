@@ -23,5 +23,6 @@ public class ApplicationDbContext : IdentityDbContext
 
     public DbSet<Form> Form { get; set; }
     public DbSet<FormEntry> FormEntry { get; set; }
+    public DbSet<DefaultForm> Default { get; set; }
     
 }

@@ -13,6 +13,8 @@ namespace feedback.Controllers
 {
     public class FormCreator : Controller
     {
+        string locale = Thread.CurrentThread.CurrentCulture.Name;
+
         public enum Sexes
         {
             Male,
@@ -30,9 +32,134 @@ namespace feedback.Controllers
         // GET: FormCreator
         public async Task<IActionResult> Index()
         {
+            int communityCount = _context.Default.Count(d => d.Category == "Community");
+            int industryCount = _context.Default.Count(d => d.Category == "Industry");
+
+            if (communityCount > 0)
+            {
+                ViewBag.communityDefault = _context.Default
+                    .Where(d => d.Category == "Community")
+                    .Select(d => d.FormID)
+                    .Single();
+            }
+
+            if (industryCount > 0)
+            {
+                ViewBag.IndustryDefault = _context.Default
+                    .Where(d => d.Category == "Industry")
+                    .Select(d => d.FormID)
+                    .Single();
+            }
+
+
             return View(await _context.Form
                 .Include(f => f.FormEntries)
                 .ToListAsync());
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> SetDefaultForm([Bind(
+                "FormID,Category")]
+            DefaultForm defualt)
+        {
+            int communityDefault = 0;
+            int IndustryDefault = 0;
+
+            int communityCount = _context.Default.Count(d => d.Category == "Community");
+            int industryCount = _context.Default.Count(d => d.Category == "Industry");
+
+            if (communityCount > 0)
+            {
+                communityDefault = _context.Default
+                    .Where(d => d.Category == "Community")
+                    .Select(d => d.FormID)
+                    .Single();
+            }
+
+            if (industryCount > 0)
+            {
+                IndustryDefault = _context.Default
+                    .Where(d => d.Category == "Industry")
+                    .Select(d => d.FormID)
+                    .Single();
+            }
+
+
+            if (defualt.FormID > 0 && (defualt.Category.Equals("Industry") || defualt.Category.Equals("Community")))
+            {
+                int? Industry = _context.Default
+                    .Where(d => d.Category == defualt.Category)
+                    .ToList().Count();
+
+                int? Community = _context.Default
+                    .Where(d => d.Category == defualt.Category)
+                    .ToList().Count();
+
+                if (defualt.Category.Equals("Industry") && Industry > 0)
+                {
+                    try
+                    {
+                        if (IndustryDefault == defualt.FormID)
+                        {
+                            _context.Default.Where(d => d.FormID == defualt.FormID)
+                                .Where(d => d.Category == defualt.Category).ExecuteDeleteAsync();
+                            return RedirectToAction(nameof(Index));
+                        }
+
+                        _context.Default
+                            .Where(d => d.Category == defualt.Category)
+                            .ExecuteUpdate(setters => setters.SetProperty(d => d.FormID, defualt.FormID));
+
+                        await _context.SaveChangesAsync();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                }
+
+                if (defualt.Category.Equals("Industry") && Industry <= 0)
+                {
+                    _context.Add(defualt);
+                    await _context.SaveChangesAsync();
+
+                    return RedirectToAction(nameof(Index));
+                }
+
+
+                if (defualt.Category.Equals("Community") && Community > 0)
+                {
+                    try
+                    {
+                        if (communityDefault == defualt.FormID)
+                        {
+                            _context.Default.Where(d => d.FormID == defualt.FormID)
+                                .Where(d => d.Category == defualt.Category).ExecuteDeleteAsync();
+                            return RedirectToAction(nameof(Index));
+                        }
+
+                        _context.Default
+                            .Where(d => d.Category == defualt.Category)
+                            .ExecuteUpdateAsync(setters => setters.SetProperty(d => d.FormID, defualt.FormID));
+
+                        await _context.SaveChangesAsync();
+                    }
+                    catch (Exception e)
+                    {
+                        throw e;
+                    }
+                }
+
+                if (defualt.Category.Equals("Community") && Community <= 0)
+                {
+                    _context.Add(defualt);
+                    await _context.SaveChangesAsync();
+                }
+            }
+
+
+            return RedirectToAction(nameof(Index));
         }
 
         [Authorize]
@@ -285,6 +412,53 @@ namespace feedback.Controllers
             return View(form);
         }
 
+        private (string, bool, string, bool) validateDateOnCreation(DateTime? startDate, DateTime? endDate,
+            string type = "Create")
+        {
+            if (type == "Create")
+            {
+                bool startDateValid = startDate > @DateTime.Now.AddMonths(-1) &&
+                                      startDate < DateTime.Now.AddYears(5);
+
+                bool endDateValid = endDate > DateTime.Now.AddHours(1) &&
+                                    endDate < DateTime.Now.AddYears(5);
+
+                return validateDates(startDateValid, endDateValid);
+            }
+
+            bool startDateValida = startDate < DateTime.Now.AddYears(5);
+
+            bool endDateValida = endDate > DateTime.Now.AddMinutes(10) &&
+                                 endDate < DateTime.Now.AddYears(5).AddMinutes(10);
+
+            return validateDates(startDateValida, endDateValida);
+        }
+
+        private (string, bool, string, bool) validateDates(bool startDateValid, bool endDateValid)
+        {
+            if (startDateValid && endDateValid)
+            {
+                return ("startDateValid", true, "endDateValid", true);
+            }
+
+            if (startDateValid && !endDateValid)
+            {
+                return ("startDateValid", true, "endDateValid", false);
+            }
+
+            if (!startDateValid && endDateValid)
+            {
+                return ("startDateValid", false, "endDateValid", true);
+            }
+
+            if (!startDateValid && !endDateValid)
+            {
+                return ("startDateValid", false, "endDateValid", false);
+            }
+
+            return ("startDateValid", false, "endDateValid", false);
+        }
+
 
         [Authorize]
         // GET: FormCreator/Create
@@ -304,6 +478,38 @@ namespace feedback.Controllers
                 "id,FormTitleAr,FormTitleEn,FormSectionOneLabelAr,FormSectionOneLabelEn,FormSectionTwoLabelAr,FormSectionTwoLabelEn,FormSectionThreeLabelAr,FormSectionThreeLabelEn,Question1,Question2,Question3,Question4,Question5,Question6,Question7,Question8,Question9,Question10,Question11,Question12,Question13,Question1EN,Question2EN,Question3EN,Question4EN,Question5EN,Question6EN,Question7EN,Question8EN,Question9EN,Question10EN,Question11EN,Question12EN,Question13EN,OpenQuestionAr,OpenQuestionEn,CreationDate,StartDate,EndDate")]
             Form form)
         {
+            (_, bool startDateValidtionResult, _, bool endDateValidtionResult) =
+                validateDateOnCreation(form.StartDate, form.EndDate);
+
+
+            if (!startDateValidtionResult)
+            {
+                if (locale == "ar")
+                {
+                    ModelState.AddModelError("startDate",
+                        " وقت البداية يجب ان لا يكون اكثر من خمس سنوات او اقل من شهر  من تاريخ اليوم");
+                }
+
+                if (locale == "en")
+                {
+                    ModelState.AddModelError("startDate",
+                        "Start Date must not exceed 5 years from today's date and not be less than one month from today");
+                }
+            }
+
+            if (!endDateValidtionResult)
+            {
+                if (locale == "ar")
+                {
+                    ModelState.AddModelError("endDate", " وقت النهاية يجب ان لا يكون اقل من وقت البداية بعشر دقائق ");
+                }
+
+                if (locale == "en")
+                {
+                    ModelState.AddModelError("endDate", "End date must be 10 minutes grater than start date.");
+                }
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(form);
@@ -362,6 +568,38 @@ namespace feedback.Controllers
             if (id != form.id)
             {
                 return NotFound();
+            }
+
+            (_, bool startDateValidtionResult, _, bool endDateValidtionResult) =
+                validateDateOnCreation(form.StartDate, form.EndDate, "Edit");
+
+            if (!startDateValidtionResult)
+            {
+                if (locale == "ar")
+                {
+                    ModelState.AddModelError("startDate",
+                        " وقت البداية يجب ان لا يكون اكثر من خمس سنوات او اقل من شهر من تاريخ اليوم");
+                }
+
+                if (locale == "en")
+                {
+                    ModelState.AddModelError("startDate",
+                        "Start Date must not exceed 5 years from today's date and not be less than one month from today");
+                }
+            }
+
+            if (!endDateValidtionResult)
+            {
+                if (locale == "ar")
+                {
+                    ModelState.AddModelError("endDate",
+                        " وقت النهاية يجب ان لا يكون اقل من وقت الحالي ووقت البداية بعشر دقائق ");
+                }
+
+                if (locale == "en")
+                {
+                    ModelState.AddModelError("endDate", "End date must be 10 minutes grater than start date.");
+                }
             }
 
 

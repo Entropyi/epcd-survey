@@ -147,9 +147,9 @@
     border-radius: 1em;
 }
 
-.test{
-    background: red;
+.test {
 }
+
 @media (max-width: 510px) {
     
     .login-sub-container:lang(en){

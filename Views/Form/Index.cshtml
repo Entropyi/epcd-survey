@@ -8,89 +8,29 @@
 @{
     ViewData["Title"] = ViewData["Category"];
 
-    var formTitle = ViewBag.Form.FormTitleAr;
-    var formSection1 = ViewBag.Form.FormSectionOneLabelAr;
-    var formSection2 = ViewBag.Form.FormSectionTwoLabelAr;
-    var formSection3 = ViewBag.Form.FormSectionThreeLabelAr;
 
-    var question1 = ViewBag.Form.Question1;
-    var question2 = ViewBag.Form.Question2;
-    var question3 = ViewBag.Form.Question3;
-    var question4 = ViewBag.Form.Question4;
-    var question5 = ViewBag.Form.Question5;
-    var question6 = ViewBag.Form.Question6;
-    var question7 = ViewBag.Form.Question7;
-    var question8 = ViewBag.Form.Question8;
-    var question9 = ViewBag.Form.Question9;
-    var question10 = ViewBag.Form.Question10;
+    string formTitle = string.Empty;
+    string formSection1 = string.Empty;
+    string formSection2 = string.Empty;
+    string formSection3 = string.Empty;
+
+    string question1 = string.Empty;
+    string question2 = string.Empty;
+    string question3 = string.Empty;
+    string question4 = string.Empty;
+    string question5 = string.Empty;
+    string question6 = string.Empty;
+    string question7 = string.Empty;
+    string question8 = string.Empty;
+    string question9 = string.Empty;
+    string question10 = string.Empty;
 
     string? question11 = null;
     string? question12 = null;
     string? question13 = null;
     string? question14 = null;
 
-    if (ViewBag.Form.Question11 != null)
-    {
-        question11 = ViewBag.Form.Question11;
-    }
-
-    if (ViewBag.Form.Question12 != null)
-    {
-        question12 = ViewBag.Form.Question12;
-    }
-
-    if (ViewBag.Form.Question13 != null)
-    {
-        question13 = ViewBag.Form.Question13;
-    }
-
-    if (ViewBag.Form.OpenQuestionAr != null)
-    {
-        question14 = ViewBag.Form.OpenQuestionAr;
-    }
-
-
-    if (Thread.CurrentThread.CurrentCulture.Name != "ar")
-    {
-        formTitle = ViewBag.Form.FormTitleEn;
-
-        formSection1 = ViewBag.Form.FormSectionOneLabelEn;
-        formSection2 = ViewBag.Form.FormSectionTwoLabelEn;
-        formSection3 = ViewBag.Form.FormSectionThreeLabelEn;
-
-        question1 = ViewBag.Form.Question1EN;
-        question2 = ViewBag.Form.Question2EN;
-        question3 = ViewBag.Form.Question3EN;
-        question4 = ViewBag.Form.Question4EN;
-        question5 = ViewBag.Form.Question5EN;
-        question6 = ViewBag.Form.Question6EN;
-        question7 = ViewBag.Form.Question7EN;
-        question8 = ViewBag.Form.Question8EN;
-        question9 = ViewBag.Form.Question9EN;
-        question10 = ViewBag.Form.Question10EN;
-
-
-        if (ViewBag.Form.Question11 != null)
-        {
-            question11 = ViewBag.Form.Question11EN;
-        }
-
-        if (ViewBag.Form.Question12 != null)
-        {
-            question12 = ViewBag.Form.Question12EN;
-        }
-
-        if (ViewBag.Form.Question13 != null)
-        {
-            question13 = ViewBag.Form.Question13EN;
-        }
-
-        if (ViewBag.Form.OpenQuestionAr != null)
-        {
-            question14 = ViewBag.Form.OpenQuestionEn;
-        }
-    }
-    else
+    try
     {
         formTitle = ViewBag.Form.FormTitleAr;
         formSection1 = ViewBag.Form.FormSectionOneLabelAr;
@@ -108,25 +48,111 @@
         question9 = ViewBag.Form.Question9;
         question10 = ViewBag.Form.Question10;
 
-        if (ViewBag.Form.Question11 != null && ViewBag.Form.Question13 != null)
+
+        if (ViewBag.Form.Question11 != null)
         {
             question11 = ViewBag.Form.Question11;
         }
 
-        if (ViewBag.Form.Question12 != null && ViewBag.Form.Question12 != null)
+        if (ViewBag.Form.Question12 != null)
         {
             question12 = ViewBag.Form.Question12;
         }
 
-        if (ViewBag.Form.Question13 != null && ViewBag.Form.Question13 != null)
+        if (ViewBag.Form.Question13 != null)
         {
             question13 = ViewBag.Form.Question13;
         }
 
-        if (ViewBag.Form.OpenQuestionAr != null && ViewBag.Form.OpenQuestionAr != null)
+        if (ViewBag.Form.OpenQuestionAr != null)
         {
             question14 = ViewBag.Form.OpenQuestionAr;
         }
+
+
+        if (Thread.CurrentThread.CurrentCulture.Name != "ar")
+        {
+            formTitle = ViewBag.Form.FormTitleEn;
+
+            formSection1 = ViewBag.Form.FormSectionOneLabelEn;
+            formSection2 = ViewBag.Form.FormSectionTwoLabelEn;
+            formSection3 = ViewBag.Form.FormSectionThreeLabelEn;
+
+            question1 = ViewBag.Form.Question1EN;
+            question2 = ViewBag.Form.Question2EN;
+            question3 = ViewBag.Form.Question3EN;
+            question4 = ViewBag.Form.Question4EN;
+            question5 = ViewBag.Form.Question5EN;
+            question6 = ViewBag.Form.Question6EN;
+            question7 = ViewBag.Form.Question7EN;
+            question8 = ViewBag.Form.Question8EN;
+            question9 = ViewBag.Form.Question9EN;
+            question10 = ViewBag.Form.Question10EN;
+
+
+            if (ViewBag.Form.Question11 != null)
+            {
+                question11 = ViewBag.Form.Question11EN;
+            }
+
+            if (ViewBag.Form.Question12 != null)
+            {
+                question12 = ViewBag.Form.Question12EN;
+            }
+
+            if (ViewBag.Form.Question13 != null)
+            {
+                question13 = ViewBag.Form.Question13EN;
+            }
+
+            if (ViewBag.Form.OpenQuestionAr != null)
+            {
+                question14 = ViewBag.Form.OpenQuestionEn;
+            }
+        }
+        else
+        {
+            formTitle = ViewBag.Form.FormTitleAr;
+            formSection1 = ViewBag.Form.FormSectionOneLabelAr;
+            formSection2 = ViewBag.Form.FormSectionTwoLabelAr;
+            formSection3 = ViewBag.Form.FormSectionThreeLabelAr;
+
+            question1 = ViewBag.Form.Question1;
+            question2 = ViewBag.Form.Question2;
+            question3 = ViewBag.Form.Question3;
+            question4 = ViewBag.Form.Question4;
+            question5 = ViewBag.Form.Question5;
+            question6 = ViewBag.Form.Question6;
+            question7 = ViewBag.Form.Question7;
+            question8 = ViewBag.Form.Question8;
+            question9 = ViewBag.Form.Question9;
+            question10 = ViewBag.Form.Question10;
+
+            if (ViewBag.Form.Question11 != null && ViewBag.Form.Question13 != null)
+            {
+                question11 = ViewBag.Form.Question11;
+            }
+
+            if (ViewBag.Form.Question12 != null && ViewBag.Form.Question12 != null)
+            {
+                question12 = ViewBag.Form.Question12;
+            }
+
+            if (ViewBag.Form.Question13 != null && ViewBag.Form.Question13 != null)
+            {
+                question13 = ViewBag.Form.Question13;
+            }
+
+            if (ViewBag.Form.OpenQuestionAr != null && ViewBag.Form.OpenQuestionAr != null)
+            {
+                question14 = ViewBag.Form.OpenQuestionAr;
+            }
+        }
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine(e);
+        throw;
     }
 }
 
@@ -138,7 +164,7 @@
 <div class="form2-root-container">
 
 <form method="post" asp-action="Index" class="form2-container">
-  
+
 <div asp-validation-summary="ModelOnly"></div>
 
 <div class="form2__super-title-container">
@@ -146,19 +172,18 @@
 </div>
 
 
-
 <div class="form2__section-container">
     <div class="form2__section-title-container" id="section1Container">
         <h3 class="form2__section-title-text"> @formSection1</h3>
     </div>
-    
+
     <div class="progress-bar-spacing-container">
         <div class="progress-bar_super-container">
             <div class="progress-bar_sub-container" id="progressBar">
             </div>
-        </div> 
+        </div>
     </div>
-  
+
 
     <div class="form2__input-container" id="Question1">
         <label class="form2__label-text">@question1</label>
@@ -529,33 +554,32 @@
     </div>
 </div>
 
-    <div class="progress-indicator__super-container">
-        <div class="progress-indicator__container">
-            <div class="number-container">
-                <div class="current-container">
-                    <p class="current-text" id="current-question">1</p>
-                </div>
-                <div class="separator-container">
-                    <p class="separator-text">/</p>
-                </div>
-                <div class="total-container">
-                    <p class="total-text" id="total-questions">11</p>
-                </div>
+<div class="progress-indicator__super-container">
+    <div class="progress-indicator__container">
+        <div class="number-container">
+            <div class="current-container">
+                <p class="current-text" id="current-question">1</p>
+            </div>
+            <div class="separator-container">
+                <p class="separator-text">/</p>
+            </div>
+            <div class="total-container">
+                <p class="total-text" id="total-questions">11</p>
             </div>
         </div>
     </div>
+</div>
 <input type="hidden" id="locale" value="@Thread.CurrentThread.CurrentCulture.Name" asp-for="Language">
-    <input type="hidden" asp-for="CreationDate" value="@DateTime.Now">
-    <input type="hidden" asp-for="FormId" value="@ViewBag.Form.id">
-    <input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
-    <input type="hidden" asp-for="Category" value="@ViewBag.Category">
+<input type="hidden" asp-for="CreationDate" value="@DateTime.Now">
+<input type="hidden" asp-for="FormId" value="@ViewBag.Form.id">
+<input type="hidden" asp-for="Language" value="@Thread.CurrentThread.CurrentCulture.Name">
+<input type="hidden" asp-for="Category" value="@ViewBag.Category">
 
 </form>
 </div>
 
 </div>
 
- 
 
 </div>
 
@@ -738,7 +762,7 @@
 
         next.addEventListener("click", () => {
             checkChecker(count)
-            console.log(count)
+            
             if (count < 14 && checkChecker(count)) {
                 changeContainerDisplay(count, "none");
                 count++;
@@ -764,7 +788,7 @@
 
 
         back.addEventListener("click", () => {
-            if(count != 0 && count < 11) {
+            if(count > 1 && count < 11) {
                 next.classList.replace("before-disabled", "form2__next")
                 changeContainerDisplay(count, "none");
                 count--;
@@ -774,6 +798,7 @@
                 currentQuestion.innerText = count;
 
             } else {
+            if (count > 1){
                 if(count >= 11) {
                     let oldCount = count ;
                     count--;
@@ -815,6 +840,7 @@
                     }
 
                 }
+            }
             }
         })
 
@@ -1003,6 +1029,5 @@
             }
 
         }
-        
     </script>
 }

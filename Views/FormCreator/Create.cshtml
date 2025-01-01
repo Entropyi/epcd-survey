@@ -834,25 +834,38 @@
             </div>
         </div>
     </div>
-    
-    <div class="dates-container">
-        <div class="required-container">
-            <label class="form__label-text">@Localizer["StartDate"]</label>
-            <p class="error-message">*</p>
-        </div>
-        <input asp-for="StartDate" class="form__create-input">
 
-        <div class="required-container">
-            <label class="form__label-text">@Localizer["EndDate"]</label>
-            <p class="error-message">*</p>
+    <div class="dates-container">
+        <div class="start-date-super-container">
+            <div class="required-container">
+                <label class="form__label-text">@Localizer["StartDate"]</label>
+                <p class="error-message">*</p>
+            </div>
+            <input asp-for="StartDate" class="form__create-input"
+                   min="@DateTime.Now.AddMonths(-1).ToString("yyyy-MM-ddTHH:mm")"
+                   max="@DateTime.Now.AddYears(5).ToString("yyyy-MM-ddTHH:mm")">
+            <span asp-validation-for="StartDate" class="error-message"></span>
+
         </div>
-        <input asp-for="EndDate" class="form__create-input">
+
+        <div class="end-date-super-container">
+            <div class="required-container">
+                <label class="form__label-text">@Localizer["EndDate"]</label>
+                <p class="error-message">*</p>
+            </div>
+
+            <input asp-for="EndDate" class="form__create-input"
+                   min="@DateTime.Now.AddMonths(-1).ToString("yyyy-MM-ddTHH:mm")"
+                   max="@DateTime.Now.AddYears(5).AddHours(1).ToString("yyyy-MM-ddTHH:mm")">
+            <span asp-validation-for="EndDate" class="error-message"></span>
+
+        </div>
     </div>
 </div>
 
-
+ <h1 style="color: red"></h1>
 <div class="form__submit-container">
-    <input class="form__submit" type="submit" value="@Localizer["Submit"]">
+    <input min="@DateTime.Now" class="form__submit" type="submit" value="@Localizer["Submit"]">
 </div>
 
 </form>
