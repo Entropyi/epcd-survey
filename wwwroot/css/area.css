@@ -47,12 +47,25 @@
     border-radius: 0.3em;
     background-color: rgba(5, 41, 118, 0.25);
     margin-bottom: 1em;
+    position: relative;
+}
+
+.form-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-title-container {
 }
 
 .from-title-card-text {
+    max-width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     font-size: 1.5em;
     font-family: "Font-Bold";
 }
@@ -72,15 +85,29 @@
     font-family: "Font-Light";
 }
 
-.form-action-delete-text:hover {
-    color: red;
+.form-action-view-text,
+.form-action-edit-text,
+.form-action-delete-text {
     cursor: pointer;
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 0.6);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+.form-action-delete-text:hover {
+    transition: ease-in 100ms;
+    background: rgba(252, 165, 165, 1);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
 }
 
 .form-action-view-text:hover,
 .form-action-edit-text:hover {
-    color: green;
-    cursor: pointer;
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 1);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
 }
 
 .form__create-container {
@@ -134,12 +161,12 @@
 }
 
 .return-super-container,
-.title-super-container{
+.title-super-container {
     width: 85%;
     margin: 1em auto;
 }
 
-.title-super-container{
+.title-super-container {
     width: 85%;
     margin: 2em auto;
 }
@@ -156,63 +183,75 @@
     border-radius: 0.4em;
 }
 
-.setDefault-super-Container{
+.setDefault-super-Container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.setDefault-sub-Container{
+.setDefault-sub-Container {
     position: absolute;
     display: flex;
     gap: 0.2em;
+    font-family: "Font-Light";
     align-items: center;
     justify-content: center;
     top: 0.2em;
 }
 
-.nondefault-container{
+.nondefault-container {
     cursor: pointer;
     transition: ease-in 100ms;
     background: rgba(156, 163, 175, 0.6);
-    padding: 0.5em 1em;
+    padding: 0.3em 1em;
     border-radius: 0.4em;
 }
 
-.nondefault-container:hover{
+.nondefault-container:hover {
     transition: ease-in 100ms;
     background: rgba(156, 163, 175, 0.8);
-    padding: 0.5em 1em;
+    padding: 0.3em 1em;
     border-radius: 0.4em;
 }
 
-.default-container{
+.default-container {
     cursor: pointer;
     transition: ease-in 100ms;
     background: rgba(163, 230, 53, 0.6);
-    padding: 0.5em 1em;
+    padding: 0.3em 1em;
     border-radius: 0.4em;
 }
 
-.default-container:hover{
+.default-container:hover {
     transition: ease-in 100ms;
     background: rgba(252, 165, 165, 1);
-    /*background: rgba(252, 165, 165, 1);*/
-    padding: 0.5em 1em;
+    padding: 0.3em 1em;
     border-radius: 0.4em;
 }
 
-.start-date-super-container{
+.start-date-super-container {
     flex: 1;
 }
 
-.end-date-super-container{
+.end-date-super-container {
     flex: 1;
 }
+
+.menu-container {
+    stroke: var(--th-Primary);
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.form-control-container {
+
+}
+
 @media (max-width: 1000px) {
     .chart-sub-container {
         width: 80%;
     }
-
 }

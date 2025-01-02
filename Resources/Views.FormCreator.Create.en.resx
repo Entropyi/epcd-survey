@@ -144,4 +144,7 @@
     <data name="EndDate" xml:space="preserve">
         <value>End Date</value>
     </data>
+    <data name="Community" xml:space="preserve">
+        <value>Community</value>
+    </data>
 </root>

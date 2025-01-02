@@ -23,4 +23,10 @@
     <data name="Edit" xml:space="preserve">
         <value>Edit</value>
     </data>
+    <data name="Industry" xml:space="preserve">
+        <value>Industry</value>
+    </data>
+    <data name="Community" xml:space="preserve">
+        <value>Community</value>
+    </data>
 </root>

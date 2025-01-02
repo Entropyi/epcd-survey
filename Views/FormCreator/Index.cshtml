@@ -1,33 +1,30 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using Org.BouncyCastle.Tls
 
 @inject IViewLocalizer Localizer
 
 @model IEnumerable<feedback.Models.Form>
 
 @{
-ViewData["Title"] =  "Index" ;
+    ViewData["Title"] = "Index";
 
-string defaultClassCommunity = "nondefault-container";
-string defaultClassIndustry = "nondefault-container";
+    string defaultClassCommunity = "nondefault-container";
+    string defaultClassIndustry = "nondefault-container";
 
-int communityDefault = 0;
-int IndustryDefault = 0;
+    int communityDefault = 0;
+    int IndustryDefault = 0;
 
-if (ViewBag.communityDefault != null)
-{
-    communityDefault = ViewBag.communityDefault;
+    if (ViewBag.communityDefault != null)
+    {
+        communityDefault = ViewBag.communityDefault;
+    }
+
+    if (ViewBag.IndustryDefault != null)
+    {
+        IndustryDefault = ViewBag.IndustryDefault;
+    }
 }
-
-if (ViewBag.IndustryDefault != null)
-{
-    IndustryDefault = ViewBag.IndustryDefault;
-}
-
-}
-
-@communityDefault
-@IndustryDefault
 
 @await Html.PartialAsync("Header")
 
@@ -50,9 +47,8 @@ if (ViewBag.IndustryDefault != null)
         else
         {
             title = @Html.DisplayFor(modelItem => item.FormTitleAr);
-
         }
-        
+
         if (communityDefault > 0 && item.id == communityDefault)
         {
             defaultClassCommunity = "default-container";
@@ -61,8 +57,8 @@ if (ViewBag.IndustryDefault != null)
         if (communityDefault > 0 && item.id != communityDefault)
         {
             defaultClassCommunity = "nondefault-container";
-        }  
-                    
+        }
+
         if (IndustryDefault > 0 && item.id == IndustryDefault)
         {
             defaultClassIndustry = "default-container";
@@ -71,61 +67,75 @@ if (ViewBag.IndustryDefault != null)
         if (IndustryDefault > 0 && item.id != IndustryDefault)
         {
             defaultClassIndustry = "nondefault-container";
-        } 
-             
+        }
+
         <div class="forms-container">
 
-        <div class="form-title-container">
-            <h3 class="from-title-card-text">
-                @title
-            </h3>
-        </div>
-        <div class="form-responses-count-container">
-            <h4 class="responses-text">
-                @Html.DisplayFor(modelItem => item.FormEntries.Count)
-            </h4>
-        </div>
+         
 
-        <div class="form-time-container">
-            <p class="form-date-text">
-                @Html.DisplayFor(modelItem => item.CreationDate)
-            </p>
-        </div>
+            <div class="form-data-container" id="formData" >
+                <div class="form-title-container">
+                    <h3 class="from-title-card-text">
+                        @title
+                    </h3>
+                </div>
+                <div class="form-responses-count-container">
+                    <h4 class="responses-text">
+                        @Html.DisplayFor(modelItem => item.FormEntries.Count)
+                    </h4>
+                </div>
 
-        <div class="form-actions-container">
-            <a asp-action="Details" asp-route-id="@item.id"
-               class="form-action-view-text">
-                @Localizer["View"]
-            </a>
-            <a asp-action="Edit" asp-route-id="@item.id"
-               class="form-action-edit-text">
-                @Localizer["Edit"]
-            </a>
-            <a asp-action="Delete" asp-route-id="@item.id"
-               class="form-action-delete-text">
-                @Localizer["Delete"]
-            </a>
-        </div>
-        
-        <div class="setDefault-super-Container">
-            <div class="setDefault-sub-Container">
-                <form method="post" asp-action="SetDefaultForm">
-                    <input type="submit" class="@defaultClassIndustry"
-                           name="Category" value="Industry"/>
-                    
-                    <input type="hidden" name="FormID" value="@item.id">
-                </form>
-
-                <form method="post" asp-action="SetDefaultForm">
-                    <input type="submit"  class="@defaultClassCommunity"
-                           name="Category" value="Community"/>
-                    
-                    <input type="hidden" name="FormID" value="@item.id">
-
-                </form>
-
+                <div class="form-time-container">
+                    <p class="form-date-text">
+                        @Html.DisplayFor(modelItem => item.CreationDate)
+                    </p>
+                </div>
             </div>
+
+            <div id="formControls" class="form-control-container">
+                <div class="form-actions-container">
+                    <a asp-action="Details" asp-route-id="@item.id"
+                       class="form-action-view-text">
+                        @Localizer["View"]
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@item.id"
+                       class="form-action-edit-text">
+                        @Localizer["Edit"]
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.id"
+                       class="form-action-delete-text">
+                        @Localizer["Delete"]
+                    </a>
+                </div>
+
+
+                <div class="setDefault-super-Container">
+                    <div class="setDefault-sub-Container">
+                        <form method="post" asp-action="SetDefaultForm">
+                            <input type="submit" class="@defaultClassIndustry"
+                                   value="@Localizer["Industry"]"/>
+                            
+                            <input type="hidden" name="Category" value="Industry">
+                            <input type="hidden" name="FormID" value="@item.id">
+                        </form>
+
+                        <form method="post" asp-action="SetDefaultForm">
+                            <input type="submit" class="@defaultClassCommunity"
+                                    value="@Localizer["Community"]"/>
+
+                            <input type="hidden" name="FormID" value="@item.id">
+                            <input type="hidden" name="Category" value="Community">
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+          
         </div>
-    </div>
     }
 </div>
+
+<script src="js/form.js">
+   
+</script>

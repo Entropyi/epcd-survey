@@ -60,6 +60,33 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to متاح.
+        /// </summary>
+        internal static string Available {
+            get {
+                return ResourceManager.GetString("Available", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المجتمع.
+        /// </summary>
+        internal static string Community {
+            get {
+                return ResourceManager.GetString("Community", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تاريخ النهاية.
+        /// </summary>
+        internal static string EndDate {
+            get {
+                return ResourceManager.GetString("EndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to المجتمع.
         /// </summary>
         internal static string formSubSection1 {
@@ -87,11 +114,56 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to الصناعات.
+        /// </summary>
+        internal static string Industry {
+            get {
+                return ResourceManager.GetString("Industry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to غير متاح.
+        /// </summary>
+        internal static string notAvailable {
+            get {
+                return ResourceManager.GetString("notAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تحكم.
         /// </summary>
         internal static string Return {
             get {
                 return ResourceManager.GetString("Return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to القطاع.
+        /// </summary>
+        internal static string Sector {
+            get {
+                return ResourceManager.GetString("Sector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تاريخ البداية.
+        /// </summary>
+        internal static string StartDate {
+            get {
+                return ResourceManager.GetString("StartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الحالة.
+        /// </summary>
+        internal static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
             }
         }
     }

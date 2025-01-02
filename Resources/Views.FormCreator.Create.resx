@@ -151,4 +151,7 @@
     <data name="EndDate" xml:space="preserve">
         <value>تاريخ النهاية</value>
     </data>
+    <data name="Community" xml:space="preserve">
+        <value>المجتمع</value>
+    </data>
 </root>

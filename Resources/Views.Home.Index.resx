@@ -30,4 +30,28 @@
     <data name="Return" xml:space="preserve">
         <value>تحكم</value>
     </data>
+    <data name="Sector" xml:space="preserve">
+        <value>القطاع</value>
+    </data>
+    <data name="Status" xml:space="preserve">
+        <value>الحالة</value>
+    </data>
+    <data name="StartDate" xml:space="preserve">
+        <value>تاريخ البداية</value>
+    </data>
+    <data name="EndDate" xml:space="preserve">
+        <value>تاريخ النهاية</value>
+    </data>
+    <data name="Industry" xml:space="preserve">
+        <value>الصناعات</value>
+    </data>
+    <data name="Community" xml:space="preserve">
+        <value>المجتمع</value>
+    </data>
+    <data name="Available" xml:space="preserve">
+        <value>متاح</value>
+    </data>
+    <data name="notAvailable" xml:space="preserve">
+        <value>غير متاح</value>
+    </data>
 </root>

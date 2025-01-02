@@ -204,3 +204,9 @@
     }
 }
 
+@media (max-width: 379px) {
+    .landing__section-container{
+        width: 70%;
+    }
+}
+

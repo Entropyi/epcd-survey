@@ -30,4 +30,10 @@
     <data name="Edit" xml:space="preserve">
         <value>تعديل</value>
     </data>
+    <data name="Community" xml:space="preserve">
+        <value>المجتمع</value>
+    </data>
+    <data name="Industry" xml:space="preserve">
+        <value>الصناعات</value>
+    </data>
 </root>

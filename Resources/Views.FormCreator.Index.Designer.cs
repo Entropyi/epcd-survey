@@ -60,6 +60,15 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to المجتمع.
+        /// </summary>
+        internal static string Community {
+            get {
+                return ResourceManager.GetString("Community", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to انشئ.
         /// </summary>
         internal static string Create {
@@ -83,6 +92,15 @@ namespace feedback.Resources {
         internal static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الصناعات.
+        /// </summary>
+        internal static string Industry {
+            get {
+                return ResourceManager.GetString("Industry", resourceCulture);
             }
         }
         

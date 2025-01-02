@@ -38,7 +38,7 @@ namespace feedback.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("feedback.Resources.Views.FormCreator.Delete", typeof(Views_FormCreator_Delete).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("feedback.Resources.Views.FormCreator.Create", typeof(Views_FormCreator_Create).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -56,6 +56,15 @@ namespace feedback.Resources {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to اضف سؤال.
+        /// </summary>
+        internal static string add {
+            get {
+                return ResourceManager.GetString("add", resourceCulture);
             }
         }
         
@@ -95,6 +104,15 @@ namespace feedback.Resources {
         internal static string AgeGroupLabel4 {
             get {
                 return ResourceManager.GetString("AgeGroupLabel4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المجتمع.
+        /// </summary>
+        internal static string Community {
+            get {
+                return ResourceManager.GetString("Community", resourceCulture);
             }
         }
         
@@ -378,7 +396,7 @@ namespace feedback.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to حذف.
+        ///   Looks up a localized string similar to حفظ.
         /// </summary>
         internal static string Submit {
             get {

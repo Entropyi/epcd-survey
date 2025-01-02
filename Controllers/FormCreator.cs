@@ -109,7 +109,7 @@ namespace feedback.Controllers
 
                         _context.Default
                             .Where(d => d.Category == defualt.Category)
-                            .ExecuteUpdate(setters => setters.SetProperty(d => d.FormID, defualt.FormID));
+                            .ExecuteUpdateAsync(setters => setters.SetProperty(d => d.FormID, defualt.FormID));
 
                         await _context.SaveChangesAsync();
                     }
