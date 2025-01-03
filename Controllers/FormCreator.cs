@@ -51,7 +51,7 @@ namespace feedback.Controllers
                     .Single();
             }
 
-
+            
             return View(await _context.Form
                 .Include(f => f.FormEntries)
                 .ToListAsync());

@@ -246,10 +246,10 @@
     cursor: pointer;
 }
 
-.form-control-container {
-
+.form-end-date-container{
+    position: absolute;
+    top: -1.3em;
 }
-
 @media (max-width: 1000px) {
     .chart-sub-container {
         width: 80%;

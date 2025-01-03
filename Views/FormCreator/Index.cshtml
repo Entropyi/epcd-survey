@@ -1,5 +1,6 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using NuGet.Packaging.Signing
 @using Org.BouncyCastle.Tls
 
 @inject IViewLocalizer Localizer
@@ -24,6 +25,27 @@
     {
         IndustryDefault = ViewBag.IndustryDefault;
     }
+
+
+    string ClockDisplay(DateTime? endDate)
+    {
+        TimeSpan? timeDifference = endDate - DateTime.Now;
+
+        if (timeDifference > TimeSpan.Zero)
+        {
+            return "block";
+        }
+
+        return "none";
+    }
+
+    bool test()
+    {
+        Console.WriteLine("s");
+        return true;
+    }
+
+    
 }
 
 @await Html.PartialAsync("Header")
@@ -38,6 +60,7 @@
 
     @foreach (var item in Model)
     {
+        
         var title = @Html.DisplayFor(modelItem => item.FormTitleAr);
 
         if (Thread.CurrentThread.CurrentCulture.Name != "ar")
@@ -71,9 +94,24 @@
 
         <div class="forms-container">
 
-         
+            <div class="form-end-date-container" style="display: @ClockDisplay(item.EndDate)">
+                <svg class="clock-container" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     width="40px" height="40px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                    <g>
+                        <circle fill="#F76D57" cx="32" cy="32" r="24"/>
+                        <g>
+                            <path fill="#00000" d="M32,0C14.328,0,0,14.328,0,32s14.328,32,32,32s32-14.328,32-32S49.672,0,32,0z M32,56
+			C18.746,56,8,45.254,8,32S18.746,8,32,8s24,10.746,24,24S45.254,56,32,56z"/>
+                            <path fill="#00000" d="M36,30.344V16c0-2.211-1.789-4-4-4s-4,1.789-4,4v16c0,0.523,0.105,1.039,0.309,1.527
+			c0.203,0.492,0.496,0.938,0.867,1.305l7.934,7.934c1.566,1.566,4.168,1.645,5.734,0.078c1.562-1.562,1.582-4.074,0.016-5.641
+			L36,30.344z"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
 
-            <div class="form-data-container" id="formData" >
+
+            <div class="form-data-container" id="formData">
                 <div class="form-title-container">
                     <h3 class="from-title-card-text">
                         @title
@@ -114,14 +152,14 @@
                         <form method="post" asp-action="SetDefaultForm">
                             <input type="submit" class="@defaultClassIndustry"
                                    value="@Localizer["Industry"]"/>
-                            
+
                             <input type="hidden" name="Category" value="Industry">
                             <input type="hidden" name="FormID" value="@item.id">
                         </form>
 
                         <form method="post" asp-action="SetDefaultForm">
                             <input type="submit" class="@defaultClassCommunity"
-                                    value="@Localizer["Community"]"/>
+                                   value="@Localizer["Community"]"/>
 
                             <input type="hidden" name="FormID" value="@item.id">
                             <input type="hidden" name="Category" value="Community">
@@ -131,11 +169,9 @@
                     </div>
                 </div>
             </div>
-          
         </div>
-    }
+       }
+    
+
 </div>
 
-<script src="js/form.js">
-   
-</script>
