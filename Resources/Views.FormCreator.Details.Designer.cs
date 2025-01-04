@@ -60,6 +60,60 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to السؤال العاشر.
+        /// </summary>
+        internal static string _10 {
+            get {
+                return ResourceManager.GetString("10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الحادي عشر.
+        /// </summary>
+        internal static string _11 {
+            get {
+                return ResourceManager.GetString("11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الثاني عشر.
+        /// </summary>
+        internal static string _12 {
+            get {
+                return ResourceManager.GetString("12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الثالث عشر.
+        /// </summary>
+        internal static string _13 {
+            get {
+                return ResourceManager.GetString("13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الرابع عشر.
+        /// </summary>
+        internal static string _14 {
+            get {
+                return ResourceManager.GetString("14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الخامس عشر.
+        /// </summary>
+        internal static string _15 {
+            get {
+                return ResourceManager.GetString("15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to أقل من 25.
         /// </summary>
         internal static string answerAge1 {
@@ -204,6 +258,42 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to السؤال الثامن.
+        /// </summary>
+        internal static string eight {
+            get {
+                return ResourceManager.GetString("eight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تاريخ النهاية.
+        /// </summary>
+        internal static string endDate {
+            get {
+                return ResourceManager.GetString("endDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الخامس.
+        /// </summary>
+        internal static string five {
+            get {
+                return ResourceManager.GetString("five", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الرابع.
+        /// </summary>
+        internal static string four {
+            get {
+                return ResourceManager.GetString("four", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to الجنس.
         /// </summary>
         internal static string labelName2 {
@@ -277,6 +367,15 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to السؤال التاسع.
+        /// </summary>
+        internal static string nine {
+            get {
+                return ResourceManager.GetString("nine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to السؤال الأول :.
         /// </summary>
         internal static string one {
@@ -286,11 +385,83 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to عدد الأسئلة.
+        /// </summary>
+        internal static string questionCount {
+            get {
+                return ResourceManager.GetString("questionCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عدد المشاركين.
+        /// </summary>
+        internal static string responseCount {
+            get {
+                return ResourceManager.GetString("responseCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to رجوع.
         /// </summary>
         internal static string Return {
             get {
                 return ResourceManager.GetString("Return", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال السابع.
+        /// </summary>
+        internal static string seven {
+            get {
+                return ResourceManager.GetString("seven", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال السادس.
+        /// </summary>
+        internal static string six {
+            get {
+                return ResourceManager.GetString("six", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تاريخ البداية.
+        /// </summary>
+        internal static string startDate {
+            get {
+                return ResourceManager.GetString("startDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تفاصيل الإستبيان.
+        /// </summary>
+        internal static string surveydetails {
+            get {
+                return ResourceManager.GetString("surveydetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الثالث.
+        /// </summary>
+        internal static string three {
+            get {
+                return ResourceManager.GetString("three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الثاني.
+        /// </summary>
+        internal static string two {
+            get {
+                return ResourceManager.GetString("two", resourceCulture);
             }
         }
     }

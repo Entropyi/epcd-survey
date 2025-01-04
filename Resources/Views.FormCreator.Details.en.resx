@@ -91,4 +91,61 @@
     <data name="asnwerEdu4" xml:space="preserve">
         <value>Bachelor Degree</value>
     </data>
+    <data name="responseCount" xml:space="preserve">
+        <value>Response Count</value>
+    </data>
+    <data name="surveydetails" xml:space="preserve">
+        <value>Survey Details</value>
+    </data>
+    <data name="endDate" xml:space="preserve">
+        <value>End Date</value>
+    </data>
+    <data name="startDate" xml:space="preserve">
+        <value>Start Date</value>
+    </data>
+    <data name="questionCount" xml:space="preserve">
+        <value>Questions Count</value>
+    </data>
+    <data name="15" xml:space="preserve">
+        <value>Question 15</value>
+    </data>
+    <data name="14" xml:space="preserve">
+        <value>Question 14</value>
+    </data>
+    <data name="13" xml:space="preserve">
+        <value>Question 13</value>
+    </data>
+    <data name="12" xml:space="preserve">
+        <value>Question 12</value>
+    </data>
+    <data name="11" xml:space="preserve">
+        <value>Question 11</value>
+    </data>
+    <data name="10" xml:space="preserve">
+        <value>Question 10</value>
+    </data>
+    <data name="eight" xml:space="preserve">
+        <value>Question 8</value>
+    </data>
+    <data name="nine" xml:space="preserve">
+        <value>Question 9</value>
+    </data>
+    <data name="seven" xml:space="preserve">
+        <value>Question 7</value>
+    </data>
+    <data name="six" xml:space="preserve">
+        <value>Question 6</value>
+    </data>
+    <data name="five" xml:space="preserve">
+        <value>Question 5</value>
+    </data>
+    <data name="four" xml:space="preserve">
+        <value>Question 4</value>
+    </data>
+    <data name="three" xml:space="preserve">
+        <value>Question 3</value>
+    </data>
+    <data name="two" xml:space="preserve">
+        <value>Question 2</value>
+    </data>
 </root>

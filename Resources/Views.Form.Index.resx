@@ -132,4 +132,10 @@
     <data name="before" xml:space="preserve">
         <value>السابق</value>
     </data>
+    <data name="two" xml:space="preserve">
+        <value>السؤال الثاني</value>
+    </data>
+    <data name="three" xml:space="preserve">
+        <value>السؤال الثالث</value>
+    </data>
 </root>

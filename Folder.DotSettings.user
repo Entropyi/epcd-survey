@@ -47,7 +47,7 @@
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002ELogin_002ELoginModel/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002ELogin_002ELoginModel/@EntryIndexRemoved">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002EResetPassword/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002EResetPassword/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FAreas_002EIdentity_002EPages_002EAccount_002EResetPasswordConfirmation/@EntryIndexedValue">False</s:Boolean>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FArea_002EIdentity_002EPages_002EAccount_002ELogin/@EntryIndexedValue">False</s:Boolean>
@@ -59,21 +59,21 @@
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FModels_002ERequest/@EntryIndexRemoved">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FSharedResources/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002ECreate/@EntryIndexedValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002EDelete/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002EDelete/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002EDetails/@EntryIndexedValue">True</s:Boolean>
 	
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002EEdit/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002EIndex/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EForm_002EIndex/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EForm_002ENotAvailable/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002EEdit/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EFormCreator_002EIndex/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EForm_002EIndex/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EForm_002ENotAvailable/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EForm_002ESuccess_002Eresx/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EForm_002ESuccess_002Eresx/@EntryIndexRemoved">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EForm_002ESuccess/@EntryIndexedValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EHome_002EIndex/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002ENotFound_002EIndex/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EHome_002EIndex/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002ENotFound_002EIndex/@EntryIndexedValue">False</s:Boolean>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EShared_002EHeader/@EntryIndexedValue">False</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EShared_002EHeaderR/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=feedback_002FResources_002FViews_002EShared_002EHeaderR/@EntryIndexedValue">False</s:Boolean>
 	
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

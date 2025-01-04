@@ -97,4 +97,61 @@
     <data name="Return" xml:space="preserve">
         <value>رجوع</value>
     </data>
+    <data name="responseCount" xml:space="preserve">
+        <value>عدد المشاركين</value>
+    </data>
+    <data name="surveydetails" xml:space="preserve">
+        <value>تفاصيل الإستبيان</value>
+    </data>
+    <data name="startDate" xml:space="preserve">
+        <value>تاريخ البداية</value>
+    </data>
+    <data name="endDate" xml:space="preserve">
+        <value>تاريخ النهاية</value>
+    </data>
+    <data name="questionCount" xml:space="preserve">
+        <value>عدد الأسئلة</value>
+    </data>
+    <data name="two" xml:space="preserve">
+        <value>السؤال الثاني</value>
+    </data>
+    <data name="three" xml:space="preserve">
+        <value>السؤال الثالث</value>
+    </data>
+    <data name="four" xml:space="preserve">
+        <value>السؤال الرابع</value>
+    </data>
+    <data name="five" xml:space="preserve">
+        <value>السؤال الخامس</value>
+    </data>
+    <data name="six" xml:space="preserve">
+        <value>السؤال السادس</value>
+    </data>
+    <data name="seven" xml:space="preserve">
+        <value>السؤال السابع</value>
+    </data>
+    <data name="eight" xml:space="preserve">
+        <value>السؤال الثامن</value>
+    </data>
+    <data name="nine" xml:space="preserve">
+        <value>السؤال التاسع</value>
+    </data>
+    <data name="11" xml:space="preserve">
+        <value>السؤال الحادي عشر</value>
+    </data>
+    <data name="10" xml:space="preserve">
+        <value>السؤال العاشر</value>
+    </data>
+    <data name="12" xml:space="preserve">
+        <value>السؤال الثاني عشر</value>
+    </data>
+    <data name="13" xml:space="preserve">
+        <value>السؤال الثالث عشر</value>
+    </data>
+    <data name="14" xml:space="preserve">
+        <value>السؤال الرابع عشر</value>
+    </data>
+    <data name="15" xml:space="preserve">
+        <value>السؤال الخامس عشر</value>
+    </data>
 </root>

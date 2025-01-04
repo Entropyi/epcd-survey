@@ -357,6 +357,24 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to السؤال الثالث.
+        /// </summary>
+        internal static string three {
+            get {
+                return ResourceManager.GetString("three", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to السؤال الثاني.
+        /// </summary>
+        internal static string two {
+            get {
+                return ResourceManager.GetString("two", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to موافق بشدة.
         /// </summary>
         internal static string vote1 {

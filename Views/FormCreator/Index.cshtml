@@ -31,18 +31,12 @@
     {
         TimeSpan? timeDifference = endDate - DateTime.Now;
 
-        if (timeDifference > TimeSpan.Zero)
+        if (timeDifference <= TimeSpan.Zero)
         {
             return "block";
         }
 
         return "none";
-    }
-
-    bool test()
-    {
-        Console.WriteLine("s");
-        return true;
     }
 
     

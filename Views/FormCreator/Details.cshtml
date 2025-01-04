@@ -3,9 +3,8 @@
 @model feedback.Models.Form
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Create";
-
-    var test = Localizer["labelName6"];
+    ViewData["Title"] = @Localizer["surveydetails"];
+    
 }
 
 
@@ -21,11 +20,150 @@
 
 <div class="form__super-title-container">
 
-    <div class="title-super-container">
-        <div class="title-sup-container">
-            <h1 class="form__super-title-text" id="formTitle">
-                @ViewBag.PageTitle
-            </h1>
+<div class="title-super-container">
+    <div class="title-sup-container">
+        <h1 class="form__super-title-text" id="formTitle">
+            @ViewBag.PageTitle
+        </h1>
+    </div>
+</div>
+
+<div class="metaInfoSuperContainer">
+    <div class="metaDataContainer">
+        <div class="infoContainer1">
+            <p>@Localizer["responseCount"] : @ViewBag.ageCountTotal</p>
+            <p>@Localizer["questionCount"] : @ViewBag.numberOfQuestions</p>
+        </div>
+        <div class="infoContainer1">
+            <p>@Localizer["startDate"] : @ViewBag.startDate</p>
+            <p>@Localizer["endDate"] : @ViewBag.endDate</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="form__create-container">
+
+    <div class="chart-super-container">
+        <div class="chart-sub-container">
+            <div class="chart-question-container">
+                <label class="form__label-text">@Localizer["one"]</label>
+                <label class="form__label-text">@ViewBag.Question1</label>
+            </div>
+
+            <div class="responseCountContainer">
+                <p class="form__label-text">
+                    @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                </p>
+            </div>
+            <canvas id="Question1" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="form__create-container">
+
+    <div class="chart-super-container">
+        <div class="chart-sub-container">
+            <div class="chart-question-container">
+                <label class="form__label-text">@Localizer["two"] :</label>
+                <label class="form__label-text">@ViewBag.Question2</label>
+            </div>
+
+            <div class="responseCountContainer">
+                <p class="form__label-text">
+                    @Localizer["responseCount"] : @ViewBag.eduCountTotal
+                </p>
+            </div>
+            <canvas id="Question2" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="form__create-container">
+
+    <div class="chart-super-container">
+        <div class="chart-sub-container">
+            <div class="chart-question-container">
+                <label class="form__label-text">@Localizer["three"] :</label>
+                <label class="form__label-text">@ViewBag.Question3</label>
+            </div>
+            <div class="responseCountContainer">
+                <p class="form__label-text">
+                    @Localizer["responseCount"] : @ViewBag.sexesCountTotal
+                </p>
+            </div>
+            <canvas id="Question3" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="form__create-container">
+
+    <div class="chart-super-container">
+        <div class="chart-sub-container">
+            <div class="chart-question-container">
+                <label class="form__label-text">@Localizer["four"] :</label>
+                <label class="form__label-text">@ViewBag.Question4</label>
+            </div>
+            <div class="responseCountContainer">
+                <p class="form__label-text">
+                    @Localizer["responseCount"] : @ViewBag.sexesCountTotal
+                </p>
+            </div>
+            <canvas id="Question4" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="form__create-container">
+
+    <div class="chart-super-container">
+        <div class="chart-sub-container">
+            <div class="chart-question-container">
+                <label class="form__label-text">@Localizer["five"] :</label>
+                <label class="form__label-text">@ViewBag.Question4</label>
+            </div>
+            <div class="responseCountContainer">
+                <p class="form__label-text">
+                    @Localizer["responseCount"] : @ViewBag.sexesCountTotal
+                </p>
+            </div>
+            <canvas id="Question5" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="form__create-container">
+
+    <div class="chart-super-container">
+        <div class="chart-sub-container">
+            <div class="chart-question-container">
+                <label class="form__label-text">@Localizer["six"] :</label>
+                <label class="form__label-text">@ViewBag.Question5</label>
+            </div>
+            <div class="responseCountContainer">
+                <p class="form__label-text">
+                    @Localizer["responseCount"] : @ViewBag.sexesCountTotal
+                </p>
+            </div>
+            <canvas id="Question6" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<div style="display: block">
+    <div class="form__create-container">
+
+        <div class="chart-super-container">
+            <div class="chart-sub-container">
+                <div class="chart-question-container">
+                    <label class="form__label-text">@Localizer["seven"] :</label>
+                    <label class="form__label-text">@ViewBag.Question6</label>
+                </div>
+
+                <canvas id="Question7" width="400" height="200"></canvas>
+            </div>
         </div>
     </div>
 
@@ -34,11 +172,11 @@
         <div class="chart-super-container">
             <div class="chart-sub-container">
                 <div class="chart-question-container">
-                    <label class="form__label-text">@Localizer["one"]</label>
-                    <label class="form__label-text">@ViewBag.Question1</label>
+                    <label class="form__label-text">@Localizer["eight"] :</label>
+                    <label class="form__label-text">@ViewBag.Question7</label>
                 </div>
 
-                <canvas id="Question1" width="400" height="200"></canvas>
+                <canvas id="Question8" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
@@ -48,11 +186,11 @@
         <div class="chart-super-container">
             <div class="chart-sub-container">
                 <div class="chart-question-container">
-                    <label class="form__label-text">@Localizer["one"]</label>
-                    <label class="form__label-text">@ViewBag.Question2</label>
+                    <label class="form__label-text">@Localizer["nine"] :</label>
+                    <label class="form__label-text">@ViewBag.Question8</label>
                 </div>
 
-                <canvas id="Question2" width="400" height="200"></canvas>
+                <canvas id="Question9" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
@@ -62,160 +200,74 @@
         <div class="chart-super-container">
             <div class="chart-sub-container">
                 <div class="chart-question-container">
-                    <label class="form__label-text">@Localizer["one"]</label>
-                    <label class="form__label-text">@ViewBag.Question3</label>
+                    <label class="form__label-text">@Localizer["10"] :</label>
+                    <label class="form__label-text">@ViewBag.Question9</label>
                 </div>
 
-                <canvas id="Question3" width="400" height="200"></canvas>
+                <canvas id="Question10" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
 
-    <div class="form__create-container">
+    <div class="form__create-container" style="display: none" id="containerOfQuestion11">
 
         <div class="chart-super-container">
             <div class="chart-sub-container">
                 <div class="chart-question-container">
-                    <label class="form__label-text">@Localizer["one"]</label>
-                    <label class="form__label-text">@ViewBag.Question4</label>
+                    <label class="form__label-text">@Localizer["11"] :</label>
+                    <label class="form__label-text">@ViewBag.Question10</label>
                 </div>
 
-                <canvas id="Question4" width="400" height="200"></canvas>
+                <canvas id="Question11" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
 
-    <div class="form__create-container">
+    <div class="form__create-container" style="display: none" id="containerOfQuestion12">
 
         <div class="chart-super-container">
             <div class="chart-sub-container">
                 <div class="chart-question-container">
-                    <label class="form__label-text">@Localizer["one"]</label>
-                    <label class="form__label-text">@ViewBag.Question4</label>
+                    <label class="form__label-text">@Localizer["12"] :</label>
+                    <label class="form__label-text">@ViewBag.Question11</label>
                 </div>
 
-                <canvas id="Question5" width="400" height="200"></canvas>
+                <canvas id="Question12" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
 
-    <div class="form__create-container">
-
+    <div class="form__create-container" style="display: none" id="containerOfQuestion13">
         <div class="chart-super-container">
             <div class="chart-sub-container">
                 <div class="chart-question-container">
-                    <label class="form__label-text">@Localizer["one"]</label>
-                    <label class="form__label-text">@ViewBag.Question5</label>
+                    <label class="form__label-text">@Localizer["13"] :</label>
+                    <label class="form__label-text">@ViewBag.Question12</label>
                 </div>
 
-                <canvas id="Question6" width="400" height="200"></canvas>
+                <canvas id="Question13" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
 
-    <div style="display: none">
-        <div class="form__create-container">
-
-            <div class="chart-super-container">
-                <div class="chart-sub-container">
-                    <div class="chart-question-container">
-                        <label class="form__label-text">@Localizer["one"]</label>
-                        <label class="form__label-text">@ViewBag.Question6</label>
-                    </div>
-
-                    <canvas id="Question7" width="400" height="200"></canvas>
-                </div>
+</div>
+    <div class="chart-super-container">
+        <div class="chart-sub-container">
+            <div class="chart-question-container" style="margin-bottom: 1em">
+            <label class="form__label-text">@Localizer["14"]:</label>
+            <label class="form__label-text">@ViewBag.openQuestion</label>
             </div>
-        </div>
 
-        <div class="form__create-container">
-
-            <div class="chart-super-container">
-                <div class="chart-sub-container">
-                    <div class="chart-question-container">
-                        <label class="form__label-text">@Localizer["one"]</label>
-                        <label class="form__label-text">@ViewBag.Question7</label>
-                    </div>
-
-                    <canvas id="Question8" width="400" height="200"></canvas>
+            @foreach (var values in ViewBag.openQuestiona)
+            {
+                <div class="chart-question-container">
+                    <p style="margin-bottom: 0.5em">@values</p>
                 </div>
-            </div>
+
+            }
         </div>
-
-        <div class="form__create-container">
-
-            <div class="chart-super-container">
-                <div class="chart-sub-container">
-                    <div class="chart-question-container">
-                        <label class="form__label-text">@Localizer["one"]</label>
-                        <label class="form__label-text">@ViewBag.Question8</label>
-                    </div>
-
-                    <canvas id="Question9" width="400" height="200"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__create-container">
-
-            <div class="chart-super-container">
-                <div class="chart-sub-container">
-                    <div class="chart-question-container">
-                        <label class="form__label-text">@Localizer["one"]</label>
-                        <label class="form__label-text">@ViewBag.Question9</label>
-                    </div>
-
-                    <canvas id="Question10" width="400" height="200"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__create-container">
-
-            <div class="chart-super-container">
-                <div class="chart-sub-container">
-                    <div class="chart-question-container">
-                        <label class="form__label-text">@Localizer["one"]</label>
-                        <label class="form__label-text">@ViewBag.Question10</label>
-                    </div>
-
-                    <canvas id="Question11" width="400" height="200"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__create-container">
-
-            <div class="chart-super-container">
-                <div class="chart-sub-container">
-                    <div class="chart-question-container">
-                        <label class="form__label-text">@Localizer["one"]</label>
-                        <label class="form__label-text">@ViewBag.Question11</label>
-                    </div>
-
-                    <canvas id="Question12" width="400" height="200"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__create-container">
-
-            <div class="chart-super-container">
-                <div class="chart-sub-container">
-                    <div class="chart-question-container">
-                        <label class="form__label-text">@Localizer["one"]</label>
-                        <label class="form__label-text">@ViewBag.Question12</label>
-                    </div>
-
-                    <canvas id="Question13" width="400" height="200"></canvas>
-                </div>
-            </div>
-        </div>
-        
     </div>
 
-
-    
 
 </div>
 
@@ -231,36 +283,66 @@
     const Question8 = document.getElementById('Question8').getContext('2d');
     const Question9 = document.getElementById('Question9').getContext('2d');
     const Question10 = document.getElementById('Question10').getContext('2d');
-    const Question11 = document.getElementById('Question11').getContext('2d');
-    const Question12 = document.getElementById('Question12').getContext('2d');
-    const Question13 = document.getElementById('Question13').getContext('2d');
+
+    const options = {
+        responsive: true,
+        tooltips: {
+            enabled: false
+        },
+        plugins: {
+            datalabels: {
+                formatter: (value, ctx) => {
+                    const datapoints = ctx.chart.data.datasets[0].data
+                    const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
+                    const percentage = value / total * 100
+                    return percentage.toFixed(2) + "%";
+                },
+                color: '#fff',
+                textAlign: "center",
+            }
+        }
+    };
+
+    let chartType = "bar";
+    
+    
+    
+
 
     
-    const chart1 = new Chart(Question1, {
-        type: 'bar',  // Chart type (bar, line, etc.)
+    Chart.defaults.font.family = "Font-Regular"
+
+    let chart1 = new Chart(Question1, {
+        plugins: [ChartDataLabels],
+        type: chartType, // Chart type (e.g., bar, line)
         data: {
             labels: [
-            '@Localizer["answerAge1"]',
-            '@Localizer["answerAge2"]',
-            '@Localizer["answerAge3"]',
-            '@Localizer["answerAge4"]'],  // X-axis labels
-            datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
-                data: [
-                    @ViewBag.eduCount1,
-                    @ViewBag.eduCount2,
-                    @ViewBag.eduCount3,
-                    @ViewBag.eduCount4
-                  ],  // Y-axis values
-                borderColor: 'rgba(5, 41, 118, 1)',
-                backgroundColor: 'rgba(5, 41, 118, 1)',
-                borderWidth: 1
-            }]
+                '@Localizer["answerAge1"]',
+                '@Localizer["answerAge2"]',
+                '@Localizer["answerAge3"]',
+                '@Localizer["answerAge4"]'
+            ],
+            
+            datasets: [
+                {
+                    label: '@Html.Raw(ViewBag.Question1)',
+                    data: [
+                        @ViewBag.AgeCount1,
+                        @ViewBag.AgeCount2,
+                        @ViewBag.AgeCount3,
+                        @ViewBag.AgeCount4
+                    ],
+                    borderColor: 'rgba(5, 41, 118, 1)',
+                    backgroundColor: 'rgba(5, 41, 118, 1)',
+                    borderWidth: 1
+                },
+            ]
         },
-        options: {
-            responsive: true
-        }
-    }); const chart2 = new Chart(Question2, {
+        options: options
+    });
+
+    const chart2 = new Chart(Question2, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
@@ -268,7 +350,7 @@
             '@Localizer["asnwerSex2"]'
             ],  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question2)',
                 data: [
                 @ViewBag.Sex1,
                 @ViewBag.Sex2
@@ -278,11 +360,14 @@
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true
-        }
-    }); const chart3 = new Chart(Question3, {
-        type: 'bar',  // Chart type (bar, line, etc.)
+        options: options,
+    });
+
+    
+    
+     const chart3 = new Chart(Question3, {
+         plugins: [ChartDataLabels],
+         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
                 '@Localizer["asnwerEdu1"]',
@@ -292,7 +377,7 @@
                 '@Localizer["asnwerEdu5"]'
                ],  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question3)',
                 data: [
                 @ViewBag.AgeCount1,
                 @ViewBag.AgeCount2,
@@ -304,12 +389,11 @@
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true
-        }
+        options: options
     });
     
     const chart4 = new Chart(Question4, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
@@ -317,9 +401,10 @@
             '@Localizer["answerScale2"]',
             '@Localizer["answerScale3"]',
             '@Localizer["answerScale4"]',
-            '@Localizer["answerScale5"]',], // X-axis labels
+            '@Localizer["answerScale5"]',
+            ], // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question4)',
                 data: [
                 @ViewBag.Scale1Count1,
                 @ViewBag.Scale1Count2,
@@ -331,12 +416,11 @@
                 borderWidth: 1
             }],
         },
-        options: {
-            responsive: true
-        }
+        options: options
     });
 
     const chart5 = new Chart(Question5, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
@@ -346,7 +430,7 @@
                 '@Localizer["answerScale4"]',
                 '@Localizer["answerScale5"]',], // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question5)',
                 data: [
                     @ViewBag.Scale2Count1,
                     @ViewBag.Scale2Count2,
@@ -358,12 +442,11 @@
                 borderWidth: 1
             }],
         },
-        options: {
-            responsive: true
-        }
+        options:options
     }); 
     
     const chart6 = new Chart(Question6, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
@@ -373,7 +456,7 @@
                 '@Localizer["answerScale4"]',
                 '@Localizer["answerScale5"]',], // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question6)',
                 data: [
                     @ViewBag.Scale3Count1,
                     @ViewBag.Scale3Count2,
@@ -385,12 +468,11 @@
                 borderWidth: 1
             }],
         },
-        options: {
-            responsive: true
-        }
+        options:options
     });
 
     const chart7 = new Chart(Question7, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
@@ -400,7 +482,7 @@
                 '@Localizer["answerScale4"]',
                 '@Localizer["answerScale5"]',], // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question7)',
                 data: [
                     @ViewBag.Scale4Count1,
                     @ViewBag.Scale4Count2,
@@ -412,21 +494,22 @@
                 borderWidth: 1
             }],
         },
-        options: {
-            responsive: true
-        }
+        options:options
     }); 
     
     const chart8 = new Chart(Question8, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
-            '@Localizer["answerAge1"]',
-            '@Localizer["answerAge2"]',
-            '@Localizer["answerAge3"]',
-            '@Localizer["answerAge4"]'],  // X-axis labels
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',
+            ],  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question8)',
                 data: [
                 @ViewBag.AgeCount1,
                 @ViewBag.AgeCount2,
@@ -438,21 +521,22 @@
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true
-        }
+        options: options
     }); 
     
     const chart9 = new Chart(Question9, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
-            '@Localizer["answerAge1"]',
-            '@Localizer["answerAge2"]',
-            '@Localizer["answerAge3"]',
-            '@Localizer["answerAge4"]'],  // X-axis labels
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',
+            ],  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question9)',
                 data: [
                 @ViewBag.AgeCount1,
                 @ViewBag.AgeCount2,
@@ -464,114 +548,140 @@
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true
-        }
+        options: options
     });
 
     const chart10 = new Chart(Question10, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
-            '@Localizer["answerAge1"]',
-            '@Localizer["answerAge2"]',
-            '@Localizer["answerAge3"]',
-            '@Localizer["answerAge4"]'],  // X-axis labels
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',
+            ]
+            ,  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question10)',
                 data: [
-                @ViewBag.AgeCount1,
-                @ViewBag.AgeCount2,
-                @ViewBag.AgeCount3, 
-                @ViewBag.AgeCount4
+                @ViewBag.Scale7Count1,
+                @ViewBag.Scale7Count2,
+                @ViewBag.Scale7Count3, 
+                @ViewBag.Scale7Count4,
+                @ViewBag.Scale7Count5
                   ],  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true
-        }
-    }); 
-    
-    const chart11 = new Chart(Question11, {
-        type: 'bar',  // Chart type (bar, line, etc.)
-        data: {
-            labels: [
-            '@Localizer["answerAge1"]',
-            '@Localizer["answerAge2"]',
-            '@Localizer["answerAge3"]',
-            '@Localizer["answerAge4"]'],  // X-axis labels
-            datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
-                data: [
-                @ViewBag.AgeCount1,
-                @ViewBag.AgeCount2,
-                @ViewBag.AgeCount3, 
-                @ViewBag.AgeCount4
-                  ],  // Y-axis values
-                borderColor: 'rgba(5, 41, 118, 1)',
-                backgroundColor: 'rgba(5, 41, 118, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true
-        }
+        options: options
     });
+
+    if (`@ViewBag.Question11`.length > 0){
+        const Question11 = document.getElementById('Question11').getContext('2d');
+        const containerOfQuestion11 = document.getElementById('containerOfQuestion11');
+        containerOfQuestion11.style.display = "block"
+        
+    const chart11 = new Chart(Question11, {
+        plugins: [ChartDataLabels],
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: [
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',
+            ],  // X-axis labels
+            datasets: [{
+                label: '@Html.Raw(ViewBag.Question11)',
+                data: [
+                @ViewBag.Scale8Count1,
+                @ViewBag.Scale8Count2,
+                @ViewBag.Scale8Count3, 
+                @ViewBag.Scale8Count4,
+                @ViewBag.Scale8Count5,
+                  ],  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },
+        options:options
+    });
+}
+    if (`@ViewBag.Question12`.length > 0){
+    const Question12 = document.getElementById('Question12').getContext('2d');
+    const containerOfQuestion12 = document.getElementById('containerOfQuestion12');
+    containerOfQuestion12.style.display = "block"
 
     const chart12 = new Chart(Question12, {
+        plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
             labels: [
-            '@Localizer["answerAge1"]',
-            '@Localizer["answerAge2"]',
-            '@Localizer["answerAge3"]',
-            '@Localizer["answerAge4"]'],  // X-axis labels
+                '@Localizer["answerScale1"]',
+                '@Localizer["answerScale2"]',
+                '@Localizer["answerScale3"]',
+                '@Localizer["answerScale4"]',
+                '@Localizer["answerScale5"]',
+            ],  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
+                label: '@Html.Raw(ViewBag.Question12)',
                 data: [
-                @ViewBag.AgeCount1,
-                @ViewBag.AgeCount2,
-                @ViewBag.AgeCount3, 
-                @ViewBag.AgeCount4
+                @ViewBag.Scale9Count1,
+                @ViewBag.Scale9Count2,
+                @ViewBag.Scale9Count3, 
+                @ViewBag.Scale9Count4,
+                @ViewBag.Scale9Count5,
                   ],  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
             }]
         },
-        options: {
-            responsive: true
-        }
+        options: options
     });
+}
 
-    const chart13 = new Chart(Question13, {
-        type: 'bar',  // Chart type (bar, line, etc.)
-        data: {
-            labels: [
-            '@Localizer["answerAge1"]',
-            '@Localizer["answerAge2"]',
-            '@Localizer["answerAge3"]',
-            '@Localizer["answerAge4"]'],  // X-axis labels
-            datasets: [{
-                label: '@Html.Raw(ViewBag.Question1)',
-                data: [
-                @ViewBag.AgeCount1,
-                @ViewBag.AgeCount2,
-                @ViewBag.AgeCount3, 
-                @ViewBag.AgeCount4
-                  ],  // Y-axis values
-                borderColor: 'rgba(5, 41, 118, 1)',
-                backgroundColor: 'rgba(5, 41, 118, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
+   if (`@ViewBag.Question13`.length > 0){
+   
+       const Question13 = document.getElementById('Question13').getContext('2d');
+       const containerOfQuestion13 = document.getElementById('containerOfQuestion13');
+       containerOfQuestion13.style.display = "block"
+       
+       const chart13 = new Chart(Question13, {
+           plugins: [ChartDataLabels],
+           type: 'bar',  // Chart type (bar, line, etc.)
+           data: {
+               labels: [
+                   '@Localizer["answerScale1"]',
+                   '@Localizer["answerScale2"]',
+                   '@Localizer["answerScale3"]',
+                   '@Localizer["answerScale4"]',
+                   '@Localizer["answerScale5"]',
+               ],  // X-axis labels
+               datasets: [{
+                   label: '@Html.Raw(ViewBag.Question13)',
+                   data: [
+                       @ViewBag.Scale10Count1,
+                       @ViewBag.Scale10Count2,
+                       @ViewBag.Scale10Count3,
+                       @ViewBag.Scale10Count4,
+                       @ViewBag.Scale10Count5
+                   ],  // Y-axis values
+                   borderColor: 'rgba(5, 41, 118, 1)',
+                   backgroundColor: 'rgba(5, 41, 118, 1)',
+                   borderWidth: 1
+               }]
+           },
+           options: options
+       });
+   }
+  
 
 
 </script>
