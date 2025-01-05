@@ -133,10 +133,7 @@ namespace feedback.Areas.Identity.Pages.Account
             bool dropSession = true, 
             string sessionKeyName = null)
              */
-            if (!_captcha.Validate(Input.CaptchaCode, HttpContext.Session))
-            {
-                ModelState.AddModelError(String.Empty, "Wrong captcha code");            
-            }
+       
 
             if (ModelState.IsValid)
             {

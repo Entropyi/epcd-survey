@@ -43,7 +43,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 builder.Services.Configure<AuthMessageSenderOptions>(options =>
 {
     options.SmtpServer = Environment.GetEnvironmentVariable("SmtpServer");
-    options.SmtpPort = int.Parse(Environment.GetEnvironmentVariable("SmtpPort") ?? "587");
+    options.SmtpPort = int.Parse(Environment.GetEnvironmentVariable("SmtpPort") ?? "0");
     options.SmtpUser = Environment.GetEnvironmentVariable("SmtpUser");
     options.SmtpPass = Environment.GetEnvironmentVariable("SmtpPass");
 });
