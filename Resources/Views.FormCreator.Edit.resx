@@ -147,4 +147,7 @@
     <data name="EndDate" xml:space="preserve">
         <value>تاريخ النهاية</value>
     </data>
+    <data name="add" xml:space="preserve">
+        <value>اضف سؤال</value>
+    </data>
 </root>

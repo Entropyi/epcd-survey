@@ -7,7 +7,6 @@
 }
 
 <form id="account" method="post" class="landing-root-container">
-    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
     <div class="landing-sub-container" id="landing-background">
         <div class="top-container">
@@ -22,25 +21,32 @@
                 </div>
             </div>
 
+            <div
+                asp-validation-summary="ModelOnly"
+                style="text-align: center"
+                class="error-message">
+                
+            </div>
+
             <div class="login__section-container">
+
                 <div class="login-group">
                     <div class="email-container">
                         <label asp-for="Input.Email" class="login-label">@Localizer["email"]</label>
                         <input asp-for="Input.Email" class="form__input__small" autocomplete="username" aria-required="true" placeholder="@Localizer["email"]"/>
-                        <span asp-validation-for="Input.Email" class="error-message"></span>
+                        <span asp-validation-for="Input.Email" class="error-message-login"></span>
                         <div class="spacing"></div>
                     </div>
 
                     <div class="password-container">
                         <label asp-for="Input.Password" class="login-label">@Localizer["password"]</label>
                         <input asp-for="Input.Password" class="form__input__small" autocomplete="current-password" aria-required="true" placeholder="@Localizer["password"]"/>
-                        <span asp-validation-for="Input.Password" class="error-message"></span>
+                        <span asp-validation-for="Input.Password" class="error-message-login"></span>
                         <div class="spacing"></div>
 
                     </div>
 
 
-                    <label asp-for="Input.CaptchaCode" class="login-label">@Localizer["captcha"]</label>
                     <img class="captcha-image" id="img-captcha" src="~/captcha-image"/>
 
                     <div class="password-container">
@@ -53,8 +59,9 @@
                                minlength="4"
                                maxlength="4"/>
 
-                        <span asp-validation-for="Input.CaptchaCode" class="error-message"></span>
                         <div class="spacing"></div>
+                        <span asp-validation-for="Input.CaptchaCode" class="error-message-login"></span>
+
                     </div>
 
                     <div style="margin-top: 1em;">

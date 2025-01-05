@@ -23,7 +23,6 @@
     font-family: Font-Bold;
     color: var(--th-Primary);
     margin-bottom: 1em;
-    
 }
 
 .form__section-container {
@@ -32,6 +31,7 @@
 
 .form__super-title-text{
     font-size: 1.8em;
+    overflow-wrap: break-word;
     color:var(--th-Primary);
 
 }
@@ -98,7 +98,6 @@
     box-shadow: none;
     resize: none;
     border-width: 0.2em;
-
 }
 
 .form__input:focus {
@@ -127,9 +126,10 @@
     gap: 0.3em;
 }
 
-.form__submit-container {
+.form__submit-container  {
     display: flex;
     justify-content: end;
+    font-family:"Font-Light";
 }
 
 .form__submit {
@@ -154,6 +154,12 @@
 }
 
 .error-message{
+    font-family: "Font-Light";
+    font-size: 0.9em;
+    color: red;
+}
+
+.error-message-login{
     position: absolute;
     font-family: "Font-Light";
     font-size: 0.9em;

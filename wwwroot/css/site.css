@@ -21,8 +21,9 @@ time, mark, audio, video {
 }
 
 a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
+    color: inherit; 
+    text-decoration: inherit; 
+    overflow-wrap: break-word;
 
 }
 
@@ -41,7 +42,7 @@ body {
     
 }
 
-input[type="submit"] {
+input[type="submit"]:not(.form__submit-container input) {
     color: inherit;
     border: none;
     font: inherit;
@@ -137,4 +138,22 @@ input[type="submit"] {
     font-style: normal;
     font-weight: 700;
     src: url("/fonts/PingAR_LT_Bold.otf") format("opentype");
+}
+
+@keyframes pulseRed {
+    0% {
+        box-shadow:0 0 0 0 rgba(252, 165, 165, 1);
+    }
+}
+
+@keyframes pulseGreen {
+    0% {
+        box-shadow:0 0 0 0 rgba(163, 230, 53, 0.6);
+    }
+}
+
+@keyframes pulseGrey {
+    0% {
+        box-shadow:0 0 0 0 rgba(156, 163, 175, 0.8);
+    }
 }

@@ -17,6 +17,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+
 namespace feedback.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
@@ -122,9 +124,7 @@ namespace feedback.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-
+            
             /*
              * public abstract bool Validate(
             string userInputCaptcha, 
@@ -133,6 +133,11 @@ namespace feedback.Areas.Identity.Pages.Account
             bool dropSession = true, 
             string sessionKeyName = null)
              */
+            if (!_captcha.Validate(Input.CaptchaCode, HttpContext.Session))
+            {
+                ModelState.AddModelError(String.Empty, "Wrong captcha code");            
+            }
+
             if (ModelState.IsValid)
             {
                 if (_captcha.Validate(Input.CaptchaCode, HttpContext.Session))
@@ -154,7 +159,7 @@ namespace feedback.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Wrong captcha code");
+                    ModelState.AddModelError(String.Empty, "Wrong captcha code");
                     return Page();
 
                 }

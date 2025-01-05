@@ -19,7 +19,7 @@ public class EmailSender : IEmailSender
     public async Task SendEmailAsync(string email, string subject, string htmlMessage)
     {
         var mimeMessage = new MimeMessage();
-        mimeMessage.From.Add(new MailboxAddress("Your App", _options.SmtpUser));
+        mimeMessage.From.Add(new MailboxAddress("Rest Password", _options.SmtpUser));
         mimeMessage.To.Add(MailboxAddress.Parse(email));
         mimeMessage.Subject = subject;
 

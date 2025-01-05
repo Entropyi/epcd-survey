@@ -174,7 +174,7 @@
 
 <div class="form2__section-container">
     <div class="form2__section-title-container" id="section1Container">
-        <h3 class="form2__section-title-text"> @formSection1</h3>
+        <h3 class="form2__section-title-text" id="sectionText"> @formSection1</h3>
     </div>
 
     <div class="progress-bar-spacing-container">
@@ -608,6 +608,8 @@
         const question11Container = document.getElementById("Question11");
         const question12Container = document.getElementById("Question12");
         const question13Container = document.getElementById("Question13");
+        
+        const sectionText = document.getElementById("sectionText");
 
         const section3Container = document.getElementById("section3Container");
         const question14Container = document.getElementById("Question14");
@@ -631,7 +633,7 @@
         let Scale9 = document.querySelectorAll('input[name = "Scale9"]')
         let Scale10 = document.querySelectorAll('input[name = "Scale10"]')
 
-        section1Container.style.display = "flex"
+        section1Container.style.display = "flex"      
         question1Container.style.display = "flex"
 
         const progressBar = document.getElementById("progressBar")
@@ -747,6 +749,7 @@
             Scale8.forEach(button => {
                 button.addEventListener("input", () => {
                     nextButtonStatus();
+                    
                 }, {once: true});
             });
         })();
@@ -928,18 +931,22 @@
             next.classList.replace("before-disabled", "form2__next")
             next.disabled = false;
         }
-
+        
 
         const changeContainerDisplay = (number, display) => {
-
             if (number <= 3) {
                 section1Container.innerHTML = "@formSection1"
+                section1Container.style.overflowWrap = "anywhere"
+                section1Container.style.width = "100%"
                 section1Container.classList.add("form2__section-title-text");
+                
              
             } else if (number <= 13) {
-                section1Container.innerHTML = "@formSection2"
+                section1Container.innerText = "@formSection2"
+                section1Container.classList.add("form2__section-title-text");
             } else {
-                section1Container.innerHTML = "@formSection3"
+                section1Container.innerText = "@formSection3"
+                section1Container.classList.add("form2__section-title-text");
             }
 
             switch (number) {
