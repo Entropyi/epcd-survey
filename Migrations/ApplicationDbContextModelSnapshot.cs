@@ -242,7 +242,7 @@ namespace feedback.Migrations
 
                     b.HasIndex("FormID");
 
-                    b.ToTable("Default");
+                    b.ToTable("FormDefault");
                 });
 
             modelBuilder.Entity("feedback.Models.Form", b =>

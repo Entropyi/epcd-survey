@@ -16,7 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        int tableCount = _context.Default.Count();
+        int tableCount = _context.FormDefault.Count();
 
         int indestryFormID = 0;
         int communityFormID = 0;
@@ -29,12 +29,12 @@ public class HomeController : Controller
 
         if (tableCount > 0)
         {
-            int indestryCount = _context.Default
+            int indestryCount = _context.FormDefault
                 .Count(d => d.Category == "Industry");
 
             if (indestryCount > 0)
             {
-                indestryFormID = _context.Default
+                indestryFormID = _context.FormDefault
                     .Where(d => d.Category == "Industry")
                     .Select(d => d.FormID)
                     .Single();
@@ -50,17 +50,13 @@ public class HomeController : Controller
                     .Single();
             }
 
-
-            Console.WriteLine(indestryFormEndtDate);
-            Console.WriteLine(indestryFormStartDate);
-
-            int communityCount = _context.Default
+            int communityCount = _context.FormDefault
                 .Count(d => d.Category == "Community");
 
 
             if (communityCount > 0)
             {
-                communityFormID = _context.Default
+                communityFormID = _context.FormDefault
                     .Where(d => d.Category == "Community")
                     .Select(d => d.FormID)
                     .Single();
@@ -76,8 +72,7 @@ public class HomeController : Controller
                     .Single();
             }
         }
-
-
+        
         if (indestryFormStartDate.HasValue && indestryFormEndtDate.HasValue)
         {
             ViewBag.indestryFormStartDate = indestryFormStartDate;
@@ -97,7 +92,6 @@ public class HomeController : Controller
         ViewData["communityStatusColor"] = "Red";
         ViewData["industryStatusColor"] = "Red";
 
-
         if (communityFormIDEndDate.HasValue)
         {
             TimeSpan? communityTimeDifference = communityFormIDEndDate - DateTime.Now;
@@ -109,14 +103,13 @@ public class HomeController : Controller
             }
         }
 
-
         if (indestryFormEndtDate.HasValue)
         {
-            TimeSpan? communityTimeDifference = indestryFormEndtDate - DateTime.Now;
+            TimeSpan? ndestryTimeDifference = indestryFormEndtDate - DateTime.Now;
 
-            if (communityTimeDifference > TimeSpan.Zero)
+            if (ndestryTimeDifference > TimeSpan.Zero)
             {
-                ViewData["CommunityForm"] = indestryFormID;
+                ViewData["IndustryForm"] = indestryFormID;
                 ViewData["industryStatusColor"] = "Green";
             }
         }

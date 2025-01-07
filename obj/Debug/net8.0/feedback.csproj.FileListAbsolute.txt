@@ -556,8 +556,6 @@ C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Vie
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Home.Index.en.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.Success.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.Success.en.resources
-C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\package-lock.json
-C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\package.json
 C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\Microsoft.Build.dll
 C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\Microsoft.Build.Framework.dll

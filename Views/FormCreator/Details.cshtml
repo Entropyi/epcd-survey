@@ -28,6 +28,17 @@
     </div>
 </div>
 
+<div class="filters__super-container">
+        <div class="filters__container">
+            <div class="filters__bySex">
+                
+            </div>
+            <div class="filters__byEducation">
+
+            </div>
+        </div>
+</div>
+
 <div class="metaInfoSuperContainer">
     <div class="metaDataContainer">
         <div class="infoContainer1">
@@ -50,7 +61,6 @@
                 <label class="form__label-text">@Localizer["one"]</label>
                 <label class="form__label-text">@ViewBag.Question1</label>
             </div>
-
             <div class="responseCountContainer">
                 <p class="form__label-text">
                     @Localizer["responseCount"] : @ViewBag.ageCountTotal
@@ -161,12 +171,16 @@
                     <label class="form__label-text">@Localizer["seven"] :</label>
                     <label class="form__label-text">@ViewBag.Question6</label>
                 </div>
-
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                    </p>
+                </div>
                 <canvas id="Question7" width="400" height="200"></canvas>
             </div>
         </div>
     </div>
-
+    
     <div class="form__create-container">
 
         <div class="chart-super-container">
@@ -175,7 +189,11 @@
                     <label class="form__label-text">@Localizer["eight"] :</label>
                     <label class="form__label-text">@ViewBag.Question7</label>
                 </div>
-
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                    </p>
+                </div>
                 <canvas id="Question8" width="400" height="200"></canvas>
             </div>
         </div>
@@ -189,7 +207,11 @@
                     <label class="form__label-text">@Localizer["nine"] :</label>
                     <label class="form__label-text">@ViewBag.Question8</label>
                 </div>
-
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                    </p>
+                </div>
                 <canvas id="Question9" width="400" height="200"></canvas>
             </div>
         </div>
@@ -203,7 +225,11 @@
                     <label class="form__label-text">@Localizer["10"] :</label>
                     <label class="form__label-text">@ViewBag.Question9</label>
                 </div>
-
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                    </p>
+                </div>
                 <canvas id="Question10" width="400" height="200"></canvas>
             </div>
         </div>
@@ -217,7 +243,11 @@
                     <label class="form__label-text">@Localizer["11"] :</label>
                     <label class="form__label-text">@ViewBag.Question10</label>
                 </div>
-
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                    </p>
+                </div>
                 <canvas id="Question11" width="400" height="200"></canvas>
             </div>
         </div>
@@ -231,7 +261,11 @@
                     <label class="form__label-text">@Localizer["12"] :</label>
                     <label class="form__label-text">@ViewBag.Question11</label>
                 </div>
-
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                    </p>
+                </div>
                 <canvas id="Question12" width="400" height="200"></canvas>
             </div>
         </div>
@@ -244,7 +278,11 @@
                     <label class="form__label-text">@Localizer["13"] :</label>
                     <label class="form__label-text">@ViewBag.Question12</label>
                 </div>
-
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.ageCountTotal
+                    </p>
+                </div>
                 <canvas id="Question13" width="400" height="200"></canvas>
             </div>
         </div>
@@ -256,6 +294,11 @@
             <div class="chart-question-container" style="margin-bottom: 1em">
             <label class="form__label-text">@Localizer["14"]:</label>
             <label class="form__label-text">@ViewBag.openQuestion</label>
+                <div class="responseCountContainer">
+                    <p class="form__label-text">
+                        @Localizer["responseCount"] : @ViewBag.openQuestionaCount
+                    </p>
+                </div>
             </div>
 
             @foreach (var values in ViewBag.openQuestiona)

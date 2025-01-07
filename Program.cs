@@ -63,6 +63,15 @@ builder.Services.AddSessionBasedCaptcha();
 
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    
+    context.Database.Migrate();
+}
+
 var LocalizationOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
 app.UseRequestLocalization(LocalizationOptions);
 

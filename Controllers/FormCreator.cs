@@ -32,12 +32,12 @@ namespace feedback.Controllers
         // GET: FormCreator
         public async Task<IActionResult> Index()
         {
-            int communityCount = _context.Default.Count(d => d.Category == "Community");
-            int industryCount = _context.Default.Count(d => d.Category == "Industry");
+            int communityCount = _context.FormDefault.Count(d => d.Category == "Community");
+            int industryCount = _context.FormDefault.Count(d => d.Category == "Industry");
 
             if (communityCount > 0)
             {
-                ViewBag.communityDefault = _context.Default
+                ViewBag.communityDefault = _context.FormDefault
                     .Where(d => d.Category == "Community")
                     .Select(d => d.FormID)
                     .Single();
@@ -45,7 +45,7 @@ namespace feedback.Controllers
 
             if (industryCount > 0)
             {
-                ViewBag.IndustryDefault = _context.Default
+                ViewBag.IndustryDefault = _context.FormDefault
                     .Where(d => d.Category == "Industry")
                     .Select(d => d.FormID)
                     .Single();
@@ -66,12 +66,12 @@ namespace feedback.Controllers
             int communityDefault = 0;
             int IndustryDefault = 0;
 
-            int communityCount = _context.Default.Count(d => d.Category == "Community");
-            int industryCount = _context.Default.Count(d => d.Category == "Industry");
+            int communityCount = _context.FormDefault.Count(d => d.Category == "Community");
+            int industryCount = _context.FormDefault.Count(d => d.Category == "Industry");
 
             if (communityCount > 0)
             {
-                communityDefault = _context.Default
+                communityDefault = _context.FormDefault
                     .Where(d => d.Category == "Community")
                     .Select(d => d.FormID)
                     .Single();
@@ -79,7 +79,7 @@ namespace feedback.Controllers
 
             if (industryCount > 0)
             {
-                IndustryDefault = _context.Default
+                IndustryDefault = _context.FormDefault
                     .Where(d => d.Category == "Industry")
                     .Select(d => d.FormID)
                     .Single();
@@ -88,11 +88,11 @@ namespace feedback.Controllers
 
             if (defualt.FormID > 0 && (defualt.Category.Equals("Industry") || defualt.Category.Equals("Community")))
             {
-                int? Industry = _context.Default
+                int? Industry = _context.FormDefault
                     .Where(d => d.Category == defualt.Category)
                     .ToList().Count();
 
-                int? Community = _context.Default
+                int? Community = _context.FormDefault
                     .Where(d => d.Category == defualt.Category)
                     .ToList().Count();
 
@@ -102,12 +102,12 @@ namespace feedback.Controllers
                     {
                         if (IndustryDefault == defualt.FormID)
                         {
-                            _context.Default.Where(d => d.FormID == defualt.FormID)
+                            _context.FormDefault.Where(d => d.FormID == defualt.FormID)
                                 .Where(d => d.Category == defualt.Category).ExecuteDeleteAsync();
                             return RedirectToAction(nameof(Index));
                         }
 
-                        _context.Default
+                        _context.FormDefault
                             .Where(d => d.Category == defualt.Category)
                             .ExecuteUpdateAsync(setters => setters.SetProperty(d => d.FormID, defualt.FormID));
 
@@ -134,12 +134,12 @@ namespace feedback.Controllers
                     {
                         if (communityDefault == defualt.FormID)
                         {
-                            _context.Default.Where(d => d.FormID == defualt.FormID)
+                            _context.FormDefault.Where(d => d.FormID == defualt.FormID)
                                 .Where(d => d.Category == defualt.Category).ExecuteDeleteAsync();
                             return RedirectToAction(nameof(Index));
                         }
 
-                        _context.Default
+                        _context.FormDefault
                             .Where(d => d.Category == defualt.Category)
                             .ExecuteUpdateAsync(setters => setters.SetProperty(d => d.FormID, defualt.FormID));
 
@@ -426,7 +426,14 @@ namespace feedback.Controllers
                 .Select(fe => fe.OpenQuestion)
                 .ToList();
             
+            int openQuestionaCount = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.OpenQuestion != null)
+                .Select(fe => fe.OpenQuestion)
+                .Count();
+            
             ViewBag.openQuestiona = openQuestiona;
+            ViewBag.openQuestionaCount = openQuestionaCount;
             
             ViewBag.Scale1Count1 = Scale1Count1;
             ViewBag.Scale1Count2 = Scale1Count2;
