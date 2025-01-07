@@ -114,6 +114,11 @@
     gap: 1em 5em;
 }
 
+.filter__button{
+    border: 5px solid var(--blue);
+    padding: 0.5em 0.5em;
+}
+
 .form__create-input-container {
 
 }

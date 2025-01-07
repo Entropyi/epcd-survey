@@ -176,11 +176,70 @@ namespace feedback.Controllers
                 .FirstOrDefaultAsync(m => m.id == id);
 
             var formEntry = _context.FormEntry.Where(fe => fe.FormId == id).ToList();
-
+            
             int ageCountTotal = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Select(fe => fe.AgeGroup)
                 .ToList().Count;
+
+            int AgeCountByMale1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 1)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
+                .ToList().Count;
+            
+            
+            int AgeCountByMale2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 2)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
+                .ToList().Count;
+            
+            
+            int AgeCountByMale3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 3)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
+                .ToList().Count;
+            
+            int AgeCountByMale4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 4)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
+                .ToList().Count;
+            
+            int AgeCountByFemale1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 1)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
+                .ToList().Count;
+            
+            
+            int AgeCountByFemale2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 2)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
+                .ToList().Count;
+            
+            
+            int AgeCountByFemale3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 3)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
+                .ToList().Count;
+            
+            int AgeCountByFemale4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 4)
+                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
+                .ToList().Count;
+            
+            
+            int[] ageByMale = { AgeCountByMale1, AgeCountByMale2, AgeCountByMale3 ,AgeCountByMale4 };
+
+            ViewBag.ageByMale = ageByMale;
+            
+            
 
             int AgeCount1 = _context.FormEntry
                 .Where(fe => fe.FormId == id)

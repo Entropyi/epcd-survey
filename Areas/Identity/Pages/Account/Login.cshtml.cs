@@ -124,16 +124,6 @@ namespace feedback.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-            
-            /*
-             * public abstract bool Validate(
-            string userInputCaptcha, 
-            ISession httpSession, 
-            bool ignoreCase = true, 
-            bool dropSession = true, 
-            string sessionKeyName = null)
-             */
-       
 
             if (ModelState.IsValid)
             {
@@ -150,7 +140,6 @@ namespace feedback.Areas.Identity.Pages.Account
                     if(!result.Succeeded)
                     {
                         ModelState.AddModelError(string.Empty, result.Succeeded.ToString());
-                        Console.Write(result);
                         return Page();
                     }
                 }

@@ -1403,6 +1403,5 @@ C:\Users\E N T R O P Y\test\epcd-survey\obj\Debug\net8.0\feedback.Resources.View
 C:\Users\E N T R O P Y\test\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.NotAvailable.en.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.NotAvailable.resources
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\feedback.Resources.Views.Form.NotAvailable.en.resources
-C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\feedback.staticwebassets.endpoints.json
-C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\je-ha\RiderProjects\epcd-survey\obj\Debug\net8.0\staticwebassets\msbuild.feedback.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\je-ha\RiderProjects\epcd-survey\bin\Debug\net8.0\System.Text.Json.dll

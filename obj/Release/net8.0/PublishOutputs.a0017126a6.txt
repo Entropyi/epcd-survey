@@ -213,6 +213,7 @@ C:\inetpub\wwwroot\epcd-survey\System.Composition.Runtime.dll
 C:\inetpub\wwwroot\epcd-survey\System.Composition.TypedParts.dll
 C:\inetpub\wwwroot\epcd-survey\System.Configuration.ConfigurationManager.dll
 C:\inetpub\wwwroot\epcd-survey\System.Drawing.Common.dll
+C:\inetpub\wwwroot\epcd-survey\System.Formats.Asn1.dll
 C:\inetpub\wwwroot\epcd-survey\System.IdentityModel.Tokens.Jwt.dll
 C:\inetpub\wwwroot\epcd-survey\System.Memory.Data.dll
 C:\inetpub\wwwroot\epcd-survey\System.Reflection.MetadataLoadContext.dll
@@ -220,6 +221,7 @@ C:\inetpub\wwwroot\epcd-survey\System.Runtime.Caching.dll
 C:\inetpub\wwwroot\epcd-survey\System.Security.Cryptography.Pkcs.dll
 C:\inetpub\wwwroot\epcd-survey\System.Security.Cryptography.ProtectedData.dll
 C:\inetpub\wwwroot\epcd-survey\System.Security.Permissions.dll
+C:\inetpub\wwwroot\epcd-survey\System.Text.Json.dll
 C:\inetpub\wwwroot\epcd-survey\System.Windows.Extensions.dll
 C:\inetpub\wwwroot\epcd-survey\af\Humanizer.resources.dll
 C:\inetpub\wwwroot\epcd-survey\ar\Humanizer.resources.dll

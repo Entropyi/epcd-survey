@@ -279,10 +279,12 @@
     margin-bottom: 1em;
 }
 
-@media (max-width: 1218px) {
-
- 
+.filters__container{
+    width: 70%;
+    margin-inline: auto;
 }
+
+
 
 @media (max-width: 702px) {
     .form__inputs-container {

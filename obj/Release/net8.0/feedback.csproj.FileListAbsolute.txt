@@ -346,6 +346,5 @@ C:\Users\je-ha\RiderProjects\epcd-survey\obj\Release\net8.0\refint\feedback.dll
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Release\net8.0\feedback.pdb
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Release\net8.0\feedback.genruntimeconfig.cache
 C:\Users\je-ha\RiderProjects\epcd-survey\obj\Release\net8.0\ref\feedback.dll
-C:\Users\je-ha\RiderProjects\epcd-survey\bin\Release\net8.0\feedback.staticwebassets.endpoints.json
-C:\Users\je-ha\RiderProjects\epcd-survey\obj\Release\net8.0\staticwebassets.build.endpoints.json
-C:\Users\je-ha\RiderProjects\epcd-survey\obj\Release\net8.0\staticwebassets\msbuild.feedback.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\je-ha\RiderProjects\epcd-survey\bin\Release\net8.0\System.Formats.Asn1.dll
+C:\Users\je-ha\RiderProjects\epcd-survey\bin\Release\net8.0\System.Text.Json.dll
