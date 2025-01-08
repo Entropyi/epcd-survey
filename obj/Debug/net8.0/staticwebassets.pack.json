@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\feedback.bundle.scp.css",
-      "PackagePath": "staticwebassets\\feedback.bundle.scp.css"
+      "PackagePath": "staticwebassets\\feedback.5bwvhkow4o.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\area.css",
@@ -847,6 +847,10 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.feedback.props",
       "PackagePath": "buildTransitive\\feedback.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.feedback.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.feedback.Microsoft.AspNetCore.StaticWebAssets.props",

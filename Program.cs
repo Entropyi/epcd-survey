@@ -30,7 +30,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
                        throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseSqlite(connectionString));
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     {
@@ -64,13 +64,6 @@ builder.Services.AddSessionBasedCaptcha();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<ApplicationDbContext>();
-    
-    context.Database.Migrate();
-}
 
 var LocalizationOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
 app.UseRequestLocalization(LocalizationOptions);
@@ -119,8 +112,15 @@ using (var scope = app.Services.GetRequiredService<IServiceScopeFactory>().Creat
             EmailConfirmed = true,
             Email = Environment.GetEnvironmentVariable("ADMIN_EMAIL"),
         };
-        
-        userManger.CreateAsync(user,Environment.GetEnvironmentVariable("ADMIN_PASSWORD")).Wait();
+        try
+        {
+            userManger.CreateAsync(user, Environment.GetEnvironmentVariable("ADMIN_PASSWORD")).Wait();
+
+        }
+        catch (Exception E)
+        {
+            Console.Write(E);
+        }
     }
    
 }
