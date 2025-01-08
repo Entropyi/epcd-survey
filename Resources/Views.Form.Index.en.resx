@@ -131,4 +131,16 @@
     <data name="three" xml:space="preserve">
         <value>Question 3</value>
     </data>
+    <data name="IndustrySurvey" xml:space="preserve">
+        <value>Industry Survey</value>
+    </data>
+    <data name="CommunitySurvey" xml:space="preserve">
+        <value>Community Survey</value>
+    </data>
+    <data name="copyLink" xml:space="preserve">
+        <value>Copy survey link</value>
+    </data>
+    <data name="copied" xml:space="preserve">
+        <value>Copied</value>
+    </data>
 </root>

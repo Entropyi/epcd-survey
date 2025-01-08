@@ -105,6 +105,33 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to إستبيان المجتمع.
+        /// </summary>
+        internal static string CommunitySurvey {
+            get {
+                return ResourceManager.GetString("CommunitySurvey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم النسخ.
+        /// </summary>
+        internal static string copied {
+            get {
+                return ResourceManager.GetString("copied", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to انسخ رابط الإستبيان.
+        /// </summary>
+        internal static string copyLink {
+            get {
+                return ResourceManager.GetString("copyLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ابتدائي.
         /// </summary>
         internal static string eduLabel1 {
@@ -182,6 +209,15 @@ namespace feedback.Resources {
         internal static string formTitle {
             get {
                 return ResourceManager.GetString("formTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to إستبيان الصناعات.
+        /// </summary>
+        internal static string IndustrySurvey {
+            get {
+                return ResourceManager.GetString("IndustrySurvey", resourceCulture);
             }
         }
         

@@ -1,12 +1,19 @@
-﻿@using Azure.Core
-@using Microsoft.AspNetCore.Mvc.Localization
-@using Microsoft.EntityFrameworkCore
-@using Microsoft.EntityFrameworkCore.Metadata.Internal
+﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @model FormEntry
 
 @{
-    ViewData["Title"] = ViewData["Category"];
+    string? Category = ViewData["Category"].ToString();
+
+    if (Category == "Community")
+    {
+        ViewData["Title"] = @Localizer["CommunitySurvey"];
+    }
+
+    if (Category == "Industry")
+    {
+        ViewData["Title"] = @Localizer["IndustrySurvey"];
+    }
 
 
     string formTitle = string.Empty;
@@ -155,16 +162,17 @@
         throw;
     }
 }
-
 <div class="landing-root-container">
 <div class="landing-sub-container" id="landing-background">
 <div class="top-container">
 @await Html.PartialAsync("HeaderR")
 
+<div class="copy-container">
+    <button id="copyLink" class="copy-button">@Localizer["copyLink"]</button>
+</div>
 <div class="form2-root-container">
 
 <form method="post" asp-action="Index" class="form2-container">
-
 <div asp-validation-summary="ModelOnly"></div>
 
 <div class="form2__super-title-container">
@@ -591,6 +599,7 @@
         const next = document.getElementById("next");
         const back = document.getElementById("before");
         const submit = document.getElementById("submit");
+        const copyLink = document.getElementById("copyLink");
 
         const section1Container = document.getElementById("section1Container");
         const question1Container = document.getElementById("Question1");
@@ -639,6 +648,19 @@
         const progressBar = document.getElementById("progressBar")
         const currentQuestion = document.getElementById("current-question")
         const totalQuestions = document.getElementById("total-questions")
+
+        
+        copyLink.addEventListener("click",() => {
+            copyLink.classList.replace("copy-button","copied-button")
+            copyLink.innerText = `@Localizer["copied"]`
+            navigator.clipboard.writeText(window.location.href)
+            
+            setTimeout(() => {
+                copyLink.classList.replace("copied-button","copy-button")
+                copyLink.innerText = `@Localizer["copyLink"]`
+                            }, 1000);     
+        
+        })
 
         let count = 1;
 
@@ -1036,5 +1058,7 @@
             }
 
         }
+        
+        
     </script>
 }

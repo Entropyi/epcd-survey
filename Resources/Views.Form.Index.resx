@@ -138,4 +138,16 @@
     <data name="three" xml:space="preserve">
         <value>السؤال الثالث</value>
     </data>
+    <data name="IndustrySurvey" xml:space="preserve">
+        <value>إستبيان الصناعات</value>
+    </data>
+    <data name="CommunitySurvey" xml:space="preserve">
+        <value>إستبيان المجتمع</value>
+    </data>
+    <data name="copyLink" xml:space="preserve">
+        <value>انسخ رابط الإستبيان</value>
+    </data>
+    <data name="copied" xml:space="preserve">
+        <value>تم النسخ</value>
+    </data>
 </root>
