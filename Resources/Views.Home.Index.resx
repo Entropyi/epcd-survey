@@ -54,4 +54,7 @@
     <data name="notAvailable" xml:space="preserve">
         <value>غير متاح</value>
     </data>
+    <data name="HomeTitle" xml:space="preserve">
+        <value>منصة الإستبيان</value>
+    </data>
 </root>

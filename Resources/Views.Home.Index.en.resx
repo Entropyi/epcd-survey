@@ -47,4 +47,7 @@
     <data name="notAvailable" xml:space="preserve">
         <value>Not available</value>
     </data>
+    <data name="HomeTitle" xml:space="preserve">
+        <value>EPCD Survey</value>
+    </data>
 </root>

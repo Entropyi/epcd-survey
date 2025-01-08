@@ -183,6 +183,7 @@
     align-items: center;
     padding: 5em 10em;
     border-radius: 0.4em;
+    
     background: rgba(173,235,179,0.3);
 }
 
@@ -207,6 +208,7 @@
 }
 
 .pass-text{
+    text-align: center;
     font-family: Font-Light;
     color: var(--th-Primary-3);
 }

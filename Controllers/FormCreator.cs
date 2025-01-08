@@ -234,12 +234,86 @@ namespace feedback.Controllers
                 .Where(fe => fe.Sex == FormEntry.Sexes.Female)
                 .ToList().Count;
             
+            int eduOneCount1 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 1)
+                .Where(fe => fe.Education == 1)
+                .ToList().Count;
+            
+            
+            int eduOneCount2 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 2)
+                .Where(fe => fe.Education == 1)
+                .ToList().Count;
+            
+            
+            int eduOneCount3 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 3)
+                .Where(fe => fe.Education == 1)
+                .ToList().Count;
+            
+            int eduOneCount4 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.AgeGroup == 4)
+                .Where(fe => fe.Education == 1)
+                .ToList().Count;
+
+            int[] eduOne = { eduOneCount1, eduOneCount2, eduOneCount3 ,eduOneCount4 };
+            ViewBag.eduOne = eduOne;
+            
+            int[] eduTwoT = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.AgeGroup == ageGroup)
+                    .Count(fe => fe.Education == 2))
+                .ToArray();
+
+            
+            ViewBag.eduTwo = eduTwoT;
+            
+            int[] edu3ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.AgeGroup == ageGroup)
+                    .Count(fe => fe.Education == 3))
+                .ToArray();
+
+            
+            ViewBag.edu3ByAge = edu3ByAge;
+            
+            int[] edu4ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.AgeGroup == ageGroup)
+                    .Count(fe => fe.Education == 4))
+                .ToArray();
+
+            
+            ViewBag.edu4ByAge = edu4ByAge;
+            
+            
+            int[] edu5ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.AgeGroup == ageGroup)
+                    .Count(fe => fe.Education == 5))
+                .ToArray();
+
+            
+            ViewBag.edu5ByAge = edu5ByAge;
+       
             
             int[] ageByMale = { AgeCountByMale1, AgeCountByMale2, AgeCountByMale3 ,AgeCountByMale4 };
 
             ViewBag.ageByMale = ageByMale;
             
+            int[] ageByFemale = { AgeCountByFemale1, AgeCountByFemale2, AgeCountByFemale3 ,AgeCountByFemale4 };
+
+            ViewBag.ageByFemale = ageByFemale;
             
+    
 
             int AgeCount1 = _context.FormEntry
                 .Where(fe => fe.FormId == id)
@@ -260,8 +334,7 @@ namespace feedback.Controllers
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.AgeGroup == 4)
                 .ToList().Count;
-
-
+            
             int eduCountTotal = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Select(fe => fe.Education)

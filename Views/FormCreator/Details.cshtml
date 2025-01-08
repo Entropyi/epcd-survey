@@ -28,7 +28,6 @@
 </div>
 
 
-
 <div class="metaInfoSuperContainer">
     <div class="metaDataContainer">
         <div class="infoContainer1">
@@ -43,28 +42,88 @@
 </div>
 
 
-
 <div class="form__create-container">
-    
+
     <div class="filters__super-container">
         <div class="filters__container">
             <div class="filters__bySex">
                 <p>
                     فرز حسب الجنس
                 </p>
-                <button onclick="question1S1()" class="filter__button">ذكر</button>
-                <button class="filter__button">انثى</button>
+                <button id="filterMale"
+                        onclick="chartOneFilter(
+                        this,
+                        @ViewBag.ageByMale[0],
+                        @ViewBag.ageByMale[1],
+                        @ViewBag.ageByMale[2],
+                        @ViewBag.ageByMale[3],
+                        )"
+                        class="filter__button">
+                    ذكر
+                </button>
+                <button id="filterFemale"
+                        onclick="chartOneFilter(
+                            this,
+                        @ViewBag.ageByFemale[0],
+                        @ViewBag.ageByFemale[1],
+                        @ViewBag.ageByFemale[2],
+                        @ViewBag.ageByFemale[3],
+                    )" class="filter__button">
+                    انثى
+                </button>
             </div>
-            
+
             <div class="filters__byEducation">
                 <p>
                     فرز حسب المستوى التعليمي
                 </p>
-                <button class="filter__button">ابتدائي</button>
-                <button class="filter__button">متوسط</button>
-                <button class="filter__button">ثانوي</button>
-                <button class="filter__button">بكالوريوس</button>
-                <button class="filter__button">تعليم عالي</button>
+                <button id="eduButton1"
+                        onclick="chartOneFilter(
+                        this,
+                        @ViewBag.eduOne[0],
+                        @ViewBag.eduOne[1],
+                        @ViewBag.eduOne[2],
+                        @ViewBag.eduOne[3]
+                        )"
+                        class="filter__button">ابتدائي</button>
+                <button
+                    id="eduButton2"
+                    onclick="chartOneFilter(
+                        this,
+                    @ViewBag.eduTwo[0],
+                    @ViewBag.eduTwo[1],
+                    @ViewBag.eduTwo[2],
+                    @ViewBag.eduTwo[3]
+                        )"class="filter__button">متوسط</button>
+                <button
+                    id="eduButton3"
+                    onclick="chartOneFilter(
+                        this,
+                    @ViewBag.edu3ByAge[0],
+                    @ViewBag.edu3ByAge[1],
+                    @ViewBag.edu3ByAge[2],
+                    @ViewBag.edu3ByAge[3]
+                        )"
+                    class="filter__button">ثانوي</button>
+                <button  id="eduButton4"
+                            onclick="chartOneFilter(
+                                this,
+                            @ViewBag.edu4ByAge[0],
+                            @ViewBag.edu4ByAge[1],
+                            @ViewBag.edu4ByAge[2],
+                            @ViewBag.edu4ByAge[3]
+                                )"
+                            class="filter__button">بكالوريوس</button>
+                <button
+                    id="eduButton5"
+                    onclick="chartOneFilter(
+                        this,
+                    @ViewBag.edu5ByAge[0],
+                    @ViewBag.edu5ByAge[1],
+                    @ViewBag.edu5ByAge[2],
+                    @ViewBag.edu5ByAge[3]
+                        )"
+                    class="filter__button">تعليم عالي</button>
             </div>
         </div>
     </div>
@@ -194,7 +253,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="form__create-container">
 
         <div class="chart-super-container">
@@ -303,27 +362,26 @@
     </div>
 
 </div>
-    <div class="chart-super-container">
-        <div class="chart-sub-container">
-            <div class="chart-question-container" style="margin-bottom: 1em">
+<div class="chart-super-container">
+    <div class="chart-sub-container">
+        <div class="chart-question-container" style="margin-bottom: 1em">
             <label class="form__label-text">@Localizer["14"]:</label>
             <label class="form__label-text">@ViewBag.openQuestion</label>
-                <div class="responseCountContainer">
-                    <p class="form__label-text">
-                        @Localizer["responseCount"] : @ViewBag.openQuestionaCount
-                    </p>
-                </div>
+            <div class="responseCountContainer">
+                <p class="form__label-text">
+                    @Localizer["responseCount"] : @ViewBag.openQuestionaCount
+                </p>
             </div>
-
-            @foreach (var values in ViewBag.openQuestiona)
-            {
-                <div class="chart-question-container">
-                    <p style="margin-bottom: 0.5em">@values</p>
-                </div>
-
-            }
         </div>
+
+        @foreach (var values in ViewBag.openQuestiona)
+        {
+            <div class="chart-question-container">
+                <p style="margin-bottom: 0.5em">@values</p>
+            </div>
+        }
     </div>
+</div>
 
 
 </div>
@@ -340,6 +398,9 @@
     const Question8 = document.getElementById('Question8').getContext('2d');
     const Question9 = document.getElementById('Question9').getContext('2d');
     const Question10 = document.getElementById('Question10').getContext('2d');
+    
+    const filterMale = document.getElementById('filterMale');
+    const filterFemale = document.getElementById('filterFemale');
 
    
 
@@ -371,7 +432,7 @@
 
     
     Chart.defaults.font.family = "Font-Regular"
-
+    
     let chart1 = new Chart(Question1, {
         plugins: [ChartDataLabels],
         type: chartType, // Chart type (e.g., bar, line)
@@ -400,10 +461,67 @@
         },
         options: options
     });
+    
+    let chartOneCounter = 0;
+    let chartOneCounterMale = 0;
+    let chartOneCounterMFemale = 0;
+    
+    function chartOneFilter(button,data1,data2,data3,data4){
+        if (!(button == filterMale)){
+            filterMale.style.background = "none"
+            filterMale.style.color = "black"
+            }
 
-    function question1S1(){
-        console.log("a wroking fir");
+        if (!(button == filterFemale)){
+            filterFemale.style.background = "none"
+            filterFemale.style.color = "black"
+        }  
+        
+         if (!(button.id == "eduButton1")){
+             button.style.background = "none"
+             button.style.color = "black"
+        }
+
+        if (chartOneCounter == 0){
+
+            button.style.background = "blue"
+            button.style.color = "white"
+        
         chart1.destroy();
+        chartOneCounter++;
+        chart1 = new Chart(Question1, {
+            plugins: [ChartDataLabels],
+            type: chartType, // Chart type (e.g., bar, line)
+            data: {
+                labels: [
+                    '@Localizer["answerAge1"]',
+                    '@Localizer["answerAge2"]',
+                    '@Localizer["answerAge3"]',
+                    '@Localizer["answerAge4"]'
+                ],
+
+                datasets: [
+                    {
+                        label: '@Html.Raw(ViewBag.Question1)',
+                        data: [
+                            data1,
+                            data2,
+                            data3,
+                            data4
+                        ],
+                        borderColor: 'rgba(5, 41, 118, 1)',
+                        backgroundColor: 'rgba(5, 41, 118, 1)',
+                        borderWidth: 1
+                    },
+                ]
+            },
+            options: options
+        });
+        return;
+        }
+        chart1.destroy()
+        button.style.background = "none"
+        button.style.color = "black"
         
         chart1 = new Chart(Question1, {
             plugins: [ChartDataLabels],
@@ -420,10 +538,10 @@
                     {
                         label: '@Html.Raw(ViewBag.Question1)',
                         data: [
-                            @ViewBag.ageByMale[0],
-                            @ViewBag.ageByMale[1],
-                            @ViewBag.ageByMale[2],
-                            @ViewBag.ageByMale[3]
+                            @ViewBag.AgeCount1,
+                            @ViewBag.AgeCount2,
+                            @ViewBag.AgeCount3,
+                            @ViewBag.AgeCount4
                         ],
                         borderColor: 'rgba(5, 41, 118, 1)',
                         backgroundColor: 'rgba(5, 41, 118, 1)',
@@ -433,9 +551,11 @@
             },
             options: options
         });
-        
+        chartOneCounter--;
     }
-    
+
+
+
     const chart2 = new Chart(Question2, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
@@ -474,10 +594,10 @@
             datasets: [{
                 label: '@Html.Raw(ViewBag.Question3)',
                 data: [
-                @ViewBag.AgeCount1,
-                @ViewBag.AgeCount2,
-                @ViewBag.AgeCount3, 
-                @ViewBag.AgeCount4
+                @ViewBag.eduCount1,
+                @ViewBag.eduCount2,
+                @ViewBag.eduCount3, 
+                @ViewBag.eduCount4
                   ],  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
