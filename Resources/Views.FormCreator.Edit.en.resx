@@ -144,4 +144,7 @@
     <data name="add" xml:space="preserve">
         <value>Add a question</value>
     </data>
+    <data name="Edit" xml:space="preserve">
+        <value>Edit Survey</value>
+    </data>
 </root>

@@ -29,4 +29,7 @@
     <data name="Community" xml:space="preserve">
         <value>Community</value>
     </data>
+    <data name="Index" xml:space="preserve">
+        <value>Control Panel</value>
+    </data>
 </root>

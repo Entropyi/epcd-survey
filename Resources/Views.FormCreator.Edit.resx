@@ -150,4 +150,7 @@
     <data name="add" xml:space="preserve">
         <value>اضف سؤال</value>
     </data>
+    <data name="Edit" xml:space="preserve">
+        <value>تعديل إستبيان</value>
+    </data>
 </root>

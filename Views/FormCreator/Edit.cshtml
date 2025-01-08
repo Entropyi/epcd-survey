@@ -3,7 +3,7 @@
 @model feedback.Models.Form
 @inject IViewLocalizer Localizer
 @{
-ViewData["Title"] = "Create";
+ViewData["Title"] = @Localizer["Edit"];
 }
 
 @await Html.PartialAsync("Header")

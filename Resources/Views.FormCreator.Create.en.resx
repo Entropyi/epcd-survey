@@ -147,4 +147,7 @@
     <data name="Community" xml:space="preserve">
         <value>Community</value>
     </data>
+    <data name="Create" xml:space="preserve">
+        <value>Create Survey</value>
+    </data>
 </root>

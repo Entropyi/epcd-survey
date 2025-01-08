@@ -154,4 +154,7 @@
     <data name="Community" xml:space="preserve">
         <value>المجتمع</value>
     </data>
+    <data name="Create" xml:space="preserve">
+        <value>انشئ إستبيان</value>
+    </data>
 </root>

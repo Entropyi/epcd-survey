@@ -141,4 +141,7 @@
     <data name="EndDate" xml:space="preserve">
         <value>End Date</value>
     </data>
+    <data name="Delete" xml:space="preserve">
+        <value>Delete Survey</value>
+    </data>
 </root>

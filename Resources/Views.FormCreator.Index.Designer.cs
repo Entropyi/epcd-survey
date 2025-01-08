@@ -96,6 +96,15 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to لوحة التحكم.
+        /// </summary>
+        internal static string Index {
+            get {
+                return ResourceManager.GetString("Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to الصناعات.
         /// </summary>
         internal static string Industry {

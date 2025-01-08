@@ -148,4 +148,7 @@
     <data name="EndDate" xml:space="preserve">
         <value>تاريخ النهاية</value>
     </data>
+    <data name="Delete" xml:space="preserve">
+        <value>حذف إستبيان</value>
+    </data>
 </root>

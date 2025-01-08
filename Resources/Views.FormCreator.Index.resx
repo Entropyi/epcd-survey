@@ -36,4 +36,7 @@
     <data name="Industry" xml:space="preserve">
         <value>الصناعات</value>
     </data>
+    <data name="Index" xml:space="preserve">
+        <value>لوحة التحكم</value>
+    </data>
 </root>
