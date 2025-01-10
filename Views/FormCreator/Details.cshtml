@@ -3,7 +3,7 @@
 @model feedback.Models.Form
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = @Localizer["surveydetails"];
+    ViewData["title"] = @Localizer["surveydetails"];
 }
 
 
@@ -41,35 +41,18 @@
     </div>
 </div>
 
-
 <div class="form__create-container">
-
     <div class="filters__super-container">
         <div class="filters__container">
             <div class="filters__bySex">
                 <p>
                     فرز حسب الجنس
                 </p>
-                <button id="filterMale"
-                        onclick="chartOneFilter(
-                        this,
-                        @ViewBag.ageByMale[0],
-                        @ViewBag.ageByMale[1],
-                        @ViewBag.ageByMale[2],
-                        @ViewBag.ageByMale[3],
-                        )"
-                        class="filter__button">
-                    ذكر
+                <button id="filterMale" class="filter__button">
+                   @Localizer["asnwerSex1"]
                 </button>
-                <button id="filterFemale"
-                        onclick="chartOneFilter(
-                            this,
-                        @ViewBag.ageByFemale[0],
-                        @ViewBag.ageByFemale[1],
-                        @ViewBag.ageByFemale[2],
-                        @ViewBag.ageByFemale[3],
-                    )" class="filter__button">
-                    انثى
+                <button id="filterFemale" class="filter__button">
+                    @Localizer["asnwerSex2"]
                 </button>
             </div>
 
@@ -77,57 +60,25 @@
                 <p>
                     فرز حسب المستوى التعليمي
                 </p>
-                <button id="eduButton1"
-                        onclick="chartOneFilter(
-                        this,
-                        @ViewBag.eduOne[0],
-                        @ViewBag.eduOne[1],
-                        @ViewBag.eduOne[2],
-                        @ViewBag.eduOne[3]
-                        )"
-                        class="filter__button">ابتدائي</button>
-                <button
-                    id="eduButton2"
-                    onclick="chartOneFilter(
-                        this,
-                    @ViewBag.eduTwo[0],
-                    @ViewBag.eduTwo[1],
-                    @ViewBag.eduTwo[2],
-                    @ViewBag.eduTwo[3]
-                        )"class="filter__button">متوسط</button>
-                <button
-                    id="eduButton3"
-                    onclick="chartOneFilter(
-                        this,
-                    @ViewBag.edu3ByAge[0],
-                    @ViewBag.edu3ByAge[1],
-                    @ViewBag.edu3ByAge[2],
-                    @ViewBag.edu3ByAge[3]
-                        )"
-                    class="filter__button">ثانوي</button>
-                <button  id="eduButton4"
-                            onclick="chartOneFilter(
-                                this,
-                            @ViewBag.edu4ByAge[0],
-                            @ViewBag.edu4ByAge[1],
-                            @ViewBag.edu4ByAge[2],
-                            @ViewBag.edu4ByAge[3]
-                                )"
-                            class="filter__button">بكالوريوس</button>
-                <button
-                    id="eduButton5"
-                    onclick="chartOneFilter(
-                        this,
-                    @ViewBag.edu5ByAge[0],
-                    @ViewBag.edu5ByAge[1],
-                    @ViewBag.edu5ByAge[2],
-                    @ViewBag.edu5ByAge[3]
-                        )"
-                    class="filter__button">تعليم عالي</button>
+                <button id="eduButton1" class="filter__button">@Localizer["asnwerEdu1"]</button>
+                <button id="eduButton2" class="filter__button">@Localizer["asnwerEdu2"]</button>
+                <button id="eduButton3" class="filter__button">@Localizer["asnwerEdu3"]</button>
+                <button id="eduButton4" class="filter__button">@Localizer["asnwerEdu4"]</button>
+                <button id="eduButton5" class="filter__button">@Localizer["asnwerEdu5"]</button>
+            </div>
+            
+            <div class="filters__byEducation">
+                <p>
+                    فرز حسب العمر
+                </p>
+                <button id="ageButton1" class="filter__button">@Localizer["answerAge1"]</button>
+                <button id="ageButton2" class="filter__button">@Localizer["answerAge2"]</button>
+                <button id="ageButton3" class="filter__button">@Localizer["answerAge3"]</button>
+                <button id="ageButton4" class="filter__button">@Localizer["answerAge4"]</button>
             </div>
         </div>
     </div>
-
+   
     <div class="chart-super-container">
         <div class="chart-sub-container">
             <div class="chart-question-container">
@@ -401,10 +352,20 @@
     
     const filterMale = document.getElementById('filterMale');
     const filterFemale = document.getElementById('filterFemale');
-
-   
-
+    const filterEdu1 = document.getElementById('eduButton1');
+    const filterEdu2 = document.getElementById('eduButton2');
+    const filterEdu3 = document.getElementById('eduButton3');
+    const filterEdu4 = document.getElementById('eduButton4');
+    const filterEdu5 = document.getElementById('eduButton5');
     
+    const filterAge1 = document.getElementById('ageButton1');
+    const filterAge2 = document.getElementById('ageButton2');
+    const filterAge3 = document.getElementById('ageButton3');
+    const filterAge4 = document.getElementById('ageButton4');
+
+    Chart.defaults.font.family = "Font-Regular"
+
+
     const options = {
         responsive: true,
         tooltips: {
@@ -423,36 +384,1250 @@
             }
         }
     };
+    
+    const question1Label = '@Html.Raw(ViewBag.Question1)';
+    const question2Label = '@Html.Raw(ViewBag.Question2)';
+    const question3Label = '@Html.Raw(ViewBag.Question3)';
+    const question4Label = '@Html.Raw(ViewBag.Question4)';
+    const question5Label = '@Html.Raw(ViewBag.Question5)';
+    const question6Label = '@Html.Raw(ViewBag.Question6)';
+    const question7Label = '@Html.Raw(ViewBag.Question7)';
+    const question8Label = '@Html.Raw(ViewBag.Question8)';
+    const question9Label = '@Html.Raw(ViewBag.Question9)';
+    const question10Label = '@Html.Raw(ViewBag.Question10)';
+    const question11Label = '@Html.Raw(ViewBag.Question11)';
+    const question12Label = '@Html.Raw(ViewBag.Question12)';
+    const question13Label = '@Html.Raw(ViewBag.Question13)';
+    const openQuestionLabel = '@Html.Raw(ViewBag.openQuestion)';
+    
+    const ageLabels = [
+        '@Localizer["answerAge1"]',
+        '@Localizer["answerAge2"]',
+        '@Localizer["answerAge3"]',
+        '@Localizer["answerAge4"]']
+
+    const ageData = [
+        @ViewBag.AgeCount1,
+        @ViewBag.AgeCount2,
+        @ViewBag.AgeCount3,
+        @ViewBag.AgeCount4]
+
+    const sexLabels = [
+        '@Localizer["asnwerSex1"]',
+        '@Localizer["asnwerSex2"]'] 
+        
+    const sexData = [
+        @ViewBag.Sex1,
+        @ViewBag.Sex2]
+
+    const eduLabels = [
+        '@Localizer["asnwerEdu1"]',
+        '@Localizer["asnwerEdu2"]',
+        '@Localizer["asnwerEdu3"]',
+        '@Localizer["asnwerEdu4"]',
+        '@Localizer["asnwerEdu5"]']
+        
+        
+    const eduData = [
+        @ViewBag.eduCount1,
+        @ViewBag.eduCount2,
+        @ViewBag.eduCount3,
+        @ViewBag.eduCount4,
+        @ViewBag.eduCount5]
+        
+        
+    const scaleLabels = [
+        '@Localizer["answerScale1"]',
+        '@Localizer["answerScale2"]',
+        '@Localizer["answerScale3"]',
+        '@Localizer["answerScale4"]',
+        '@Localizer["answerScale5"]'
+        ]
+    
+    const Scale1Data = [
+        @ViewBag.Scale1Count1,
+        @ViewBag.Scale1Count2,
+        @ViewBag.Scale1Count3,
+        @ViewBag.Scale1Count4,
+        @ViewBag.Scale1Count5
+    ]
+
+    const Scale2Data = [
+        @ViewBag.Scale2Count1,
+        @ViewBag.Scale2Count2,
+        @ViewBag.Scale2Count3,
+        @ViewBag.Scale2Count4,
+        @ViewBag.Scale2Count5
+    ]
+
+    const Scale3Data = [
+        @ViewBag.Scale3Count1,
+        @ViewBag.Scale3Count2,
+        @ViewBag.Scale3Count3,
+        @ViewBag.Scale3Count4,
+        @ViewBag.Scale3Count5
+    ]
+
+    const Scale4Data = [
+        @ViewBag.Scale4Count1,
+        @ViewBag.Scale4Count2,
+        @ViewBag.Scale4Count3,
+        @ViewBag.Scale4Count4,
+        @ViewBag.Scale4Count5
+    ]
+
+    const Scale5Data = [
+        @ViewBag.Scale5Count1,
+        @ViewBag.Scale5Count2,
+        @ViewBag.Scale5Count3,
+        @ViewBag.Scale5Count4,
+        @ViewBag.Scale5Count5
+    ]
+
+    const Scale6Data = [
+        @ViewBag.Scale6Count1,
+        @ViewBag.Scale6Count2,
+        @ViewBag.Scale6Count3,
+        @ViewBag.Scale6Count4,
+        @ViewBag.Scale6Count5
+    ]
+
+    const Scale7Data = [
+        @ViewBag.Scale7Count1,
+        @ViewBag.Scale7Count2,
+        @ViewBag.Scale7Count3,
+        @ViewBag.Scale7Count4,
+        @ViewBag.Scale7Count5
+    ]
+
+    const Scale8Data = [
+        @ViewBag.Scale8Count1,
+        @ViewBag.Scale8Count2,
+        @ViewBag.Scale8Count3,
+        @ViewBag.Scale8Count4,
+        @ViewBag.Scale8Count5
+    ]
+
+    const Scale9Data = [
+        @ViewBag.Scale9Count1,
+        @ViewBag.Scale9Count2,
+        @ViewBag.Scale9Count3,
+        @ViewBag.Scale9Count4,
+        @ViewBag.Scale9Count5
+    ]
+
+    const Scale10Data = [
+        @ViewBag.Scale10Count1,
+        @ViewBag.Scale10Count2,
+        @ViewBag.Scale10Count3,
+        @ViewBag.Scale10Count4,
+        @ViewBag.Scale10Count5
+        
+        
+    ]
+    const MaleByAge = [
+        @ViewBag.maleByAge[0],
+        @ViewBag.maleByAge[1],
+        @ViewBag.maleByAge[2],
+        @ViewBag.maleByAge[3]
+    ]
+
+    const maleByEdu = [
+        @ViewBag.maleByEdu[0],
+        @ViewBag.maleByEdu[1],
+        @ViewBag.maleByEdu[2],
+        @ViewBag.maleByEdu[3],
+        @ViewBag.maleByEdu[4]
+    ]
+
+    const maleByScale1 = [
+        @ViewBag.maleByScale1[0],
+        @ViewBag.maleByScale1[1],
+        @ViewBag.maleByScale1[2],
+        @ViewBag.maleByScale1[3],
+        @ViewBag.maleByScale1[4]
+    ]  
+    
+    const maleByScale2 = [
+        @ViewBag.maleByScale2[0],
+        @ViewBag.maleByScale2[1],
+        @ViewBag.maleByScale2[2],
+        @ViewBag.maleByScale2[3],
+        @ViewBag.maleByScale2[4]
+    ]  
+    
+    const maleByScale3 = [
+        @ViewBag.maleByScale3[0],
+        @ViewBag.maleByScale3[1],
+        @ViewBag.maleByScale3[2],
+        @ViewBag.maleByScale3[3],
+        @ViewBag.maleByScale3[4]
+    ]  
+    
+    const maleByScale4 = [
+        @ViewBag.maleByScale4[0],
+        @ViewBag.maleByScale4[1],
+        @ViewBag.maleByScale4[2],
+        @ViewBag.maleByScale4[3],
+        @ViewBag.maleByScale4[4]
+    ]  
+    
+    const maleByScale5 = [
+        @ViewBag.maleByScale5[0],
+        @ViewBag.maleByScale5[1],
+        @ViewBag.maleByScale5[2],
+        @ViewBag.maleByScale5[3],
+        @ViewBag.maleByScale5[4]
+    ]  
+    
+    const maleByScale6 = [
+        @ViewBag.maleByScale6[0],
+        @ViewBag.maleByScale6[1],
+        @ViewBag.maleByScale6[2],
+        @ViewBag.maleByScale6[3],
+        @ViewBag.maleByScale6[4]
+    ]  
+    
+    const maleByScale7 = [
+        @ViewBag.maleByScale7[0],
+        @ViewBag.maleByScale7[1],
+        @ViewBag.maleByScale7[2],
+        @ViewBag.maleByScale7[3],
+        @ViewBag.maleByScale7[4]
+    ]
+
+    const maleByScale8 = [
+        @ViewBag.maleByScale8[0],
+        @ViewBag.maleByScale8[1],
+        @ViewBag.maleByScale8[2],
+        @ViewBag.maleByScale8[3],
+        @ViewBag.maleByScale8[4]
+    ]
+
+    const maleByScale9 = [
+        @ViewBag.maleByScale9[0],
+        @ViewBag.maleByScale9[1],
+        @ViewBag.maleByScale9[2],
+        @ViewBag.maleByScale9[3],
+        @ViewBag.maleByScale9[4]
+    ]
+
+    const maleByScale10 = [
+        @ViewBag.maleByScale10[0],
+        @ViewBag.maleByScale10[1],
+        @ViewBag.maleByScale10[2],
+        @ViewBag.maleByScale10[3],
+        @ViewBag.maleByScale10[4]
+    ]
+
+    const FemaleByAge = [
+        @ViewBag.femaleByAge[0],
+        @ViewBag.femaleByAge[1],
+        @ViewBag.femaleByAge[2],
+        @ViewBag.femaleByAge[3]
+    ]
+
+    const femaleByEdu = [
+        @ViewBag.femaleByEdu[0],
+        @ViewBag.femaleByEdu[1],
+        @ViewBag.femaleByEdu[2],
+        @ViewBag.femaleByEdu[3],
+        @ViewBag.femaleByEdu[4]
+    ]
+
+    const femaleByScale1 = [
+        @ViewBag.femaleByScale1[0],
+        @ViewBag.femaleByScale1[1],
+        @ViewBag.femaleByScale1[2],
+        @ViewBag.femaleByScale1[3],
+        @ViewBag.femaleByScale1[4]
+    ]
+
+    const femaleByScale2 = [
+        @ViewBag.femaleByScale2[0],
+        @ViewBag.femaleByScale2[1],
+        @ViewBag.femaleByScale2[2],
+        @ViewBag.femaleByScale2[3],
+        @ViewBag.femaleByScale2[4]
+    ]
+
+    const femaleByScale3 = [
+        @ViewBag.femaleByScale3[0],
+        @ViewBag.femaleByScale3[1],
+        @ViewBag.femaleByScale3[2],
+        @ViewBag.femaleByScale3[3],
+        @ViewBag.femaleByScale3[4]
+    ]
+
+    const femaleByScale4 = [
+        @ViewBag.femaleByScale4[0],
+        @ViewBag.femaleByScale4[1],
+        @ViewBag.femaleByScale4[2],
+        @ViewBag.femaleByScale4[3],
+        @ViewBag.femaleByScale4[4]
+    ]
+
+    const femaleByScale5 = [
+        @ViewBag.femaleByScale5[0],
+        @ViewBag.femaleByScale5[1],
+        @ViewBag.femaleByScale5[2],
+        @ViewBag.femaleByScale5[3],
+        @ViewBag.femaleByScale5[4]
+    ]
+
+    const femaleByScale6 = [
+        @ViewBag.femaleByScale6[0],
+        @ViewBag.femaleByScale6[1],
+        @ViewBag.femaleByScale6[2],
+        @ViewBag.femaleByScale6[3],
+        @ViewBag.femaleByScale6[4]
+    ]
+
+    const femaleByScale7 = [
+        @ViewBag.femaleByScale7[0],
+        @ViewBag.femaleByScale7[1],
+        @ViewBag.femaleByScale7[2],
+        @ViewBag.femaleByScale7[3],
+        @ViewBag.femaleByScale7[4]
+    ]
+
+    const femaleByScale8 = [
+        @ViewBag.femaleByScale8[0],
+        @ViewBag.femaleByScale8[1],
+        @ViewBag.femaleByScale8[2],
+        @ViewBag.femaleByScale8[3],
+        @ViewBag.femaleByScale8[4]
+    ]
+
+    const femaleByScale9 = [
+        @ViewBag.femaleByScale9[0],
+        @ViewBag.femaleByScale9[1],
+        @ViewBag.femaleByScale9[2],
+        @ViewBag.femaleByScale9[3],
+        @ViewBag.femaleByScale9[4]
+    ]
+
+    const femaleByScale10 = [
+        @ViewBag.femaleByScale10[0],
+        @ViewBag.femaleByScale10[1],
+        @ViewBag.femaleByScale10[2],
+        @ViewBag.femaleByScale10[3],
+        @ViewBag.femaleByScale10[4]
+    ]
+
+    const edu1ByAge = [
+        @ViewBag.edu1ByAge[0],
+        @ViewBag.edu1ByAge[1],
+        @ViewBag.edu1ByAge[2],
+        @ViewBag.edu1ByAge[3]
+    ] 
+    
+    const edu1BySex = [
+        @ViewBag.edu1BySex[0],
+        @ViewBag.edu1BySex[1],
+    ]
+
+    const edu1ByEdu = [
+        @ViewBag.edu1ByEdu[0],
+        @ViewBag.edu1ByEdu[1],
+        @ViewBag.edu1ByEdu[2],
+        @ViewBag.edu1ByEdu[3],
+        @ViewBag.edu1ByEdu[4]
+    ]
+
+    const edu1ByScale1 = [
+        @ViewBag.edu1ByScale1[0],
+        @ViewBag.edu1ByScale1[1],
+        @ViewBag.edu1ByScale1[2],
+        @ViewBag.edu1ByScale1[3],
+        @ViewBag.edu1ByScale1[4]
+    ]
+
+    const edu1ByScale2 = [
+        @ViewBag.edu1ByScale2[0],
+        @ViewBag.edu1ByScale2[1],
+        @ViewBag.edu1ByScale2[2],
+        @ViewBag.edu1ByScale2[3],
+        @ViewBag.edu1ByScale2[4]
+    ]
+
+    const edu1ByScale3 = [
+        @ViewBag.edu1ByScale3[0],
+        @ViewBag.edu1ByScale3[1],
+        @ViewBag.edu1ByScale3[2],
+        @ViewBag.edu1ByScale3[3],
+        @ViewBag.edu1ByScale3[4]
+    ]
+
+    const edu1ByScale4 = [
+        @ViewBag.edu1ByScale4[0],
+        @ViewBag.edu1ByScale4[1],
+        @ViewBag.edu1ByScale4[2],
+        @ViewBag.edu1ByScale4[3],
+        @ViewBag.edu1ByScale4[4]
+    ]
+
+    const edu1ByScale5 = [
+        @ViewBag.edu1ByScale5[0],
+        @ViewBag.edu1ByScale5[1],
+        @ViewBag.edu1ByScale5[2],
+        @ViewBag.edu1ByScale5[3],
+        @ViewBag.edu1ByScale5[4]
+    ]
+
+    const edu1ByScale6 = [
+        @ViewBag.edu1ByScale6[0],
+        @ViewBag.edu1ByScale6[1],
+        @ViewBag.edu1ByScale6[2],
+        @ViewBag.edu1ByScale6[3],
+        @ViewBag.edu1ByScale6[4]
+    ]
+
+    const edu1ByScale7 = [
+        @ViewBag.edu1ByScale7[0],
+        @ViewBag.edu1ByScale7[1],
+        @ViewBag.edu1ByScale7[2],
+        @ViewBag.edu1ByScale7[3],
+        @ViewBag.edu1ByScale7[4]
+    ]
+
+    const edu1ByScale8 = [
+        @ViewBag.edu1ByScale8[0],
+        @ViewBag.edu1ByScale8[1],
+        @ViewBag.edu1ByScale8[2],
+        @ViewBag.edu1ByScale8[3],
+        @ViewBag.edu1ByScale8[4]
+    ]
+
+    const edu1ByScale9 = [
+        @ViewBag.edu1ByScale9[0],
+        @ViewBag.edu1ByScale9[1],
+        @ViewBag.edu1ByScale9[2],
+        @ViewBag.edu1ByScale9[3],
+        @ViewBag.edu1ByScale9[4]
+    ]
+
+    const edu1ByScale10 = [
+        @ViewBag.edu1ByScale10[0],
+        @ViewBag.edu1ByScale10[1],
+        @ViewBag.edu1ByScale10[2],
+        @ViewBag.edu1ByScale10[3],
+        @ViewBag.edu1ByScale10[4]
+    ]
+
+    const edu2ByAge = [
+        @ViewBag.edu2ByAge[0],
+        @ViewBag.edu2ByAge[1],
+        @ViewBag.edu2ByAge[2],
+        @ViewBag.edu2ByAge[3]
+    ]
+
+    const edu2BySex = [
+        @ViewBag.edu2BySex[0],
+        @ViewBag.edu2BySex[1],
+    ]
+
+    const edu2ByEdu = [
+        @ViewBag.edu2ByEdu[0],
+        @ViewBag.edu2ByEdu[1],
+        @ViewBag.edu2ByEdu[2],
+        @ViewBag.edu2ByEdu[3],
+        @ViewBag.edu2ByEdu[4]
+    ]
+
+    const edu2ByScale1 = [
+        @ViewBag.edu2ByScale1[0],
+        @ViewBag.edu2ByScale1[1],
+        @ViewBag.edu2ByScale1[2],
+        @ViewBag.edu2ByScale1[3],
+        @ViewBag.edu2ByScale1[4]
+    ]
+
+    const edu2ByScale2 = [
+        @ViewBag.edu2ByScale2[0],
+        @ViewBag.edu2ByScale2[1],
+        @ViewBag.edu2ByScale2[2],
+        @ViewBag.edu2ByScale2[3],
+        @ViewBag.edu2ByScale2[4]
+    ]
+
+    const edu2ByScale3 = [
+        @ViewBag.edu2ByScale3[0],
+        @ViewBag.edu2ByScale3[1],
+        @ViewBag.edu2ByScale3[2],
+        @ViewBag.edu2ByScale3[3],
+        @ViewBag.edu2ByScale3[4]
+    ]
+
+    const edu2ByScale4 = [
+        @ViewBag.edu2ByScale4[0],
+        @ViewBag.edu2ByScale4[1],
+        @ViewBag.edu2ByScale4[2],
+        @ViewBag.edu2ByScale4[3],
+        @ViewBag.edu2ByScale4[4]
+    ]
+
+    const edu2ByScale5 = [
+        @ViewBag.edu2ByScale5[0],
+        @ViewBag.edu2ByScale5[1],
+        @ViewBag.edu2ByScale5[2],
+        @ViewBag.edu2ByScale5[3],
+        @ViewBag.edu2ByScale5[4]
+    ]
+
+    const edu2ByScale6 = [
+        @ViewBag.edu2ByScale6[0],
+        @ViewBag.edu2ByScale6[1],
+        @ViewBag.edu2ByScale6[2],
+        @ViewBag.edu2ByScale6[3],
+        @ViewBag.edu2ByScale6[4]
+    ]
+
+    const edu2ByScale7 = [
+        @ViewBag.edu2ByScale7[0],
+        @ViewBag.edu2ByScale7[1],
+        @ViewBag.edu2ByScale7[2],
+        @ViewBag.edu2ByScale7[3],
+        @ViewBag.edu2ByScale7[4]
+    ]
+
+    const edu2ByScale8 = [
+        @ViewBag.edu2ByScale8[0],
+        @ViewBag.edu2ByScale8[1],
+        @ViewBag.edu2ByScale8[2],
+        @ViewBag.edu2ByScale8[3],
+        @ViewBag.edu2ByScale8[4]
+    ]
+
+    const edu2ByScale9 = [
+        @ViewBag.edu2ByScale9[0],
+        @ViewBag.edu2ByScale9[1],
+        @ViewBag.edu2ByScale9[2],
+        @ViewBag.edu2ByScale9[3],
+        @ViewBag.edu2ByScale9[4]
+    ]
+
+    const edu2ByScale10 = [
+        @ViewBag.edu2ByScale10[0],
+        @ViewBag.edu2ByScale10[1],
+        @ViewBag.edu2ByScale10[2],
+        @ViewBag.edu2ByScale10[3],
+        @ViewBag.edu2ByScale10[4]
+    ]
+
+    const edu3ByAge = [
+        @ViewBag.edu3ByAge[0],
+        @ViewBag.edu3ByAge[1],
+        @ViewBag.edu3ByAge[2],
+        @ViewBag.edu3ByAge[3]
+    ];
+
+    const edu3BySex = [
+        @ViewBag.edu3BySex[0],
+        @ViewBag.edu3BySex[1],
+    ]
+
+    const edu3ByEdu = [
+        @ViewBag.edu3ByEdu[0],
+        @ViewBag.edu3ByEdu[1],
+        @ViewBag.edu3ByEdu[2],
+        @ViewBag.edu3ByEdu[3],
+        @ViewBag.edu3ByEdu[4]
+    ];
+
+    const edu3ByScale1 = [
+        @ViewBag.edu3ByScale1[0],
+        @ViewBag.edu3ByScale1[1],
+        @ViewBag.edu3ByScale1[2],
+        @ViewBag.edu3ByScale1[3],
+        @ViewBag.edu3ByScale1[4]
+    ];
+
+    const edu3ByScale2 = [
+        @ViewBag.edu3ByScale2[0],
+        @ViewBag.edu3ByScale2[1],
+        @ViewBag.edu3ByScale2[2],
+        @ViewBag.edu3ByScale2[3],
+        @ViewBag.edu3ByScale2[4]
+    ];
+
+    const edu3ByScale3 = [
+        @ViewBag.edu3ByScale3[0],
+        @ViewBag.edu3ByScale3[1],
+        @ViewBag.edu3ByScale3[2],
+        @ViewBag.edu3ByScale3[3],
+        @ViewBag.edu3ByScale3[4]
+    ];
+
+    const edu3ByScale4 = [
+        @ViewBag.edu3ByScale4[0],
+        @ViewBag.edu3ByScale4[1],
+        @ViewBag.edu3ByScale4[2],
+        @ViewBag.edu3ByScale4[3],
+        @ViewBag.edu3ByScale4[4]
+    ];
+
+    const edu3ByScale5 = [
+        @ViewBag.edu3ByScale5[0],
+        @ViewBag.edu3ByScale5[1],
+        @ViewBag.edu3ByScale5[2],
+        @ViewBag.edu3ByScale5[3],
+        @ViewBag.edu3ByScale5[4]
+    ];
+
+    const edu3ByScale6 = [
+        @ViewBag.edu3ByScale6[0],
+        @ViewBag.edu3ByScale6[1],
+        @ViewBag.edu3ByScale6[2],
+        @ViewBag.edu3ByScale6[3],
+        @ViewBag.edu3ByScale6[4]
+    ];
+
+    const edu3ByScale7 = [
+        @ViewBag.edu3ByScale7[0],
+        @ViewBag.edu3ByScale7[1],
+        @ViewBag.edu3ByScale7[2],
+        @ViewBag.edu3ByScale7[3],
+        @ViewBag.edu3ByScale7[4]
+    ];
+
+    const edu3ByScale8 = [
+        @ViewBag.edu3ByScale8[0],
+        @ViewBag.edu3ByScale8[1],
+        @ViewBag.edu3ByScale8[2],
+        @ViewBag.edu3ByScale8[3],
+        @ViewBag.edu3ByScale8[4]
+    ];
+
+    const edu3ByScale9 = [
+        @ViewBag.edu3ByScale9[0],
+        @ViewBag.edu3ByScale9[1],
+        @ViewBag.edu3ByScale9[2],
+        @ViewBag.edu3ByScale9[3],
+        @ViewBag.edu3ByScale9[4]
+    ];
+
+    const edu3ByScale10 = [
+        @ViewBag.edu3ByScale10[0],
+        @ViewBag.edu3ByScale10[1],
+        @ViewBag.edu3ByScale10[2],
+        @ViewBag.edu3ByScale10[3],
+        @ViewBag.edu3ByScale10[4]
+    ];
+
+    const edu4ByAge = [
+        @ViewBag.edu4ByAge[0],
+        @ViewBag.edu4ByAge[1],
+        @ViewBag.edu4ByAge[2],
+        @ViewBag.edu4ByAge[3]
+    ];
+
+    const edu4BySex = [
+        @ViewBag.edu4BySex[0],
+        @ViewBag.edu4BySex[1],
+    ]
+
+    const edu4ByEdu = [
+        @ViewBag.edu4ByEdu[0],
+        @ViewBag.edu4ByEdu[1],
+        @ViewBag.edu4ByEdu[2],
+        @ViewBag.edu4ByEdu[3],
+        @ViewBag.edu4ByEdu[4]
+    ];
+
+    const edu4ByScale1 = [
+        @ViewBag.edu4ByScale1[0],
+        @ViewBag.edu4ByScale1[1],
+        @ViewBag.edu4ByScale1[2],
+        @ViewBag.edu4ByScale1[3],
+        @ViewBag.edu4ByScale1[4]
+    ];
+
+    const edu4ByScale2 = [
+        @ViewBag.edu4ByScale2[0],
+        @ViewBag.edu4ByScale2[1],
+        @ViewBag.edu4ByScale2[2],
+        @ViewBag.edu4ByScale2[3],
+        @ViewBag.edu4ByScale2[4]
+    ];
+
+    const edu4ByScale3 = [
+        @ViewBag.edu4ByScale3[0],
+        @ViewBag.edu4ByScale3[1],
+        @ViewBag.edu4ByScale3[2],
+        @ViewBag.edu4ByScale3[3],
+        @ViewBag.edu4ByScale3[4]
+    ];
+
+    const edu4ByScale4 = [
+        @ViewBag.edu4ByScale4[0],
+        @ViewBag.edu4ByScale4[1],
+        @ViewBag.edu4ByScale4[2],
+        @ViewBag.edu4ByScale4[3],
+        @ViewBag.edu4ByScale4[4]
+    ];
+
+    const edu4ByScale5 = [
+        @ViewBag.edu4ByScale5[0],
+        @ViewBag.edu4ByScale5[1],
+        @ViewBag.edu4ByScale5[2],
+        @ViewBag.edu4ByScale5[3],
+        @ViewBag.edu4ByScale5[4]
+    ];
+
+    const edu4ByScale6 = [
+        @ViewBag.edu4ByScale6[0],
+        @ViewBag.edu4ByScale6[1],
+        @ViewBag.edu4ByScale6[2],
+        @ViewBag.edu4ByScale6[3],
+        @ViewBag.edu4ByScale6[4]
+    ];
+
+    const edu4ByScale7 = [
+        @ViewBag.edu4ByScale7[0],
+        @ViewBag.edu4ByScale7[1],
+        @ViewBag.edu4ByScale7[2],
+        @ViewBag.edu4ByScale7[3],
+        @ViewBag.edu4ByScale7[4]
+    ];
+
+    const edu4ByScale8 = [
+        @ViewBag.edu4ByScale8[0],
+        @ViewBag.edu4ByScale8[1],
+        @ViewBag.edu4ByScale8[2],
+        @ViewBag.edu4ByScale8[3],
+        @ViewBag.edu4ByScale8[4]
+    ];
+
+    const edu4ByScale9 = [
+        @ViewBag.edu4ByScale9[0],
+        @ViewBag.edu4ByScale9[1],
+        @ViewBag.edu4ByScale9[2],
+        @ViewBag.edu4ByScale9[3],
+        @ViewBag.edu4ByScale9[4]
+    ];
+
+    const edu4ByScale10 = [
+        @ViewBag.edu4ByScale10[0],
+        @ViewBag.edu4ByScale10[1],
+        @ViewBag.edu4ByScale10[2],
+        @ViewBag.edu4ByScale10[3],
+        @ViewBag.edu4ByScale10[4]
+    ];
+
+    const edu5ByAge = [
+        @ViewBag.edu5ByAge[0],
+        @ViewBag.edu5ByAge[1],
+        @ViewBag.edu5ByAge[2],
+        @ViewBag.edu5ByAge[3]
+    ];
+
+    const edu5BySex = [
+        @ViewBag.edu5BySex[0],
+        @ViewBag.edu5BySex[1],
+    ]
+
+    const edu5ByEdu = [
+        @ViewBag.edu5ByEdu[0],
+        @ViewBag.edu5ByEdu[1],
+        @ViewBag.edu5ByEdu[2],
+        @ViewBag.edu5ByEdu[3],
+        @ViewBag.edu5ByEdu[4]
+    ];
+
+    const edu5ByScale1 = [
+        @ViewBag.edu5ByScale1[0],
+        @ViewBag.edu5ByScale1[1],
+        @ViewBag.edu5ByScale1[2],
+        @ViewBag.edu5ByScale1[3],
+        @ViewBag.edu5ByScale1[4]
+    ];
+
+    const edu5ByScale2 = [
+        @ViewBag.edu5ByScale2[0],
+        @ViewBag.edu5ByScale2[1],
+        @ViewBag.edu5ByScale2[2],
+        @ViewBag.edu5ByScale2[3],
+        @ViewBag.edu5ByScale2[4]
+    ];
+
+    const edu5ByScale3 = [
+        @ViewBag.edu5ByScale3[0],
+        @ViewBag.edu5ByScale3[1],
+        @ViewBag.edu5ByScale3[2],
+        @ViewBag.edu5ByScale3[3],
+        @ViewBag.edu5ByScale3[4]
+    ];
+
+    const edu5ByScale4 = [
+        @ViewBag.edu5ByScale4[0],
+        @ViewBag.edu5ByScale4[1],
+        @ViewBag.edu5ByScale4[2],
+        @ViewBag.edu5ByScale4[3],
+        @ViewBag.edu5ByScale4[4]
+    ];
+
+    const edu5ByScale5 = [
+        @ViewBag.edu5ByScale5[0],
+        @ViewBag.edu5ByScale5[1],
+        @ViewBag.edu5ByScale5[2],
+        @ViewBag.edu5ByScale5[3],
+        @ViewBag.edu5ByScale5[4]
+    ];
+
+    const edu5ByScale6 = [
+        @ViewBag.edu5ByScale6[0],
+        @ViewBag.edu5ByScale6[1],
+        @ViewBag.edu5ByScale6[2],
+        @ViewBag.edu5ByScale6[3],
+        @ViewBag.edu5ByScale6[4]
+    ];
+
+    const edu5ByScale7 = [
+        @ViewBag.edu5ByScale7[0],
+        @ViewBag.edu5ByScale7[1],
+        @ViewBag.edu5ByScale7[2],
+        @ViewBag.edu5ByScale7[3],
+        @ViewBag.edu5ByScale7[4]
+    ];
+
+    const edu5ByScale8 = [
+        @ViewBag.edu5ByScale8[0],
+        @ViewBag.edu5ByScale8[1],
+        @ViewBag.edu5ByScale8[2],
+        @ViewBag.edu5ByScale8[3],
+        @ViewBag.edu5ByScale8[4]
+    ];
+
+    const edu5ByScale9 = [
+        @ViewBag.edu5ByScale9[0],
+        @ViewBag.edu5ByScale9[1],
+        @ViewBag.edu5ByScale9[2],
+        @ViewBag.edu5ByScale9[3],
+        @ViewBag.edu5ByScale9[4]
+    ];
+
+    const edu5ByScale10 = [
+        @ViewBag.edu5ByScale10[0],
+        @ViewBag.edu5ByScale10[1],
+        @ViewBag.edu5ByScale10[2],
+        @ViewBag.edu5ByScale10[3],
+        @ViewBag.edu5ByScale10[4]
+    ];
+
+    const age1ByAge = [
+        @ViewBag.age1ByAge[0],
+        @ViewBag.age1ByAge[1],
+        @ViewBag.age1ByAge[2],
+        @ViewBag.age1ByAge[3]
+    ]   
+    
+    const age1BySex = [
+        @ViewBag.age1BySex[0],
+        @ViewBag.age1BySex[1],
+    ]
+
+    const age1ByEdu = [
+        @ViewBag.age1ByEdu[0],
+        @ViewBag.age1ByEdu[1],
+        @ViewBag.age1ByEdu[2],
+        @ViewBag.age1ByEdu[3],
+        @ViewBag.age1ByEdu[4]
+    ]
+
+    const age1ByScale1 = [
+        @ViewBag.age1ByScale1[0],
+        @ViewBag.age1ByScale1[1],
+        @ViewBag.age1ByScale1[2],
+        @ViewBag.age1ByScale1[3],
+        @ViewBag.age1ByScale1[4]
+    ]
+
+    const age1ByScale2 = [
+        @ViewBag.age1ByScale2[0],
+        @ViewBag.age1ByScale2[1],
+        @ViewBag.age1ByScale2[2],
+        @ViewBag.age1ByScale2[3],
+        @ViewBag.age1ByScale2[4]
+    ]
+
+    const age1ByScale3 = [
+        @ViewBag.age1ByScale3[0],
+        @ViewBag.age1ByScale3[1],
+        @ViewBag.age1ByScale3[2],
+        @ViewBag.age1ByScale3[3],
+        @ViewBag.age1ByScale3[4]
+    ]
+
+    const age1ByScale4 = [
+        @ViewBag.age1ByScale4[0],
+        @ViewBag.age1ByScale4[1],
+        @ViewBag.age1ByScale4[2],
+        @ViewBag.age1ByScale4[3],
+        @ViewBag.age1ByScale4[4]
+    ]
+
+    const age1ByScale5 = [
+        @ViewBag.age1ByScale5[0],
+        @ViewBag.age1ByScale5[1],
+        @ViewBag.age1ByScale5[2],
+        @ViewBag.age1ByScale5[3],
+        @ViewBag.age1ByScale5[4]
+    ]
+
+    const age1ByScale6 = [
+        @ViewBag.age1ByScale6[0],
+        @ViewBag.age1ByScale6[1],
+        @ViewBag.age1ByScale6[2],
+        @ViewBag.age1ByScale6[3],
+        @ViewBag.age1ByScale6[4]
+    ]
+
+    const age1ByScale7 = [
+        @ViewBag.age1ByScale7[0],
+        @ViewBag.age1ByScale7[1],
+        @ViewBag.age1ByScale7[2],
+        @ViewBag.age1ByScale7[3],
+        @ViewBag.age1ByScale7[4]
+    ]
+
+    const age1ByScale8 = [
+        @ViewBag.age1ByScale8[0],
+        @ViewBag.age1ByScale8[1],
+        @ViewBag.age1ByScale8[2],
+        @ViewBag.age1ByScale8[3],
+        @ViewBag.age1ByScale8[4]
+    ]
+
+    const age1ByScale9 = [
+        @ViewBag.age1ByScale9[0],
+        @ViewBag.age1ByScale9[1],
+        @ViewBag.age1ByScale9[2],
+        @ViewBag.age1ByScale9[3],
+        @ViewBag.age1ByScale9[4]
+    ]
+
+    const age1ByScale10 = [
+        @ViewBag.age1ByScale10[0],
+        @ViewBag.age1ByScale10[1],
+        @ViewBag.age1ByScale10[2],
+        @ViewBag.age1ByScale10[3],
+        @ViewBag.age1ByScale10[4]
+    ]
+
+
+    const age2ByAge = [
+        @ViewBag.age2ByAge[0],
+        @ViewBag.age2ByAge[1],
+        @ViewBag.age2ByAge[2],
+        @ViewBag.age2ByAge[3]
+    ]
+
+    const age2BySex = [
+        @ViewBag.age2BySex[0],
+        @ViewBag.age2BySex[1],
+    ]
+    
+    const age2ByEdu = [
+        @ViewBag.age2ByEdu[0],
+        @ViewBag.age2ByEdu[1],
+        @ViewBag.age2ByEdu[2],
+        @ViewBag.age2ByEdu[3],
+        @ViewBag.age2ByEdu[4]
+    ]
+
+    const age2ByScale1 = [
+        @ViewBag.age2ByScale1[0],
+        @ViewBag.age2ByScale1[1],
+        @ViewBag.age2ByScale1[2],
+        @ViewBag.age2ByScale1[3],
+        @ViewBag.age2ByScale1[4]
+    ]
+
+    const age2ByScale2 = [
+        @ViewBag.age2ByScale2[0],
+        @ViewBag.age2ByScale2[1],
+        @ViewBag.age2ByScale2[2],
+        @ViewBag.age2ByScale2[3],
+        @ViewBag.age2ByScale2[4]
+    ]
+
+    const age2ByScale3 = [
+        @ViewBag.age2ByScale3[0],
+        @ViewBag.age2ByScale3[1],
+        @ViewBag.age2ByScale3[2],
+        @ViewBag.age2ByScale3[3],
+        @ViewBag.age2ByScale3[4]
+    ]
+
+    const age2ByScale4 = [
+        @ViewBag.age2ByScale4[0],
+        @ViewBag.age2ByScale4[1],
+        @ViewBag.age2ByScale4[2],
+        @ViewBag.age2ByScale4[3],
+        @ViewBag.age2ByScale4[4]
+    ]
+
+    const age2ByScale5 = [
+        @ViewBag.age2ByScale5[0],
+        @ViewBag.age2ByScale5[1],
+        @ViewBag.age2ByScale5[2],
+        @ViewBag.age2ByScale5[3],
+        @ViewBag.age2ByScale5[4]
+    ]
+
+    const age2ByScale6 = [
+        @ViewBag.age2ByScale6[0],
+        @ViewBag.age2ByScale6[1],
+        @ViewBag.age2ByScale6[2],
+        @ViewBag.age2ByScale6[3],
+        @ViewBag.age2ByScale6[4]
+    ]
+
+    const age2ByScale7 = [
+        @ViewBag.age2ByScale7[0],
+        @ViewBag.age2ByScale7[1],
+        @ViewBag.age2ByScale7[2],
+        @ViewBag.age2ByScale7[3],
+        @ViewBag.age2ByScale7[4]
+    ]
+
+    const age2ByScale8 = [
+        @ViewBag.age2ByScale8[0],
+        @ViewBag.age2ByScale8[1],
+        @ViewBag.age2ByScale8[2],
+        @ViewBag.age2ByScale8[3],
+        @ViewBag.age2ByScale8[4]
+    ]
+
+    const age2ByScale9 = [
+        @ViewBag.age2ByScale9[0],
+        @ViewBag.age2ByScale9[1],
+        @ViewBag.age2ByScale9[2],
+        @ViewBag.age2ByScale9[3],
+        @ViewBag.age2ByScale9[4]
+    ]
+
+    const age2ByScale10 = [
+        @ViewBag.age2ByScale10[0],
+        @ViewBag.age2ByScale10[1],
+        @ViewBag.age2ByScale10[2],
+        @ViewBag.age2ByScale10[3],
+        @ViewBag.age2ByScale10[4]
+    ]
+
+    const age3ByAge = [
+        @ViewBag.age3ByAge[0],
+        @ViewBag.age3ByAge[1],
+        @ViewBag.age3ByAge[2],
+        @ViewBag.age3ByAge[3]
+    ]
+
+    const age3BySex = [
+        @ViewBag.age3BySex[0],
+        @ViewBag.age3BySex[1],
+    ]
+
+    const age3ByEdu = [
+        @ViewBag.age3ByEdu[0],
+        @ViewBag.age3ByEdu[1],
+        @ViewBag.age3ByEdu[2],
+        @ViewBag.age3ByEdu[3],
+        @ViewBag.age3ByEdu[4]
+    ]
+
+    const age3ByScale1 = [
+        @ViewBag.age3ByScale1[0],
+        @ViewBag.age3ByScale1[1],
+        @ViewBag.age3ByScale1[2],
+        @ViewBag.age3ByScale1[3],
+        @ViewBag.age3ByScale1[4]
+    ]
+
+    const age3ByScale2 = [
+        @ViewBag.age3ByScale2[0],
+        @ViewBag.age3ByScale2[1],
+        @ViewBag.age3ByScale2[2],
+        @ViewBag.age3ByScale2[3],
+        @ViewBag.age3ByScale2[4]
+    ]
+
+    const age3ByScale3 = [
+        @ViewBag.age3ByScale3[0],
+        @ViewBag.age3ByScale3[1],
+        @ViewBag.age3ByScale3[2],
+        @ViewBag.age3ByScale3[3],
+        @ViewBag.age3ByScale3[4]
+    ]
+
+    const age3ByScale4 = [
+        @ViewBag.age3ByScale4[0],
+        @ViewBag.age3ByScale4[1],
+        @ViewBag.age3ByScale4[2],
+        @ViewBag.age3ByScale4[3],
+        @ViewBag.age3ByScale4[4]
+    ]
+
+    const age3ByScale5 = [
+        @ViewBag.age3ByScale5[0],
+        @ViewBag.age3ByScale5[1],
+        @ViewBag.age3ByScale5[2],
+        @ViewBag.age3ByScale5[3],
+        @ViewBag.age3ByScale5[4]
+    ]
+
+    const age3ByScale6 = [
+        @ViewBag.age3ByScale6[0],
+        @ViewBag.age3ByScale6[1],
+        @ViewBag.age3ByScale6[2],
+        @ViewBag.age3ByScale6[3],
+        @ViewBag.age3ByScale6[4]
+    ]
+
+    const age3ByScale7 = [
+        @ViewBag.age3ByScale7[0],
+        @ViewBag.age3ByScale7[1],
+        @ViewBag.age3ByScale7[2],
+        @ViewBag.age3ByScale7[3],
+        @ViewBag.age3ByScale7[4]
+    ]
+
+    const age3ByScale8 = [
+        @ViewBag.age3ByScale8[0],
+        @ViewBag.age3ByScale8[1],
+        @ViewBag.age3ByScale8[2],
+        @ViewBag.age3ByScale8[3],
+        @ViewBag.age3ByScale8[4]
+    ]
+
+    const age3ByScale9 = [
+        @ViewBag.age3ByScale9[0],
+        @ViewBag.age3ByScale9[1],
+        @ViewBag.age3ByScale9[2],
+        @ViewBag.age3ByScale9[3],
+        @ViewBag.age3ByScale9[4]
+    ]
+
+    const age3ByScale10 = [
+        @ViewBag.age3ByScale10[0],
+        @ViewBag.age3ByScale10[1],
+        @ViewBag.age3ByScale10[2],
+        @ViewBag.age3ByScale10[3],
+        @ViewBag.age3ByScale10[4]
+    ]
+
+    const age4ByAge = [
+        @ViewBag.age4ByAge[0],
+        @ViewBag.age4ByAge[1],
+        @ViewBag.age4ByAge[2],
+        @ViewBag.age4ByAge[3]
+    ]
+
+    const age4BySex = [
+        @ViewBag.age4BySex[0],
+        @ViewBag.age4BySex[1],
+    ]
+
+    const age4ByEdu = [
+        @ViewBag.age4ByEdu[0],
+        @ViewBag.age4ByEdu[1],
+        @ViewBag.age4ByEdu[2],
+        @ViewBag.age4ByEdu[3],
+        @ViewBag.age4ByEdu[4]
+    ]
+
+    const age4ByScale1 = [
+        @ViewBag.age4ByScale1[0],
+        @ViewBag.age4ByScale1[1],
+        @ViewBag.age4ByScale1[2],
+        @ViewBag.age4ByScale1[3],
+        @ViewBag.age4ByScale1[4]
+    ]
+
+    const age4ByScale2 = [
+        @ViewBag.age4ByScale2[0],
+        @ViewBag.age4ByScale2[1],
+        @ViewBag.age4ByScale2[2],
+        @ViewBag.age4ByScale2[3],
+        @ViewBag.age4ByScale2[4]
+    ]
+
+    const age4ByScale3 = [
+        @ViewBag.age4ByScale3[0],
+        @ViewBag.age4ByScale3[1],
+        @ViewBag.age4ByScale3[2],
+        @ViewBag.age4ByScale3[3],
+        @ViewBag.age4ByScale3[4]
+    ]
+
+    const age4ByScale4 = [
+        @ViewBag.age4ByScale4[0],
+        @ViewBag.age4ByScale4[1],
+        @ViewBag.age4ByScale4[2],
+        @ViewBag.age4ByScale4[3],
+        @ViewBag.age4ByScale4[4]
+    ]
+
+    const age4ByScale5 = [
+        @ViewBag.age4ByScale5[0],
+        @ViewBag.age4ByScale5[1],
+        @ViewBag.age4ByScale5[2],
+        @ViewBag.age4ByScale5[3],
+        @ViewBag.age4ByScale5[4]
+    ]
+
+    const age4ByScale6 = [
+        @ViewBag.age4ByScale6[0],
+        @ViewBag.age4ByScale6[1],
+        @ViewBag.age4ByScale6[2],
+        @ViewBag.age4ByScale6[3],
+        @ViewBag.age4ByScale6[4]
+    ]
+
+    const age4ByScale7 = [
+        @ViewBag.age4ByScale7[0],
+        @ViewBag.age4ByScale7[1],
+        @ViewBag.age4ByScale7[2],
+        @ViewBag.age4ByScale7[3],
+        @ViewBag.age4ByScale7[4]
+    ]
+
+    const age4ByScale8 = [
+        @ViewBag.age4ByScale8[0],
+        @ViewBag.age4ByScale8[1],
+        @ViewBag.age4ByScale8[2],
+        @ViewBag.age4ByScale8[3],
+        @ViewBag.age4ByScale8[4]
+    ]
+
+    const age4ByScale9 = [
+        @ViewBag.age4ByScale9[0],
+        @ViewBag.age4ByScale9[1],
+        @ViewBag.age4ByScale9[2],
+        @ViewBag.age4ByScale9[3],
+        @ViewBag.age4ByScale9[4]
+    ]
+
+    const age4ByScale10 = [
+        @ViewBag.age4ByScale10[0],
+        @ViewBag.age4ByScale10[1],
+        @ViewBag.age4ByScale10[2],
+        @ViewBag.age4ByScale10[3],
+        @ViewBag.age4ByScale10[4]
+    ]
 
     let chartType = "bar";
-    
-    
-    
-
-
-    
-    Chart.defaults.font.family = "Font-Regular"
     
     let chart1 = new Chart(Question1, {
         plugins: [ChartDataLabels],
         type: chartType, // Chart type (e.g., bar, line)
         data: {
-            labels: [
-                '@Localizer["answerAge1"]',
-                '@Localizer["answerAge2"]',
-                '@Localizer["answerAge3"]',
-                '@Localizer["answerAge4"]'
-            ],
+            labels: ageLabels,
             
             datasets: [
                 {
-                    label: '@Html.Raw(ViewBag.Question1)',
-                    data: [
-                        @ViewBag.AgeCount1,
-                        @ViewBag.AgeCount2,
-                        @ViewBag.AgeCount3,
-                        @ViewBag.AgeCount4
-                    ],
+                    label: question1Label,
+                    data: ageData,
                     borderColor: 'rgba(5, 41, 118, 1)',
                     backgroundColor: 'rgba(5, 41, 118, 1)',
                     borderWidth: 1
@@ -460,116 +1635,16 @@
             ]
         },
         options: options
-    });
-    
-    let chartOneCounter = 0;
-    let chartOneCounterMale = 0;
-    let chartOneCounterMFemale = 0;
-    
-    function chartOneFilter(button,data1,data2,data3,data4){
-        if (!(button == filterMale)){
-            filterMale.style.background = "none"
-            filterMale.style.color = "black"
-            }
+    });    
 
-        if (!(button == filterFemale)){
-            filterFemale.style.background = "none"
-            filterFemale.style.color = "black"
-        }  
-        
-         if (!(button.id == "eduButton1")){
-             button.style.background = "none"
-             button.style.color = "black"
-        }
-
-        if (chartOneCounter == 0){
-
-            button.style.background = "blue"
-            button.style.color = "white"
-        
-        chart1.destroy();
-        chartOneCounter++;
-        chart1 = new Chart(Question1, {
-            plugins: [ChartDataLabels],
-            type: chartType, // Chart type (e.g., bar, line)
-            data: {
-                labels: [
-                    '@Localizer["answerAge1"]',
-                    '@Localizer["answerAge2"]',
-                    '@Localizer["answerAge3"]',
-                    '@Localizer["answerAge4"]'
-                ],
-
-                datasets: [
-                    {
-                        label: '@Html.Raw(ViewBag.Question1)',
-                        data: [
-                            data1,
-                            data2,
-                            data3,
-                            data4
-                        ],
-                        borderColor: 'rgba(5, 41, 118, 1)',
-                        backgroundColor: 'rgba(5, 41, 118, 1)',
-                        borderWidth: 1
-                    },
-                ]
-            },
-            options: options
-        });
-        return;
-        }
-        chart1.destroy()
-        button.style.background = "none"
-        button.style.color = "black"
-        
-        chart1 = new Chart(Question1, {
-            plugins: [ChartDataLabels],
-            type: chartType, // Chart type (e.g., bar, line)
-            data: {
-                labels: [
-                    '@Localizer["answerAge1"]',
-                    '@Localizer["answerAge2"]',
-                    '@Localizer["answerAge3"]',
-                    '@Localizer["answerAge4"]'
-                ],
-
-                datasets: [
-                    {
-                        label: '@Html.Raw(ViewBag.Question1)',
-                        data: [
-                            @ViewBag.AgeCount1,
-                            @ViewBag.AgeCount2,
-                            @ViewBag.AgeCount3,
-                            @ViewBag.AgeCount4
-                        ],
-                        borderColor: 'rgba(5, 41, 118, 1)',
-                        backgroundColor: 'rgba(5, 41, 118, 1)',
-                        borderWidth: 1
-                    },
-                ]
-            },
-            options: options
-        });
-        chartOneCounter--;
-    }
-
-
-
-    const chart2 = new Chart(Question2, {
+    let chart2 = new Chart(Question2, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-            '@Localizer["asnwerSex1"]',
-            '@Localizer["asnwerSex2"]'
-            ],  // X-axis labels
+            labels: sexLabels,  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question2)',
-                data: [
-                @ViewBag.Sex1,
-                @ViewBag.Sex2
-                  ],  // Y-axis values
+                label: question2Label,
+                data: sexData,  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
@@ -580,25 +1655,14 @@
 
     
     
-     const chart3 = new Chart(Question3, {
+     let chart3 = new Chart(Question3, {
          plugins: [ChartDataLabels],
          type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-                '@Localizer["asnwerEdu1"]',
-                '@Localizer["asnwerEdu2"]',
-                '@Localizer["asnwerEdu3"]',
-                '@Localizer["asnwerEdu4"]',
-                '@Localizer["asnwerEdu5"]'
-               ],  // X-axis labels
+            labels: eduLabels,  // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question3)',
-                data: [
-                @ViewBag.eduCount1,
-                @ViewBag.eduCount2,
-                @ViewBag.eduCount3, 
-                @ViewBag.eduCount4
-                  ],  // Y-axis values
+                label: question4Label,
+                data: eduData,  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
@@ -607,25 +1671,14 @@
         options: options
     });
     
-    const chart4 = new Chart(Question4, {
+    let chart4 = new Chart(Question4, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-            '@Localizer["answerScale1"]',
-            '@Localizer["answerScale2"]',
-            '@Localizer["answerScale3"]',
-            '@Localizer["answerScale4"]',
-            '@Localizer["answerScale5"]',
-            ], // X-axis labels
+            labels: scaleLabels, // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question4)',
-                data: [
-                @ViewBag.Scale1Count1,
-                @ViewBag.Scale1Count2,
-                @ViewBag.Scale1Count3, 
-                @ViewBag.Scale1Count4
-                  ],  // Y-axis values
+                label: question4Label,
+                data: Scale1Data,  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
@@ -634,50 +1687,14 @@
         options: options
     });
 
-    const chart5 = new Chart(Question5, {
+    let chart5 = new Chart(Question5, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',], // X-axis labels
+            labels: scaleLabels, // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question5)',
-                data: [
-                    @ViewBag.Scale2Count1,
-                    @ViewBag.Scale2Count2,
-                    @ViewBag.Scale2Count3,
-                    @ViewBag.Scale2Count4
-                ],  // Y-axis values
-                borderColor: 'rgba(5, 41, 118, 1)',
-                backgroundColor: 'rgba(5, 41, 118, 1)',
-                borderWidth: 1
-            }],
-        },
-        options:options
-    }); 
-    
-    const chart6 = new Chart(Question6, {
-        plugins: [ChartDataLabels],
-        type: 'bar',  // Chart type (bar, line, etc.)
-        data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',], // X-axis labels
-            datasets: [{
-                label: '@Html.Raw(ViewBag.Question6)',
-                data: [
-                    @ViewBag.Scale3Count1,
-                    @ViewBag.Scale3Count2,
-                    @ViewBag.Scale3Count3,
-                    @ViewBag.Scale3Count4
-                ],  // Y-axis values
+                label: question5Label,
+                data: Scale2Data,  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
@@ -686,24 +1703,31 @@
         options:options
     });
 
-    const chart7 = new Chart(Question7, {
+    
+    let chart6 = new Chart(Question6, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',], // X-axis labels
+            labels: scaleLabels, // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question7)',
-                data: [
-                    @ViewBag.Scale4Count1,
-                    @ViewBag.Scale4Count2,
-                    @ViewBag.Scale4Count3,
-                    @ViewBag.Scale4Count4
-                ],  // Y-axis values
+                label: question6Label,
+                data: Scale3Data,   // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }],
+        },
+        options:options
+    });
+
+    let chart7 = new Chart(Question7, {
+        plugins: [ChartDataLabels],
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: scaleLabels, // X-axis labels
+            datasets: [{
+                label: question7Label,
+                data: Scale4Data, // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
@@ -712,25 +1736,14 @@
         options:options
     }); 
     
-    const chart8 = new Chart(Question8, {
+    let chart8 = new Chart(Question8, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',
-            ],  // X-axis labels
+            labels: scaleLabels, // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question8)',
-                data: [
-                @ViewBag.AgeCount1,
-                @ViewBag.AgeCount2,
-                @ViewBag.AgeCount3, 
-                @ViewBag.AgeCount4,
-                  ],  // Y-axis values
+                label: question8Label,
+                data: Scale5Data,   // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
@@ -739,155 +1752,99 @@
         options: options
     }); 
     
-    const chart9 = new Chart(Question9, {
+    let chart9 = new Chart(Question9, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',
-            ],  // X-axis labels
+            labels: scaleLabels, // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question9)',
-                data: [
-                @ViewBag.AgeCount1,
-                @ViewBag.AgeCount2,
-                @ViewBag.AgeCount3, 
-                @ViewBag.AgeCount4
-                  ],  // Y-axis values
+                label: question9Label,
+                data: Scale6Data,  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
             }]
         },
         options: options
+    });
+    
+    let chart10 = new Chart(Question10, {
+        plugins: [ChartDataLabels],
+        type: 'bar',  // Chart type (bar, line, etc.)
+        data: {
+            labels: scaleLabels, // X-axis labels
+            datasets: [{
+                label: question10Label,
+                data: Scale7Data,  // Y-axis values
+                borderColor: 'rgba(5, 41, 118, 1)',
+                backgroundColor: 'rgba(5, 41, 118, 1)',
+                borderWidth: 1
+            }]
+        },        options: options
     });
 
-    const chart10 = new Chart(Question10, {
-        plugins: [ChartDataLabels],
-        type: 'bar',  // Chart type (bar, line, etc.)
-        data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',
-            ]
-            ,  // X-axis labels
-            datasets: [{
-                label: '@Html.Raw(ViewBag.Question10)',
-                data: [
-                @ViewBag.Scale7Count1,
-                @ViewBag.Scale7Count2,
-                @ViewBag.Scale7Count3, 
-                @ViewBag.Scale7Count4,
-                @ViewBag.Scale7Count5
-                  ],  // Y-axis values
-                borderColor: 'rgba(5, 41, 118, 1)',
-                backgroundColor: 'rgba(5, 41, 118, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: options
-    });
+    let chart11 = null;
 
     if (`@ViewBag.Question11`.length > 0){
         const Question11 = document.getElementById('Question11').getContext('2d');
         const containerOfQuestion11 = document.getElementById('containerOfQuestion11');
         containerOfQuestion11.style.display = "block"
         
-    const chart11 = new Chart(Question11, {
+     chart11 = new Chart(Question11, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',
-            ],  // X-axis labels
+            labels: scaleLabels, // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question11)',
-                data: [
-                @ViewBag.Scale8Count1,
-                @ViewBag.Scale8Count2,
-                @ViewBag.Scale8Count3, 
-                @ViewBag.Scale8Count4,
-                @ViewBag.Scale8Count5,
-                  ],  // Y-axis values
+                label: question11Label,
+                data: Scale8Data,  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
             }]
-        },
-        options:options
+        },        options:options
     });
 }
+
+    let chart12 = null;
+
     if (`@ViewBag.Question12`.length > 0){
     const Question12 = document.getElementById('Question12').getContext('2d');
     const containerOfQuestion12 = document.getElementById('containerOfQuestion12');
     containerOfQuestion12.style.display = "block"
 
-    const chart12 = new Chart(Question12, {
+     chart12 = new Chart(Question12, {
         plugins: [ChartDataLabels],
         type: 'bar',  // Chart type (bar, line, etc.)
         data: {
-            labels: [
-                '@Localizer["answerScale1"]',
-                '@Localizer["answerScale2"]',
-                '@Localizer["answerScale3"]',
-                '@Localizer["answerScale4"]',
-                '@Localizer["answerScale5"]',
-            ],  // X-axis labels
+            labels: scaleLabels, // X-axis labels
             datasets: [{
-                label: '@Html.Raw(ViewBag.Question12)',
-                data: [
-                @ViewBag.Scale9Count1,
-                @ViewBag.Scale9Count2,
-                @ViewBag.Scale9Count3, 
-                @ViewBag.Scale9Count4,
-                @ViewBag.Scale9Count5,
-                  ],  // Y-axis values
+                label: question12Label,
+                data: Scale9Data,  // Y-axis values
                 borderColor: 'rgba(5, 41, 118, 1)',
                 backgroundColor: 'rgba(5, 41, 118, 1)',
                 borderWidth: 1
             }]
-        },
+        },        
         options: options
     });
 }
-
+    
+    let chart13 = null;
    if (`@ViewBag.Question13`.length > 0){
    
        const Question13 = document.getElementById('Question13').getContext('2d');
        const containerOfQuestion13 = document.getElementById('containerOfQuestion13');
        containerOfQuestion13.style.display = "block"
        
-       const chart13 = new Chart(Question13, {
+        chart13 = new Chart(Question13, {
            plugins: [ChartDataLabels],
            type: 'bar',  // Chart type (bar, line, etc.)
            data: {
-               labels: [
-                   '@Localizer["answerScale1"]',
-                   '@Localizer["answerScale2"]',
-                   '@Localizer["answerScale3"]',
-                   '@Localizer["answerScale4"]',
-                   '@Localizer["answerScale5"]',
-               ],  // X-axis labels
+               labels: scaleLabels, // X-axis labels
                datasets: [{
-                   label: '@Html.Raw(ViewBag.Question13)',
-                   data: [
-                       @ViewBag.Scale10Count1,
-                       @ViewBag.Scale10Count2,
-                       @ViewBag.Scale10Count3,
-                       @ViewBag.Scale10Count4,
-                       @ViewBag.Scale10Count5
-                   ],  // Y-axis values
+                   label: question13Label,
+                   data: Scale10Data,  // Y-axis values
                    borderColor: 'rgba(5, 41, 118, 1)',
                    backgroundColor: 'rgba(5, 41, 118, 1)',
                    borderWidth: 1
@@ -896,7 +1853,1241 @@
            options: options
        });
    }
-  
+    
+    
+    const makeChart1 = (data,label,chart) => {
+        if (chart){
+        chart.data.datasets[0].data = data;
+        chart.data.labels = label;
+        chart.update();
+        }
+    }
+    
+    function restChart(){
+
+        makeChart1(
+            ageData,
+            ageLabels,
+            chart1
+        )
+
+        makeChart1(
+            sexData,
+            sexLabels,
+            chart2
+        )
+
+        makeChart1(
+            eduData,
+            eduLabels,
+            chart3
+        )
+
+        makeChart1(
+            Scale1Data,
+            scaleLabels,
+            chart4
+        )
+
+        makeChart1(
+            Scale4Data,
+            scaleLabels,
+            chart5
+        )
+
+        makeChart1(
+            Scale5Data,
+            scaleLabels,
+            chart6
+        )
+
+        makeChart1(
+            Scale6Data,
+            scaleLabels,
+            chart7
+        )
+
+        makeChart1(
+            Scale7Data,
+            scaleLabels,
+            chart8
+        )
+
+        if (`@ViewBag.Question11`.length > 0){
+            makeChart1(
+                Scale8Data,
+                scaleLabels,
+                chart11
+            )
+        }
+
+        if (`@ViewBag.Question12`.length > 0){
+            makeChart1(
+                Scale9Data,
+                scaleLabels,
+                chart12
+            )
+        }
+
+        if (`@ViewBag.Question13`.length > 0){
+            makeChart1(
+                Scale5Data10,
+                scaleLabels,
+                chart13
+            )
+        }
+    
+    }
+    
+    let maleFilter = 0
+
+    filterMale.addEventListener("click", () => {
+        console.log(maleFilter)
+        if (maleFilter == 0){
+            
+            filterMale.style.backgroundColor = "red"
+            
+            makeChart1(
+                MaleByAge,
+                ageLabels,
+                chart1
+            )
+            
+        const maleCount = [sexData[0],0];
+        
+            makeChart1(
+                maleCount,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                maleByEdu,
+                eduLabels,
+                chart3
+            )
+            
+            makeChart1(
+                maleByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                maleByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                maleByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                maleByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                maleByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                maleByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                maleByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0){
+                makeChart1(
+                    maleByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0){
+                makeChart1(
+                    maleByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0){
+                makeChart1(
+                    maleByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+            
+            maleFilter++;
+        return
+    }
+
+        restChart()
+    
+        maleFilter--;
+        console.log("here at")
+        filterMale.style.backgroundColor = "white"
+        return;
+    })
+
+    let femaleFilter = 0
+
+    filterFemale.addEventListener("click", () => {
+        console.log(femaleFilter)
+        if (femaleFilter == 0) {
+
+            filterFemale.style.backgroundColor = "red"
+
+            makeChart1(
+                FemaleByAge,
+                ageLabels,
+                chart1
+            )
+
+            const femaleCount = [0,sexData[1]];
+
+            makeChart1(
+                femaleCount,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                femaleByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                femaleByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                femaleByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                femaleByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                femaleByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                femaleByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                femaleByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                femaleByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    femaleByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    femaleByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    femaleByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            femaleFilter++;
+            return
+        }
+
+        restChart()
+
+        femaleFilter--;
+        console.log("here at")
+        filterFemale.style.backgroundColor = "white"
+        return;
+    })
+
+
+    let edu1FilterCount = 0
+
+    filterEdu1.addEventListener("click", () => {
+        if (edu1FilterCount == 0) {
+
+            filterEdu1.style.backgroundColor = "red"
+
+            makeChart1(
+                edu1ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                edu1BySex,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                edu1ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                edu1ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                edu1ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                edu1ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                edu1ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                edu1ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                edu1ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                edu1ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    edu1ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    edu1ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    edu1ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            edu1FilterCount++;
+            return
+        }
+
+        restChart()
+
+        edu1FilterCount--;
+        console.log("here at")
+        filterEdu1.style.backgroundColor = "white"
+        return;
+    })
+
+    let edu2FilterCount = 0;
+
+    filterEdu2.addEventListener("click", () => {
+        console.log(edu2FilterCount)
+        if (edu2FilterCount == 0) {
+
+            filterEdu2.style.backgroundColor = "red"
+
+            makeChart1(
+                edu2ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                edu2BySex,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                edu2ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                edu2ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                edu2ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                edu2ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                edu2ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                edu2ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                edu2ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                edu2ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    edu2ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    edu2ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    edu2ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            edu2FilterCount++;
+            return
+        }
+
+        restChart()
+
+        edu2FilterCount--;
+        console.log("here at")
+        filterEdu2.style.backgroundColor = "white"
+        return;
+    })
+
+    let edu3FilterCount = 0;
+
+    filterEdu3.addEventListener("click", () => {
+        console.log(edu3FilterCount)
+        if (edu3FilterCount == 0) {
+
+            filterEdu3.style.backgroundColor = "red"
+
+            makeChart1(
+                edu3ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                edu3BySex,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                edu3ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                edu3ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                edu3ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                edu3ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                edu3ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                edu3ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                edu3ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                edu3ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    edu3ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    edu3ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    edu3ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            edu3FilterCount++;
+            return
+        }
+
+        restChart()
+
+        edu3FilterCount--;
+        console.log("here at")
+        filterEdu3.style.backgroundColor = "white"
+        return;
+    })
+
+    let edu4FilterCount = 0;
+
+    filterEdu4.addEventListener("click", () => {
+        console.log(edu4FilterCount)
+        if (edu4FilterCount == 0) {
+
+            filterEdu4.style.backgroundColor = "red"
+
+            makeChart1(
+                edu4ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                edu4BySex,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                edu4ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                edu4ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                edu4ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                edu4ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                edu4ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                edu4ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                edu4ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                edu4ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    edu4ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    edu4ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    edu4ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            edu4FilterCount++;
+            return
+        }
+
+        restChart()
+
+        edu4FilterCount--;
+        console.log("here at")
+        filterEdu4.style.backgroundColor = "white"
+        return;
+    })
+
+    let edu5FilterCount = 0;
+
+    filterEdu5.addEventListener("click", () => {
+        console.log(edu5FilterCount)
+        if (edu5FilterCount == 0) {
+
+            filterEdu5.style.backgroundColor = "red"
+
+            makeChart1(
+                edu5ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                edu5BySex,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                edu5ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                edu5ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                edu5ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                edu5ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                edu5ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                edu5ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                edu5ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                edu5ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    edu5ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    edu5ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    edu5ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            edu5FilterCount++;
+            return
+        }
+
+        restChart()
+
+        edu5FilterCount--;
+        console.log("here at")
+        filterEdu5.style.backgroundColor = "white"
+        return;
+    })
+
+    let age1Filter = 0
+
+    filterAge1.addEventListener("click", () => {
+        console.log(age1Filter)
+        if (age1Filter == 0) {
+
+            filterAge1.style.backgroundColor = "red"
+
+            makeChart1(
+                age1ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                age1BySex,
+                sexLabels,
+                chart2
+            )
+            
+            makeChart1(
+                age1ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                age1ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                age1ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                age1ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                age1ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                age1ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                age1ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                age1ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    age1ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    age1ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    age1ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            age1Filter++;
+            return
+        }
+
+        restChart()
+
+        age1Filter--;
+        console.log("here at")
+        filterAge1.style.backgroundColor = "white"
+        return;
+    })
+
+
+    let age2Filter = 0
+
+    filterAge2.addEventListener("click", () => {
+        console.log(age2Filter)
+        if (age2Filter == 0) {
+
+            filterAge2.style.backgroundColor = "red"
+
+            makeChart1(
+                age2ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                age2BySex,
+                sexLabels,
+                chart2
+            )
+            
+            makeChart1(
+                age2ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                age2ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                age2ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                age2ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                age2ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                age2ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                age2ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                age2ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    age2ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    age2ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    age2ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            age2Filter++;
+            return
+        }
+
+        restChart()
+
+        age2Filter--;
+        console.log("here at")
+        filterAge2.style.backgroundColor = "white"
+        return;
+    })
+
+    let age3Filter = 0
+
+    filterAge3.addEventListener("click", () => {
+        console.log(age3Filter)
+        if (age3Filter == 0) {
+
+            filterAge3.style.backgroundColor = "red"
+
+            makeChart1(
+                age3ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                age3BySex,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                age3ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                age3ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                age3ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                age3ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                age3ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                age3ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                age3ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                age3ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    age3ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    age3ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    age3ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            age3Filter++;
+            return
+        }
+
+        restChart()
+
+        age3Filter--;
+        console.log("here at")
+        filterAge3.style.backgroundColor = "white"
+        return;
+    })
+
+
+    let age4Filter = 0
+
+    filterAge4.addEventListener("click", () => {
+        console.log(age4Filter)
+        if (age4Filter == 0) {
+
+            filterAge4.style.backgroundColor = "red"
+
+            makeChart1(
+                age4ByAge,
+                ageLabels,
+                chart1
+            )
+
+            makeChart1(
+                age4BySex,
+                sexLabels,
+                chart2
+            )
+
+            makeChart1(
+                age4ByEdu,
+                eduLabels,
+                chart3
+            )
+
+            makeChart1(
+                age4ByScale1,
+                scaleLabels,
+                chart4
+            )
+
+            makeChart1(
+                age4ByScale2,
+                scaleLabels,
+                chart5
+            )
+
+            makeChart1(
+                age4ByScale3,
+                scaleLabels,
+                chart6
+            )
+
+            makeChart1(
+                age4ByScale4,
+                scaleLabels,
+                chart7
+            )
+
+            makeChart1(
+                age4ByScale5,
+                scaleLabels,
+                chart8
+            )
+
+            makeChart1(
+                age4ByScale6,
+                scaleLabels,
+                chart9
+            )
+
+            makeChart1(
+                age4ByScale7,
+                scaleLabels,
+                chart10
+            )
+
+            if (`@ViewBag.Question11`.length > 0) {
+                makeChart1(
+                    age4ByScale8,
+                    scaleLabels,
+                    chart11
+                )
+            }
+
+            if (`@ViewBag.Question12`.length > 0) {
+                makeChart1(
+                    age4ByScale9,
+                    scaleLabels,
+                    chart12
+                )
+            }
+
+            if (`@ViewBag.Question13`.length > 0) {
+                makeChart1(
+                    age4ByScale10,
+                    scaleLabels,
+                    chart13
+                )
+            }
+
+            age4Filter++;
+            return
+        }
+
+        restChart()
+
+        age4Filter--;
+        console.log("here at")
+        filterAge4.style.backgroundColor = "white"
+        return;
+    })
 
 
 </script>

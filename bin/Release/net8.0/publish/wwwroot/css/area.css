@@ -1,0 +1,291 @@
+﻿.create-super-container {
+    width: 80%;
+    height: 3em;
+    margin: 2em auto;
+}
+
+.create-container {
+    padding: 1em;
+    max-width: 13%;
+    min-width: 5em;
+    border: 0.3em transparent solid;
+    border-radius: 0.3em;
+    background-color: var(--secondary-4);
+    text-align: center;
+    cursor: pointer;
+}
+
+.create-container:hover {
+    border: 0.3em var(--blue) solid;
+    transition: 1s ease;
+
+}
+
+.create-text {
+    font-family: "Font-Bold";
+    color: var(--th-Primary);
+}
+
+.forms-super-container {
+    width: 90%;
+    margin: 4em auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    color: var(--th-Primary);
+}
+
+.forms-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 3em;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3em;
+    background-color: rgba(5, 41, 118, 0.25);
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.form-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-title-container {
+}
+
+.from-title-card-text {
+    max-width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-size: 1.5em;
+    font-family: "Font-Bold";
+}
+
+.responses-text {
+    font-size: 2em;
+    font-family: "Font-Medium";
+}
+
+.form-date-text {
+    font-family: "Font-Light";
+}
+
+.form-actions-container {
+    display: flex;
+    gap: 0.5em;
+    font-family: "Font-Light";
+}
+
+.form-action-view-text,
+.form-action-edit-text,
+.form-action-delete-text {
+    cursor: pointer;
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 0.6);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+.form-action-delete-text:hover {
+    transition: ease-in 100ms;
+    background: rgba(252, 165, 165, 1);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+.form-action-view-text:hover,
+.form-action-edit-text:hover {
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 1);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+.form__create-container {
+    gap: 1em 5em;
+}
+
+.filter__button{
+    border: 5px solid var(--blue);
+    padding: 0.5em 0.5em;
+}
+
+.form__create-input-container {
+
+}
+
+.form__create-input {
+    border: 1px solid var(--th-Primary);
+    overflow: auto;
+    outline: none;
+    width: 95%;
+    height: 2.5em;
+    border-width: 0.2em;
+    border-radius: 0.3em;
+    border-color: var(--th-Primary-6);
+    color: var(--th-Primary);
+    font-family: "Font-Light";
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+
+.form__create-input:focus {
+    border-color: var(--secondary-1);
+    border-width: 0.2em;
+    transition: ease-in 0.1s;
+
+}
+
+.return-container {
+    background-color: var(--secondary-4);
+    display: flex;
+    width: fit-content;
+    padding: 1em 3em;
+    border-radius: 0.3em;
+    border: 0.2em solid transparent;
+}
+
+.return-container:hover {
+    border: 0.2em var(--blue) solid;
+}
+
+.return-text {
+    font-family: Font-Bold;
+    color: var(--th-Primary);
+}
+
+.return-super-container,
+.title-super-container {
+    width: 85%;
+    margin: 1em auto;
+}
+
+.title-super-container {
+    width: 85%;
+    margin: 2em auto;
+}
+
+.chart-super-container {
+    width: 100%;
+}
+
+.chart-sub-container {
+    background-color: rgba(105, 125, 169, 0.2);
+    width: 50%;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    border-radius: 0.4em;
+}
+
+.setDefault-super-Container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setDefault-sub-Container {
+    position: absolute;
+    display: flex;
+    gap: 0.2em;
+    font-family: "Font-Light";
+    align-items: center;
+    justify-content: center;
+    top: 0.2em;
+}
+
+.nondefault-container {
+    cursor: pointer;
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 0.6);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+.nondefault-container:hover {
+    animation:pulseGrey 1s;
+    box-shadow:0 0 0 1.25rem transparent;
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 0.8);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+.default-container {
+    animation:pulseGreen 1s;
+    box-shadow:0 0 0 1.25rem transparent;
+    transition: ease-in 100ms;
+    cursor: pointer;
+    background: rgba(163, 230, 53, 0.6);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+.default-container:hover {
+    animation:pulseRed 1s;
+    box-shadow:0 0 0 1.25rem transparent;
+    transition: ease-in 100ms;
+    background: rgba(252, 165, 165, 1);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
+}
+
+
+.start-date-super-container {
+    flex: 1;
+}
+
+.end-date-super-container {
+    flex: 1;
+}
+
+.menu-container {
+    stroke: var(--th-Primary);
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.form-end-date-container{
+    position: absolute;
+    top: -1.3em;
+}
+
+.metaInfoSuperContainer{
+    font-family: "Font-Medium";
+}
+
+.metaDataContainer{
+    width: 80%;
+    margin: 1em auto;
+    background: rgba(156, 163, 175, 0.3);
+    border-radius: 0.4em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 0em;
+    gap: 1em;
+}
+
+.infoContainer1{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+@media (max-width: 1000px) {
+    .chart-sub-container {
+        width: 80%;
+    }
+}

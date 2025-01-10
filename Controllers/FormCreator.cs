@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using feedback.Data;
 using feedback.Models;
@@ -175,145 +170,10 @@ namespace feedback.Controllers
                 .Include(f => f.FormEntries) // Ensure FormEntries is loaded
                 .FirstOrDefaultAsync(m => m.id == id);
 
-            var formEntry = _context.FormEntry.Where(fe => fe.FormId == id).ToList();
-            
             int ageCountTotal = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Select(fe => fe.AgeGroup)
                 .ToList().Count;
-
-            int AgeCountByMale1 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 1)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
-                .ToList().Count;
-            
-            
-            int AgeCountByMale2 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 2)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
-                .ToList().Count;
-            
-            
-            int AgeCountByMale3 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 3)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
-                .ToList().Count;
-            
-            int AgeCountByMale4 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 4)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Male)
-                .ToList().Count;
-            
-            int AgeCountByFemale1 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 1)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
-                .ToList().Count;
-            
-            
-            int AgeCountByFemale2 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 2)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
-                .ToList().Count;
-            
-            
-            int AgeCountByFemale3 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 3)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
-                .ToList().Count;
-            
-            int AgeCountByFemale4 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 4)
-                .Where(fe => fe.Sex == FormEntry.Sexes.Female)
-                .ToList().Count;
-            
-            int eduOneCount1 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 1)
-                .Where(fe => fe.Education == 1)
-                .ToList().Count;
-            
-            
-            int eduOneCount2 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 2)
-                .Where(fe => fe.Education == 1)
-                .ToList().Count;
-            
-            
-            int eduOneCount3 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 3)
-                .Where(fe => fe.Education == 1)
-                .ToList().Count;
-            
-            int eduOneCount4 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.AgeGroup == 4)
-                .Where(fe => fe.Education == 1)
-                .ToList().Count;
-
-            int[] eduOne = { eduOneCount1, eduOneCount2, eduOneCount3 ,eduOneCount4 };
-            ViewBag.eduOne = eduOne;
-            
-            int[] eduTwoT = Enumerable.Range(1, 4)
-                .Select(ageGroup => _context.FormEntry
-                    .Where(fe => fe.FormId == id)
-                    .Where(fe => fe.AgeGroup == ageGroup)
-                    .Count(fe => fe.Education == 2))
-                .ToArray();
-
-            
-            ViewBag.eduTwo = eduTwoT;
-            
-            int[] edu3ByAge = Enumerable.Range(1, 4)
-                .Select(ageGroup => _context.FormEntry
-                    .Where(fe => fe.FormId == id)
-                    .Where(fe => fe.AgeGroup == ageGroup)
-                    .Count(fe => fe.Education == 3))
-                .ToArray();
-
-            
-            ViewBag.edu3ByAge = edu3ByAge;
-            
-            int[] edu4ByAge = Enumerable.Range(1, 4)
-                .Select(ageGroup => _context.FormEntry
-                    .Where(fe => fe.FormId == id)
-                    .Where(fe => fe.AgeGroup == ageGroup)
-                    .Count(fe => fe.Education == 4))
-                .ToArray();
-
-            
-            ViewBag.edu4ByAge = edu4ByAge;
-            
-            
-            int[] edu5ByAge = Enumerable.Range(1, 4)
-                .Select(ageGroup => _context.FormEntry
-                    .Where(fe => fe.FormId == id)
-                    .Where(fe => fe.AgeGroup == ageGroup)
-                    .Count(fe => fe.Education == 5))
-                .ToArray();
-
-            
-            ViewBag.edu5ByAge = edu5ByAge;
-       
-            
-            int[] ageByMale = { AgeCountByMale1, AgeCountByMale2, AgeCountByMale3 ,AgeCountByMale4 };
-
-            ViewBag.ageByMale = ageByMale;
-            
-            int[] ageByFemale = { AgeCountByFemale1, AgeCountByFemale2, AgeCountByFemale3 ,AgeCountByFemale4 };
-
-            ViewBag.ageByFemale = ageByFemale;
-            
-    
 
             int AgeCount1 = _context.FormEntry
                 .Where(fe => fe.FormId == id)
@@ -334,7 +194,7 @@ namespace feedback.Controllers
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.AgeGroup == 4)
                 .ToList().Count;
-            
+
             int eduCountTotal = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Select(fe => fe.Education)
@@ -353,6 +213,11 @@ namespace feedback.Controllers
             int eduCount3 = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.Education == 3)
+                .ToList().Count;
+
+            int eduCount5 = _context.FormEntry
+                .Where(fe => fe.FormId == id)
+                .Where(fe => fe.Education == 5)
                 .ToList().Count;
 
             int eduCount4 = _context.FormEntry
@@ -557,16 +422,1071 @@ namespace feedback.Controllers
                 .Where(fe => fe.OpenQuestion != null)
                 .Select(fe => fe.OpenQuestion)
                 .ToList();
-            
+
             int openQuestionaCount = _context.FormEntry
                 .Where(fe => fe.FormId == id)
                 .Where(fe => fe.OpenQuestion != null)
                 .Select(fe => fe.OpenQuestion)
                 .Count();
+
+
+            int[] maleByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.AgeGroup == ageGroup)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByAge = maleByAge;
+
+            int[] maleByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.Education == Education)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByEdu = maleByEdu;
+
+
+            int[] maleByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale1 == Scale1)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale1 = maleByScale1;
+
+
+            int[] maleByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale2 == Scale2)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale2 = maleByScale2;
+
+
+            int[] maleByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale3 == Scale3)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale3 = maleByScale3;
+
+
+            int[] maleByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale4 == Scale4)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale4 = maleByScale4;
+
+
+            int[] maleByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale5 == Scale5)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale5 = maleByScale5;
+
+
+            int[] maleByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale6 == Scale6)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale6 = maleByScale6;
+
+
+            int[] maleByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale7 == Scale7)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+
+            ViewBag.maleByScale7 = maleByScale7;
+
+            int[] maleByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale8 == Scale8)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale8 = maleByScale8;
+
+            int[] maleByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale9 == Scale9)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale9 = maleByScale9;
+
+            int[] maleByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale10 == Scale10)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Male))
+                .ToArray();
+
+            ViewBag.maleByScale10 = maleByScale10;
+
+
+            int[] femaleByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.AgeGroup == ageGroup)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByAge = femaleByAge;
+
+            int[] femaleByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.Education == Education)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByEdu = femaleByEdu;
+
+            int[] femaleByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale1 == Scale1)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale1 = femaleByScale1;
+
+            int[] femaleByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale2 == Scale2)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale2 = femaleByScale2;
+
+            int[] femaleByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale3 == Scale3)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale3 = femaleByScale3;
+
+            int[] femaleByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale4 == Scale4)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale4 = femaleByScale4;
+
+            int[] femaleByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale5 == Scale5)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale5 = femaleByScale5;
+
+            int[] femaleByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale6 == Scale6)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale6 = femaleByScale6;
+
+            int[] femaleByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale7 == Scale7)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale7 = femaleByScale7;
+
+            int[] femaleByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale8 == Scale8)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale8 = femaleByScale8;
+
+            int[] femaleByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale9 == Scale9)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale9 = femaleByScale9;
+
+            int[] femaleByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Where(fe => fe.FormId == id && fe.Scale10 == Scale10)
+                    .Count(fe => fe.Sex == FormEntry.Sexes.Female))
+                .ToArray();
+
+            ViewBag.femaleByScale10 = femaleByScale10;
             
+            int[] edu1ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByAge = edu1ByAge;
+
+            int edu1BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 1)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int edu1BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 1)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.edu1BySex = new int[]{edu1BySex1,edu1BySex2};
+            
+
+            int[] edu1ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByEdu = edu1ByEdu;
+
+            int[] edu1ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale1 = edu1ByScale1;
+
+            int[] edu1ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale2 = edu1ByScale2;
+
+            int[] edu1ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale3 = edu1ByScale3;
+
+            int[] edu1ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale4 = edu1ByScale4;
+
+            int[] edu1ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale5 = edu1ByScale5;
+
+            int[] edu1ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale6 = edu1ByScale6;
+
+            int[] edu1ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale7 = edu1ByScale7;
+
+            int[] edu1ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale8 = edu1ByScale8;
+
+            int[] edu1ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale9 = edu1ByScale9;
+
+            int[] edu1ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.Education == 1))
+                .ToArray();
+
+            ViewBag.edu1ByScale10 = edu1ByScale10;
+
+            int[] edu2ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.Education == 2))
+                .ToArray();
+            
+            ViewBag.edu2ByAge = edu2ByAge;
+            
+            
+            int edu2BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 2)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int edu2BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 2)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.edu2BySex = new int[] {edu2BySex1,edu2BySex2};
+
+            int[] edu2ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByEdu = edu2ByEdu;
+
+            int[] edu2ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale1 = edu2ByScale1;
+
+            int[] edu2ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale2 = edu2ByScale2;
+
+            int[] edu2ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale3 = edu2ByScale3;
+
+            int[] edu2ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale4 = edu2ByScale4;
+
+            int[] edu2ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale5 = edu2ByScale5;
+
+            int[] edu2ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale6 = edu2ByScale6;
+
+            int[] edu2ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale7 = edu2ByScale7;
+
+            int[] edu2ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale8 = edu2ByScale8;
+
+            int[] edu2ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale9 = edu2ByScale9;
+
+            int[] edu2ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.Education == 2))
+                .ToArray();
+
+            ViewBag.edu2ByScale10 = edu2ByScale10;
+
+            int[] edu3ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByAge = edu3ByAge;
+            
+            int edu3BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 3)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int edu3BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 3)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.edu3BySex = new int[]{edu3BySex1,edu3BySex2};
+
+            int[] edu3ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByEdu = edu3ByEdu;
+
+            int[] edu3ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale1 = edu3ByScale1;
+
+            int[] edu3ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale2 = edu3ByScale2;
+
+            int[] edu3ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale3 = edu3ByScale3;
+
+            int[] edu3ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale4 = edu3ByScale4;
+
+            int[] edu3ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale5 = edu3ByScale5;
+
+            int[] edu3ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale6 = edu3ByScale6;
+
+            int[] edu3ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale7 = edu3ByScale7;
+
+            int[] edu3ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale8 = edu3ByScale8;
+
+            int[] edu3ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale9 = edu3ByScale9;
+
+            int[] edu3ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.Education == 3))
+                .ToArray();
+
+            ViewBag.edu3ByScale10 = edu3ByScale10;
+
+            int[] edu4ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByAge = edu4ByAge;
+
+            int edu4BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 4)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int edu4BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 4)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.edu4BySex = new int[]{edu4BySex1,edu4BySex2};
+            
+            int[] edu4ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByEdu = edu4ByEdu;
+
+            int[] edu4ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale1 = edu4ByScale1;
+
+            int[] edu4ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale2 = edu4ByScale2;
+
+            int[] edu4ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale3 = edu4ByScale3;
+
+            int[] edu4ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale4 = edu4ByScale4;
+
+            int[] edu4ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale5 = edu4ByScale5;
+
+            int[] edu4ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale6 = edu4ByScale6;
+
+            int[] edu4ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale7 = edu4ByScale7;
+
+            int[] edu4ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale8 = edu4ByScale8;
+
+            int[] edu4ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale9 = edu4ByScale9;
+
+            int[] edu4ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.Education == 4))
+                .ToArray();
+
+            ViewBag.edu4ByScale10 = edu4ByScale10;
+
+            int[] edu5ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByAge = edu5ByAge;
+            
+            int edu5BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 5)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int edu5BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.Education == 5)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.edu5BySex = new int[]{edu5BySex1,edu5BySex2};
+
+
+            int[] edu5ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByEdu = edu5ByEdu;
+
+            int[] edu5ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale1 = edu5ByScale1;
+
+            int[] edu5ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale2 = edu5ByScale2;
+
+            int[] edu5ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale3 = edu5ByScale3;
+
+            int[] edu5ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale4 = edu5ByScale4;
+
+            int[] edu5ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale5 = edu5ByScale5;
+
+            int[] edu5ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale6 = edu5ByScale6;
+
+            int[] edu5ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale7 = edu5ByScale7;
+
+            int[] edu5ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale8 = edu5ByScale8;
+
+            int[] edu5ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale9 = edu5ByScale9;
+
+            int[] edu5ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.Education == 5))
+                .ToArray();
+
+            ViewBag.edu5ByScale10 = edu5ByScale10;
+
+            int[] age1ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByAge = age1ByAge;
+            
+            int age1BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 1)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int age1BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 1)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.age1BySex = new int[]{age1BySex1,age1BySex2};
+
+            int[] age1ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByEdu = age1ByEdu;
+
+            int[] age1ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale1 = age1ByScale1;
+
+            int[] age1ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale2 = age1ByScale2;
+
+            int[] age1ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale3 = age1ByScale3;
+
+            int[] age1ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale4 = age1ByScale4;
+
+            int[] age1ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale5 = age1ByScale5;
+
+            int[] age1ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale6 = age1ByScale6;
+
+            int[] age1ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale7 = age1ByScale7;
+
+            int[] age1ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale8 = age1ByScale8;
+
+            int[] age1ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale9 = age1ByScale9;
+
+            int[] age1ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.AgeGroup == 1))
+                .ToArray();
+
+            ViewBag.age1ByScale10 = age1ByScale10;
+
+            int[] age2ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByAge = age2ByAge;
+            
+            int age2BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 2)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int age2BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 2)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.age2BySex = new int[]{age2BySex1,age2BySex2};
+
+            int[] age2ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByEdu = age2ByEdu;
+
+            int[] age2ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale1 = age2ByScale1;
+
+            int[] age2ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale2 = age2ByScale2;
+
+            int[] age2ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale3 = age2ByScale3;
+
+            int[] age2ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale4 = age2ByScale4;
+
+            int[] age2ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale5 = age2ByScale5;
+
+            int[] age2ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale6 = age2ByScale6;
+
+            int[] age2ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale7 = age2ByScale7;
+
+            int[] age2ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale8 = age2ByScale8;
+
+            int[] age2ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale9 = age2ByScale9;
+
+            int[] age2ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.AgeGroup == 2))
+                .ToArray();
+
+            ViewBag.age2ByScale10 = age2ByScale10;
+            int[] age3ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByAge = age3ByAge;
+            
+            int age3BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 3)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int age3BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 3)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.age3BySex = new int[]{age3BySex1,age3BySex2};
+
+            int[] age3ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByEdu = age3ByEdu;
+
+            int[] age3ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale1 = age3ByScale1;
+
+            int[] age3ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale2 = age3ByScale2;
+
+            int[] age3ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale3 = age3ByScale3;
+
+            int[] age3ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale4 = age3ByScale4;
+
+            int[] age3ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale5 = age3ByScale5;
+
+            int[] age3ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale6 = age3ByScale6;
+
+            int[] age3ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale7 = age3ByScale7;
+
+            int[] age3ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale8 = age3ByScale8;
+
+            int[] age3ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale9 = age3ByScale9;
+
+            int[] age3ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.AgeGroup == 3))
+                .ToArray();
+
+            ViewBag.age3ByScale10 = age3ByScale10;
+
+
+            int[] age4ByAge = Enumerable.Range(1, 4)
+                .Select(ageGroup => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == ageGroup && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByAge = age4ByAge;
+            
+            int age4BySex1 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 4)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Male);
+            
+            int age4BySex2 = _context.FormEntry
+                .Where(fe => fe.FormId == id && fe.AgeGroup == 4)
+                .Count(fe => fe.Sex == FormEntry.Sexes.Female);
+
+            ViewBag.age4BySex = new int[]{age4BySex1,age4BySex2};
+
+            int[] age4ByEdu = Enumerable.Range(1, 5)
+                .Select(Education => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Education == Education && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByEdu = age4ByEdu;
+
+            int[] age4ByScale1 = Enumerable.Range(1, 5)
+                .Select(Scale1 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale1 == Scale1 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale1 = age4ByScale1;
+
+            int[] age4ByScale2 = Enumerable.Range(1, 5)
+                .Select(Scale2 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale2 == Scale2 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale2 = age4ByScale2;
+
+            int[] age4ByScale3 = Enumerable.Range(1, 5)
+                .Select(Scale3 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale3 == Scale3 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale3 = age4ByScale3;
+
+            int[] age4ByScale4 = Enumerable.Range(1, 5)
+                .Select(Scale4 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale4 == Scale4 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale4 = age4ByScale4;
+
+            int[] age4ByScale5 = Enumerable.Range(1, 5)
+                .Select(Scale5 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale5 == Scale5 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale5 = age4ByScale5;
+
+            int[] age4ByScale6 = Enumerable.Range(1, 5)
+                .Select(Scale6 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale6 == Scale6 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale6 = age4ByScale6;
+
+            int[] age4ByScale7 = Enumerable.Range(1, 5)
+                .Select(Scale7 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale7 == Scale7 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale7 = age4ByScale7;
+
+            int[] age4ByScale8 = Enumerable.Range(1, 5)
+                .Select(Scale8 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale8 == Scale8 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale8 = age4ByScale8;
+
+            int[] age4ByScale9 = Enumerable.Range(1, 5)
+                .Select(Scale9 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale9 == Scale9 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale9 = age4ByScale9;
+
+            int[] age4ByScale10 = Enumerable.Range(1, 5)
+                .Select(Scale10 => _context.FormEntry
+                    .Count(fe => fe.FormId == id && fe.Scale10 == Scale10 && fe.AgeGroup == 4))
+                .ToArray();
+
+            ViewBag.age4ByScale10 = age4ByScale10;
+
             ViewBag.openQuestiona = openQuestiona;
             ViewBag.openQuestionaCount = openQuestionaCount;
-            
+
             ViewBag.Scale1Count1 = Scale1Count1;
             ViewBag.Scale1Count2 = Scale1Count2;
             ViewBag.Scale1Count3 = Scale1Count3;
@@ -591,7 +1511,7 @@ namespace feedback.Controllers
             ViewBag.Scale4Count4 = Scale4Count4;
             ViewBag.Scale4Count5 = Scale4Count5;
 
-            
+
             ViewBag.Scale5Count1 = Scale5Count1;
             ViewBag.Scale5Count2 = Scale5Count2;
             ViewBag.Scale5Count3 = Scale5Count3;
@@ -609,12 +1529,13 @@ namespace feedback.Controllers
             ViewBag.Scale7Count3 = Scale7Count3;
             ViewBag.Scale7Count4 = Scale7Count4;
             ViewBag.Scale7Count5 = Scale7Count5;
-            
+
             ViewBag.ageCountTotal = ageCountTotal;
             ViewBag.eduCount1 = eduCount1;
             ViewBag.eduCount2 = eduCount2;
             ViewBag.eduCount3 = eduCount3;
             ViewBag.eduCount4 = eduCount4;
+            ViewBag.eduCount5 = eduCount5;
 
             ViewBag.eduCountTotal = eduCountTotal;
             ViewBag.AgeCount1 = AgeCount1;
@@ -716,38 +1637,39 @@ namespace feedback.Controllers
 
             if (numberOfQuestions == 12)
             {
-                  int Scale8Count1 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.Scale8 == 1)
-                .ToList().Count;
+                int Scale8Count1 = _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.Scale8 == 1)
+                    .ToList().Count;
 
-            int Scale8Count2 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.Scale8 == 2)
-                .ToList().Count;
+                int Scale8Count2 = _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.Scale8 == 2)
+                    .ToList().Count;
 
-            int Scale8Count3 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.Scale8 == 3)
-                .ToList().Count;
+                int Scale8Count3 = _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.Scale8 == 3)
+                    .ToList().Count;
 
-            int Scale8Count4 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.Scale8 == 4)
-                .ToList().Count;
+                int Scale8Count4 = _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.Scale8 == 4)
+                    .ToList().Count;
 
-            int Scale8Count5 = _context.FormEntry
-                .Where(fe => fe.FormId == id)
-                .Where(fe => fe.Scale8 == 5)
-                .ToList().Count;
-            
-            ViewBag.Scale8Count1 = Scale8Count1;
-            ViewBag.Scale8Count2 = Scale8Count2;
-            ViewBag.Scale8Count3 = Scale8Count3;
-            ViewBag.Scale8Count4 = Scale8Count4;
-            ViewBag.Scale8Count5 = Scale8Count5;
+                int Scale8Count5 = _context.FormEntry
+                    .Where(fe => fe.FormId == id)
+                    .Where(fe => fe.Scale8 == 5)
+                    .ToList().Count;
+
+
+                ViewBag.Scale8Count1 = Scale8Count1;
+                ViewBag.Scale8Count2 = Scale8Count2;
+                ViewBag.Scale8Count3 = Scale8Count3;
+                ViewBag.Scale8Count4 = Scale8Count4;
+                ViewBag.Scale8Count5 = Scale8Count5;
             }
-            
+
             if (numberOfQuestions == 13)
             {
                 int Scale9Count1 = _context.FormEntry
@@ -774,14 +1696,15 @@ namespace feedback.Controllers
                     .Where(fe => fe.FormId == id)
                     .Where(fe => fe.Scale9 == 5)
                     .ToList().Count;
-                
+
+
                 ViewBag.Scale9Count1 = Scale9Count1;
                 ViewBag.Scale9Count2 = Scale9Count2;
                 ViewBag.Scale9Count3 = Scale9Count3;
                 ViewBag.Scale9Count4 = Scale9Count4;
                 ViewBag.Scale9Count5 = Scale9Count5;
             }
-            
+
             if (numberOfQuestions == 14)
             {
                 int Scale10Count1 = _context.FormEntry
@@ -808,7 +1731,8 @@ namespace feedback.Controllers
                     .Where(fe => fe.FormId == id)
                     .Where(fe => fe.Scale10 == 5)
                     .ToList().Count;
-                
+
+
                 ViewBag.Scale10Count1 = Scale10Count1;
                 ViewBag.Scale10Count2 = Scale10Count2;
                 ViewBag.Scale10Count3 = Scale10Count3;
