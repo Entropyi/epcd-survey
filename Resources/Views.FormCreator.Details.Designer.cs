@@ -258,6 +258,24 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to المجتمع.
+        /// </summary>
+        internal static string Community {
+            get {
+                return ResourceManager.GetString("Community", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فرز حسب المستوى التعليمي.
+        /// </summary>
+        internal static string eduSort {
+            get {
+                return ResourceManager.GetString("eduSort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to السؤال الثامن.
         /// </summary>
         internal static string eight {
@@ -290,6 +308,15 @@ namespace feedback.Resources {
         internal static string four {
             get {
                 return ResourceManager.GetString("four", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الصناعات.
+        /// </summary>
+        internal static string Industry {
+            get {
+                return ResourceManager.GetString("Industry", resourceCulture);
             }
         }
         
@@ -412,6 +439,15 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to فرز حسب القطاع.
+        /// </summary>
+        internal static string sector {
+            get {
+                return ResourceManager.GetString("sector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to السؤال السابع.
         /// </summary>
         internal static string seven {
@@ -421,11 +457,29 @@ namespace feedback.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to فرز حسب الجنس.
+        /// </summary>
+        internal static string sexSort {
+            get {
+                return ResourceManager.GetString("sexSort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to السؤال السادس.
         /// </summary>
         internal static string six {
             get {
                 return ResourceManager.GetString("six", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فرز حسب العمر.
+        /// </summary>
+        internal static string sortAge {
+            get {
+                return ResourceManager.GetString("sortAge", resourceCulture);
             }
         }
         

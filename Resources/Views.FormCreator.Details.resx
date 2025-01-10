@@ -154,4 +154,22 @@
     <data name="15" xml:space="preserve">
         <value>السؤال الخامس عشر</value>
     </data>
+    <data name="Community" xml:space="preserve">
+        <value>المجتمع</value>
+    </data>
+    <data name="Industry" xml:space="preserve">
+        <value>الصناعات</value>
+    </data>
+    <data name="sector" xml:space="preserve">
+        <value>فرز حسب القطاع</value>
+    </data>
+    <data name="sortAge" xml:space="preserve">
+        <value>فرز حسب العمر</value>
+    </data>
+    <data name="eduSort" xml:space="preserve">
+        <value>فرز حسب المستوى التعليمي</value>
+    </data>
+    <data name="sexSort" xml:space="preserve">
+        <value>فرز حسب الجنس</value>
+    </data>
 </root>

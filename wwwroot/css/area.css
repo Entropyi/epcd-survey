@@ -115,8 +115,10 @@
 }
 
 .filter__button{
-    border: 5px solid var(--blue);
-    padding: 0.5em 0.5em;
+    transition: ease-in 100ms;
+    background: rgba(156, 163, 175, 0.6);
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
 }
 
 .form__create-input-container {

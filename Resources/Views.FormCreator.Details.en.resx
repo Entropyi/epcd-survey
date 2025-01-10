@@ -148,4 +148,22 @@
     <data name="two" xml:space="preserve">
         <value>Question 2</value>
     </data>
+    <data name="Industry" xml:space="preserve">
+        <value>Industry</value>
+    </data>
+    <data name="Community" xml:space="preserve">
+        <value>Community</value>
+    </data>
+    <data name="sector" xml:space="preserve">
+        <value>Sort by sector</value>
+    </data>
+    <data name="sortAge" xml:space="preserve">
+        <value>Sort by age</value>
+    </data>
+    <data name="eduSort" xml:space="preserve">
+        <value>Sort by education </value>
+    </data>
+    <data name="sexSort" xml:space="preserve">
+        <value>Sort by gender</value>
+    </data>
 </root>
