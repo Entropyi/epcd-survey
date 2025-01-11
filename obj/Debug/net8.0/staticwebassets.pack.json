@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\feedback.bundle.scp.css",
-      "PackagePath": "staticwebassets\\feedback.bundle.scp.css"
+      "PackagePath": "staticwebassets\\feedback.5bwvhkow4o.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\css\\area.css",
@@ -71,14 +71,6 @@
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.min.js",
       "PackagePath": "staticwebassets\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.min.js"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\form.js",
-      "PackagePath": "staticwebassets\\js\\form.js"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\LICENSE.md",
@@ -847,6 +839,10 @@
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.feedback.props",
       "PackagePath": "buildTransitive\\feedback.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.feedback.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.feedback.Microsoft.AspNetCore.StaticWebAssets.props",

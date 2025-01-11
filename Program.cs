@@ -30,7 +30,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
                        throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     {
@@ -67,7 +67,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.Migrate(); 
+    dbContext.Database.Migrate(); // This applies any pending migrations on startup
 }
 
 var LocalizationOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
