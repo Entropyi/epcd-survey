@@ -10,12 +10,6 @@ namespace feedback.Controllers
     {
         string locale = Thread.CurrentThread.CurrentCulture.Name;
 
-        public enum Sexes
-        {
-            Male,
-            Female
-        };
-
         private readonly ApplicationDbContext _context;
 
         public FormCreator(ApplicationDbContext context)
@@ -45,7 +39,6 @@ namespace feedback.Controllers
                     .Select(d => d.FormID)
                     .Single();
             }
-
 
             return View(await _context.Form
                 .Include(f => f.FormEntries)
@@ -1486,9 +1479,9 @@ namespace feedback.Controllers
 
             int[] category1ByAge = Enumerable.Range(1, 5)
                 .Select(AgeGroup => _context.FormEntry
-                    .Count(fe => fe.FormId == id && fe.AgeGroup == AgeGroup  && fe.Category == "Community"))
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == AgeGroup && fe.Category == "Community"))
                 .ToArray();
-            
+
             ViewBag.category1ByAge = category1ByAge;
 
             int category1BySex1 = _context.FormEntry
@@ -1577,12 +1570,12 @@ namespace feedback.Controllers
                 .ToArray();
 
             ViewBag.category1ByScale10 = category1ByScale10;
-            
+
             int[] category2ByAge = Enumerable.Range(1, 5)
                 .Select(AgeGroup => _context.FormEntry
-                    .Count(fe => fe.FormId == id && fe.AgeGroup == AgeGroup  && fe.Category == "Industry"))
+                    .Count(fe => fe.FormId == id && fe.AgeGroup == AgeGroup && fe.Category == "Industry"))
                 .ToArray();
-            
+
             ViewBag.category2ByAge = category2ByAge;
 
             int category2BySex1 = _context.FormEntry
@@ -2033,7 +2026,7 @@ namespace feedback.Controllers
                 if (locale == "ar")
                 {
                     ModelState.AddModelError("startDate",
-                        " وقت البداية يجب ان لا يكون اكثر من خمس سنوات او اقل من شهر  من تاريخ اليوم");
+                        "وقت البداية يجب ان لا يكون اكثر من خمس سنوات او اقل من شهر من تاريخ اليوم");
                 }
 
                 if (locale == "en")
@@ -2047,12 +2040,12 @@ namespace feedback.Controllers
             {
                 if (locale == "ar")
                 {
-                    ModelState.AddModelError("endDate", " وقت النهاية يجب ان لا يكون اقل من وقت البداية بعشر دقائق ");
+                    ModelState.AddModelError("endDate", "وقت النهاية يجب ان لا يكون اقل من وقت البداية بعشر دقائق");
                 }
 
                 if (locale == "en")
                 {
-                    ModelState.AddModelError("endDate", "End date must be 10 minutes grater than start date.");
+                    ModelState.AddModelError("endDate", "End date must be 10 minutes greater than the start date.");
                 }
             }
 
@@ -2124,7 +2117,7 @@ namespace feedback.Controllers
                 if (locale == "ar")
                 {
                     ModelState.AddModelError("startDate",
-                        " وقت البداية يجب ان لا يكون اكثر من خمس سنوات او اقل من شهر من تاريخ اليوم");
+                        "وقت البداية يجب ان لا يكون اكثر من خمس سنوات او اقل من شهر من تاريخ اليوم");
                 }
 
                 if (locale == "en")
@@ -2138,13 +2131,12 @@ namespace feedback.Controllers
             {
                 if (locale == "ar")
                 {
-                    ModelState.AddModelError("endDate",
-                        " وقت النهاية يجب ان لا يكون اقل من وقت الحالي ووقت البداية بعشر دقائق ");
+                    ModelState.AddModelError("endDate", "وقت النهاية يجب ان لا يكون اقل من وقت البداية بعشر دقائق");
                 }
 
                 if (locale == "en")
                 {
-                    ModelState.AddModelError("endDate", "End date must be 10 minutes grater than start date.");
+                    ModelState.AddModelError("endDate", "End date must be 10 minutes greater than the start date.");
                 }
             }
 

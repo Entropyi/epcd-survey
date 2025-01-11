@@ -11,9 +11,13 @@ public class FormEntry
     public Form? Form { get; init; }
 
 
-    [Required(ErrorMessage = "Required")] public int? AgeGroup { get; init; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 4)]
+    public int? AgeGroup { get; init; }
 
-    [Required(ErrorMessage = "Required")] public int? Education { get; init; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Education { get; init; }
 
     public enum Sexes
     {
@@ -23,26 +27,39 @@ public class FormEntry
 
     [Required(ErrorMessage = "Required")] public Sexes Sex { get; init; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale1 { get; set; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Scale1 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale2 { get; set; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Scale2 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale3 { get; set; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Scale3 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale4 { get; set; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Scale4 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale5 { get; set; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Scale5 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale6 { get; set; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Scale6 { get; set; }
 
-    [Required(ErrorMessage = "Required")] public int? Scale7 { get; set; }
-    
-   public int? Scale8 { get; set; }
-   public int? Scale9 { get; set; }
-   public int? Scale10 { get; set; }
+    [Required(ErrorMessage = "Required")]
+    [Range(1, 5)]
+    public int? Scale7 { get; set; }
 
+    [Range(1, 5)] public int? Scale8 { get; set; }
+    [Range(1, 5)] public int? Scale9 { get; set; }
+    [Range(1, 5)] public int? Scale10 { get; set; }
 
-    public string? OpenQuestion { get; init; } = string.Empty;
+    [MaxLength(1500)] public string? OpenQuestion { get; init; } = string.Empty;
 
 
     public enum Languages
@@ -51,9 +68,9 @@ public class FormEntry
         ar
     }
 
- public Languages? Language { get; init; }
- 
-public string? Category { get; init; }
+    public Languages? Language { get; init; }
 
-public DateTime? CreationDate { get; init; } = DateTime.Now;
+    [MaxLength(60)] public string? Category { get; init; }
+
+    public DateTime? CreationDate { get; init; } = DateTime.Now;
 }

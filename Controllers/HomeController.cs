@@ -8,7 +8,7 @@ namespace feedback.Controllers;
 public class HomeController : Controller
 {
     private readonly ApplicationDbContext _context;
-    
+
     public HomeController(ApplicationDbContext context)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
@@ -72,7 +72,7 @@ public class HomeController : Controller
                     .Single();
             }
         }
-        
+
         if (indestryFormStartDate.HasValue && indestryFormEndtDate.HasValue)
         {
             ViewBag.indestryFormStartDate = indestryFormStartDate;

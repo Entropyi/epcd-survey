@@ -3,7 +3,14 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Log in";
+    string title = "Log in";
+
+    if (Thread.CurrentThread.CurrentCulture.Name == "ar")
+    {
+        title = "تسجيل الدخول";
+    }
+
+    ViewData["Title"] = title;
 }
 
 <form id="account" method="post" class="landing-root-container">
@@ -25,7 +32,7 @@
                 asp-validation-summary="ModelOnly"
                 style="text-align: center"
                 class="error-message">
-                
+
             </div>
 
             <div class="login__section-container">

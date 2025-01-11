@@ -31,7 +31,8 @@ public class EmailSender : IEmailSender
         try
         {
             using var client = new SmtpClient();
-            await client.ConnectAsync(_options.SmtpServer, _options.SmtpPort, MailKit.Security.SecureSocketOptions.StartTls);
+            await client.ConnectAsync(_options.SmtpServer, _options.SmtpPort,
+                MailKit.Security.SecureSocketOptions.StartTls);
             await client.AuthenticateAsync(_options.SmtpUser, _options.SmtpPass);
             await client.SendAsync(mimeMessage);
             await client.DisconnectAsync(true);

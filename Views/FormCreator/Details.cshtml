@@ -49,7 +49,7 @@
                     @Localizer["sexSort"]
                 </p>
                 <button id="filterMale" class="filter__button">
-                   @Localizer["asnwerSex1"]
+                    @Localizer["asnwerSex1"]
                 </button>
                 <button id="filterFemale" class="filter__button">
                     @Localizer["asnwerSex2"]
@@ -66,7 +66,7 @@
                 <button id="eduButton4" class="filter__button">@Localizer["asnwerEdu4"]</button>
                 <button id="eduButton5" class="filter__button">@Localizer["asnwerEdu5"]</button>
             </div>
-            
+
             <div class="filters__byEducation">
                 <p>
                     @Localizer["sortAge"]
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-   
+
     <div class="chart-super-container">
         <div class="chart-sub-container">
             <div class="chart-question-container">
@@ -3187,7 +3187,6 @@
     let age3Filter = 0
 
     filterAge3.addEventListener("click", () => {
-        console.log(age3Filter)
         if (age3Filter == 0) {
             filterMale.style.backgroundColor = "rgba(156, 163, 175, 0.6)";
             filterFemale.style.backgroundColor = "rgba(156, 163, 175, 0.6)";
@@ -3301,7 +3300,6 @@
     let age4Filter = 0
 
     filterAge4.addEventListener("click", () => {
-        console.log(age4Filter)
         if (age4Filter == 0) {
 
             filterAge4.style.backgroundColor = "rgba(163, 230, 53, 0.6)"
@@ -3518,7 +3516,6 @@
         restChart()
 
         cat1Filter--;
-        console.log("here at")
         filterCat1.style.backgroundColor = "rgba(156, 163, 175, 0.6)"
         return;
     })
@@ -3526,7 +3523,6 @@
 
     let cat2Filter = 0
     filterCat2.addEventListener("click", () => {
-        console.log(age4Filter)
         if (cat2Filter == 0) {
 
             filterCat2.style.backgroundColor = "rgba(163, 230, 53, 0.6)"
@@ -3632,7 +3628,6 @@
         restChart()
 
         cat2Filter--;
-        console.log("here at")
         filterCat2.style.backgroundColor = "rgba(156, 163, 175, 0.6)"
         return;
     })

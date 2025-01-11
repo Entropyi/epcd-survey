@@ -26,6 +26,7 @@ namespace feedback.Areas.Identity.Pages.Account
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
         private readonly ISessionBasedCaptcha _captcha;
+        private string locale = Thread.CurrentThread.CurrentCulture.Name;
         
         public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger,ISessionBasedCaptcha captcha)
         {
@@ -139,13 +140,29 @@ namespace feedback.Areas.Identity.Pages.Account
                     }
                     if(!result.Succeeded)
                     {
-                        ModelState.AddModelError(string.Empty, result.Succeeded.ToString());
+                        if (locale != "ar")
+                        {
+                            ModelState.AddModelError(string.Empty, "Invalid email or password");
+
+                        }
+                        else
+                        {
+                            ModelState.AddModelError(string.Empty, "كلمة المرور أو البريد الإلكتروني قد يكون غير صالح");
+                        }
                         return Page();
                     }
                 }
                 else
                 {
-                    ModelState.AddModelError(String.Empty, "Wrong captcha code");
+                    if (locale != "ar")
+                    {
+                        ModelState.AddModelError(String.Empty, "Wrong captcha code");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(String.Empty, "رمز التحقق غير صحيح");
+
+                    }
                     return Page();
 
                 }
@@ -158,6 +175,7 @@ namespace feedback.Areas.Identity.Pages.Account
                 return Page();
 */
                 
+            ModelState.AddModelError(String.Empty, "Wrong email or password");
 
             // If we got this far, something failed, redisplay form
             return Page();

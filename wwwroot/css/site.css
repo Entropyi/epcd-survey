@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video,button{
+time, mark, audio, video, button {
     margin: 0;
     padding: 0;
     border: 0;
@@ -21,8 +21,8 @@ time, mark, audio, video,button{
 }
 
 a {
-    color: inherit; 
-    text-decoration: inherit; 
+    color: inherit;
+    text-decoration: inherit;
     overflow-wrap: break-word;
 
 }
@@ -33,13 +33,13 @@ a {
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
-    
+
 }
 
 
 body {
     background: var(--dark-grey-5);
-    
+
 }
 
 input[type="submit"]:not(.form__submit-container input) {
@@ -51,7 +51,7 @@ input[type="submit"]:not(.form__submit-container input) {
 }
 
 :root {
-     filter: invert(0);
+    filter: invert(0);
     --th-Primary: #052976;
     --th-secondary: #8142ff;
     --primary: #052976;
@@ -142,18 +142,18 @@ input[type="submit"]:not(.form__submit-container input) {
 
 @keyframes pulseRed {
     0% {
-        box-shadow:0 0 0 0 rgba(252, 165, 165, 1);
+        box-shadow: 0 0 0 0 rgba(252, 165, 165, 1);
     }
 }
 
 @keyframes pulseGreen {
     0% {
-        box-shadow:0 0 0 0 rgba(163, 230, 53, 0.6);
+        box-shadow: 0 0 0 0 rgba(163, 230, 53, 0.6);
     }
 }
 
 @keyframes pulseGrey {
     0% {
-        box-shadow:0 0 0 0 rgba(156, 163, 175, 0.8);
+        box-shadow: 0 0 0 0 rgba(156, 163, 175, 0.8);
     }
 }

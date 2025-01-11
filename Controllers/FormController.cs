@@ -27,10 +27,10 @@ public class FormController : Controller
         List<string> Categories = new();
         Categories.Add("Community");
         Categories.Add("Industry");
-        
+
         if (Categories.Contains(category))
         {
-            ViewBag.Category =  category;
+            ViewBag.Category = category;
 
             ViewBag.Form = await _context.Form.FindAsync(FormID);
 
@@ -38,28 +38,27 @@ public class FormController : Controller
             {
                 return RedirectToAction(nameof(NotAvailable));
             }
-            
+
             var formEndDate = _context.Form
                 .Where(f => f.id == FormID)
                 .Select(e => e.EndDate)
                 .FirstOrDefault();
-            
+
             if (formEndDate.HasValue)
             {
-                TimeSpan? dateDifference = formEndDate - DateTime.Now ;
+                TimeSpan? dateDifference = formEndDate - DateTime.Now;
                 if (dateDifference > TimeSpan.Zero)
                 {
                     return View();
                 }
+
                 return RedirectToAction(nameof(NotAvailable));
-            
             }
+
             return RedirectToAction(nameof(NotAvailable));
         }
-        
+
         return RedirectToAction(nameof(NotAvailable));
-        
-    
     }
 
 
@@ -74,7 +73,7 @@ public class FormController : Controller
         {
             ModelState.AddModelError(string.Empty, "Invalid category");
         }
-        
+
         if (ModelState.IsValid)
         {
             _context.Add(entry);
@@ -89,13 +88,13 @@ public class FormController : Controller
     {
         return View();
     }
-    
+
     public IActionResult NotAvailable()
     {
         return View();
     }
 
-    
+
     public IActionResult Home()
     {
         return View();
