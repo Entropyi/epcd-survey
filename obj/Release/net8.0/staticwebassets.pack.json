@@ -73,14 +73,6 @@
       "PackagePath": "staticwebassets\\js\\chartjs-plugin-datalabels\\chartjs-plugin-datalabels.min.js"
     },
     {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\form.js",
-      "PackagePath": "staticwebassets\\js\\form.js"
-    },
-    {
-      "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
-    },
-    {
       "Id": "C:\\Users\\je-ha\\RiderProjects\\epcd-survey\\wwwroot\\lib\\@kurkle\\color\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\@kurkle\\color\\LICENSE.md"
     },

@@ -6,7 +6,7 @@
     padding-bottom: 1.2em;
 }
 
-.form-root-container{
+.form-root-container {
     background: var(--dark-grey-5);
     display: flex;
     align-items: start;
@@ -15,10 +15,11 @@
     height: 100%;
 }
 
-.form-container{
+.form-container {
     width: 75%;
     margin-top: 2em;
 }
+
 .form__super-title-container {
     font-family: Font-Bold;
     color: var(--th-Primary);
@@ -26,13 +27,13 @@
 }
 
 .form__section-container {
-   
+
 }
 
-.form__super-title-text{
+.form__super-title-text {
     font-size: 1.8em;
     overflow-wrap: break-word;
-    color:var(--th-Primary);
+    color: var(--th-Primary);
 
 }
 
@@ -44,7 +45,7 @@
     margin-bottom: 1em;
 }
 
-.form__section-title-text{
+.form__section-title-text {
     font-size: 1.5em;
 }
 
@@ -67,12 +68,12 @@
     color: var(--dark-grey-2);
 }
 
-.form__label-text-1{
+.form__label-text-1 {
     font-family: Font-Regular;
     color: var(--dark-grey-2);
 }
 
-.AgeGroupLabel{
+.AgeGroupLabel {
     margin-top: 0.3em;
     display: flex;
     flex-direction: column;
@@ -106,7 +107,7 @@
     transition: ease-in 0.8s;
 }
 
-.homecard{
+.homecard {
     display: flex;
     flex-direction: column;
     background-color: var(--dark-grey-6);
@@ -126,10 +127,10 @@
     gap: 0.3em;
 }
 
-.form__submit-container  {
+.form__submit-container {
     display: flex;
     justify-content: end;
-    font-family:"Font-Light";
+    font-family: "Font-Light";
 }
 
 .form__submit {
@@ -153,13 +154,13 @@
     color: red;
 }
 
-.error-message{
+.error-message {
     font-family: "Font-Light";
     font-size: 0.9em;
     color: red;
 }
 
-.error-message-login{
+.error-message-login {
     position: absolute;
     font-family: "Font-Light";
     font-size: 0.9em;
@@ -167,15 +168,15 @@
 }
 
 
-.pass_form-root-container{
+.pass_form-root-container {
     display: flex;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
     margin-top: 10%;
 }
 
-.pass-container{
+.pass-container {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -183,11 +184,11 @@
     align-items: center;
     padding: 5em 10em;
     border-radius: 0.4em;
-    
-    background: rgba(173,235,179,0.3);
+
+    background: rgba(173, 235, 179, 0.3);
 }
 
-.not-container{
+.not-container {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -197,40 +198,41 @@
     border-radius: 0.4em;
     background: var(--dark-grey-4);
 }
-.pass_svg{
+
+.pass_svg {
     width: 170px;
 }
 
-.pass-title{
+.pass-title {
     font-family: Font-Bold;
     font-size: 1.5em;
     color: var(--th-Primary);
 }
 
-.pass-text{
+.pass-text {
     text-align: center;
     font-family: Font-Light;
     color: var(--th-Primary-3);
 }
 
-.notfound-super-container{
+.notfound-super-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10%;
 }
 
-.notfound-sub-container{
+.notfound-sub-container {
     width: 40%;
     display: flex;
     justify-content: center;
 }
 
-.notfound_svg{
+.notfound_svg {
     width: 10em;
 }
 
-.notfound-card-container{
+.notfound-card-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,54 +240,53 @@
     width: 80%;
     padding: 5em 0;
     border-radius: 0.5em;
-    background-color: rgba(5,41,118,0.1);
+    background-color: rgba(5, 41, 118, 0.1);
 }
 
-.form__input_inner-container{
+.form__input_inner-container {
     display: flex;
     flex-direction: column;
 }
 
-.required-container{
+.required-container {
     display: flex;
 }
 
-.add-super-container{
+.add-super-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.add-container{
+.add-container {
     background-color: var(--secondary-4);
     padding: 1em;
     border-radius: 0.2em;
     border: 0.2em solid transparent;
 }
 
-.add-container:hover{
+.add-container:hover {
     cursor: pointer;
     transition: ease-in 0.2s;
     border: 0.2em solid var(--th-Primary);
 }
 
-.add-text{
+.add-text {
     font-family: Font-Bold;
     color: var(--th-Primary);
 }
 
-.dates-container{
+.dates-container {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.filters__container{
+.filters__container {
     width: 70%;
     margin-inline: auto;
 }
-
 
 
 @media (max-width: 702px) {
@@ -303,7 +304,7 @@
 }
 
 @media (max-width: 547px) {
-    .pass-container{
+    .pass-container {
         padding: 5em 4em;
     }
 }
