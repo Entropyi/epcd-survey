@@ -6,12 +6,11 @@ namespace feedback.Controllers;
 public class CultureController : Controller
 {
     // GET
-    public IActionResult ToggleCulture(string returnUrl)    { 
-        // Determine the current culturevar
+    public IActionResult ToggleCulture(string returnUrl)    {
+    
       var  currentCulture = HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name; 
-        // Toggle between the two culturesvar
-     var   newCulture = currentCulture == "en" ? "ar" : "en";     
-        // Set the new culture in the cookie
+     var   newCulture = currentCulture == "en" ? "ar" : "en";    
+     
         Response.Cookies.Append(
             CookieRequestCultureProvider.DefaultCookieName,
             CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(newCulture)), 
